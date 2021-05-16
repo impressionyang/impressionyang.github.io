@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qt文件操作QFile - impressionyang</title><link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="180x180">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png">
+<meta name="description" content="" /><meta itemprop="name" content="Qt文件操作QFile">
+<meta itemprop="description" content="先导
+
+因为有需求使用Qt的文件I/O操作,所以做此记录以供后用
+"><meta itemprop="datePublished" content="2020-03-29T19:50:18&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-29T19:50:18&#43;00:00" />
+<meta itemprop="wordCount" content="598">
+<meta itemprop="keywords" content="program,C&#43;&#43;,Qt,QFile," /><meta property="og:title" content="Qt文件操作QFile" />
+<meta property="og:description" content="先导
+
+因为有需求使用Qt的文件I/O操作,所以做此记录以供后用
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/coding/qt-qfile-note/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-03-29T19:50:18&#43;00:00" />
+<meta property="article:modified_time" content="2020-03-29T19:50:18&#43;00:00" /><meta property="og:site_name" content="impressionyang" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Qt文件操作QFile"/>
+<meta name="twitter:description" content="先导
+
+因为有需求使用Qt的文件I/O操作,所以做此记录以供后用
+"/>
+<meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.fb6a2f555467bf9d44fa0fc6f95b200fcddbd2efd37ad2621f7408b9c2c4b8e4.css" integrity="sha256-&#43;2ovVVRnv51E&#43;g/G&#43;VsgD83b0u/TetJiH3QIucLEuOQ=" crossorigin="anonymous"><script src="/js/bundle.min.078401d7a9ee1fd5830bf91cfe6d51e0711245cab1e263acd8cd0d79d5a3f04e.js" integrity="sha256-B4QB16nuH9WDC/kc/m1R4HESRcqx4mOs2M0NedWj8E4=" crossorigin="anonymous"></script>
+
+
+</head>
+  <body><header><nav class="navbar fixed-top navbar-expand-xl">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy">impressionyang</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-2 mb-2 mb-lg-0"><form class="search-bar d-flex mr-2" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav mb-2 mb-lg-0 mr-2 ml-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>个人
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-about"><li>
+              <a class="dropdown-item"
+                href="/about/about">
+                <i class="fas fa-user"></i> 个人简介
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/music">
+                <i class="fas fa-music"></i> 歌单分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/games">
+                <i class="fab fa-steam"></i> stem游戏分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/impressionyang" target="_blank">
+                <i class="fab fa-fw fa-github"></i>github
+              </a>
+            </li></ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-third_party" role="button" data-toggle="dropdown" aria-expanded="false">
+            第三方链接
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-third_party"><li>
+              <a class="dropdown-item"
+                href="https://fontawesome.com/" target="_blank">
+                <i class="fab fa-font-awesome"></i> Font Awesome 5
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">
+                <i class="fas fa-palette"></i> 主题地址
+              </a>
+            </li></ul>
+        </li></ul>
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0"><li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="languageSwitcher" data-toggle="popover"
+    data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-language" ></i>
+  </a>
+</li>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="languages list-group"><li class="language list-group-item active">简体中文</li><li class="language list-group-item">
+      <a href="/en/">English</a></li><li class="language list-group-item">
+      <a href="/zh-tw/">繁體中文</a></li></ul>
+</script>
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="paletteSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#palettesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
+  </a>
+</li>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group"><li id="palette-blue" class="palette list-group-item bg-blue">
+      <a>蓝色</a>
+    </li><li id="palette-blue-gray" class="palette list-group-item bg-blue-gray">
+      <a>蓝灰色</a>
+    </li><li id="palette-brown" class="palette list-group-item bg-brown">
+      <a>棕色</a>
+    </li><li id="palette-cyan" class="palette list-group-item bg-cyan">
+      <a>青色</a>
+    </li><li id="palette-green" class="palette list-group-item bg-green">
+      <a>绿色</a>
+    </li><li id="palette-indigo" class="palette list-group-item bg-indigo">
+      <a>靛青色</a>
+    </li><li id="palette-orange" class="palette list-group-item bg-orange">
+      <a>橙色</a>
+    </li><li id="palette-pink" class="palette list-group-item bg-pink">
+      <a>粉色</a>
+    </li><li id="palette-purple" class="palette list-group-item bg-purple">
+      <a>紫色</a>
+    </li><li id="palette-red" class="palette list-group-item bg-red">
+      <a>红色</a>
+    </li><li id="palette-teal" class="palette list-group-item bg-teal">
+      <a>蓝绿色</a>
+    </li><li id="palette-yellow" class="palette list-group-item bg-yellow">
+      <a>黄色</a>
+    </li></ul>
+</script>
+
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="fontSizeSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#fontSizesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-font" ></i>
+  </a>
+</li>
+<script type="text/html" id="fontSizesPopoverBody">
+  <form class="font-size-switcher-form">
+    <label for="fontSize" class="form-label">字体大小</label>
+    <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+  </form>
+</script>
+<form class="mode-switcher-form d-flex align-items-center">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="modeSwitcher">
+  </div>
+</form>
+</ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-md-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item"><a href="/posts/coding/">编程技巧</a></li><li class="breadcrumb-item active">Qt文件操作QFile</li></ol>
+</nav><article class="post row surface">
+  <h1 class="post-title my-3">Qt文件操作QFile</h1><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-03-29
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/program/" class="post-taxonomy">#program</a><a href="/tags/c&#43;&#43;/" class="post-taxonomy">#C&#43;&#43;</a><a href="/tags/qt/" class="post-taxonomy">#Qt</a><a href="/tags/qfile/" class="post-taxonomy">#QFile</a></div>
+<div class="accordion accordion-flush surface post-toc position-sticky" id="accordionTOC">
+  <div class="accordion-item">
+    <div class="accordion-header" id="headingTOC" data-toggle="collapse" data-target="#collapseTOC" aria-expanded="true" aria-controls="collapseTOC">
+      <i class="fas fa-fw fa-bars"></i>目录
+    </div>
+    <div id="collapseTOC" class="accordion-collapse collapse" aria-labelledby="headingTOC" data-parent="#accordionTOC">
+      <div class="accordion-body mt-2">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#先导">先导</a></li>
+    <li><a href="#使用">使用</a>
+      <ul>
+        <li><a href="#简单使用以及说明">简单使用以及说明</a></li>
+        <li><a href="#使用stream进行读写">使用<code>stream</code>进行读写</a></li>
+      </ul>
+    </li>
+    <li><a href="#后记">后记</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div><div class="post-content mb-3"><h2 id="先导">先导</h2>
+<blockquote>
+<p>因为有需求使用<code>Qt</code>的文件<code>I/O</code>操作,所以做此记录以供后用</p>
+</blockquote>
+<h2 id="使用">使用</h2>
+<h3 id="简单使用以及说明">简单使用以及说明</h3>
+<p>简单的使用基本上分4步:</p>
+<ol>
+<li>定义文件变量</li>
+<li>打开文件</li>
+<li>执行文件<code>I/O</code>操作</li>
+<li>关闭文件</li>
+</ol>
+<p>简单使用读取文件:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">    QFile <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#34;your file path&#34;</span>);
+    file.open(QFile<span style="color:#f92672">::</span>ReadOnly);
+    QByteArray buf;
+    <span style="color:#66d9ef">while</span>(file.read(buf.data(),<span style="color:#ae81ff">1024</span>)<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>){
+        cout<span style="color:#f92672">&lt;&lt;</span>buf;
+        buf.clear();
+    }
+    file.close();
+</code></pre></div><p>上述文件读取操作中,使用的是<code>C++</code>习惯下的<code>read</code>函数,其使用也和<code>C++</code>的<code>read</code>函数差不多,需要讲解一下的是<code>QFile</code>的<code>open</code>函数的参数,有以下的表列</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NotOpen</td>
+<td>不打开文件</td>
+</tr>
+<tr>
+<td>ReadOnly</td>
+<td>只读</td>
+</tr>
+<tr>
+<td>WriteOnly</td>
+<td>只写</td>
+</tr>
+<tr>
+<td>ReadWrite</td>
+<td>可读写</td>
+</tr>
+<tr>
+<td>Append</td>
+<td>追加</td>
+</tr>
+<tr>
+<td>Truncate</td>
+<td>尽可能在打开文件前删除</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>限定文本操作,读文件的话结束符翻译为文本的<code>\n</code>,写文件则结尾时写入当前系统的文本结束符,例如<code>win</code>的<code>\n\r</code></td>
+</tr>
+<tr>
+<td>Unbuffered</td>
+<td>不能使用缓存流<code>I/O</code></td>
+</tr>
+<tr>
+<td>NewOnly</td>
+<td>在创建文件的时候确保文件是不存在的,不然文件不能打开</td>
+</tr>
+<tr>
+<td>ExistingOnly</td>
+<td>在读取文件是确保文件是存在的,不然文件不能打开</td>
+</tr>
+</tbody>
+</table>
+<p>简单写入文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">    QFile <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#34;your file path&#34;</span>);
+    file.open(QFile<span style="color:#f92672">::</span>WriteOnly <span style="color:#f92672">|</span> QFile<span style="color:#f92672">::</span>Truncate);
+    QByteArray <span style="color:#a6e22e">buf</span>(<span style="color:#e6db74">&#34;text to write&#34;</span>);
+    file.write(buf);
+    file.close();
+</code></pre></div><h3 id="使用stream进行读写">使用<code>stream</code>进行读写</h3>
+<p>使用<code>stream</code>进行读写时可以使用输入(<code>&gt;&gt;</code>)输出(<code>&lt;&lt;</code>)流符号进行格式化输入输出,读写方便,在<code>Qt</code>的文件<code>I/O</code>中可以使用<code>QTextStream</code>和<code>QDateStream</code>来对文件进行操作</p>
+<p>读取文件:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">    QFile <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#34;in.txt&#34;</span>);
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>file.open(QFile<span style="color:#f92672">::</span>ReadOnly <span style="color:#f92672">|</span> QFile<span style="color:#f92672">::</span>Text))
+        <span style="color:#66d9ef">return</span>;
+
+    QByteArray buf;
+    QTextStream <span style="color:#a6e22e">in</span>(<span style="color:#f92672">&amp;</span>file);
+    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>in.atEnd()) {
+        in<span style="color:#f92672">&gt;&gt;</span>buf.data();
+        cout<span style="color:#f92672">&lt;&lt;</span>buf;
+        buf.clear();
+    }
+    file.close();
+</code></pre></div><p>写入文件:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">    QFile <span style="color:#a6e22e">file</span>(<span style="color:#e6db74">&#34;out.txt&#34;</span>);
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>file.open(QFile<span style="color:#f92672">::</span>WriteOnly <span style="color:#f92672">|</span> QFile<span style="color:#f92672">::</span>Text))
+        <span style="color:#66d9ef">return</span>;
+
+    QTextStream <span style="color:#a6e22e">out</span>(<span style="color:#f92672">&amp;</span>file);
+    out <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;a=&#34;</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+    out.flush();
+    file.close();
+</code></pre></div><h2 id="后记">后记</h2>
+<p><code>Qt</code>的文件操作对于一个应用软件来说是一个重要的使用方式,虽然上面讲述了<code>Qt</code>文件<code>I/O</code>的基本操作,但是其使用方式还有很多,这仅仅是最基本的使用方式而已,以后还有很多东西需要学习的</p>
+<hr>
+<center><img src="https://impressionyang.gitee.io/imgbed/img/favicon/favicon_64.png" /></center>
+<center>impressionyang</center></div><div class="post-copyright mb-4">
+  <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
+</div><div class="post-reward mb-4 text-center">
+  <button type="button" class="btn btn-reward" data-toggle="modal" data-target="#rewardModal">
+    <i class="fas fa-fw fa-medal"></i>打赏
+  </button>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post">
+      <a href="/posts/coding/qt-udp-brocast/">Qt UDP广播</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"><div class="next-post">
+      <a href="/posts/tech_and_skill/arch-refind-bootloader-efi/">Arch Linux切换rEFInd开机引导程序</a>
+    </div></div>
+</div><section class="related-posts">
+  <h3>相关文章</h3>
+  <ul class="related-posts"><li><a href="/posts/coding/qt-udp-brocast/">Qt UDP广播</a></li><li><a href="/posts/coding/auto-init-cmake-qt-project/">Qt CMake GUI项目生成脚本</a></li><li><a href="/posts/coding/cpp-java-variable-diff/">C&#43;&#43;和Java的变量对比</a></li><li><a href="/posts/coding/cmake-personal-config/">CMake编写总结</a></li><li><a href="/posts/coding/c-cpp-tools-collect/">盘点C/C&#43;&#43;语言编程&#43;编译工具</a></li></ul>
+</section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="impressionyang/impressionyang.github.io"
+  issue-term="pathname"
+  label=""
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row">
+  <div class="col-xl-6 d-flex align-items-center justify-content-center">
+    <img class="profile-avatar img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" alt="impressionyang" loading="lazy">
+  </div>
+  <div class="col-xl-6">
+    <h5 class="profile-name my-2">impressionyang</h5><div class="profile-bio mb-2">looove coooding.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><div class="profile-about mb-2"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">关于</a></div></div>
+</section><section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/talk/hugo_theme_bootstrap_change/">对于此hugo主题的更改</a></li><li><a href="/posts/talk/about_change_to_hugo/">关于换到hugo</a></li><li><a href="/posts/book/book_about/">关于读书分享</a></li><li><a href="/posts/coding/git-update-script/">git更新脚本</a></li><li><a href="/posts/tech_and_skill/qt-creator-my-setup/">Qt个人配置</a></li></ul>
+</section>
+<section class="taxonomy-categories row surface">
+  <h4>
+    <a href="/categories">分类</a>
+  </h4>
+  <div><a href="/categories/tech_and_skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="tech_and_skill">
+      tech_and_skill <span class="badge rounded-pill">30</span>
+    </a><a href="/categories/coding/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="coding">
+      coding <span class="badge rounded-pill">12</span>
+    </a><a href="/categories/book/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="book">
+      book <span class="badge rounded-pill">2</span>
+    </a><a href="/categories/talk/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="talk">
+      talk <span class="badge rounded-pill">2</span>
+    </a></div>
+</section><section class="taxonomy-series row surface">
+  <h4>
+    <a href="/series">专栏</a>
+  </h4>
+  <div><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="博客">
+      博客 <span class="badge rounded-pill">45</span>
+    </a></div>
+</section><section class="taxonomy-tags row surface">
+  <h4>
+    <a href="/tags">标签</a>
+  </h4>
+  <div><a href="/tags/skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="skill">
+      skill <span class="badge rounded-pill">33</span>
+    </a><a href="/tags/linux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Linux">
+      Linux <span class="badge rounded-pill">8</span>
+    </a><a href="/tags/archlinux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="archlinux">
+      archlinux <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c&#43;&#43;/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C&#43;&#43;">
+      C&#43;&#43; <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/program/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="program">
+      program <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C">
+      C <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/hexo/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="hexo">
+      hexo <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/qt/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Qt">
+      Qt <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/install/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="install">
+      install <span class="badge rounded-pill">4</span>
+    </a><a href="/tags/plasma/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Plasma">
+      Plasma <span class="badge rounded-pill">3</span>
+    </a></div>
+</section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:impressionyang@outlook.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/impressionyang" title="Github">
+        <i class="fab fa-fw fa-2x fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2572247223&amp;site=qq&amp;menu=yes" title="Qq">
+        <i class="fab fa-fw fa-2x fa-qq"></i>
+      </a>
+    </li></nav>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.9.2/mermaid.min.js"></script>
+<script>
+      mermaid.initialize({ startOnLoad: true });
+</script>
+<div class="copyright mb-2">
+  Copyright © 2016-2021 impressionyang. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">Bootstrap</a> theme.
+</div></footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

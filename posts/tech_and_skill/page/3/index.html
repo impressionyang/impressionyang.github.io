@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>技术分享 第 3 页 - impressionyang</title><link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="180x180">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png">
+<meta name="description" content="" /><meta itemprop="name" content="技术分享">
+<meta itemprop="description" content="一个极快、响应式和功能丰富的 Hugo 博客主题"><meta property="og:title" content="技术分享" />
+<meta property="og:description" content="一个极快、响应式和功能丰富的 Hugo 博客主题" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/posts/tech_and_skill/" /><meta property="og:site_name" content="impressionyang" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="技术分享"/>
+<meta name="twitter:description" content="一个极快、响应式和功能丰富的 Hugo 博客主题"/>
+<link rel="alternate" type="application/rss+xml" href="/posts/tech_and_skill/index.xml" title="impressionyang" /><meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.fb6a2f555467bf9d44fa0fc6f95b200fcddbd2efd37ad2621f7408b9c2c4b8e4.css" integrity="sha256-&#43;2ovVVRnv51E&#43;g/G&#43;VsgD83b0u/TetJiH3QIucLEuOQ=" crossorigin="anonymous"><script src="/js/bundle.min.078401d7a9ee1fd5830bf91cfe6d51e0711245cab1e263acd8cd0d79d5a3f04e.js" integrity="sha256-B4QB16nuH9WDC/kc/m1R4HESRcqx4mOs2M0NedWj8E4=" crossorigin="anonymous"></script>
+
+
+</head>
+  <body><header><nav class="navbar fixed-top navbar-expand-xl">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy">impressionyang</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-2 mb-2 mb-lg-0"><form class="search-bar d-flex mr-2" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav mb-2 mb-lg-0 mr-2 ml-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>个人
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-about"><li>
+              <a class="dropdown-item"
+                href="/about/about">
+                <i class="fas fa-user"></i> 个人简介
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/music">
+                <i class="fas fa-music"></i> 歌单分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/games">
+                <i class="fab fa-steam"></i> stem游戏分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/impressionyang" target="_blank">
+                <i class="fab fa-fw fa-github"></i>github
+              </a>
+            </li></ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-third_party" role="button" data-toggle="dropdown" aria-expanded="false">
+            第三方链接
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-third_party"><li>
+              <a class="dropdown-item"
+                href="https://fontawesome.com/" target="_blank">
+                <i class="fab fa-font-awesome"></i> Font Awesome 5
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">
+                <i class="fas fa-palette"></i> 主题地址
+              </a>
+            </li></ul>
+        </li></ul>
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0"><li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="languageSwitcher" data-toggle="popover"
+    data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-language" ></i>
+  </a>
+</li>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="languages list-group"><li class="language list-group-item active">简体中文</li><li class="language list-group-item">
+      <a href="/en/">English</a></li><li class="language list-group-item">
+      <a href="/zh-tw/">繁體中文</a></li></ul>
+</script>
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="paletteSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#palettesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
+  </a>
+</li>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group"><li id="palette-blue" class="palette list-group-item bg-blue">
+      <a>蓝色</a>
+    </li><li id="palette-blue-gray" class="palette list-group-item bg-blue-gray">
+      <a>蓝灰色</a>
+    </li><li id="palette-brown" class="palette list-group-item bg-brown">
+      <a>棕色</a>
+    </li><li id="palette-cyan" class="palette list-group-item bg-cyan">
+      <a>青色</a>
+    </li><li id="palette-green" class="palette list-group-item bg-green">
+      <a>绿色</a>
+    </li><li id="palette-indigo" class="palette list-group-item bg-indigo">
+      <a>靛青色</a>
+    </li><li id="palette-orange" class="palette list-group-item bg-orange">
+      <a>橙色</a>
+    </li><li id="palette-pink" class="palette list-group-item bg-pink">
+      <a>粉色</a>
+    </li><li id="palette-purple" class="palette list-group-item bg-purple">
+      <a>紫色</a>
+    </li><li id="palette-red" class="palette list-group-item bg-red">
+      <a>红色</a>
+    </li><li id="palette-teal" class="palette list-group-item bg-teal">
+      <a>蓝绿色</a>
+    </li><li id="palette-yellow" class="palette list-group-item bg-yellow">
+      <a>黄色</a>
+    </li></ul>
+</script>
+
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="fontSizeSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#fontSizesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-font" ></i>
+  </a>
+</li>
+<script type="text/html" id="fontSizesPopoverBody">
+  <form class="font-size-switcher-form">
+    <label for="fontSize" class="form-label">字体大小</label>
+    <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+  </form>
+</script>
+<form class="mode-switcher-form d-flex align-items-center">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="modeSwitcher">
+  </div>
+</form>
+</ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">技术分享</li></ol>
+</nav><div class="posts mb-4"><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/active_window_control/">Plasma顶栏和窗口标题整合插件</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-20
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/plasma/" class="post-taxonomy">#Plasma</a><a href="/tags/plasma-applet/" class="post-taxonomy">#plasma-applet</a></div>
+<div class="post-summary mb-3"><h2 id="plasma顶栏和窗口标题整合插件">Plasma顶栏和窗口标题整合插件</h2>
+<ul>
+<li>Active Window Controle 窗口集成功能</li>
+</ul>
+<p>Active Window Controle经过配置可以使得你的Plasma的窗口与顶栏相结合，达到Ubuntu曾经使用的Unity桌面环境那般高效，可以在全屏是节省一条标题栏的高度，毕竟显示器区域真的是寸土寸金的呀。</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/restart_kde/">一个命令进行Plasma热重启</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-20
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a><a href="/tags/plasma/" class="post-taxonomy">#Plasma</a></div>
+<div class="post-summary mb-3"><h2 id="一个命令进行plasma热重启">一个命令进行Plasma热重启</h2>
+<ul>
+<li>通过一个命令来重启Plasma桌面来释放系统资源</li>
+</ul>
+<p>KDE Plasma桌面环境具有很多炫酷的显示效果，但是经过一天下来长时间使用Plasma桌面而不待机或者睡眠的话，Plasma桌面会占用大量的内存资源，为了解决这个问题，特地写了一个脚本文件来对Plasma桌面进行热重启，从而释放一些资源的占用</p>
+<p>思路基本上就是使用Plasma的指令先关闭Plasma桌面再启动它</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/wine_deepinwine_config/">wine和deepinwine的相关配置</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-20
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/wine/" class="post-taxonomy">#wine</a><a href="/tags/deepin/" class="post-taxonomy">#deepin</a></div>
+<div class="post-summary mb-3"><h2 id="wine和deepinwine的相关配置">wine和deepinwine的相关配置</h2></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/usb_boot_multi_use/">archlinux安装与应急使用双用U盘</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-20
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>4 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a><a href="/tags/archlinux/" class="post-taxonomy">#archlinux</a><a href="/tags/usb/" class="post-taxonomy">#USB</a></div>
+<div class="post-summary mb-3"><h2 id="archlinux安装与应急使用双用u盘">archlinux安装与应急使用双用U盘</h2>
+<ul>
+<li>本次方案建议使用16G及以上的U盘进行安装，以保证得到较好的体验</li>
+<li>建议使用<code>USB3.0</code>及以上的U盘，当然<code>2.0</code>也没问题，如果不使用图形界面的话</li>
+<li>本次是在linux环境下完成的，当然Windows下也可以实现</li>
+</ul>
+<h2 id="使用意义">使用意义</h2>
+<p>在使用archlinux启动盘之前需要用<code>dd</code>命令将U盘刻为启动盘，这样就导致整个U盘分区被<code>dd</code>修改，最明显的是第一个装有安装环境的分区被分配了一个<code>iso9960</code>标志并且使用<code>cfdisk</code>打开该设备是会有提示使用<code>写命令</code>是会丢失丢失该标志从而导致标签异常使得启动异常，而安装环境仅有<code>600+</code>M，白白浪费了该启动盘的其他空间，因为不可以新建分区。</p>
+<p>另一方面，对于某些情况下，例如电脑的 …</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/arch_sierial_bumblebee_install/">arch系的bumblebee安装</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-19
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a><a href="/tags/bumblebee/" class="post-taxonomy">#bumblebee</a><a href="/tags/archlinux/" class="post-taxonomy">#archlinux</a></div>
+<div class="post-summary mb-3"><h2 id="arch系的bumblebee安装">arch系的bumblebee安装</h2>
+<h2 id="bumblebee有什么用">bumblebee有什么用</h2>
+<ul>
+<li>bumblebee是用来进行双显卡切换的工具，专用于具有NVDIA独立显卡以及CPU核显双显卡方案的笔记本来说可以有效的节约电源</li>
+<li>有效地进行双显卡的快速切换使用，默认使用核显以节约电量</li>
+</ul></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/linux_show_bilibili/">Linux显示bilibili小电视</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-19
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/shell/" class="post-taxonomy">#shell</a><a href="/tags/bash/" class="post-taxonomy">#bash</a></div>
+<div class="post-summary mb-3"><h2 id="linux控制台显示bilibili小电视">Linux控制台显示bilibili小电视</h2>
+<ul>
+<li>不限制linux系统发行版、不限制shell</li>
+</ul>
+<h2 id="显示效果">显示效果</h2>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/Screenshot_20190826_223125.png" alt="Screenshot_20190826_223125"  loading="lazy" />
+</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/archlinux_asciiview/">archlinux生成字符图片</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-19
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/picture/" class="post-taxonomy">#picture</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a></div>
+<div class="post-summary mb-3"><h2 id="asciiview----archlinux生成字符图片的程序">asciiview &mdash;archlinux生成字符图片的程序</h2>
+<ul>
+<li>控制台生成ascii字符图片的程序</li>
+</ul></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/git_use_guid/">git使用要点</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-19
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/git/" class="post-taxonomy">#git</a></div>
+<div class="post-summary mb-3"><blockquote>
+<p>本帖子是用来记录<code>git</code>的使用操作的，会在使用到新功能的时候进行更新，所以本贴是会进行较为长期的更新的</p>
+</blockquote>
+<h2 id="基本命令">基本命令</h2>
+<h3 id="初始化配置username-useremail替换为自己的">初始化配置（<code>$username</code>、 <code>$useremail</code>替换为自己的）</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git config --global user.name $username
+git config --global user.email $useremail
+</code></pre></div></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/archlinux_install_1/">archlinux安装篇（一） 基本系统</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-19
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/archlinux/" class="post-taxonomy">#archlinux</a><a href="/tags/install/" class="post-taxonomy">#install</a></div>
+<div class="post-summary mb-3"><h2 id="先导">先导</h2>
+<blockquote>
+<p>安装ArchLinux</p>
+</blockquote></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/manjaro-install-config/">MANJARO KDE安装配置(已换Arch Linux，此贴可能废弃)</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-18
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>4 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/archlinux/" class="post-taxonomy">#archlinux</a><a href="/tags/install/" class="post-taxonomy">#install</a></div>
+<div class="post-summary mb-3"><h2 id="manjaro-kde安装配置">MANJARO KDE安装配置</h2>
+<ul>
+<li>已换<code>Arch Linux</code>，<code>Manjaro</code>文章已经不再添加更新，此文为以前所写，作为备份用,看心情更新</li>
+</ul></div>
+      </div>
+    </article></div><div class="row">
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/posts/tech_and_skill/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/posts/tech_and_skill/page/2/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/tech_and_skill/">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/tech_and_skill/page/2/">2</a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/posts/tech_and_skill/page/3/">3</a>
+  </li>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/posts/tech_and_skill/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
+
+</div>
+</div>
+
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row">
+  <div class="col-xl-6 d-flex align-items-center justify-content-center">
+    <img class="profile-avatar img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" alt="impressionyang" loading="lazy">
+  </div>
+  <div class="col-xl-6">
+    <h5 class="profile-name my-2">impressionyang</h5><div class="profile-bio mb-2">looove coooding.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><div class="profile-about mb-2"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">关于</a></div></div>
+</section><section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/talk/hugo_theme_bootstrap_change/">对于此hugo主题的更改</a></li><li><a href="/posts/talk/about_change_to_hugo/">关于换到hugo</a></li><li><a href="/posts/book/book_about/">关于读书分享</a></li><li><a href="/posts/coding/git-update-script/">git更新脚本</a></li><li><a href="/posts/tech_and_skill/qt-creator-my-setup/">Qt个人配置</a></li></ul>
+</section>
+<section class="taxonomy-categories row surface">
+  <h4>
+    <a href="/categories">分类</a>
+  </h4>
+  <div><a href="/categories/tech_and_skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="tech_and_skill">
+      tech_and_skill <span class="badge rounded-pill">30</span>
+    </a><a href="/categories/coding/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="coding">
+      coding <span class="badge rounded-pill">12</span>
+    </a><a href="/categories/book/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="book">
+      book <span class="badge rounded-pill">2</span>
+    </a><a href="/categories/talk/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="talk">
+      talk <span class="badge rounded-pill">2</span>
+    </a></div>
+</section><section class="taxonomy-series row surface">
+  <h4>
+    <a href="/series">专栏</a>
+  </h4>
+  <div><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="博客">
+      博客 <span class="badge rounded-pill">45</span>
+    </a></div>
+</section><section class="taxonomy-tags row surface">
+  <h4>
+    <a href="/tags">标签</a>
+  </h4>
+  <div><a href="/tags/skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="skill">
+      skill <span class="badge rounded-pill">33</span>
+    </a><a href="/tags/linux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Linux">
+      Linux <span class="badge rounded-pill">8</span>
+    </a><a href="/tags/archlinux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="archlinux">
+      archlinux <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c&#43;&#43;/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C&#43;&#43;">
+      C&#43;&#43; <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/program/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="program">
+      program <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C">
+      C <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/hexo/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="hexo">
+      hexo <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/qt/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Qt">
+      Qt <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/install/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="install">
+      install <span class="badge rounded-pill">4</span>
+    </a><a href="/tags/plasma/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Plasma">
+      Plasma <span class="badge rounded-pill">3</span>
+    </a></div>
+</section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:impressionyang@outlook.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/impressionyang" title="Github">
+        <i class="fab fa-fw fa-2x fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2572247223&amp;site=qq&amp;menu=yes" title="Qq">
+        <i class="fab fa-fw fa-2x fa-qq"></i>
+      </a>
+    </li><li class="nav-item">
+    <a class="nav-link social-link" target="_blank" href="/posts/tech_and_skill/index.xml" title="RSS">
+      <i class="fas fa-fw fa-2x fa-rss"></i>
+    </a>
+  </li></nav>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.9.2/mermaid.min.js"></script>
+<script>
+      mermaid.initialize({ startOnLoad: true });
+</script>
+<div class="copyright mb-2">
+  Copyright © 2016-2021 impressionyang. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">Bootstrap</a> theme.
+</div></footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

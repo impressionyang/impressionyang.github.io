@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>专栏 on impressionyang</title>
+    <link>/series/</link>
+    <description>Recent content in 专栏 on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 16 May 2021 14:39:48 +0800</lastBuildDate><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客</title>
+      <link>/series/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 16 May 2021 14:39:48 +0800</pubDate>
+      
+      <guid>/series/%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

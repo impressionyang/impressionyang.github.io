@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on impressionyang</title>
+    <link>/series/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 16 May 2021 14:39:48 +0800</lastBuildDate><atom:link href="/series/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>对于此hugo主题的更改</title>
+      <link>/posts/talk/hugo_theme_bootstrap_change/</link>
+      <pubDate>Sun, 16 May 2021 14:39:48 +0800</pubDate>
+      
+      <guid>/posts/talk/hugo_theme_bootstrap_change/</guid>
+      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此贴说明对该主题做出的更改点，主要是为了达成原有hexo站点功能&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于换到hugo</title>
+      <link>/posts/talk/about_change_to_hugo/</link>
+      <pubDate>Sun, 16 May 2021 00:10:33 +0800</pubDate>
+      
+      <guid>/posts/talk/about_change_to_hugo/</guid>
+      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本贴说明为何更改使用&lt;code&gt;hugo&lt;/code&gt;作为静态博客生成器&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img class=&#34;img-fluid&#34; src=&#34;https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/20210515224700.png&#34; alt=&#34;hugo&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于读书分享</title>
+      <link>/posts/book/book_about/</link>
+      <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/book/book_about/</guid>
+      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;读书分享的说明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;读书分享一般用来分享一些书籍的读后感的,估计是会长期的鸽下去的2333&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git更新脚本</title>
+      <link>/posts/coding/git-update-script/</link>
+      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
+      
+      <guid>/posts/coding/git-update-script/</guid>
+      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此脚本用于更新git仓库，主要用于使用ssh克隆的仓库，使用https克隆或者直接下载的不可使用此脚本进行更新，编写此贴用于保存脚本以供后用&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Qt个人配置</title>
+      <link>/posts/tech_and_skill/qt-creator-my-setup/</link>
+      <pubDate>Sun, 02 May 2021 23:55:04 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/qt-creator-my-setup/</guid>
+      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该帖子是用来保存Qt的相关配置的，比如代码片段、快捷键等，用来进行新开发环境搭建时的参考&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img class=&#34;img-fluid&#34; src=&#34;https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/20210503000819.png&#34; alt=&#34;pic cheader&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Win10安装配置Windows Terminal</title>
+      <link>/posts/tech_and_skill/win10-windows-terminal-setup/</link>
+      <pubDate>Wed, 17 Feb 2021 02:22:54 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/win10-windows-terminal-setup/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文也是在Win10主机下配置轻量级开发环境的一个帖子，主要是用来记录Win10下的新Windows Terminal的安装和配置，留作以后参考&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;直接在Win10商店中安装Windows Terminal即可&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;img-fluid&#34; src=&#34;https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/20210217022649.png&#34; alt=&#34;pic windows terminal in win10 store&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>win10重新安装导出的WSL2镜像</title>
+      <link>/posts/tech_and_skill/win10-install-wsl2/</link>
+      <pubDate>Mon, 15 Feb 2021 21:17:50 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/win10-install-wsl2/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装&lt;code&gt;WSL2 Linux子系统&lt;/code&gt;是我打算在游戏主机上面安装轻量级开发环境的下一步打算，至于为什么不用更好评的&lt;code&gt;WSL1&lt;/code&gt;我也不多说，毕竟&lt;code&gt;WSL2&lt;/code&gt;是&lt;code&gt;Microsoft&lt;/code&gt;主推的，支持的特性和后续的维护应该会更快且优先级更高，所以本文使用&lt;code&gt;WSL2&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;系统需求&#34;&gt;系统需求&lt;/h2&gt;
+&lt;p&gt;下面只是列举基本要求，详细的内容请查看微软的文档&lt;a href=&#34;https://docs.microsoft.com/zh-cn/windows/wsl/&#34; target=&#34;_blank&#34;&gt;传送门&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;img-fluid&#34; src=&#34;https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/20210216143928.png&#34; alt=&#34;pic wsl2 require&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;所以如果不是&lt;code&gt;win10&lt;/code&gt;的话就基本不能体验&lt;code&gt;WSL2&lt;/code&gt;了&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>win10 安装scoop的正确姿势</title>
+      <link>/posts/tech_and_skill/win10-install-scoop/</link>
+      <pubDate>Mon, 15 Feb 2021 20:10:54 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/win10-install-scoop/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么想要安装scoop并且是在win10中呢？这个问题主要聚焦于我的游戏小主机上，我想要能够随时玩游戏的同时也能够进一定的博客工作或者轻量级的开发（现在wsl2中），所以需要使用scoop这个Windows的命令行工具。 但是这个工具在国内进行安装是有一定的难度的，主要是网络环境以及系统的需求，所以做此帖子留作参考&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;系统需求&#34;&gt;系统需求&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;操作系统： win10 （主要是基本能够一步到位，不用考虑以下因素，当然，Windows的其他发行版满足以下需求也可以进行安装）&lt;/li&gt;
+&lt;li&gt;power shell版本： 3.0以上&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Qt使用配置文件</title>
+      <link>/posts/coding/qt-qsettins-uage/</link>
+      <pubDate>Tue, 29 Dec 2020 23:34:17 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qsettins-uage/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文用于在qt中使用配置文件进行一些配置的保存&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
+&lt;p&gt;关键点就是使用qt的一个类&lt;code&gt;QSettings&lt;/code&gt;，该类提供一系列接口用于配置文件的操作如读取和写入，支持的配置文件格式有&lt;code&gt;ini&lt;/code&gt;、&lt;code&gt;conf&lt;/code&gt;等。使用该类在软件启动时进行初始化操作对一些软件的配置进行赋值操作，可以使得上一次保存的配置可以继续使用，增加程序使用的便捷性。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用picocm来进行Linux下的串口调试</title>
+      <link>/posts/tech_and_skill/picocom-dialy-use/</link>
+      <pubDate>Thu, 17 Sep 2020 13:07:07 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/picocom-dialy-use/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么不用&lt;code&gt;minicom&lt;/code&gt;呢？功能又强大由好用不是。主要原因就是&lt;code&gt;minicom&lt;/code&gt;没有彩色文字，看着难受，特别是调试&lt;code&gt;ARM Linux&lt;/code&gt;的时候233&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;因为正常是在&lt;code&gt;Debian&lt;/code&gt;系列的&lt;code&gt;Linux&lt;/code&gt;发行版上面使用的(&lt;code&gt;deepin&lt;/code&gt;或者&lt;code&gt;ubuntu&lt;/code&gt;这些的，解决方案比较完善)，所以就是用&lt;code&gt;apt&lt;/code&gt;来进行安装，其他发行版使用自己的包管理软件进行安装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo apt install picocom -y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux下在文件夹所有文件中查找相关内容</title>
+      <link>/posts/tech_and_skill/search-content-in-files-of-dir/</link>
+      <pubDate>Sat, 22 Aug 2020 11:18:52 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/search-content-in-files-of-dir/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文是为了记录在编程中进行一些在文件夹中查找某些关键字进行配置时查找文件过于麻烦的解决办法
+在Linux开发中使用一些命令或者命令的配合进行查找文件内容及匹配关键词还是比较方便的。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux解压缩文件</title>
+      <link>/posts/tech_and_skill/compress-file-extract-and-compress/</link>
+      <pubDate>Tue, 11 Aug 2020 21:50:31 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/compress-file-extract-and-compress/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;先导：写这篇文章是为了记录在Linux下常用的、简单的进行压缩文件的解压缩以及打包压缩文件的方法，以方便自己未来忘记了在查询&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;全局说明&#34;&gt;全局说明&lt;/h2&gt;
+&lt;p&gt;下面的两个参数意义&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dest&lt;/code&gt;：目标文件，压缩的话将&lt;code&gt;dest&lt;/code&gt;换成你想要的文件名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src&lt;/code&gt;：来源文件，是一个文件或者一个文件夹，压缩要想打包多个就空格后追加接下来的文件或者文件夹，解压的就不行了&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>C语言二级指针用法之模拟句柄用途</title>
+      <link>/posts/coding/pointer-level2-as-handle/</link>
+      <pubDate>Tue, 11 Aug 2020 21:47:45 +0000</pubDate>
+      
+      <guid>/posts/coding/pointer-level2-as-handle/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为在学习中使用到了二级指针进行操作，故而作此总结&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;提前了解&#34;&gt;提前了解&lt;/h2&gt;
+&lt;h3 id=&#34;句柄&#34;&gt;句柄&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;以下词条来自百度百科&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;句柄（Handle）是一个是用来标识对象或者项目的标识符，可以用来描述窗体、文件等，值得注意的是句柄不能是常量 。
+Windows之所以要设立句柄，根本上源于内存管理机制的问题，即虚拟地址。简而言之数据的地址需要变动，变动以后就需要有人来记录、管理变动，因此系统用句柄来记载数据地址的变更。在程序设计中，句柄是一种特殊的智能指针，当一个应用程序要引用其他系统（如数据库、操作系统）所管理的内存块或对象时，就要使用句柄 。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;二级指针&#34;&gt;二级指针&lt;/h3&gt;
+&lt;p&gt;指针是C语言中最高深莫测的部分了，能够直接操作内存的这些指针如果使用得当的话可以完成很多很高效的代码。而二级或者多级指针则能够达到你之前想都不敢想的效果。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以下来自于百度百科&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A(即B的地址)是指向指针的指针，称为二级指针，用于存放二级指针的变量称为二级指针变量．根据B的不同情况，二级指针又分为指向指针变量的指针和指向数组的指针。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>给pugjs的stun主题添加canvas时钟</title>
+      <link>/posts/tech_and_skill/add-canvas-clock-in-pugjs/</link>
+      <pubDate>Fri, 07 Aug 2020 20:23:18 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/add-canvas-clock-in-pugjs/</guid>
+      <description>先导 首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了 在pugjs中添加一些好用的东</description>
+    </item>
+    
+    <item>
+      <title>最近网站备案中。。。</title>
+      <link>/posts/tech_and_skill/the-blog-is-put-on-record/</link>
+      <pubDate>Tue, 21 Apr 2020 17:10:07 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/the-blog-is-put-on-record/</guid>
+      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;打算是主要打理国内的空间，当然github也会同步发布，是所以使用未备案的域名感觉还是挺不妥当的，还是备案一下，但是我万万没想到的是备案有那么多需要注意的问题&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Arch Linux切换rEFInd开机引导程序</title>
+      <link>/posts/tech_and_skill/arch-refind-bootloader-efi/</link>
+      <pubDate>Mon, 30 Mar 2020 09:35:19 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/arch-refind-bootloader-efi/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;p&gt;以下&lt;code&gt;rEFInd&lt;/code&gt;的&lt;code&gt;arckwiki&lt;/code&gt;词条的内容：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;rEFInd 是一个 UEFI 启动管理器。它是 rEFIt （不再维护）的一个分支并且针对非 Mac 硬件修复了若干问题。它被设计为平台无关，可启动多个操作系统。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用&lt;code&gt;rEFInd&lt;/code&gt;的需求是我原来使用的是&lt;code&gt;bootctl&lt;/code&gt;这个启动引导程序,虽然简单好用,但是只有黑白界面难免有点单调,所以就想使用一个比较漂亮的但是文件结构又简洁的&lt;code&gt;bootloader&lt;/code&gt;,所以&lt;code&gt;grub&lt;/code&gt;就被丢弃了,虽然它的却很强大,但是文件结构有点复杂,配置影响因素有点多&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Qt文件操作QFile</title>
+      <link>/posts/coding/qt-qfile-note/</link>
+      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qfile-note/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为有需求使用&lt;code&gt;Qt&lt;/code&gt;的文件&lt;code&gt;I/O&lt;/code&gt;操作,所以做此记录以供后用&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Qt UDP广播</title>
+      <link>/posts/coding/qt-udp-brocast/</link>
+      <pubDate>Sat, 28 Mar 2020 19:57:07 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-udp-brocast/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最近有使用&lt;code&gt;QT&lt;/code&gt;的&lt;code&gt;UDP&lt;/code&gt;广播,所以记录这篇帖子记录一下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;讲解&#34;&gt;讲解&lt;/h2&gt;
+&lt;p&gt;什么是&lt;code&gt;UDP&lt;/code&gt;广播,我就不搬百科的内容了,就按照我的一点理解来说吧&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;UDP&lt;/code&gt;是一种网络进程间通信的技术,一般和&lt;code&gt;TCP&lt;/code&gt;一起出现,&lt;code&gt;UDP&lt;/code&gt;的通信优势是速度快、不需要确定对方&lt;code&gt;IP&lt;/code&gt;地址，但是缺点是连接不可靠。而&lt;code&gt;UDP&lt;/code&gt;广播是&lt;code&gt;UDP&lt;/code&gt;下的一种通讯手段，他作为广播发送端（使用&lt;code&gt;writeDatagram()&lt;/code&gt;方法）时可以在当前网络下的广播地址中进行发送广播信息，而任何接收端(使用&lt;code&gt;readDatagram()&lt;/code&gt;方法)都能接收到服务器&lt;strong&gt;当前发送&lt;/strong&gt;的广播信息&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>为主题用pugjs编写的hexo博客添加网站运行时间</title>
+      <link>/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/</link>
+      <pubDate>Fri, 27 Mar 2020 22:59:08 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;写这篇帖子的原因是我很想在博客网站下面添加网站的运行时间,网上虽然有教程是怎么添加的,但是他们演示的主题大都是用&lt;code&gt;ejs&lt;/code&gt;或者是&lt;code&gt;wig&lt;/code&gt;来编写的,而我使用的这个个人很喜欢的&lt;code&gt;stun&lt;/code&gt;主题却是用&lt;code&gt;pugjs&lt;/code&gt;编写的,实在是很想用,所以根据语法的转换规则修改了一份&lt;code&gt;pug&lt;/code&gt;文件下添加的脚本来使用,美滋滋&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>archlinux安装篇（三） KDE配套小工具</title>
+      <link>/posts/tech_and_skill/archlinux-install-3/</link>
+      <pubDate>Thu, 26 Mar 2020 09:50:22 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/archlinux-install-3/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;经过上一次的在配置之后能够使用图形界面了,但是会发现有一些功能是使用不了的,包括一切笔记本上的快捷键,原因是缺少了相配套的小工具进行配置,本期就是讲讲这些相关配置的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;再更新中&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</title>
+      <link>/posts/coding/markdown-note-mermaid/</link>
+      <pubDate>Sat, 21 Mar 2020 22:31:34 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-note-mermaid/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;p&gt;&lt;/br&gt;&lt;center&gt;&lt;b&gt;本贴在手机端因为&lt;code&gt;mermaid&lt;/code&gt;插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览&lt;/b&gt;&lt;/center&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;持续更新中&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录一次Hexo的崩溃修复</title>
+      <link>/posts/tech_and_skill/hexo-broken-fix-note01/</link>
+      <pubDate>Fri, 20 Mar 2020 21:43:36 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/hexo-broken-fix-note01/</guid>
+      <description>&lt;h2 id=&#34;问题复现&#34;&gt;问题复现&lt;/h2&gt;
+&lt;p&gt;这次崩溃的原因是安装主题的时候手贱终止了一次然后就出了问题，导致&lt;code&gt;hexo&lt;/code&gt;的各种命令如&lt;code&gt;clean&lt;/code&gt;、&lt;code&gt;generate&lt;/code&gt;、&lt;code&gt;server&lt;/code&gt;等一直报警告并且导致网页资源的渲染出问题从而使得网站运行异常&lt;/p&gt;
+&lt;p&gt;而这次发帖是为了记录本次的修复过程以提供后用&lt;/p&gt;
+&lt;h2 id=&#34;修复的原理&#34;&gt;修复的原理&lt;/h2&gt;
+&lt;p&gt;我们都知道&lt;code&gt;hexo&lt;/code&gt;的目录下面有一个&lt;code&gt;node_modules&lt;/code&gt;文件架夹和一个&lt;code&gt;package.json&lt;/code&gt;文件（安装插件后会自动生成），文件夹是保存了各个插件的文件依赖，&lt;code&gt;json&lt;/code&gt;文件是保存了&lt;code&gt;hexo&lt;/code&gt;的各个依赖组件，使用&lt;code&gt;npm install&lt;/code&gt;可以根据此文件进行批量安装。&lt;/p&gt;
+&lt;p&gt;更新/安装中断或者操作插件的时候导致的异常一般是因为&lt;code&gt;node_modules&lt;/code&gt;文件夹里面的文件出问题或者丢失&lt;/p&gt;
+&lt;p&gt;所以&lt;strong&gt;我们遇到什么困难也不要怕，微笑着干掉它&lt;/strong&gt;，没错，直接把&lt;code&gt;node_modules&lt;/code&gt;文件夹整个删掉、删掉、删掉。&lt;/p&gt;
+&lt;p&gt;然后就没有问题了，因为整个问题的根源已经没有了233，开玩笑的，基本上只要把插件重新一个个安装完基本上就没事了，当然，如果你在折腾主题的话还需要先把主题会复制折腾之前哦。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记一次Fcitx5的安装</title>
+      <link>/posts/tech_and_skill/fcitx5-install-note/</link>
+      <pubDate>Fri, 20 Mar 2020 16:37:55 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/fcitx5-install-note/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;maybe a new fcitx. Next generation of fcitx. Fcitx 5 is a generic input method framework released under LGPL-2.1+.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以上是&lt;code&gt;github&lt;/code&gt;上记录的&lt;code&gt;fcitx5&lt;/code&gt;的仅有的寥寥几笔，想看到更多的内容请查看老K的&lt;a href=&#34;https://www.csslayer.info/wordpress/fcitx-dev/a-new-pinyin-input-method-that-might-be-slightly-better-than-sunpinyin/&#34; target=&#34;_blank&#34;&gt;文章&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;这篇帖子是记录我安装&lt;code&gt;Fcitx5&lt;/code&gt;的经历，反正是折腾了很久才配置成功的，也看了很多其他人的配置，记录成功安装方法以留作以后参考&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;和Java的变量对比</title>
+      <link>/posts/coding/cpp-java-variable-diff/</link>
+      <pubDate>Fri, 20 Mar 2020 14:08:35 +0000</pubDate>
+      
+      <guid>/posts/coding/cpp-java-variable-diff/</guid>
+      <description>&lt;h2 id=&#34;c和java的变量对比&#34;&gt;C++和Java的变量对比&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本贴创建的原因是本人需要做一个&lt;code&gt;C++&lt;/code&gt;和&lt;code&gt;Java&lt;/code&gt;之间进行&lt;code&gt;socket&lt;/code&gt;通信的时候想要确定一下两者之间变量的内存占用情况，经过验证测试得出的结果用于以后用来进行验证&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;本次的结果均是在32位系统中得到的，64位的操作系统的内存占用情况可能有所不同！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>解决KDE下KDE Wallet重装系统后每次登陆需要输入密码</title>
+      <link>/posts/tech_and_skill/kde-wallet-login-config/</link>
+      <pubDate>Sun, 15 Mar 2020 12:26:23 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/kde-wallet-login-config/</guid>
+      <description>&lt;h2 id=&#34;解决kde下kde-wallet重装系统后每次登陆需要输入密码&#34;&gt;解决KDE下KDE Wallet重装系统后每次登陆需要输入密码&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在每次重装或者配置桌面后&lt;code&gt;kdewallet&lt;/code&gt;总是在登陆系统之后提示输入密码，虽然在输入密码后能够继续正常使用，但是每次登陆系统都需要输入一次密码还是很烦人的，所以记录本帖以留作后用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;出现的原因&#34;&gt;出现的原因&lt;/h2&gt;
+&lt;p&gt;在重新配置桌面或者重装系统之后&lt;code&gt;KDE Wallet&lt;/code&gt;所需要的一些必备需要依赖组件未能找到，所以导致不能正确运行&lt;code&gt;KDE Wallet&lt;/code&gt;，所以只要安装其所需的组件即可。而其所需的但是未能自动安装的依赖组件正是&lt;a href=&#34;https://www.archlinux.org/packages/?name=kwallet-pam&#34; target=&#34;_blank&#34;&gt;kwallet-pam&lt;/a&gt;
+&lt;sup&gt;Extra&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
+&lt;p&gt;安装缺失的组件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo pacman -S kwallet-pam
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hexo &#43; Git Pages搭建个人博客（一）</title>
+      <link>/posts/tech_and_skill/hexo-init-config-1/</link>
+      <pubDate>Mon, 09 Mar 2020 16:44:58 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/hexo-init-config-1/</guid>
+      <description>&lt;h2 id=&#34;hexo--git-pages搭建个人博客一&#34;&gt;Hexo + Git Pages搭建个人博客（一）&lt;/h2&gt;
+&lt;p&gt;期待已久的&lt;code&gt;Hexo&lt;/code&gt;部署教程终于来了，本次发帖是在经过较长时间地使用&lt;code&gt;Hexo&lt;/code&gt;之后才发出的，一成功就发感觉有点不稳，本贴主要是记录了本博客站的最终搭建方案，会分为几个部分，这次就讲讲怎么把&lt;code&gt;Hexo&lt;/code&gt;运行起来的方法。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;img-fluid&#34; src=&#34;https://impressionyang.gitee.io/imgbed/img/blog/2020-03-09_10-37.png&#34; alt=&#34;hexo web&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>KDE下完美的Unity桌面体验，扔掉active window control</title>
+      <link>/posts/tech_and_skill/unity-style-applet/</link>
+      <pubDate>Sat, 29 Feb 2020 19:09:50 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/unity-style-applet/</guid>
+      <description>&lt;h2 id=&#34;psifidotos-的-applet-window-系列完全实现unity当年风采&#34;&gt;psifidotos 的 applet-window 系列完全实现unity当年风采&lt;/h2&gt;
+&lt;p&gt;熟悉我对&lt;code&gt;Linux&lt;/code&gt;桌面态度的人都知道我个人是很推崇当年&lt;code&gt;Ubuntu&lt;/code&gt;的&lt;code&gt;Unity&lt;/code&gt;桌面的全局菜单的整合功能的，其有着能把窗口标题栏以及窗口按钮和全局菜单整合为一体的功能，能够大大节省屏幕的纵向空间而不影响使用菜单以及查看窗口标题和使用窗口按钮。在我个人看来，&lt;code&gt;Ubuntu&lt;/code&gt;的&lt;code&gt;Unity&lt;/code&gt;桌面简直就是&lt;code&gt;Linux&lt;/code&gt;桌面环境的最强代表，直到它退出历史舞台。&lt;/p&gt;
+&lt;p&gt;至今我仍然向往那种能够有效率节省屏幕空间的功能却苦于没有什么桌面能够原生支持，但是，在我转向了&lt;code&gt;archlinux+KDE&lt;/code&gt;之后便发现了此事有所转机。&lt;/p&gt;
+&lt;p&gt;一开始我是使用&lt;code&gt;KDE&lt;/code&gt;的一个名为&lt;code&gt;active window control&lt;/code&gt;的插件进行使用，它能够将窗口标题栏和顶栏进行结合，但是全局菜单需要使用&lt;code&gt;KDE&lt;/code&gt;的原生全局菜单插件，并且其使用起来并不是很友好，不过它也能够在一定程度上节省了屏幕的纵向空间，所以也能够勉强够用，但是使用起来并不是很开心。&lt;/p&gt;
+&lt;p&gt;但是在&lt;code&gt;KDE&lt;/code&gt;桌面的强大的可定制化插件的支持下，由&lt;a href=&#34;https://github.com/psifidotos&#34; target=&#34;_blank&#34;&gt;psifidotos&lt;/a&gt;
+所编写的&lt;code&gt;applet-window&lt;/code&gt;系列插件能够配合&lt;code&gt;Plasma KDE&lt;/code&gt;桌面来完美来达成‘这一愿想。&lt;/p&gt;
+&lt;p&gt;要实现&lt;code&gt;Unity&lt;/code&gt;桌面的功能需要安装他写的三个插件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;applet-window-title&lt;/li&gt;
+&lt;li&gt;applet-window-buttons&lt;/li&gt;
+&lt;li&gt;applet-window-appmenu&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;说明：&lt;code&gt;archlinux+KDE&lt;/code&gt;（原理上来说&lt;code&gt;manjaro+KDE&lt;/code&gt;也可以）在安装好桌面后还需要安装&lt;code&gt;cmake&lt;/code&gt;和&lt;code&gt;extra-cmake-modules&lt;/code&gt;，一般在安装了这两个编译依赖之后如果还是编译不成功请在评论区说明清楚哦。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Qt CMake GUI项目生成脚本</title>
+      <link>/posts/coding/auto-init-cmake-qt-project/</link>
+      <pubDate>Thu, 27 Feb 2020 09:48:34 +0000</pubDate>
+      
+      <guid>/posts/coding/auto-init-cmake-qt-project/</guid>
+      <description>&lt;h2 id=&#34;自动初始化linux下qt通用开发的cmake-gui工程的脚本&#34;&gt;自动初始化Linux下Qt通用开发的CMake GUI工程的脚本&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;这个脚本的来由是在我使用了&lt;code&gt;CMake&lt;/code&gt;作为&lt;code&gt;Qt&lt;/code&gt;工程的编译工具之后，为了使得即使在没有&lt;code&gt;qtcreator&lt;/code&gt;的情况下也能快速地建立&lt;code&gt;CMake Qt GUI&lt;/code&gt;工程从而使用其他的文本编辑器如&lt;code&gt;VSCode&lt;/code&gt;或者&lt;code&gt;Atom&lt;/code&gt;进行开发，而开发的工程建立脚本。&lt;/li&gt;
+&lt;li&gt;本项目已经发布至我的&lt;a href=&#34;https://github.com/impressionyang/qt_cmanke_project_initialize&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>终端shell美化</title>
+      <link>/posts/tech_and_skill/console-beautify-config/</link>
+      <pubDate>Tue, 25 Feb 2020 22:01:40 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/console-beautify-config/</guid>
+      <description>&lt;h2 id=&#34;终端美化&#34;&gt;终端美化&lt;/h2&gt;
+&lt;p&gt;终端是&lt;code&gt;Linux&lt;/code&gt;用户的一大特色，对于经常使用终端的我来说，单调的配色和命令行已经使我有点审美疲劳了，配色可以使用首选项配置，但是命令行的模式我是有点犯尴尬症，所以重新配置了下终端并写了这篇帖子&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GoldenDict个人配置</title>
+      <link>/posts/tech_and_skill/goldendict-personal-config/</link>
+      <pubDate>Tue, 25 Feb 2020 11:06:32 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/goldendict-personal-config/</guid>
+      <description>&lt;h2 id=&#34;goldendict个人配置&#34;&gt;GoldenDict个人配置&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ndash;一款支持Linux的强大单词翻译软件&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以下来自百度百科&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GoldenDict 是一款不错的、与StarDict（星际译王）类似的词典软件。它使用 WebKit作为渲染核心，格式化、颜色、图像、链接等支持一应俱全；支持多种词典文件格式，包括Babylon的 .BGL 文件、StarDict 的 .ifo/.dict/.idx/.syn 文件、Dictd的·index/.dict(.dz) 文件、ABBYY Lingvo 的 .dsl/.lsa/.dat 文件。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>markdown数学公式</title>
+      <link>/posts/coding/markdown-math-support/</link>
+      <pubDate>Tue, 25 Feb 2020 09:40:30 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-math-support/</guid>
+      <description>&lt;h2 id=&#34;markdown数学公式&#34;&gt;markdown数学公式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;此贴用来记录日常使用的&lt;code&gt;markdown&lt;/code&gt;数学公式以供参考&lt;/li&gt;
+&lt;li&gt;不定时更新&lt;/li&gt;
+&lt;li&gt;本文所用的公式渲染器是&lt;code&gt;KaTeX&lt;/code&gt;，相关语法支持请点击&lt;a href=&#34;https://katex.org/docs/supported.html&#34; target=&#34;_blank&#34;&gt;此处&lt;/a&gt;
+查看&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Makfile文件的编写</title>
+      <link>/posts/coding/makefile_personal_config/</link>
+      <pubDate>Mon, 24 Feb 2020 11:59:33 +0000</pubDate>
+      
+      <guid>/posts/coding/makefile_personal_config/</guid>
+      <description>&lt;h2 id=&#34;makfile文件的编写&#34;&gt;Makfile文件的编写&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;不定期更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;make和makefile&#34;&gt;make和Makefile&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;以下来自百度百科&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;make&lt;/code&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;make&lt;/code&gt;是一条计算机指令，是在安装有&lt;code&gt;GNU Make&lt;/code&gt;的计算机上的可执行指令。该指令是读入一个名为&lt;code&gt;makefile&lt;/code&gt; 的文件，然后执行这个文件中指定的指令。有时&lt;code&gt;make&lt;/code&gt;又指&lt;code&gt;GNU Make&lt;/code&gt;，&lt;code&gt;GNU Make&lt;/code&gt; 是一个用来控制可执行文件和其他一些从源文件来的非源代码文件版本的软件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Makefile&lt;/code&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个工程中的源文件不计其数，其按类型、功能、模块分别放在若干个目录中，&lt;code&gt;makefile&lt;/code&gt;定义了一系列的规则来指定哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为 makefile就像一个Shell脚本一样，也可以执行操作系统的命令。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>CMake编写总结</title>
+      <link>/posts/coding/cmake-personal-config/</link>
+      <pubDate>Sun, 23 Feb 2020 22:47:22 +0000</pubDate>
+      
+      <guid>/posts/coding/cmake-personal-config/</guid>
+      <description>&lt;h2 id=&#34;cmake编写总结&#34;&gt;CMake编写总结&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;不定期更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cmake介绍&#34;&gt;CMake介绍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;以下来自百度百科&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CMake是一个跨平台的安装（编译）工具，可以用简单的语句来描述所有平台的安装(编译过程)。他能够输出各种各样的makefile或者project文件，能测试编译器所支持的C++特性,类似UNIX下的automake。只是 CMake 的组态档取名为 CMakeLists.txt。CMake 并不直接建构出最终的软件，而是产生标准的建构档（如 Unix 的 Makefile 或 Windows Visual C++ 的 projects/workspaces），然后再依一般的建构方式使用。这使得熟悉某个集成开发环境（IDE）的开发者可以用标准的方式建构他的软件，这种可以使用各平台的原生建构系统的能力是 CMake 和 SCons 等其他类似系统的区别之处。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;cmake和make&#34;&gt;CMake和make&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;以下来自百度百科&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“CMake”这个名字是“cross platform make”的缩写。虽然名字中含有“make”，但是CMake和Unix上常见的“make”系统是分开的，而且更为高阶。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;make&lt;/code&gt;和&lt;code&gt;CMake&lt;/code&gt;之间的关系是&lt;code&gt;CMake&lt;/code&gt; 通过命令可以生成&lt;code&gt;make&lt;/code&gt;执行的&lt;code&gt;Makefile&lt;/code&gt;文件，所以说&lt;code&gt;CMake&lt;/code&gt; 是&lt;code&gt;make&lt;/code&gt; 的升级版的生成工具&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>archlinux安装篇（二） KDE桌面环境</title>
+      <link>/posts/tech_and_skill/archlinux-install_2/</link>
+      <pubDate>Sat, 22 Feb 2020 16:38:19 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/archlinux-install_2/</guid>
+      <description>&lt;h2 id=&#34;archlinux安装篇二&#34;&gt;archlinux安装篇（二）&lt;/h2&gt;
+&lt;p&gt;接着上一次安装完成了之后应该能启动到&lt;code&gt;archlinux&lt;/code&gt;的图形界面了，但是没有图形界面的话作为日常使用的系统还是很勉强的，所以还是很有必要进行接下来的图形操作界面的配置的&lt;/p&gt;
+&lt;p&gt;接下来就是配置&lt;code&gt;archlinux&lt;/code&gt;的图形操作环境了，本文介绍的是&lt;code&gt;Plasma KDE&lt;/code&gt;桌面环境&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>盘点C/C&#43;&#43;语言编程&#43;编译工具</title>
+      <link>/posts/coding/c-cpp-tools-collect/</link>
+      <pubDate>Fri, 21 Feb 2020 10:40:33 +0000</pubDate>
+      
+      <guid>/posts/coding/c-cpp-tools-collect/</guid>
+      <description>&lt;h2 id=&#34;盘点cc语言编程编译工具&#34;&gt;盘点C/C++语言编程+编译工具&lt;/h2&gt;
+&lt;p&gt;本帖子盘点了&lt;code&gt;Linux&lt;/code&gt;下的各种&lt;code&gt;C/C++&lt;/code&gt;的编程+编译工具及&lt;code&gt;IDE&lt;/code&gt;（集成开发环境&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主要是收集&lt;code&gt;Arch Linux&lt;/code&gt;下的&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Plasma顶栏和窗口标题整合插件</title>
+      <link>/posts/tech_and_skill/active_window_control/</link>
+      <pubDate>Thu, 20 Feb 2020 15:10:11 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/active_window_control/</guid>
+      <description>&lt;h2 id=&#34;plasma顶栏和窗口标题整合插件&#34;&gt;Plasma顶栏和窗口标题整合插件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Active Window Controle 窗口集成功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Active Window Controle经过配置可以使得你的Plasma的窗口与顶栏相结合，达到Ubuntu曾经使用的Unity桌面环境那般高效，可以在全屏是节省一条标题栏的高度，毕竟显示器区域真的是寸土寸金的呀。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一个命令进行Plasma热重启</title>
+      <link>/posts/tech_and_skill/restart_kde/</link>
+      <pubDate>Thu, 20 Feb 2020 14:16:41 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/restart_kde/</guid>
+      <description>&lt;h2 id=&#34;一个命令进行plasma热重启&#34;&gt;一个命令进行Plasma热重启&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;通过一个命令来重启Plasma桌面来释放系统资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;KDE Plasma桌面环境具有很多炫酷的显示效果，但是经过一天下来长时间使用Plasma桌面而不待机或者睡眠的话，Plasma桌面会占用大量的内存资源，为了解决这个问题，特地写了一个脚本文件来对Plasma桌面进行热重启，从而释放一些资源的占用&lt;/p&gt;
+&lt;p&gt;思路基本上就是使用Plasma的指令先关闭Plasma桌面再启动它&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>wine和deepinwine的相关配置</title>
+      <link>/posts/tech_and_skill/wine_deepinwine_config/</link>
+      <pubDate>Thu, 20 Feb 2020 14:01:21 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/wine_deepinwine_config/</guid>
+      <description>&lt;h2 id=&#34;wine和deepinwine的相关配置&#34;&gt;wine和deepinwine的相关配置&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
+      <title>archlinux安装与应急使用双用U盘</title>
+      <link>/posts/tech_and_skill/usb_boot_multi_use/</link>
+      <pubDate>Thu, 20 Feb 2020 12:03:10 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/usb_boot_multi_use/</guid>
+      <description>&lt;h2 id=&#34;archlinux安装与应急使用双用u盘&#34;&gt;archlinux安装与应急使用双用U盘&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;本次方案建议使用16G及以上的U盘进行安装，以保证得到较好的体验&lt;/li&gt;
+&lt;li&gt;建议使用&lt;code&gt;USB3.0&lt;/code&gt;及以上的U盘，当然&lt;code&gt;2.0&lt;/code&gt;也没问题，如果不使用图形界面的话&lt;/li&gt;
+&lt;li&gt;本次是在linux环境下完成的，当然Windows下也可以实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用意义&#34;&gt;使用意义&lt;/h2&gt;
+&lt;p&gt;在使用archlinux启动盘之前需要用&lt;code&gt;dd&lt;/code&gt;命令将U盘刻为启动盘，这样就导致整个U盘分区被&lt;code&gt;dd&lt;/code&gt;修改，最明显的是第一个装有安装环境的分区被分配了一个&lt;code&gt;iso9960&lt;/code&gt;标志并且使用&lt;code&gt;cfdisk&lt;/code&gt;打开该设备是会有提示使用&lt;code&gt;写命令&lt;/code&gt;是会丢失丢失该标志从而导致标签异常使得启动异常，而安装环境仅有&lt;code&gt;600+&lt;/code&gt;M，白白浪费了该启动盘的其他空间，因为不可以新建分区。&lt;/p&gt;
+&lt;p&gt;另一方面，对于某些情况下，例如电脑的系统炸了，但是又要很快地进行某些工作的时候，例如运维、出差是别的电脑是win系统等情况时，需要尽快的使用linux操作系统的时候，如果有一个装在U盘里面的移动的linux操作系统就可以解决燃眉之急了，并且，在日常使用的时候也可以偶尔使用U盘里面的linux系统&lt;/p&gt;
+&lt;p&gt;一些想体验linux操作系统又怕把自己的电脑搞坏的人也可以使用这一方案进行双系统使用，而不是去使用linux live环境。&lt;/p&gt;
+&lt;p&gt;所以，在以上的需求之下，这一使用方案就从我的脑子应运而生了。&lt;/p&gt;
+&lt;h2 id=&#34;基本想法&#34;&gt;基本想法&lt;/h2&gt;
+&lt;p&gt;主要实现的基本想法就是通过将刻好的启动盘的内容复制出来后在重新格式化U盘重新分区并尽量将前两个分区模仿原有的启动盘方案，然后剩下的分区在重新利用。&lt;/p&gt;
+&lt;p&gt;，使用&lt;code&gt;gparted&lt;/code&gt;或者&lt;code&gt;blkid&lt;/code&gt;（Windows可以使用分区工具查看）查看U盘经过&lt;code&gt;dd&lt;/code&gt;刻录之后的&lt;code&gt;文件系统&lt;/code&gt;和&lt;code&gt;标签&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;之后使用&lt;code&gt;mount&lt;/code&gt;命令将其第一和第二个分区挂载后将其内容复制出来&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>arch系的bumblebee安装</title>
+      <link>/posts/tech_and_skill/arch_sierial_bumblebee_install/</link>
+      <pubDate>Wed, 19 Feb 2020 22:45:26 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/arch_sierial_bumblebee_install/</guid>
+      <description>&lt;h2 id=&#34;arch系的bumblebee安装&#34;&gt;arch系的bumblebee安装&lt;/h2&gt;
+&lt;h2 id=&#34;bumblebee有什么用&#34;&gt;bumblebee有什么用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;bumblebee是用来进行双显卡切换的工具，专用于具有NVDIA独立显卡以及CPU核显双显卡方案的笔记本来说可以有效的节约电源&lt;/li&gt;
+&lt;li&gt;有效地进行双显卡的快速切换使用，默认使用核显以节约电量&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux显示bilibili小电视</title>
+      <link>/posts/tech_and_skill/linux_show_bilibili/</link>
+      <pubDate>Wed, 19 Feb 2020 22:12:43 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/linux_show_bilibili/</guid>
+      <description>&lt;h2 id=&#34;linux控制台显示bilibili小电视&#34;&gt;Linux控制台显示bilibili小电视&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;不限制linux系统发行版、不限制shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;显示效果&#34;&gt;显示效果&lt;/h2&gt;
+&lt;p&gt;&lt;img class=&#34;img-fluid&#34; src=&#34;https://impressionyang.gitee.io/imgbed/img/blog/Screenshot_20190826_223125.png&#34; alt=&#34;Screenshot_20190826_223125&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>archlinux生成字符图片</title>
+      <link>/posts/tech_and_skill/archlinux_asciiview/</link>
+      <pubDate>Wed, 19 Feb 2020 14:36:20 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/archlinux_asciiview/</guid>
+      <description>&lt;h2 id=&#34;asciiview----archlinux生成字符图片的程序&#34;&gt;asciiview &amp;mdash;archlinux生成字符图片的程序&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;控制台生成ascii字符图片的程序&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>git使用要点</title>
+      <link>/posts/tech_and_skill/git_use_guid/</link>
+      <pubDate>Wed, 19 Feb 2020 14:32:47 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/git_use_guid/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本帖子是用来记录&lt;code&gt;git&lt;/code&gt;的使用操作的，会在使用到新功能的时候进行更新，所以本贴是会进行较为长期的更新的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;基本命令&#34;&gt;基本命令&lt;/h2&gt;
+&lt;h3 id=&#34;初始化配置username-useremail替换为自己的&#34;&gt;初始化配置（&lt;code&gt;$username&lt;/code&gt;、 &lt;code&gt;$useremail&lt;/code&gt;替换为自己的）&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global user.name $username
+git config --global user.email $useremail
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>archlinux安装篇（一） 基本系统</title>
+      <link>/posts/tech_and_skill/archlinux_install_1/</link>
+      <pubDate>Wed, 19 Feb 2020 11:27:14 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/archlinux_install_1/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装ArchLinux&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>MANJARO KDE安装配置(已换Arch Linux，此贴可能废弃)</title>
+      <link>/posts/tech_and_skill/manjaro-install-config/</link>
+      <pubDate>Tue, 18 Feb 2020 23:41:19 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/manjaro-install-config/</guid>
+      <description>&lt;h2 id=&#34;manjaro-kde安装配置&#34;&gt;MANJARO KDE安装配置&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;已换&lt;code&gt;Arch Linux&lt;/code&gt;，&lt;code&gt;Manjaro&lt;/code&gt;文章已经不再添加更新，此文为以前所写，作为备份用,看心情更新&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

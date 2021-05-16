@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WDE Wallet on impressionyang</title>
+    <link>/tags/wde-wallet/</link>
+    <description>Recent content in WDE Wallet on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 15 Mar 2020 12:26:23 +0000</lastBuildDate><atom:link href="/tags/wde-wallet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决KDE下KDE Wallet重装系统后每次登陆需要输入密码</title>
+      <link>/posts/tech_and_skill/kde-wallet-login-config/</link>
+      <pubDate>Sun, 15 Mar 2020 12:26:23 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/kde-wallet-login-config/</guid>
+      <description>&lt;h2 id=&#34;解决kde下kde-wallet重装系统后每次登陆需要输入密码&#34;&gt;解决KDE下KDE Wallet重装系统后每次登陆需要输入密码&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在每次重装或者配置桌面后&lt;code&gt;kdewallet&lt;/code&gt;总是在登陆系统之后提示输入密码，虽然在输入密码后能够继续正常使用，但是每次登陆系统都需要输入一次密码还是很烦人的，所以记录本帖以留作后用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;出现的原因&#34;&gt;出现的原因&lt;/h2&gt;
+&lt;p&gt;在重新配置桌面或者重装系统之后&lt;code&gt;KDE Wallet&lt;/code&gt;所需要的一些必备需要依赖组件未能找到，所以导致不能正确运行&lt;code&gt;KDE Wallet&lt;/code&gt;，所以只要安装其所需的组件即可。而其所需的但是未能自动安装的依赖组件正是&lt;a href=&#34;https://www.archlinux.org/packages/?name=kwallet-pam&#34; target=&#34;_blank&#34;&gt;kwallet-pam&lt;/a&gt;
+&lt;sup&gt;Extra&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
+&lt;p&gt;安装缺失的组件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo pacman -S kwallet-pam
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

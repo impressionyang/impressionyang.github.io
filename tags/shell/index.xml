@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shell on impressionyang</title>
+    <link>/tags/shell/</link>
+    <description>Recent content in shell on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 11 Aug 2020 21:50:31 +0000</lastBuildDate><atom:link href="/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux解压缩文件</title>
+      <link>/posts/tech_and_skill/compress-file-extract-and-compress/</link>
+      <pubDate>Tue, 11 Aug 2020 21:50:31 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/compress-file-extract-and-compress/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;先导：写这篇文章是为了记录在Linux下常用的、简单的进行压缩文件的解压缩以及打包压缩文件的方法，以方便自己未来忘记了在查询&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;全局说明&#34;&gt;全局说明&lt;/h2&gt;
+&lt;p&gt;下面的两个参数意义&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dest&lt;/code&gt;：目标文件，压缩的话将&lt;code&gt;dest&lt;/code&gt;换成你想要的文件名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src&lt;/code&gt;：来源文件，是一个文件或者一个文件夹，压缩要想打包多个就空格后追加接下来的文件或者文件夹，解压的就不行了&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux显示bilibili小电视</title>
+      <link>/posts/tech_and_skill/linux_show_bilibili/</link>
+      <pubDate>Wed, 19 Feb 2020 22:12:43 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/linux_show_bilibili/</guid>
+      <description>&lt;h2 id=&#34;linux控制台显示bilibili小电视&#34;&gt;Linux控制台显示bilibili小电视&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;不限制linux系统发行版、不限制shell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;显示效果&#34;&gt;显示效果&lt;/h2&gt;
+&lt;p&gt;&lt;img class=&#34;img-fluid&#34; src=&#34;https://impressionyang.gitee.io/imgbed/img/blog/Screenshot_20190826_223125.png&#34; alt=&#34;Screenshot_20190826_223125&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

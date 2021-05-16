@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>技术分享 - impressionyang</title><link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="180x180">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png">
+<meta name="description" content="" /><meta itemprop="name" content="技术分享">
+<meta itemprop="description" content="一个极快、响应式和功能丰富的 Hugo 博客主题"><meta property="og:title" content="技术分享" />
+<meta property="og:description" content="一个极快、响应式和功能丰富的 Hugo 博客主题" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/posts/tech_and_skill/" /><meta property="og:site_name" content="impressionyang" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="技术分享"/>
+<meta name="twitter:description" content="一个极快、响应式和功能丰富的 Hugo 博客主题"/>
+<link rel="alternate" type="application/rss+xml" href="/posts/tech_and_skill/index.xml" title="impressionyang" /><meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.fb6a2f555467bf9d44fa0fc6f95b200fcddbd2efd37ad2621f7408b9c2c4b8e4.css" integrity="sha256-&#43;2ovVVRnv51E&#43;g/G&#43;VsgD83b0u/TetJiH3QIucLEuOQ=" crossorigin="anonymous"><script src="/js/bundle.min.078401d7a9ee1fd5830bf91cfe6d51e0711245cab1e263acd8cd0d79d5a3f04e.js" integrity="sha256-B4QB16nuH9WDC/kc/m1R4HESRcqx4mOs2M0NedWj8E4=" crossorigin="anonymous"></script>
+
+
+</head>
+  <body><header><nav class="navbar fixed-top navbar-expand-xl">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy">impressionyang</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-2 mb-2 mb-lg-0"><form class="search-bar d-flex mr-2" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav mb-2 mb-lg-0 mr-2 ml-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>个人
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-about"><li>
+              <a class="dropdown-item"
+                href="/about/about">
+                <i class="fas fa-user"></i> 个人简介
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/music">
+                <i class="fas fa-music"></i> 歌单分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/games">
+                <i class="fab fa-steam"></i> stem游戏分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/impressionyang" target="_blank">
+                <i class="fab fa-fw fa-github"></i>github
+              </a>
+            </li></ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-third_party" role="button" data-toggle="dropdown" aria-expanded="false">
+            第三方链接
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-third_party"><li>
+              <a class="dropdown-item"
+                href="https://fontawesome.com/" target="_blank">
+                <i class="fab fa-font-awesome"></i> Font Awesome 5
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">
+                <i class="fas fa-palette"></i> 主题地址
+              </a>
+            </li></ul>
+        </li></ul>
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0"><li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="languageSwitcher" data-toggle="popover"
+    data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-language" ></i>
+  </a>
+</li>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="languages list-group"><li class="language list-group-item active">简体中文</li><li class="language list-group-item">
+      <a href="/en/">English</a></li><li class="language list-group-item">
+      <a href="/zh-tw/">繁體中文</a></li></ul>
+</script>
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="paletteSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#palettesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
+  </a>
+</li>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group"><li id="palette-blue" class="palette list-group-item bg-blue">
+      <a>蓝色</a>
+    </li><li id="palette-blue-gray" class="palette list-group-item bg-blue-gray">
+      <a>蓝灰色</a>
+    </li><li id="palette-brown" class="palette list-group-item bg-brown">
+      <a>棕色</a>
+    </li><li id="palette-cyan" class="palette list-group-item bg-cyan">
+      <a>青色</a>
+    </li><li id="palette-green" class="palette list-group-item bg-green">
+      <a>绿色</a>
+    </li><li id="palette-indigo" class="palette list-group-item bg-indigo">
+      <a>靛青色</a>
+    </li><li id="palette-orange" class="palette list-group-item bg-orange">
+      <a>橙色</a>
+    </li><li id="palette-pink" class="palette list-group-item bg-pink">
+      <a>粉色</a>
+    </li><li id="palette-purple" class="palette list-group-item bg-purple">
+      <a>紫色</a>
+    </li><li id="palette-red" class="palette list-group-item bg-red">
+      <a>红色</a>
+    </li><li id="palette-teal" class="palette list-group-item bg-teal">
+      <a>蓝绿色</a>
+    </li><li id="palette-yellow" class="palette list-group-item bg-yellow">
+      <a>黄色</a>
+    </li></ul>
+</script>
+
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="fontSizeSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#fontSizesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-font" ></i>
+  </a>
+</li>
+<script type="text/html" id="fontSizesPopoverBody">
+  <form class="font-size-switcher-form">
+    <label for="fontSize" class="form-label">字体大小</label>
+    <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+  </form>
+</script>
+<form class="mode-switcher-form d-flex align-items-center">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="modeSwitcher">
+  </div>
+</form>
+</ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">技术分享</li></ol>
+</nav><div class="posts mb-4"><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/qt-creator-my-setup/">Qt个人配置</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-05-02
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/qt/" class="post-taxonomy">#Qt</a></div>
+<div class="post-summary mb-3"><h2 id="说明">说明</h2>
+<blockquote>
+<p>该帖子是用来保存Qt的相关配置的，比如代码片段、快捷键等，用来进行新开发环境搭建时的参考</p>
+</blockquote>
+<p><img class="img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/20210503000819.png" alt="pic cheader"  loading="lazy" />
+</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/win10-windows-terminal-setup/">Win10安装配置Windows Terminal</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-02-17
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/win10/" class="post-taxonomy">#win10</a></div>
+<div class="post-summary mb-3"><h2 id="先导">先导</h2>
+<blockquote>
+<p>本文也是在Win10主机下配置轻量级开发环境的一个帖子，主要是用来记录Win10下的新Windows Terminal的安装和配置，留作以后参考</p>
+</blockquote>
+<h2 id="安装">安装</h2>
+<p>直接在Win10商店中安装Windows Terminal即可</p>
+<p><img class="img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/20210217022649.png" alt="pic windows terminal in win10 store"  loading="lazy" />
+</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/win10-install-wsl2/">win10重新安装导出的WSL2镜像</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-02-15
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/win10/" class="post-taxonomy">#win10</a></div>
+<div class="post-summary mb-3"><h2 id="先导">先导</h2>
+<blockquote>
+<p>安装<code>WSL2 Linux子系统</code>是我打算在游戏主机上面安装轻量级开发环境的下一步打算，至于为什么不用更好评的<code>WSL1</code>我也不多说，毕竟<code>WSL2</code>是<code>Microsoft</code>主推的，支持的特性和后续的维护应该会更快且优先级更高，所以本文使用<code>WSL2</code></p>
+</blockquote>
+<h2 id="系统需求">系统需求</h2>
+<p>下面只是列举基本要求，详细的内容请查看微软的文档<a href="https://docs.microsoft.com/zh-cn/windows/wsl/" target="_blank">传送门</a>
+</p>
+<p><img class="img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/20210216143928.png" alt="pic wsl2 require"  loading="lazy" />
+</p>
+<p>所以如果不是<code>win10</code>的话就基本不能体验<code>WSL2</code>了</p></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/win10-install-scoop/">win10 安装scoop的正确姿势</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-02-15
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/win10/" class="post-taxonomy">#win10</a></div>
+<div class="post-summary mb-3"><h2 id="先导">先导</h2>
+<blockquote>
+<p>为什么想要安装scoop并且是在win10中呢？这个问题主要聚焦于我的游戏小主机上，我想要能够随时玩游戏的同时也能够进一定的博客工作或者轻量级的开发（现在wsl2中），所以需要使用scoop这个Windows的命令行工具。 但是这个工具在国内进行安装是有一定的难度的，主要是网络环境以及系统的需求，所以做此帖子留作参考</p>
+</blockquote>
+<h3 id="系统需求">系统需求</h3>
+<ul>
+<li>操作系统： win10 （主要是基本能够一步到位，不用考虑以下因素，当然，Windows的其他发行版满足以下需求也可以进行安装）</li>
+<li>power shell版本： 3.0以上</li>
+</ul></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/picocom-dialy-use/">使用picocm来进行Linux下的串口调试</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-09-17
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a><a href="/tags/picocom/" class="post-taxonomy">#picocom</a></div>
+<div class="post-summary mb-3"><h2 id="先导">先导</h2>
+<blockquote>
+<p>为什么不用<code>minicom</code>呢？功能又强大由好用不是。主要原因就是<code>minicom</code>没有彩色文字，看着难受，特别是调试<code>ARM Linux</code>的时候233</p>
+</blockquote>
+<h2 id="安装">安装</h2>
+<p>因为正常是在<code>Debian</code>系列的<code>Linux</code>发行版上面使用的(<code>deepin</code>或者<code>ubuntu</code>这些的，解决方案比较完善)，所以就是用<code>apt</code>来进行安装，其他发行版使用自己的包管理软件进行安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt install picocom -y
+</code></pre></div></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/search-content-in-files-of-dir/">Linux下在文件夹所有文件中查找相关内容</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-08-22
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a></div>
+<div class="post-summary mb-3"><h2 id="先导">先导</h2>
+<blockquote>
+<p>本文是为了记录在编程中进行一些在文件夹中查找某些关键字进行配置时查找文件过于麻烦的解决办法
+在Linux开发中使用一些命令或者命令的配合进行查找文件内容及匹配关键词还是比较方便的。</p>
+</blockquote></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/compress-file-extract-and-compress/">Linux解压缩文件</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-08-11
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a><a href="/tags/shell/" class="post-taxonomy">#shell</a></div>
+<div class="post-summary mb-3"><blockquote>
+<p>先导：写这篇文章是为了记录在Linux下常用的、简单的进行压缩文件的解压缩以及打包压缩文件的方法，以方便自己未来忘记了在查询</p>
+</blockquote>
+<h2 id="全局说明">全局说明</h2>
+<p>下面的两个参数意义</p>
+<ul>
+<li><code>dest</code>：目标文件，压缩的话将<code>dest</code>换成你想要的文件名</li>
+<li><code>src</code>：来源文件，是一个文件或者一个文件夹，压缩要想打包多个就空格后追加接下来的文件或者文件夹，解压的就不行了</li>
+</ul></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/add-canvas-clock-in-pugjs/">给pugjs的stun主题添加canvas时钟</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-08-07
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>4 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/hexo/" class="post-taxonomy">#hexo</a><a href="/tags/beautify/" class="post-taxonomy">#beautify</a></div>
+<div class="post-summary mb-3">先导 首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了 在pugjs中添加一些好用的东</div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/the-blog-is-put-on-record/">最近网站备案中。。。</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-04-21
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/daily/" class="post-taxonomy">#daily</a><a href="/tags/text/" class="post-taxonomy">#text</a></div>
+<div class="post-summary mb-3"><h2 id="说明">说明</h2>
+<blockquote>
+<p>打算是主要打理国内的空间，当然github也会同步发布，是所以使用未备案的域名感觉还是挺不妥当的，还是备案一下，但是我万万没想到的是备案有那么多需要注意的问题</p>
+</blockquote></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/tech_and_skill/arch-refind-bootloader-efi/">Arch Linux切换rEFInd开机引导程序</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-03-30
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/archlinux/" class="post-taxonomy">#archlinux</a><a href="/tags/refind/" class="post-taxonomy">#rEFInd</a><a href="/tags/boot-loader/" class="post-taxonomy">#boot loader</a></div>
+<div class="post-summary mb-3"><h2 id="先导">先导</h2>
+<p>以下<code>rEFInd</code>的<code>arckwiki</code>词条的内容：</p>
+<blockquote>
+<p>rEFInd 是一个 UEFI 启动管理器。它是 rEFIt （不再维护）的一个分支并且针对非 Mac 硬件修复了若干问题。它被设计为平台无关，可启动多个操作系统。</p>
+</blockquote>
+<p>使用<code>rEFInd</code>的需求是我原来使用的是<code>bootctl</code>这个启动引导程序,虽然简单好用,但是只有黑白界面难免有点单调,所以就想使用一个比较漂亮的但是文件结构又简洁的<code>bootloader</code>,所以<code>grub</code>就被丢弃了,虽然它的却很强大,但是文件结构有点复杂,配置影响因素有点多</p></div>
+      </div>
+    </article></div><div class="row">
+<ul class="pagination">
+  <li class="page-item">
+    <a href="/posts/tech_and_skill/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  </li>
+  <li class="page-item disabled">
+    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="/posts/tech_and_skill/">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/tech_and_skill/page/2/">2</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="/posts/tech_and_skill/page/3/">3</a>
+  </li>
+  <li class="page-item">
+    <a href="/posts/tech_and_skill/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/posts/tech_and_skill/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  </li>
+</ul>
+
+</div>
+</div>
+
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row">
+  <div class="col-xl-6 d-flex align-items-center justify-content-center">
+    <img class="profile-avatar img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" alt="impressionyang" loading="lazy">
+  </div>
+  <div class="col-xl-6">
+    <h5 class="profile-name my-2">impressionyang</h5><div class="profile-bio mb-2">looove coooding.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><div class="profile-about mb-2"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">关于</a></div></div>
+</section><section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/talk/hugo_theme_bootstrap_change/">对于此hugo主题的更改</a></li><li><a href="/posts/talk/about_change_to_hugo/">关于换到hugo</a></li><li><a href="/posts/book/book_about/">关于读书分享</a></li><li><a href="/posts/coding/git-update-script/">git更新脚本</a></li><li><a href="/posts/tech_and_skill/qt-creator-my-setup/">Qt个人配置</a></li></ul>
+</section>
+<section class="taxonomy-categories row surface">
+  <h4>
+    <a href="/categories">分类</a>
+  </h4>
+  <div><a href="/categories/tech_and_skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="tech_and_skill">
+      tech_and_skill <span class="badge rounded-pill">30</span>
+    </a><a href="/categories/coding/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="coding">
+      coding <span class="badge rounded-pill">12</span>
+    </a><a href="/categories/book/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="book">
+      book <span class="badge rounded-pill">2</span>
+    </a><a href="/categories/talk/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="talk">
+      talk <span class="badge rounded-pill">2</span>
+    </a></div>
+</section><section class="taxonomy-series row surface">
+  <h4>
+    <a href="/series">专栏</a>
+  </h4>
+  <div><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="博客">
+      博客 <span class="badge rounded-pill">45</span>
+    </a></div>
+</section><section class="taxonomy-tags row surface">
+  <h4>
+    <a href="/tags">标签</a>
+  </h4>
+  <div><a href="/tags/skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="skill">
+      skill <span class="badge rounded-pill">33</span>
+    </a><a href="/tags/linux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Linux">
+      Linux <span class="badge rounded-pill">8</span>
+    </a><a href="/tags/archlinux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="archlinux">
+      archlinux <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c&#43;&#43;/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C&#43;&#43;">
+      C&#43;&#43; <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/program/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="program">
+      program <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C">
+      C <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/hexo/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="hexo">
+      hexo <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/qt/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Qt">
+      Qt <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/install/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="install">
+      install <span class="badge rounded-pill">4</span>
+    </a><a href="/tags/plasma/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Plasma">
+      Plasma <span class="badge rounded-pill">3</span>
+    </a></div>
+</section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:impressionyang@outlook.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/impressionyang" title="Github">
+        <i class="fab fa-fw fa-2x fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2572247223&amp;site=qq&amp;menu=yes" title="Qq">
+        <i class="fab fa-fw fa-2x fa-qq"></i>
+      </a>
+    </li><li class="nav-item">
+    <a class="nav-link social-link" target="_blank" href="/posts/tech_and_skill/index.xml" title="RSS">
+      <i class="fas fa-fw fa-2x fa-rss"></i>
+    </a>
+  </li></nav>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.9.2/mermaid.min.js"></script>
+<script>
+      mermaid.initialize({ startOnLoad: true });
+</script>
+<div class="copyright mb-2">
+  Copyright © 2016-2021 impressionyang. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">Bootstrap</a> theme.
+</div></footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

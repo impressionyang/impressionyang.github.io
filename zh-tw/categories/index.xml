@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>分類 on Hugo Bootstrap</title>
+    <link>/zh-tw/categories/</link>
+    <description>Recent content in 分類 on Hugo Bootstrap</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sat, 15 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/zh-tw/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>提示</title>
+      <link>/zh-tw/categories/%E6%8F%90%E7%A4%BA/</link>
+      <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/zh-tw/categories/%E6%8F%90%E7%A4%BA/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

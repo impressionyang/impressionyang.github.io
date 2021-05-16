@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>标签 on impressionyang</title>
+    <link>/tags/</link>
+    <description>Recent content in 标签 on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 16 May 2021 14:39:48 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Sun, 16 May 2021 14:39:48 +0800</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>talk</title>
+      <link>/tags/talk/</link>
+      <pubDate>Sun, 16 May 2021 14:39:48 +0800</pubDate>
+      
+      <guid>/tags/talk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dialy</title>
+      <link>/tags/dialy/</link>
+      <pubDate>Sun, 16 May 2021 00:10:33 +0800</pubDate>
+      
+      <guid>/tags/dialy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book</title>
+      <link>/tags/book/</link>
+      <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>/tags/notes/</link>
+      <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>/tags/git/</link>
+      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
+      
+      <guid>/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>script</title>
+      <link>/tags/script/</link>
+      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
+      
+      <guid>/tags/script/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>skill</title>
+      <link>/tags/skill/</link>
+      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
+      
+      <guid>/tags/skill/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Qt</title>
+      <link>/tags/qt/</link>
+      <pubDate>Sun, 02 May 2021 23:55:04 +0000</pubDate>
+      
+      <guid>/tags/qt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>win10</title>
+      <link>/tags/win10/</link>
+      <pubDate>Wed, 17 Feb 2021 02:22:54 +0000</pubDate>
+      
+      <guid>/tags/win10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QSetting</title>
+      <link>/tags/qsetting/</link>
+      <pubDate>Tue, 29 Dec 2020 23:34:17 +0000</pubDate>
+      
+      <guid>/tags/qsetting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Thu, 17 Sep 2020 13:07:07 +0000</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>picocom</title>
+      <link>/tags/picocom/</link>
+      <pubDate>Thu, 17 Sep 2020 13:07:07 +0000</pubDate>
+      
+      <guid>/tags/picocom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>/tags/shell/</link>
+      <pubDate>Tue, 11 Aug 2020 21:50:31 +0000</pubDate>
+      
+      <guid>/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>/tags/c/</link>
+      <pubDate>Tue, 11 Aug 2020 21:47:45 +0000</pubDate>
+      
+      <guid>/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>beautify</title>
+      <link>/tags/beautify/</link>
+      <pubDate>Fri, 07 Aug 2020 20:23:18 +0000</pubDate>
+      
+      <guid>/tags/beautify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hexo</title>
+      <link>/tags/hexo/</link>
+      <pubDate>Fri, 07 Aug 2020 20:23:18 +0000</pubDate>
+      
+      <guid>/tags/hexo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>daily</title>
+      <link>/tags/daily/</link>
+      <pubDate>Tue, 21 Apr 2020 17:10:07 +0000</pubDate>
+      
+      <guid>/tags/daily/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text</title>
+      <link>/tags/text/</link>
+      <pubDate>Tue, 21 Apr 2020 17:10:07 +0000</pubDate>
+      
+      <guid>/tags/text/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>archlinux</title>
+      <link>/tags/archlinux/</link>
+      <pubDate>Mon, 30 Mar 2020 09:35:19 +0000</pubDate>
+      
+      <guid>/tags/archlinux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boot loader</title>
+      <link>/tags/boot-loader/</link>
+      <pubDate>Mon, 30 Mar 2020 09:35:19 +0000</pubDate>
+      
+      <guid>/tags/boot-loader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rEFInd</title>
+      <link>/tags/refind/</link>
+      <pubDate>Mon, 30 Mar 2020 09:35:19 +0000</pubDate>
+      
+      <guid>/tags/refind/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>/tags/c&#43;&#43;/</link>
+      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
+      
+      <guid>/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>program</title>
+      <link>/tags/program/</link>
+      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
+      
+      <guid>/tags/program/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QFile</title>
+      <link>/tags/qfile/</link>
+      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
+      
+      <guid>/tags/qfile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>install</title>
+      <link>/tags/install/</link>
+      <pubDate>Thu, 26 Mar 2020 09:50:22 +0000</pubDate>
+      
+      <guid>/tags/install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>/tags/markdown/</link>
+      <pubDate>Sat, 21 Mar 2020 22:31:34 +0000</pubDate>
+      
+      <guid>/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mermaid</title>
+      <link>/tags/mermaid/</link>
+      <pubDate>Sat, 21 Mar 2020 22:31:34 +0000</pubDate>
+      
+      <guid>/tags/mermaid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UML</title>
+      <link>/tags/uml/</link>
+      <pubDate>Sat, 21 Mar 2020 22:31:34 +0000</pubDate>
+      
+      <guid>/tags/uml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KDE</title>
+      <link>/tags/kde/</link>
+      <pubDate>Fri, 20 Mar 2020 16:37:55 +0000</pubDate>
+      
+      <guid>/tags/kde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KDE Wallet</title>
+      <link>/tags/kde-wallet/</link>
+      <pubDate>Fri, 20 Mar 2020 16:37:55 +0000</pubDate>
+      
+      <guid>/tags/kde-wallet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>/tags/java/</link>
+      <pubDate>Fri, 20 Mar 2020 14:08:35 +0000</pubDate>
+      
+      <guid>/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WDE Wallet</title>
+      <link>/tags/wde-wallet/</link>
+      <pubDate>Sun, 15 Mar 2020 12:26:23 +0000</pubDate>
+      
+      <guid>/tags/wde-wallet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plasma</title>
+      <link>/tags/plasma/</link>
+      <pubDate>Sat, 29 Feb 2020 19:09:50 +0000</pubDate>
+      
+      <guid>/tags/plasma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plasma-applet</title>
+      <link>/tags/plasma-applet/</link>
+      <pubDate>Sat, 29 Feb 2020 19:09:50 +0000</pubDate>
+      
+      <guid>/tags/plasma-applet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>console，shell</title>
+      <link>/tags/consoleshell/</link>
+      <pubDate>Tue, 25 Feb 2020 22:01:40 +0000</pubDate>
+      
+      <guid>/tags/consoleshell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>goldendict</title>
+      <link>/tags/goldendict/</link>
+      <pubDate>Tue, 25 Feb 2020 11:06:32 +0000</pubDate>
+      
+      <guid>/tags/goldendict/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tech</title>
+      <link>/tags/tech/</link>
+      <pubDate>Mon, 24 Feb 2020 11:59:33 +0000</pubDate>
+      
+      <guid>/tags/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>/tags/tools/</link>
+      <pubDate>Mon, 24 Feb 2020 11:59:33 +0000</pubDate>
+      
+      <guid>/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deepin</title>
+      <link>/tags/deepin/</link>
+      <pubDate>Thu, 20 Feb 2020 14:01:21 +0000</pubDate>
+      
+      <guid>/tags/deepin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wine</title>
+      <link>/tags/wine/</link>
+      <pubDate>Thu, 20 Feb 2020 14:01:21 +0000</pubDate>
+      
+      <guid>/tags/wine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>USB</title>
+      <link>/tags/usb/</link>
+      <pubDate>Thu, 20 Feb 2020 12:03:10 +0000</pubDate>
+      
+      <guid>/tags/usb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bumblebee</title>
+      <link>/tags/bumblebee/</link>
+      <pubDate>Wed, 19 Feb 2020 22:45:26 +0000</pubDate>
+      
+      <guid>/tags/bumblebee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>/tags/bash/</link>
+      <pubDate>Wed, 19 Feb 2020 22:12:43 +0000</pubDate>
+      
+      <guid>/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>picture</title>
+      <link>/tags/picture/</link>
+      <pubDate>Wed, 19 Feb 2020 14:36:20 +0000</pubDate>
+      
+      <guid>/tags/picture/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

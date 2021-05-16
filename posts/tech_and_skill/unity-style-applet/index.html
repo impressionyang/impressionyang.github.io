@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KDE下完美的Unity桌面体验，扔掉active window control - impressionyang</title><link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="180x180">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png">
+<meta name="description" content="" /><meta itemprop="name" content="KDE下完美的Unity桌面体验，扔掉active window control">
+<meta itemprop="description" content="psifidotos 的 applet-window 系列完全实现unity当年风采
+熟悉我对Linux桌面态度的人都知道我个人是很推崇当年Ubuntu的Unity桌面的全局菜单的整合功能的，其有着能把窗口标题栏以及窗口按钮和全局菜单整合为一体的功能，能够大大节省屏幕的纵向空间而不影响使用菜单以及查看窗口标题和使用窗口按钮。在我个人看来，Ubuntu的Unity桌面简直就是Linux桌面环境的最强代表，直到它退出历史舞台。
+至今我仍然向往那种能够有效率节省屏幕空间的功能却苦于没有什么桌面能够原生支持，但是，在我转向了archlinux&#43;KDE之后便发现了此事有所转机。
+一开始我是使用KDE的一个名为active window control的插件进行使用，它能够将窗口标题栏和顶栏进行结合，但是全局菜单需要使用KDE的原生全局菜单插件，并且其使用起来并不是很友好，不过它也能够在一定程度上节省了屏幕的纵向空间，所以也能够勉强够用，但是使用起来并不是很开心。
+但是在KDE桌面的强大的可定制化插件的支持下，由psifidotos
+所编写的applet-window系列插件能够配合Plasma KDE桌面来完美来达成‘这一愿想。
+要实现Unity桌面的功能需要安装他写的三个插件：
+
+applet-window-title
+applet-window-buttons
+applet-window-appmenu
+
+说明：archlinux&#43;KDE（原理上来说manjaro&#43;KDE也可以）在安装好桌面后还需要安装cmake和extra-cmake-modules，一般在安装了这两个编译依赖之后如果还是编译不成功请在评论区说明清楚哦。"><meta itemprop="datePublished" content="2020-02-29T19:09:50&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-29T19:09:50&#43;00:00" />
+<meta itemprop="wordCount" content="963">
+<meta itemprop="keywords" content="skill,Plasma,plasma-applet," /><meta property="og:title" content="KDE下完美的Unity桌面体验，扔掉active window control" />
+<meta property="og:description" content="psifidotos 的 applet-window 系列完全实现unity当年风采
+熟悉我对Linux桌面态度的人都知道我个人是很推崇当年Ubuntu的Unity桌面的全局菜单的整合功能的，其有着能把窗口标题栏以及窗口按钮和全局菜单整合为一体的功能，能够大大节省屏幕的纵向空间而不影响使用菜单以及查看窗口标题和使用窗口按钮。在我个人看来，Ubuntu的Unity桌面简直就是Linux桌面环境的最强代表，直到它退出历史舞台。
+至今我仍然向往那种能够有效率节省屏幕空间的功能却苦于没有什么桌面能够原生支持，但是，在我转向了archlinux&#43;KDE之后便发现了此事有所转机。
+一开始我是使用KDE的一个名为active window control的插件进行使用，它能够将窗口标题栏和顶栏进行结合，但是全局菜单需要使用KDE的原生全局菜单插件，并且其使用起来并不是很友好，不过它也能够在一定程度上节省了屏幕的纵向空间，所以也能够勉强够用，但是使用起来并不是很开心。
+但是在KDE桌面的强大的可定制化插件的支持下，由psifidotos
+所编写的applet-window系列插件能够配合Plasma KDE桌面来完美来达成‘这一愿想。
+要实现Unity桌面的功能需要安装他写的三个插件：
+
+applet-window-title
+applet-window-buttons
+applet-window-appmenu
+
+说明：archlinux&#43;KDE（原理上来说manjaro&#43;KDE也可以）在安装好桌面后还需要安装cmake和extra-cmake-modules，一般在安装了这两个编译依赖之后如果还是编译不成功请在评论区说明清楚哦。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/tech_and_skill/unity-style-applet/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-02-29T19:09:50&#43;00:00" />
+<meta property="article:modified_time" content="2020-02-29T19:09:50&#43;00:00" /><meta property="og:site_name" content="impressionyang" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="KDE下完美的Unity桌面体验，扔掉active window control"/>
+<meta name="twitter:description" content="psifidotos 的 applet-window 系列完全实现unity当年风采
+熟悉我对Linux桌面态度的人都知道我个人是很推崇当年Ubuntu的Unity桌面的全局菜单的整合功能的，其有着能把窗口标题栏以及窗口按钮和全局菜单整合为一体的功能，能够大大节省屏幕的纵向空间而不影响使用菜单以及查看窗口标题和使用窗口按钮。在我个人看来，Ubuntu的Unity桌面简直就是Linux桌面环境的最强代表，直到它退出历史舞台。
+至今我仍然向往那种能够有效率节省屏幕空间的功能却苦于没有什么桌面能够原生支持，但是，在我转向了archlinux&#43;KDE之后便发现了此事有所转机。
+一开始我是使用KDE的一个名为active window control的插件进行使用，它能够将窗口标题栏和顶栏进行结合，但是全局菜单需要使用KDE的原生全局菜单插件，并且其使用起来并不是很友好，不过它也能够在一定程度上节省了屏幕的纵向空间，所以也能够勉强够用，但是使用起来并不是很开心。
+但是在KDE桌面的强大的可定制化插件的支持下，由psifidotos
+所编写的applet-window系列插件能够配合Plasma KDE桌面来完美来达成‘这一愿想。
+要实现Unity桌面的功能需要安装他写的三个插件：
+
+applet-window-title
+applet-window-buttons
+applet-window-appmenu
+
+说明：archlinux&#43;KDE（原理上来说manjaro&#43;KDE也可以）在安装好桌面后还需要安装cmake和extra-cmake-modules，一般在安装了这两个编译依赖之后如果还是编译不成功请在评论区说明清楚哦。"/>
+<meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.fb6a2f555467bf9d44fa0fc6f95b200fcddbd2efd37ad2621f7408b9c2c4b8e4.css" integrity="sha256-&#43;2ovVVRnv51E&#43;g/G&#43;VsgD83b0u/TetJiH3QIucLEuOQ=" crossorigin="anonymous"><script src="/js/bundle.min.078401d7a9ee1fd5830bf91cfe6d51e0711245cab1e263acd8cd0d79d5a3f04e.js" integrity="sha256-B4QB16nuH9WDC/kc/m1R4HESRcqx4mOs2M0NedWj8E4=" crossorigin="anonymous"></script>
+
+
+</head>
+  <body><header><nav class="navbar fixed-top navbar-expand-xl">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy">impressionyang</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-2 mb-2 mb-lg-0"><form class="search-bar d-flex mr-2" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav mb-2 mb-lg-0 mr-2 ml-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>个人
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-about"><li>
+              <a class="dropdown-item"
+                href="/about/about">
+                <i class="fas fa-user"></i> 个人简介
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/music">
+                <i class="fas fa-music"></i> 歌单分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/games">
+                <i class="fab fa-steam"></i> stem游戏分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/impressionyang" target="_blank">
+                <i class="fab fa-fw fa-github"></i>github
+              </a>
+            </li></ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-third_party" role="button" data-toggle="dropdown" aria-expanded="false">
+            第三方链接
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-third_party"><li>
+              <a class="dropdown-item"
+                href="https://fontawesome.com/" target="_blank">
+                <i class="fab fa-font-awesome"></i> Font Awesome 5
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">
+                <i class="fas fa-palette"></i> 主题地址
+              </a>
+            </li></ul>
+        </li></ul>
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0"><li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="languageSwitcher" data-toggle="popover"
+    data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-language" ></i>
+  </a>
+</li>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="languages list-group"><li class="language list-group-item active">简体中文</li><li class="language list-group-item">
+      <a href="/en/">English</a></li><li class="language list-group-item">
+      <a href="/zh-tw/">繁體中文</a></li></ul>
+</script>
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="paletteSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#palettesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
+  </a>
+</li>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group"><li id="palette-blue" class="palette list-group-item bg-blue">
+      <a>蓝色</a>
+    </li><li id="palette-blue-gray" class="palette list-group-item bg-blue-gray">
+      <a>蓝灰色</a>
+    </li><li id="palette-brown" class="palette list-group-item bg-brown">
+      <a>棕色</a>
+    </li><li id="palette-cyan" class="palette list-group-item bg-cyan">
+      <a>青色</a>
+    </li><li id="palette-green" class="palette list-group-item bg-green">
+      <a>绿色</a>
+    </li><li id="palette-indigo" class="palette list-group-item bg-indigo">
+      <a>靛青色</a>
+    </li><li id="palette-orange" class="palette list-group-item bg-orange">
+      <a>橙色</a>
+    </li><li id="palette-pink" class="palette list-group-item bg-pink">
+      <a>粉色</a>
+    </li><li id="palette-purple" class="palette list-group-item bg-purple">
+      <a>紫色</a>
+    </li><li id="palette-red" class="palette list-group-item bg-red">
+      <a>红色</a>
+    </li><li id="palette-teal" class="palette list-group-item bg-teal">
+      <a>蓝绿色</a>
+    </li><li id="palette-yellow" class="palette list-group-item bg-yellow">
+      <a>黄色</a>
+    </li></ul>
+</script>
+
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="fontSizeSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#fontSizesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-font" ></i>
+  </a>
+</li>
+<script type="text/html" id="fontSizesPopoverBody">
+  <form class="font-size-switcher-form">
+    <label for="fontSize" class="form-label">字体大小</label>
+    <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+  </form>
+</script>
+<form class="mode-switcher-form d-flex align-items-center">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="modeSwitcher">
+  </div>
+</form>
+</ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-md-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item"><a href="/posts/tech_and_skill/">技术分享</a></li><li class="breadcrumb-item active">KDE下完美的Unity桌面体验，扔掉active window control</li></ol>
+</nav><article class="post row surface">
+  <h1 class="post-title my-3">KDE下完美的Unity桌面体验，扔掉active window control</h1><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-02-29
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/plasma/" class="post-taxonomy">#Plasma</a><a href="/tags/plasma-applet/" class="post-taxonomy">#plasma-applet</a></div>
+<div class="accordion accordion-flush surface post-toc position-sticky" id="accordionTOC">
+  <div class="accordion-item">
+    <div class="accordion-header" id="headingTOC" data-toggle="collapse" data-target="#collapseTOC" aria-expanded="true" aria-controls="collapseTOC">
+      <i class="fas fa-fw fa-bars"></i>目录
+    </div>
+    <div id="collapseTOC" class="accordion-collapse collapse" aria-labelledby="headingTOC" data-parent="#accordionTOC">
+      <div class="accordion-body mt-2">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#psifidotos-的-applet-window-系列完全实现unity当年风采">psifidotos 的 applet-window 系列完全实现unity当年风采</a></li>
+    <li><a href="#安装并配置三个插件">安装并配置三个插件</a>
+      <ul>
+        <li><a href="#applet-window-title">applet-window-title</a></li>
+        <li><a href="#applet-window-buttons">applet-window-buttons</a></li>
+        <li><a href="#applet-window-appmenu">applet-window-appmenu</a></li>
+        <li><a href="#配置">配置</a></li>
+      </ul>
+    </li>
+    <li><a href="#后记">后记</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div><div class="post-content mb-3"><h2 id="psifidotos-的-applet-window-系列完全实现unity当年风采">psifidotos 的 applet-window 系列完全实现unity当年风采</h2>
+<p>熟悉我对<code>Linux</code>桌面态度的人都知道我个人是很推崇当年<code>Ubuntu</code>的<code>Unity</code>桌面的全局菜单的整合功能的，其有着能把窗口标题栏以及窗口按钮和全局菜单整合为一体的功能，能够大大节省屏幕的纵向空间而不影响使用菜单以及查看窗口标题和使用窗口按钮。在我个人看来，<code>Ubuntu</code>的<code>Unity</code>桌面简直就是<code>Linux</code>桌面环境的最强代表，直到它退出历史舞台。</p>
+<p>至今我仍然向往那种能够有效率节省屏幕空间的功能却苦于没有什么桌面能够原生支持，但是，在我转向了<code>archlinux+KDE</code>之后便发现了此事有所转机。</p>
+<p>一开始我是使用<code>KDE</code>的一个名为<code>active window control</code>的插件进行使用，它能够将窗口标题栏和顶栏进行结合，但是全局菜单需要使用<code>KDE</code>的原生全局菜单插件，并且其使用起来并不是很友好，不过它也能够在一定程度上节省了屏幕的纵向空间，所以也能够勉强够用，但是使用起来并不是很开心。</p>
+<p>但是在<code>KDE</code>桌面的强大的可定制化插件的支持下，由<a href="https://github.com/psifidotos" target="_blank">psifidotos</a>
+所编写的<code>applet-window</code>系列插件能够配合<code>Plasma KDE</code>桌面来完美来达成‘这一愿想。</p>
+<p>要实现<code>Unity</code>桌面的功能需要安装他写的三个插件：</p>
+<ol>
+<li>applet-window-title</li>
+<li>applet-window-buttons</li>
+<li>applet-window-appmenu</li>
+</ol>
+<p>说明：<code>archlinux+KDE</code>（原理上来说<code>manjaro+KDE</code>也可以）在安装好桌面后还需要安装<code>cmake</code>和<code>extra-cmake-modules</code>，一般在安装了这两个编译依赖之后如果还是编译不成功请在评论区说明清楚哦。</p>
+<h2 id="安装并配置三个插件">安装并配置三个插件</h2>
+<h3 id="applet-window-title">applet-window-title</h3>
+<p>github地址点击<a href="https://github.com/psifidotos/applet-window-title" target="_blank">此处</a>
+</p>
+<p>克隆仓库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/psifidotos/applet-window-title.git
+</code></pre></div><p>由于此插件使用<code>QML</code>编写，所以可以直接使用命令装入插件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd applet-window-title
+plasmapkg2 -i .
+</code></pre></div><ul>
+<li>图示</li>
+</ul>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/2020-02-29_17-38.png" alt="applet-window-title"  loading="lazy" />
+</p>
+<p>至此<code>applet-window-title</code>安装完毕</p>
+<h3 id="applet-window-buttons">applet-window-buttons</h3>
+<p>github地址点击<a href="https://github.com/psifidotos/applet-window-buttons" target="_blank">此处</a>
+</p>
+<p>克隆仓库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/psifidotos/applet-window-buttons.git
+</code></pre></div><p>因为该插件使用<code>C++</code>进行编写，所以需要进行编译安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd applet-window-buttons
+sh install.sh
+</code></pre></div><ul>
+<li>图示</li>
+</ul>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/2020-02-29_17-41.png" alt="applet-window-buttons"  loading="lazy" />
+</p>
+<p>基本上如果没有编译依赖缺失的话可以一路编译下去然后自动安装</p>
+<p>至此<code>applet-window-buttons</code>安装完毕</p>
+<h3 id="applet-window-appmenu">applet-window-appmenu</h3>
+<p>github地址点击<a href="https://github.com/psifidotos/applet-window-appmenu" target="_blank">此处</a>
+</p>
+<p>克隆仓库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/psifidotos/applet-window-appmenu.git
+</code></pre></div><p>同样因为该插件使用<code>C++</code>进行编写，所以需要进行编译安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd applet-window-appmenu
+sh install.sh
+</code></pre></div><ul>
+<li>图示</li>
+</ul>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/2020-02-29_17-43.png" alt="applet-window-appmenu"  loading="lazy" />
+</p>
+<p>基本上如果没有编译依赖缺失的话也是可以一路编译下去然后自动安装</p>
+<p>至此<code>applet-window-appmenu</code>安装完毕</p>
+<h3 id="配置">配置</h3>
+<ul>
+<li>applet-window-title</li>
+</ul>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/2020-02-29_17-44.png" alt="setttings "  loading="lazy" />
+</p>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/2020-02-29_17-45.png" alt="setttings "  loading="lazy" />
+</p>
+<ul>
+<li>applet-window-buttons</li>
+</ul>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/2020-02-29_17-46.png" alt="setttings "  loading="lazy" />
+</p>
+<ul>
+<li>applet-window-appmenu</li>
+</ul>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/2020-02-29_17-47.png" alt="setttings "  loading="lazy" />
+</p>
+<h2 id="后记">后记</h2>
+<p>现在基本上已经能够得到和<code>Unity</code>桌面那样的机制体验了，舒服。</p>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/deepin_plasmashell_20200229175440.gif" alt=""  loading="lazy" />
+</p>
+<hr>
+<center><img src="https://impressionyang.gitee.io/imgbed/img/favicon/favicon_64.png" /></center>
+<center>impressionyang</center></div><div class="post-copyright mb-4">
+  <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
+</div><div class="post-reward mb-4 text-center">
+  <button type="button" class="btn btn-reward" data-toggle="modal" data-target="#rewardModal">
+    <i class="fas fa-fw fa-medal"></i>打赏
+  </button>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post">
+      <a href="/posts/coding/auto-init-cmake-qt-project/">Qt CMake GUI项目生成脚本</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"><div class="next-post">
+      <a href="/posts/tech_and_skill/hexo-init-config-1/">Hexo &#43; Git Pages搭建个人博客（一）</a>
+    </div></div>
+</div><section class="related-posts">
+  <h3>相关文章</h3>
+  <ul class="related-posts"><li><a href="/posts/tech_and_skill/active_window_control/">Plasma顶栏和窗口标题整合插件</a></li><li><a href="/posts/tech_and_skill/restart_kde/">一个命令进行Plasma热重启</a></li><li><a href="/posts/tech_and_skill/console-beautify-config/">终端shell美化</a></li><li><a href="/posts/tech_and_skill/goldendict-personal-config/">GoldenDict个人配置</a></li><li><a href="/posts/tech_and_skill/archlinux-install_2/">archlinux安装篇（二） KDE桌面环境</a></li></ul>
+</section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="impressionyang/impressionyang.github.io"
+  issue-term="pathname"
+  label=""
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row">
+  <div class="col-xl-6 d-flex align-items-center justify-content-center">
+    <img class="profile-avatar img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" alt="impressionyang" loading="lazy">
+  </div>
+  <div class="col-xl-6">
+    <h5 class="profile-name my-2">impressionyang</h5><div class="profile-bio mb-2">looove coooding.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><div class="profile-about mb-2"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">关于</a></div></div>
+</section><section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/talk/hugo_theme_bootstrap_change/">对于此hugo主题的更改</a></li><li><a href="/posts/talk/about_change_to_hugo/">关于换到hugo</a></li><li><a href="/posts/book/book_about/">关于读书分享</a></li><li><a href="/posts/coding/git-update-script/">git更新脚本</a></li><li><a href="/posts/tech_and_skill/qt-creator-my-setup/">Qt个人配置</a></li></ul>
+</section>
+<section class="taxonomy-categories row surface">
+  <h4>
+    <a href="/categories">分类</a>
+  </h4>
+  <div><a href="/categories/tech_and_skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="tech_and_skill">
+      tech_and_skill <span class="badge rounded-pill">30</span>
+    </a><a href="/categories/coding/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="coding">
+      coding <span class="badge rounded-pill">12</span>
+    </a><a href="/categories/book/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="book">
+      book <span class="badge rounded-pill">2</span>
+    </a><a href="/categories/talk/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="talk">
+      talk <span class="badge rounded-pill">2</span>
+    </a></div>
+</section><section class="taxonomy-series row surface">
+  <h4>
+    <a href="/series">专栏</a>
+  </h4>
+  <div><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="博客">
+      博客 <span class="badge rounded-pill">45</span>
+    </a></div>
+</section><section class="taxonomy-tags row surface">
+  <h4>
+    <a href="/tags">标签</a>
+  </h4>
+  <div><a href="/tags/skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="skill">
+      skill <span class="badge rounded-pill">33</span>
+    </a><a href="/tags/linux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Linux">
+      Linux <span class="badge rounded-pill">8</span>
+    </a><a href="/tags/archlinux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="archlinux">
+      archlinux <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c&#43;&#43;/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C&#43;&#43;">
+      C&#43;&#43; <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/program/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="program">
+      program <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C">
+      C <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/hexo/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="hexo">
+      hexo <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/qt/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Qt">
+      Qt <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/install/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="install">
+      install <span class="badge rounded-pill">4</span>
+    </a><a href="/tags/plasma/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Plasma">
+      Plasma <span class="badge rounded-pill">3</span>
+    </a></div>
+</section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:impressionyang@outlook.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/impressionyang" title="Github">
+        <i class="fab fa-fw fa-2x fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2572247223&amp;site=qq&amp;menu=yes" title="Qq">
+        <i class="fab fa-fw fa-2x fa-qq"></i>
+      </a>
+    </li></nav>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.9.2/mermaid.min.js"></script>
+<script>
+      mermaid.initialize({ startOnLoad: true });
+</script>
+<div class="copyright mb-2">
+  Copyright © 2016-2021 impressionyang. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">Bootstrap</a> theme.
+</div></footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

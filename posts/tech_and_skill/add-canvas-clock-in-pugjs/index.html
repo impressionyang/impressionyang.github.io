@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>给pugjs的stun主题添加canvas时钟 - impressionyang</title><link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="180x180">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png">
+<meta name="description" content="" /><meta itemprop="name" content="给pugjs的stun主题添加canvas时钟">
+<meta itemprop="description" content="先导 首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了 在pugjs中添加一些好用的东"><meta itemprop="datePublished" content="2020-08-07T20:23:18&#43;00:00" />
+<meta itemprop="dateModified" content="2020-08-07T20:23:18&#43;00:00" />
+<meta itemprop="wordCount" content="1532">
+<meta itemprop="keywords" content="skill,hexo,beautify," /><meta property="og:title" content="给pugjs的stun主题添加canvas时钟" />
+<meta property="og:description" content="先导 首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了 在pugjs中添加一些好用的东" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/tech_and_skill/add-canvas-clock-in-pugjs/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-07T20:23:18&#43;00:00" />
+<meta property="article:modified_time" content="2020-08-07T20:23:18&#43;00:00" /><meta property="og:site_name" content="impressionyang" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="给pugjs的stun主题添加canvas时钟"/>
+<meta name="twitter:description" content="先导 首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了 在pugjs中添加一些好用的东"/>
+<meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.fb6a2f555467bf9d44fa0fc6f95b200fcddbd2efd37ad2621f7408b9c2c4b8e4.css" integrity="sha256-&#43;2ovVVRnv51E&#43;g/G&#43;VsgD83b0u/TetJiH3QIucLEuOQ=" crossorigin="anonymous"><script src="/js/bundle.min.078401d7a9ee1fd5830bf91cfe6d51e0711245cab1e263acd8cd0d79d5a3f04e.js" integrity="sha256-B4QB16nuH9WDC/kc/m1R4HESRcqx4mOs2M0NedWj8E4=" crossorigin="anonymous"></script>
+
+
+</head>
+  <body><header><nav class="navbar fixed-top navbar-expand-xl">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy">impressionyang</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-2 mb-2 mb-lg-0"><form class="search-bar d-flex mr-2" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav mb-2 mb-lg-0 mr-2 ml-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>个人
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-about"><li>
+              <a class="dropdown-item"
+                href="/about/about">
+                <i class="fas fa-user"></i> 个人简介
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/music">
+                <i class="fas fa-music"></i> 歌单分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/games">
+                <i class="fab fa-steam"></i> stem游戏分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/impressionyang" target="_blank">
+                <i class="fab fa-fw fa-github"></i>github
+              </a>
+            </li></ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-third_party" role="button" data-toggle="dropdown" aria-expanded="false">
+            第三方链接
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-third_party"><li>
+              <a class="dropdown-item"
+                href="https://fontawesome.com/" target="_blank">
+                <i class="fab fa-font-awesome"></i> Font Awesome 5
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">
+                <i class="fas fa-palette"></i> 主题地址
+              </a>
+            </li></ul>
+        </li></ul>
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0"><li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="languageSwitcher" data-toggle="popover"
+    data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-language" ></i>
+  </a>
+</li>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="languages list-group"><li class="language list-group-item active">简体中文</li><li class="language list-group-item">
+      <a href="/en/">English</a></li><li class="language list-group-item">
+      <a href="/zh-tw/">繁體中文</a></li></ul>
+</script>
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="paletteSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#palettesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
+  </a>
+</li>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group"><li id="palette-blue" class="palette list-group-item bg-blue">
+      <a>蓝色</a>
+    </li><li id="palette-blue-gray" class="palette list-group-item bg-blue-gray">
+      <a>蓝灰色</a>
+    </li><li id="palette-brown" class="palette list-group-item bg-brown">
+      <a>棕色</a>
+    </li><li id="palette-cyan" class="palette list-group-item bg-cyan">
+      <a>青色</a>
+    </li><li id="palette-green" class="palette list-group-item bg-green">
+      <a>绿色</a>
+    </li><li id="palette-indigo" class="palette list-group-item bg-indigo">
+      <a>靛青色</a>
+    </li><li id="palette-orange" class="palette list-group-item bg-orange">
+      <a>橙色</a>
+    </li><li id="palette-pink" class="palette list-group-item bg-pink">
+      <a>粉色</a>
+    </li><li id="palette-purple" class="palette list-group-item bg-purple">
+      <a>紫色</a>
+    </li><li id="palette-red" class="palette list-group-item bg-red">
+      <a>红色</a>
+    </li><li id="palette-teal" class="palette list-group-item bg-teal">
+      <a>蓝绿色</a>
+    </li><li id="palette-yellow" class="palette list-group-item bg-yellow">
+      <a>黄色</a>
+    </li></ul>
+</script>
+
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="fontSizeSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#fontSizesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-font" ></i>
+  </a>
+</li>
+<script type="text/html" id="fontSizesPopoverBody">
+  <form class="font-size-switcher-form">
+    <label for="fontSize" class="form-label">字体大小</label>
+    <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+  </form>
+</script>
+<form class="mode-switcher-form d-flex align-items-center">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="modeSwitcher">
+  </div>
+</form>
+</ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-md-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item"><a href="/posts/tech_and_skill/">技术分享</a></li><li class="breadcrumb-item active">给pugjs的stun主题添加canvas时钟</li></ol>
+</nav><article class="post row surface">
+  <h1 class="post-title my-3">给pugjs的stun主题添加canvas时钟</h1><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-08-07
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>4 分钟阅读
+  </span>
+<a href="/categories/tech_and_skill/" class="post-taxonomy">#tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/hexo/" class="post-taxonomy">#hexo</a><a href="/tags/beautify/" class="post-taxonomy">#beautify</a></div>
+<div class="accordion accordion-flush surface post-toc position-sticky" id="accordionTOC">
+  <div class="accordion-item">
+    <div class="accordion-header" id="headingTOC" data-toggle="collapse" data-target="#collapseTOC" aria-expanded="true" aria-controls="collapseTOC">
+      <i class="fas fa-fw fa-bars"></i>目录
+    </div>
+    <div id="collapseTOC" class="accordion-collapse collapse" aria-labelledby="headingTOC" data-parent="#accordionTOC">
+      <div class="accordion-body mt-2">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#先导">先导</a></li>
+    <li><a href="#内容介绍">内容介绍</a></li>
+    <li><a href="#脚本代码">脚本代码</a>
+      <ul>
+        <li><a href="#原脚本">原脚本</a></li>
+        <li><a href="#修改后的脚本">修改后的脚本</a></li>
+      </ul>
+    </li>
+    <li><a href="#后记">后记</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div><div class="post-content mb-3"><h2 id="先导">先导</h2>
+<p>首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了</p>
+<p>在pugjs中添加一些好用的东西这个系列会长期的添加更新，因为这些都是会用在博客当中的，而且这些操作都比较简单，都是在主题的相应文件位置添加相应代码即可。</p>
+<h2 id="内容介绍">内容介绍</h2>
+<p>这次添加的内容是在右边栏那里加上一个时钟，用来给阅读的人直观地看到时间，时钟的代码是直接从网上拷贝下来的，并且自己做了修改，地址是<a href="https://www.helloweba.net/demo/html5clock/" target="_blank">这里</a>
+,打开这个链接就能看到一个时钟，此时检查页面元素定位到时钟所在的div标签，其中有一个canvas标签，将其复制下来，并且找到下面与之最近的script标签查看到时钟的逻辑代码，也将其复制下来进行修改后就差不多可以使用了。</p>
+<p><strong>首先声明，代码是直接复制的，复制也没有删除，主要是为了学习用途，如果造成侵权或者修改了不应修改的地方，还请拿出版权证据证明后修改或者删除您的代码，自行复制后造成的一切问题与我无关</strong></p>
+<!--  more-->
+<h2 id="脚本代码">脚本代码</h2>
+<h3 id="原脚本">原脚本</h3>
+<ul>
+<li>复制下来的脚本内容大致如下，内容有点多请别介意，方便复制</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">canvas</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clock&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;400&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;400&#34;</span>&gt;&lt;/<span style="color:#f92672">canvas</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getHours</span>(); <span style="color:#75715e">//时
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getMinutes</span>(); <span style="color:#75715e">//分
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getSeconds</span>(); <span style="color:#75715e">//秒
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">h</span><span style="color:#f92672">=</span><span style="color:#a6e22e">h</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">12</span><span style="color:#f92672">?</span>(<span style="color:#a6e22e">h</span><span style="color:#f92672">-</span><span style="color:#ae81ff">12</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">5</span><span style="color:#f92672">+</span>parseInt(<span style="color:#a6e22e">m</span><span style="color:#f92672">/</span><span style="color:#ae81ff">12</span>)<span style="color:#f92672">:</span><span style="color:#a6e22e">h</span><span style="color:#f92672">*</span><span style="color:#ae81ff">5</span><span style="color:#f92672">+</span>parseInt(<span style="color:#a6e22e">m</span><span style="color:#f92672">/</span><span style="color:#ae81ff">12</span>); <span style="color:#75715e">//时针 初始位置
+</span><span style="color:#75715e">//=====================================
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>,<span style="color:#a6e22e">y</span><span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>,<span style="color:#a6e22e">sAngle</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; <span style="color:#75715e">//x y 原点 秒针角度变量
+</span><span style="color:#75715e"></span> 
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>(){
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span><span style="color:#f92672">=</span>document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;clock&#34;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ctx</span><span style="color:#f92672">=</span><span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#34;2d&#34;</span>); <span style="color:#75715e">//获取绘图对象
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">width</span>,<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">height</span>); <span style="color:#75715e">//清除上次绘制的图形
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">s</span><span style="color:#f92672">++</span>;<span style="color:#75715e">//秒针
+</span><span style="color:#75715e"></span> 
+    <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#fff&#39;</span> <span style="color:#75715e">//填充白色背景色 
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillRect</span>(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">width</span>,<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">height</span>);   <span style="color:#75715e">//设置画布区域
+</span><span style="color:#75715e"></span> 
+	<span style="color:#75715e">//填充圆点，在画布中心（200,200）绘制一个半径10px的圆形
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">0</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,<span style="color:#66d9ef">true</span>);
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fill</span>();
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">closePath</span>();
+ 		
+	<span style="color:#75715e">//填充版权文字
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#ccc&#34;</span>;
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;12pt Arial&#34;</span>; 
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#e6db74">&#34;Helloweba.com&#34;</span>,<span style="color:#ae81ff">150</span>,<span style="color:#ae81ff">250</span>);
+	<span style="color:#75715e">//调用日期并填充到画布中
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#666&#34;</span>;
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;14pt Verdana&#34;</span>;
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getMonth</span>()<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;-&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getDate</span>(),<span style="color:#ae81ff">183</span>,<span style="color:#ae81ff">170</span>);
+		
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">save</span>(); <span style="color:#75715e">//保存当前绘图状态
+</span><span style="color:#75715e"></span> 
+    <span style="color:#75715e">// 时间刻度
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">12</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">angle</span><span style="color:#f92672">=</span>(Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">12</span>;
+        <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();<span style="color:#75715e">//开始绘制
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">font</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;12px Arial&#34;</span>;
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">i</span><span style="color:#f92672">==</span><span style="color:#ae81ff">0</span><span style="color:#f92672">||</span><span style="color:#a6e22e">i</span><span style="color:#f92672">==</span><span style="color:#ae81ff">3</span><span style="color:#f92672">||</span><span style="color:#a6e22e">i</span><span style="color:#f92672">==</span><span style="color:#ae81ff">6</span><span style="color:#f92672">||</span><span style="color:#a6e22e">i</span><span style="color:#f92672">==</span><span style="color:#ae81ff">9</span>){
+             <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>;
+             <span style="color:#a6e22e">radius</span><span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>;
+        }<span style="color:#66d9ef">else</span>{
+             <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span>;
+             <span style="color:#a6e22e">radius</span><span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>;
+        }
+ 
+        <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span><span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>,<span style="color:#a6e22e">radius</span>,<span style="color:#ae81ff">0</span>,Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>,<span style="color:#66d9ef">true</span>); <span style="color:#75715e">//画圆
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fill</span>(); <span style="color:#75715e">//填充路径
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#a6e22e">angle</span>);  <span style="color:#75715e">//刻度分布              
+</span><span style="color:#75715e"></span>    }
+    <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">restore</span>(); <span style="color:#75715e">//恢复上次保存的绘图状态
+</span><span style="color:#75715e"></span> 
+    <span style="color:#a6e22e">sAngle</span><span style="color:#f92672">=</span>(Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#a6e22e">s</span>; <span style="color:#75715e">//秒度
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//时针转动
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">save</span>(); 
+    <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">strokeStyle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>;
+    <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">lineWidth</span><span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>;
+    <span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,(Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#a6e22e">h</span>); 
+    <span style="color:#a6e22e">pointer</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#a6e22e">y</span><span style="color:#f92672">-</span><span style="color:#ae81ff">40</span>);
+    <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">restore</span>();
+ 	
+	<span style="color:#75715e">//分针转动
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">save</span>();
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">strokeStyle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span>;
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">lineWidth</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>;
+	<span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,(Math.<span style="color:#a6e22e">PI</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">60</span><span style="color:#f92672">*</span><span style="color:#a6e22e">m</span>); 
+	<span style="color:#a6e22e">pointer</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#a6e22e">y</span><span style="color:#f92672">-</span><span style="color:#ae81ff">68</span>);
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">restore</span>();
+ 
+	<span style="color:#75715e">//秒针转动
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">save</span>();
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">strokeStyle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#000&#34;</span>;
+	<span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#a6e22e">sAngle</span>);  
+	<span style="color:#a6e22e">pointer</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#a6e22e">y</span><span style="color:#f92672">-</span><span style="color:#ae81ff">80</span>);
+	<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">restore</span>();  
+ 
+    <span style="color:#75715e">//数据整理
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">s</span><span style="color:#f92672">%</span><span style="color:#ae81ff">60</span><span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>){
+		<span style="color:#a6e22e">sAngle</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,<span style="color:#a6e22e">s</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,<span style="color:#a6e22e">m</span><span style="color:#f92672">++</span>;
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">m</span><span style="color:#f92672">%</span><span style="color:#ae81ff">12</span><span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>){ <span style="color:#75715e">//每十二分 时针旋转一次
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">m</span><span style="color:#f92672">!=</span><span style="color:#ae81ff">0</span>)<span style="color:#a6e22e">h</span><span style="color:#f92672">++</span>;
+            <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">m</span><span style="color:#f92672">%</span><span style="color:#ae81ff">60</span><span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)<span style="color:#a6e22e">m</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+        }
+     	<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">h</span><span style="color:#f92672">%</span><span style="color:#ae81ff">60</span><span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>)<span style="color:#a6e22e">h</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; 
+    }
+}
+ 
+<span style="color:#75715e">//绘制指针
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">pointer</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#a6e22e">z</span>){
+     <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();
+     <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>);
+     <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">z</span>);
+     <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">stroke</span>();
+     <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fill</span>();
+}
+ 
+ <span style="color:#75715e">//据坐标旋转
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>,<span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">y</span>,<span style="color:#a6e22e">angle</span>){
+     <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">transform</span>(Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">angle</span>), Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">angle</span>), 
+        <span style="color:#f92672">-</span>Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">angle</span>), Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">angle</span>), 
+        <span style="color:#a6e22e">x</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">angle</span>)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">*</span>Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">angle</span>), 
+      	<span style="color:#a6e22e">y</span><span style="color:#f92672">*</span>(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">angle</span>)) <span style="color:#f92672">-</span> <span style="color:#a6e22e">y</span><span style="color:#f92672">*</span>Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">angle</span>))
+}
+ 
+<span style="color:#a6e22e">setInterval</span>(<span style="color:#e6db74">&#34;draw()&#34;</span>,<span style="color:#ae81ff">1000</span>);
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="修改后的脚本">修改后的脚本</h3>
+<p>下面是修改后用之前的网站进行转换成pugjs的脚本，懒一点的就直接复制下面代码吧</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">br</span>
+<span style="color:#a6e22e">div</span>(<span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;position: relative;top: 0px;left: 0px;&#39;</span>)
+  <span style="color:#a6e22e">canvas</span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">clock</span>(<span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;250&#39;</span>, <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;250&#39;</span>)
+<span style="color:#a6e22e">script</span>.
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getHours</span>(); <span style="color:#75715e">//时
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getMinutes</span>(); <span style="color:#75715e">//分
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getSeconds</span>(); <span style="color:#75715e">//秒
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">?</span> (<span style="color:#a6e22e">h</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">12</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">+</span> parseInt(<span style="color:#a6e22e">m</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">12</span>) <span style="color:#f92672">:</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">+</span> parseInt(<span style="color:#a6e22e">m</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">12</span>); <span style="color:#75715e">//时针 初始位置
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//=====================================
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cc</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;clock&#34;</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cc</span>.<span style="color:#a6e22e">width</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>, <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cc</span>.<span style="color:#a6e22e">height</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2.0</span>, <span style="color:#a6e22e">sAngle</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">//x y 原点 秒针角度变量
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;clock&#34;</span>);
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ctx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#34;2d&#34;</span>); <span style="color:#75715e">//获取绘图对象
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">height</span>); <span style="color:#75715e">//清除上次绘制的图形
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">s</span><span style="color:#f92672">++</span>;<span style="color:#75715e">//秒针
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;#fff&#39;</span> <span style="color:#75715e">//填充白色背景色
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">height</span>);   <span style="color:#75715e">//设置画布区域
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//填充圆点，在画布中心（200,200）绘制一个半径10px的圆形
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0</span>, Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>, <span style="color:#66d9ef">true</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fill</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">closePath</span>();
+  <span style="color:#75715e">//填充版权文字
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#ccc&#34;</span>;
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;12pt Arial&#34;</span>;
+  <span style="color:#75715e">// ctx.fillText(&#34;impressionyang.top&#34;, 10, c.height-10);
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//调用日期并填充到画布中
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#666&#34;</span>;
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;14pt Verdana&#34;</span>;
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getMonth</span>() <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">getDate</span>(), <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">width</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">height</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">save</span>(); <span style="color:#75715e">//保存当前绘图状态
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 时间刻度
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">angle</span> <span style="color:#f92672">=</span> (Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">12</span>;
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();<span style="color:#75715e">//开始绘制
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;12px Arial&#34;</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">6</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">9</span>) {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
+  <span style="color:#a6e22e">radius</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
+  } <span style="color:#66d9ef">else</span> {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;blue&#34;</span>;
+  <span style="color:#a6e22e">radius</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+  }
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">radius</span>, <span style="color:#ae81ff">0</span>, Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>, <span style="color:#66d9ef">true</span>); <span style="color:#75715e">//画圆
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fill</span>(); <span style="color:#75715e">//填充路径
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">angle</span>);  <span style="color:#75715e">//刻度分布
+</span><span style="color:#75715e"></span>  }
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">restore</span>(); <span style="color:#75715e">//恢复上次保存的绘图状态
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">sAngle</span> <span style="color:#f92672">=</span> (Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">s</span>; <span style="color:#75715e">//秒度
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//时针转动
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">save</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>;
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+  <span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, (Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">h</span>);
+  <span style="color:#a6e22e">pointer</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">40</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">restore</span>();
+  <span style="color:#75715e">//分针转动
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">save</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;blue&#34;</span>;
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+  <span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, (Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">m</span>);
+  <span style="color:#a6e22e">pointer</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">68</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">restore</span>();
+  <span style="color:#75715e">//秒针转动
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">save</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#000&#34;</span>;
+  <span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">sAngle</span>);
+  <span style="color:#a6e22e">pointer</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">80</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">restore</span>();
+  <span style="color:#75715e">//数据整理
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">s</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+  <span style="color:#a6e22e">sAngle</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">m</span><span style="color:#f92672">++</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">m</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) { <span style="color:#75715e">//每十二分 时针旋转一次
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">m</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) <span style="color:#a6e22e">h</span><span style="color:#f92672">++</span>;
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">m</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">h</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  }
+  }
+  <span style="color:#75715e">//绘制指针
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">pointer</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">z</span>) {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">beginPath</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">z</span>);
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">stroke</span>();
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fill</span>();
+  }
+  <span style="color:#75715e">//据坐标旋转
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">trans</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">angle</span>) {
+  <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">transform</span>(Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">angle</span>), Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">angle</span>),
+  <span style="color:#f92672">-</span>Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">angle</span>), Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">angle</span>),
+  <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">angle</span>)) <span style="color:#f92672">+</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">angle</span>),
+  <span style="color:#a6e22e">y</span> <span style="color:#f92672">*</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">angle</span>)) <span style="color:#f92672">-</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">angle</span>))
+  }
+  <span style="color:#a6e22e">setInterval</span>(<span style="color:#e6db74">&#34;draw()&#34;</span>, <span style="color:#ae81ff">1000</span>);
+
+</code></pre></div><p>至此就能够添加这个时钟到网站里面了，是不是感觉很简单呢。</p>
+<h2 id="后记">后记</h2>
+<p>虽然觉得直接拉取被人的东西有点不太厚道，但是我可是最强缝合怪啊，想拿来凑一凑再说哈哈哈。</p>
+<hr>
+<center><img src="https://impressionyang.gitee.io/imgbed/img/favicon/favicon_64.png" /></center>
+<center>impressionyang</center></div><div class="post-copyright mb-4">
+  <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
+</div><div class="post-reward mb-4 text-center">
+  <button type="button" class="btn btn-reward" data-toggle="modal" data-target="#rewardModal">
+    <i class="fas fa-fw fa-medal"></i>打赏
+  </button>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post">
+      <a href="/posts/tech_and_skill/the-blog-is-put-on-record/">最近网站备案中。。。</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"><div class="next-post">
+      <a href="/posts/coding/pointer-level2-as-handle/">C语言二级指针用法之模拟句柄用途</a>
+    </div></div>
+</div><section class="related-posts">
+  <h3>相关文章</h3>
+  <ul class="related-posts"><li><a href="/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/">为主题用pugjs编写的hexo博客添加网站运行时间</a></li><li><a href="/posts/coding/markdown-note-mermaid/">Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</a></li><li><a href="/posts/tech_and_skill/hexo-broken-fix-note01/">记录一次Hexo的崩溃修复</a></li><li><a href="/posts/tech_and_skill/hexo-init-config-1/">Hexo &#43; Git Pages搭建个人博客（一）</a></li><li><a href="/posts/tech_and_skill/arch-refind-bootloader-efi/">Arch Linux切换rEFInd开机引导程序</a></li></ul>
+</section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="impressionyang/impressionyang.github.io"
+  issue-term="pathname"
+  label=""
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row">
+  <div class="col-xl-6 d-flex align-items-center justify-content-center">
+    <img class="profile-avatar img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" alt="impressionyang" loading="lazy">
+  </div>
+  <div class="col-xl-6">
+    <h5 class="profile-name my-2">impressionyang</h5><div class="profile-bio mb-2">looove coooding.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><div class="profile-about mb-2"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">关于</a></div></div>
+</section><section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/talk/hugo_theme_bootstrap_change/">对于此hugo主题的更改</a></li><li><a href="/posts/talk/about_change_to_hugo/">关于换到hugo</a></li><li><a href="/posts/book/book_about/">关于读书分享</a></li><li><a href="/posts/coding/git-update-script/">git更新脚本</a></li><li><a href="/posts/tech_and_skill/qt-creator-my-setup/">Qt个人配置</a></li></ul>
+</section>
+<section class="taxonomy-categories row surface">
+  <h4>
+    <a href="/categories">分类</a>
+  </h4>
+  <div><a href="/categories/tech_and_skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="tech_and_skill">
+      tech_and_skill <span class="badge rounded-pill">30</span>
+    </a><a href="/categories/coding/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="coding">
+      coding <span class="badge rounded-pill">12</span>
+    </a><a href="/categories/book/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="book">
+      book <span class="badge rounded-pill">2</span>
+    </a><a href="/categories/talk/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="talk">
+      talk <span class="badge rounded-pill">2</span>
+    </a></div>
+</section><section class="taxonomy-series row surface">
+  <h4>
+    <a href="/series">专栏</a>
+  </h4>
+  <div><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="博客">
+      博客 <span class="badge rounded-pill">45</span>
+    </a></div>
+</section><section class="taxonomy-tags row surface">
+  <h4>
+    <a href="/tags">标签</a>
+  </h4>
+  <div><a href="/tags/skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="skill">
+      skill <span class="badge rounded-pill">33</span>
+    </a><a href="/tags/linux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Linux">
+      Linux <span class="badge rounded-pill">8</span>
+    </a><a href="/tags/archlinux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="archlinux">
+      archlinux <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c&#43;&#43;/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C&#43;&#43;">
+      C&#43;&#43; <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/program/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="program">
+      program <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C">
+      C <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/hexo/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="hexo">
+      hexo <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/qt/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Qt">
+      Qt <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/install/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="install">
+      install <span class="badge rounded-pill">4</span>
+    </a><a href="/tags/plasma/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Plasma">
+      Plasma <span class="badge rounded-pill">3</span>
+    </a></div>
+</section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:impressionyang@outlook.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/impressionyang" title="Github">
+        <i class="fab fa-fw fa-2x fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2572247223&amp;site=qq&amp;menu=yes" title="Qq">
+        <i class="fab fa-fw fa-2x fa-qq"></i>
+      </a>
+    </li></nav>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.9.2/mermaid.min.js"></script>
+<script>
+      mermaid.initialize({ startOnLoad: true });
+</script>
+<div class="copyright mb-2">
+  Copyright © 2016-2021 impressionyang. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">Bootstrap</a> theme.
+</div></footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>picocom on impressionyang</title>
+    <link>/tags/picocom/</link>
+    <description>Recent content in picocom on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 17 Sep 2020 13:07:07 +0000</lastBuildDate><atom:link href="/tags/picocom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用picocm来进行Linux下的串口调试</title>
+      <link>/posts/tech_and_skill/picocom-dialy-use/</link>
+      <pubDate>Thu, 17 Sep 2020 13:07:07 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/picocom-dialy-use/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么不用&lt;code&gt;minicom&lt;/code&gt;呢？功能又强大由好用不是。主要原因就是&lt;code&gt;minicom&lt;/code&gt;没有彩色文字，看着难受，特别是调试&lt;code&gt;ARM Linux&lt;/code&gt;的时候233&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;因为正常是在&lt;code&gt;Debian&lt;/code&gt;系列的&lt;code&gt;Linux&lt;/code&gt;发行版上面使用的(&lt;code&gt;deepin&lt;/code&gt;或者&lt;code&gt;ubuntu&lt;/code&gt;这些的，解决方案比较完善)，所以就是用&lt;code&gt;apt&lt;/code&gt;来进行安装，其他发行版使用自己的包管理软件进行安装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo apt install picocom -y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QSetting on impressionyang</title>
+    <link>/tags/qsetting/</link>
+    <description>Recent content in QSetting on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 29 Dec 2020 23:34:17 +0000</lastBuildDate><atom:link href="/tags/qsetting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qt使用配置文件</title>
+      <link>/posts/coding/qt-qsettins-uage/</link>
+      <pubDate>Tue, 29 Dec 2020 23:34:17 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qsettins-uage/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文用于在qt中使用配置文件进行一些配置的保存&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
+&lt;p&gt;关键点就是使用qt的一个类&lt;code&gt;QSettings&lt;/code&gt;，该类提供一系列接口用于配置文件的操作如读取和写入，支持的配置文件格式有&lt;code&gt;ini&lt;/code&gt;、&lt;code&gt;conf&lt;/code&gt;等。使用该类在软件启动时进行初始化操作对一些软件的配置进行赋值操作，可以使得上一次保存的配置可以继续使用，增加程序使用的便捷性。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>beautify on impressionyang</title>
+    <link>/tags/beautify/</link>
+    <description>Recent content in beautify on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Fri, 07 Aug 2020 20:23:18 +0000</lastBuildDate><atom:link href="/tags/beautify/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>给pugjs的stun主题添加canvas时钟</title>
+      <link>/posts/tech_and_skill/add-canvas-clock-in-pugjs/</link>
+      <pubDate>Fri, 07 Aug 2020 20:23:18 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/add-canvas-clock-in-pugjs/</guid>
+      <description>先导 首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了 在pugjs中添加一些好用的东</description>
+    </item>
+    
+    <item>
+      <title>为主题用pugjs编写的hexo博客添加网站运行时间</title>
+      <link>/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/</link>
+      <pubDate>Fri, 27 Mar 2020 22:59:08 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;写这篇帖子的原因是我很想在博客网站下面添加网站的运行时间,网上虽然有教程是怎么添加的,但是他们演示的主题大都是用&lt;code&gt;ejs&lt;/code&gt;或者是&lt;code&gt;wig&lt;/code&gt;来编写的,而我使用的这个个人很喜欢的&lt;code&gt;stun&lt;/code&gt;主题却是用&lt;code&gt;pugjs&lt;/code&gt;编写的,实在是很想用,所以根据语法的转换规则修改了一份&lt;code&gt;pug&lt;/code&gt;文件下添加的脚本来使用,美滋滋&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

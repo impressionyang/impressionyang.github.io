@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C语言二级指针用法之模拟句柄用途 - impressionyang</title><link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="180x180">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png">
+<meta name="description" content="" /><meta itemprop="name" content="C语言二级指针用法之模拟句柄用途">
+<meta itemprop="description" content="先导
+
+因为在学习中使用到了二级指针进行操作，故而作此总结
+
+提前了解
+句柄
+
+以下词条来自百度百科
+
+
+句柄（Handle）是一个是用来标识对象或者项目的标识符，可以用来描述窗体、文件等，值得注意的是句柄不能是常量 。
+Windows之所以要设立句柄，根本上源于内存管理机制的问题，即虚拟地址。简而言之数据的地址需要变动，变动以后就需要有人来记录、管理变动，因此系统用句柄来记载数据地址的变更。在程序设计中，句柄是一种特殊的智能指针，当一个应用程序要引用其他系统（如数据库、操作系统）所管理的内存块或对象时，就要使用句柄 。
+
+二级指针
+指针是C语言中最高深莫测的部分了，能够直接操作内存的这些指针如果使用得当的话可以完成很多很高效的代码。而二级或者多级指针则能够达到你之前想都不敢想的效果。
+
+以下来自于百度百科
+
+
+A(即B的地址)是指向指针的指针，称为二级指针，用于存放二级指针的变量称为二级指针变量．根据B的不同情况，二级指针又分为指向指针变量的指针和指向数组的指针。
+"><meta itemprop="datePublished" content="2020-08-11T21:47:45&#43;00:00" />
+<meta itemprop="dateModified" content="2020-08-11T21:47:45&#43;00:00" />
+<meta itemprop="wordCount" content="1886">
+<meta itemprop="keywords" content="skill,Linux,C," /><meta property="og:title" content="C语言二级指针用法之模拟句柄用途" />
+<meta property="og:description" content="先导
+
+因为在学习中使用到了二级指针进行操作，故而作此总结
+
+提前了解
+句柄
+
+以下词条来自百度百科
+
+
+句柄（Handle）是一个是用来标识对象或者项目的标识符，可以用来描述窗体、文件等，值得注意的是句柄不能是常量 。
+Windows之所以要设立句柄，根本上源于内存管理机制的问题，即虚拟地址。简而言之数据的地址需要变动，变动以后就需要有人来记录、管理变动，因此系统用句柄来记载数据地址的变更。在程序设计中，句柄是一种特殊的智能指针，当一个应用程序要引用其他系统（如数据库、操作系统）所管理的内存块或对象时，就要使用句柄 。
+
+二级指针
+指针是C语言中最高深莫测的部分了，能够直接操作内存的这些指针如果使用得当的话可以完成很多很高效的代码。而二级或者多级指针则能够达到你之前想都不敢想的效果。
+
+以下来自于百度百科
+
+
+A(即B的地址)是指向指针的指针，称为二级指针，用于存放二级指针的变量称为二级指针变量．根据B的不同情况，二级指针又分为指向指针变量的指针和指向数组的指针。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/coding/pointer-level2-as-handle/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-11T21:47:45&#43;00:00" />
+<meta property="article:modified_time" content="2020-08-11T21:47:45&#43;00:00" /><meta property="og:site_name" content="impressionyang" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C语言二级指针用法之模拟句柄用途"/>
+<meta name="twitter:description" content="先导
+
+因为在学习中使用到了二级指针进行操作，故而作此总结
+
+提前了解
+句柄
+
+以下词条来自百度百科
+
+
+句柄（Handle）是一个是用来标识对象或者项目的标识符，可以用来描述窗体、文件等，值得注意的是句柄不能是常量 。
+Windows之所以要设立句柄，根本上源于内存管理机制的问题，即虚拟地址。简而言之数据的地址需要变动，变动以后就需要有人来记录、管理变动，因此系统用句柄来记载数据地址的变更。在程序设计中，句柄是一种特殊的智能指针，当一个应用程序要引用其他系统（如数据库、操作系统）所管理的内存块或对象时，就要使用句柄 。
+
+二级指针
+指针是C语言中最高深莫测的部分了，能够直接操作内存的这些指针如果使用得当的话可以完成很多很高效的代码。而二级或者多级指针则能够达到你之前想都不敢想的效果。
+
+以下来自于百度百科
+
+
+A(即B的地址)是指向指针的指针，称为二级指针，用于存放二级指针的变量称为二级指针变量．根据B的不同情况，二级指针又分为指向指针变量的指针和指向数组的指针。
+"/>
+<meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.fb6a2f555467bf9d44fa0fc6f95b200fcddbd2efd37ad2621f7408b9c2c4b8e4.css" integrity="sha256-&#43;2ovVVRnv51E&#43;g/G&#43;VsgD83b0u/TetJiH3QIucLEuOQ=" crossorigin="anonymous"><script src="/js/bundle.min.078401d7a9ee1fd5830bf91cfe6d51e0711245cab1e263acd8cd0d79d5a3f04e.js" integrity="sha256-B4QB16nuH9WDC/kc/m1R4HESRcqx4mOs2M0NedWj8E4=" crossorigin="anonymous"></script>
+
+
+</head>
+  <body><header><nav class="navbar fixed-top navbar-expand-xl">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy">impressionyang</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-2 mb-2 mb-lg-0"><form class="search-bar d-flex mr-2" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav mb-2 mb-lg-0 mr-2 ml-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>个人
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-about"><li>
+              <a class="dropdown-item"
+                href="/about/about">
+                <i class="fas fa-user"></i> 个人简介
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/music">
+                <i class="fas fa-music"></i> 歌单分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/games">
+                <i class="fab fa-steam"></i> stem游戏分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/impressionyang" target="_blank">
+                <i class="fab fa-fw fa-github"></i>github
+              </a>
+            </li></ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-third_party" role="button" data-toggle="dropdown" aria-expanded="false">
+            第三方链接
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-third_party"><li>
+              <a class="dropdown-item"
+                href="https://fontawesome.com/" target="_blank">
+                <i class="fab fa-font-awesome"></i> Font Awesome 5
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">
+                <i class="fas fa-palette"></i> 主题地址
+              </a>
+            </li></ul>
+        </li></ul>
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0"><li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="languageSwitcher" data-toggle="popover"
+    data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-language" ></i>
+  </a>
+</li>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="languages list-group"><li class="language list-group-item active">简体中文</li><li class="language list-group-item">
+      <a href="/en/">English</a></li><li class="language list-group-item">
+      <a href="/zh-tw/">繁體中文</a></li></ul>
+</script>
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="paletteSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#palettesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
+  </a>
+</li>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group"><li id="palette-blue" class="palette list-group-item bg-blue">
+      <a>蓝色</a>
+    </li><li id="palette-blue-gray" class="palette list-group-item bg-blue-gray">
+      <a>蓝灰色</a>
+    </li><li id="palette-brown" class="palette list-group-item bg-brown">
+      <a>棕色</a>
+    </li><li id="palette-cyan" class="palette list-group-item bg-cyan">
+      <a>青色</a>
+    </li><li id="palette-green" class="palette list-group-item bg-green">
+      <a>绿色</a>
+    </li><li id="palette-indigo" class="palette list-group-item bg-indigo">
+      <a>靛青色</a>
+    </li><li id="palette-orange" class="palette list-group-item bg-orange">
+      <a>橙色</a>
+    </li><li id="palette-pink" class="palette list-group-item bg-pink">
+      <a>粉色</a>
+    </li><li id="palette-purple" class="palette list-group-item bg-purple">
+      <a>紫色</a>
+    </li><li id="palette-red" class="palette list-group-item bg-red">
+      <a>红色</a>
+    </li><li id="palette-teal" class="palette list-group-item bg-teal">
+      <a>蓝绿色</a>
+    </li><li id="palette-yellow" class="palette list-group-item bg-yellow">
+      <a>黄色</a>
+    </li></ul>
+</script>
+
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="fontSizeSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#fontSizesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-font" ></i>
+  </a>
+</li>
+<script type="text/html" id="fontSizesPopoverBody">
+  <form class="font-size-switcher-form">
+    <label for="fontSize" class="form-label">字体大小</label>
+    <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+  </form>
+</script>
+<form class="mode-switcher-form d-flex align-items-center">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="modeSwitcher">
+  </div>
+</form>
+</ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-md-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item"><a href="/posts/coding/">编程技巧</a></li><li class="breadcrumb-item active">C语言二级指针用法之模拟句柄用途</li></ol>
+</nav><article class="post row surface">
+  <h1 class="post-title my-3">C语言二级指针用法之模拟句柄用途</h1><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-08-11
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>4 分钟阅读
+  </span>
+<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a><a href="/tags/c/" class="post-taxonomy">#C</a></div>
+<div class="accordion accordion-flush surface post-toc position-sticky" id="accordionTOC">
+  <div class="accordion-item">
+    <div class="accordion-header" id="headingTOC" data-toggle="collapse" data-target="#collapseTOC" aria-expanded="true" aria-controls="collapseTOC">
+      <i class="fas fa-fw fa-bars"></i>目录
+    </div>
+    <div id="collapseTOC" class="accordion-collapse collapse" aria-labelledby="headingTOC" data-parent="#accordionTOC">
+      <div class="accordion-body mt-2">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#先导">先导</a></li>
+    <li><a href="#提前了解">提前了解</a>
+      <ul>
+        <li><a href="#句柄">句柄</a></li>
+        <li><a href="#二级指针">二级指针</a></li>
+      </ul>
+    </li>
+    <li><a href="#提出需求">提出需求</a></li>
+    <li><a href="#解决方案">解决方案</a></li>
+    <li><a href="#应用场景">应用场景</a></li>
+    <li><a href="#后记">后记</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div><div class="post-content mb-3"><h2 id="先导">先导</h2>
+<blockquote>
+<p>因为在学习中使用到了二级指针进行操作，故而作此总结</p>
+</blockquote>
+<h2 id="提前了解">提前了解</h2>
+<h3 id="句柄">句柄</h3>
+<ul>
+<li>以下词条来自百度百科</li>
+</ul>
+<blockquote>
+<p>句柄（Handle）是一个是用来标识对象或者项目的标识符，可以用来描述窗体、文件等，值得注意的是句柄不能是常量 。
+Windows之所以要设立句柄，根本上源于内存管理机制的问题，即虚拟地址。简而言之数据的地址需要变动，变动以后就需要有人来记录、管理变动，因此系统用句柄来记载数据地址的变更。在程序设计中，句柄是一种特殊的智能指针，当一个应用程序要引用其他系统（如数据库、操作系统）所管理的内存块或对象时，就要使用句柄 。</p>
+</blockquote>
+<h3 id="二级指针">二级指针</h3>
+<p>指针是C语言中最高深莫测的部分了，能够直接操作内存的这些指针如果使用得当的话可以完成很多很高效的代码。而二级或者多级指针则能够达到你之前想都不敢想的效果。</p>
+<ul>
+<li>以下来自于百度百科</li>
+</ul>
+<blockquote>
+<p>A(即B的地址)是指向指针的指针，称为二级指针，用于存放二级指针的变量称为二级指针变量．根据B的不同情况，二级指针又分为指向指针变量的指针和指向数组的指针。</p>
+</blockquote>
+<h2 id="提出需求">提出需求</h2>
+<p>这次总结的内容则是将指针当做句柄放进函数当形参是<strong>动态地申请空间</strong>来用作其他用途的。</p>
+<p>首先，我们要知道，我们如果直接把指针变量的地址当做函数的实参，去在函数里面申请空间，由于形参定义是一级指针，是无法拿到动态申请的空间的，以下就是一个实例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">get_space</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> p)
+{
+    p <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>)malloc(<span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>));
+    <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span>;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> pa <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a;
+    printf(<span style="color:#e6db74">&#34;*pa=%d </span><span style="color:#ae81ff">\t</span><span style="color:#e6db74"> pa=%p </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>pa, pa);
+    
+    get_space(<span style="color:#f92672">&amp;</span>pa);
+    printf(<span style="color:#e6db74">&#34;*pa=%d </span><span style="color:#ae81ff">\t</span><span style="color:#e6db74"> pa=%p </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>pa, pa);
+    get_space(pa);
+    printf(<span style="color:#e6db74">&#34;*pa=%d </span><span style="color:#ae81ff">\t</span><span style="color:#e6db74"> pa=%p </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>pa, pa);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>运行得到以下结果</p>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/pointer_level2_1.png" alt="pointer level2 1"  loading="lazy" />
+</p>
+<p>显然，这个结果正和上面所说的，在<code>main</code>函数传进去的实参，无论是指针变量还是地址，在函数里面的操作并不能通过一级指针的形参返回动态申请的空间，这样做很容易出现野指针现象。</p>
+<p>原因其实很简单，在形参定义的一级指针变量只是有从实参传递过来的地址而已，无论是<strong>指针变量内的地址</strong>还是<strong>指针变量本身的地址</strong>，只是存在形参一级指针变量当中，正如上面表现的，不管指针变量<code>p</code>的内容是<code>pa</code>或者<code>pa的地址</code>，只要使用<code>p</code>去获取空间的地址，便会使得指针<code>p</code>的内容从<code>pa</code>或者<code>pa的地址</code>变成新空间的地址，而在<code>main</code>函数中的<code>pa</code>并没有被影响到。</p>
+<p><strong>注意：上面的情况不要尝试用<code>*p</code>配合实参是<code>pa的地址</code>来接受新空间，会造成段错误，因为那样就是用一个<code>int</code>型的变量去接受一个<code>int*</code>型的值了</strong></p>
+<p>那么，如果我想通过指针去在函数中获取动态的空间要如何操作</p>
+<h2 id="解决方案">解决方案</h2>
+<p>其实通过上面的注意事项已经有一点眉目了，要想使用<code>*</code>符号来提取地址内容的方法来获得修改主函数传递的指针变量的内容权限的原理就是使得<code>*p</code>能够代表一个地址。由此可见，指针的指针那就是二级指针了，表现在代码中就是将上述的形参定义为二级指针并使用主函数的一级指针变量去传递参数。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">get_space</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">**</span> p)
+{
+    <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>)malloc(<span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>));
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>p;
+    <span style="color:#f92672">*</span>temp <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> pa <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>a;
+    printf(<span style="color:#e6db74">&#34;*pa=%d </span><span style="color:#ae81ff">\t</span><span style="color:#e6db74"> pa=%p </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>pa, pa);
+
+    get_space(<span style="color:#f92672">&amp;</span>pa);
+    printf(<span style="color:#e6db74">&#34;*pa=%d </span><span style="color:#ae81ff">\t</span><span style="color:#e6db74"> pa=%p </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>pa, pa);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>运行得到以下结果：</p>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/pointer_level2_2.png" alt="pointer level2 2"  loading="lazy" />
+</p>
+<p>由此便能通过一个指针在函数中去动态申请空间并返回上一层中了。</p>
+<h2 id="应用场景">应用场景</h2>
+<p>光是看上面的例子并不能了解这种方法的强大之处，但是模仿上面所说的句柄的思想，来举例说说这个方案的好处吧。</p>
+<p>首先假设，你负责一个项目的某个模块的编写，需要编写出<em>测试app</em>，<em>模块实现</em>以及<em>该模块所需的协议</em>，并且为了减少各个方法与模块之间的耦合性以及代码的简洁效率等因素不允许大量使用全局变量，但是你要完成这个模块有需要很多的变量来存储一些参数以供该模块实现内的各个方法进行调用，这时候要怎么解决呢？</p>
+<p>结构体是解决这种变量多的一种方案，但是如果在模块内使用全局变量的话你又如何管理这些空间呢（如果里面有较大的空间占用），只能等程序结束时清除吗</p>
+<p>这时候使用一个指针变量来保存一个动态空间的地址来进行操作显然更方便，也就是使用一个<code>void*</code>型指针变量来存储地址，在模块初始化时申请空间，模块进行功能时将地址下放，用完后动态地清理该空间。而这个<code>void*</code>型的指针就是本次提出的句柄的模仿。</p>
+<p>光是空口说出有点不太好说明该方案的可行性，下面用一个小例子来证明：</p>
+<ul>
+<li>假设下面的主函数函数和其他函数不在同一文件中</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+
+<span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> couple_num
+{
+    <span style="color:#66d9ef">int</span> a;
+    <span style="color:#66d9ef">char</span> b;
+} couple_num_t;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">get_space</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">**</span> a)
+{
+    printf(<span style="color:#e6db74">&#34;*a addr:%p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#f92672">*</span>a);
+    <span style="color:#f92672">*</span>a <span style="color:#f92672">=</span> (couple_num_t <span style="color:#f92672">*</span>) malloc (<span style="color:#66d9ef">sizeof</span>(couple_num_t));
+    printf(<span style="color:#e6db74">&#34;%p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a);
+    couple_num_t <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>a;
+    p<span style="color:#f92672">-&gt;</span>a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>;
+    p<span style="color:#f92672">-&gt;</span>b <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;r&#39;</span>;
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">show</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>a)
+{
+    printf(<span style="color:#e6db74">&#34;*a addr:%p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, a);
+    couple_num_t<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> a;
+    printf(<span style="color:#e6db74">&#34;show:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">%c</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,temp<span style="color:#f92672">-&gt;</span>a, temp<span style="color:#f92672">-&gt;</span>b);
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">release</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">**</span> a)
+{
+    free(<span style="color:#f92672">*</span>a);
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>p <span style="color:#f92672">=</span> NULL;
+
+    printf(<span style="color:#e6db74">&#34;origin p addr:%p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, p);
+
+    get_space(<span style="color:#f92672">&amp;</span>p);
+    printf(<span style="color:#e6db74">&#34;after change p addr:%p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, p);
+
+    couple_num_t<span style="color:#f92672">*</span> temp <span style="color:#f92672">=</span> p;
+    printf(<span style="color:#e6db74">&#34;temp:%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,temp<span style="color:#f92672">-&gt;</span>a);
+
+    show(p);
+
+    release(<span style="color:#f92672">&amp;</span>p);
+    printf(<span style="color:#e6db74">&#34;after release p addr：%p</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, p);
+    
+    show(p);
+
+    getchar();
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><p>运行结果如下：</p>
+<p><img class="img-fluid" src="https://impressionyang.gitee.io/imgbed/img/blog/pointer_level2_3.png" alt="pointer level2 3"  loading="lazy" />
+</p>
+<p>可以看到，使用这种方法，不用在主函数暴露结构体内容，也能够将结构体的地址空间进行掌握，高效的利用了指针的特性完成功能，使得各个方法之间相互影响减少，参数传递也简单，并且在使用完成后还能动态清除空间。</p>
+<h2 id="后记">后记</h2>
+<p>这种方法在C语言下设计功能模块时特别有用，模仿了面向对象的句柄思想，减少模块间的耦合（不使用全局变量，各方法就不会无意间相互干扰了）。</p>
+<hr>
+<center><img src="https://impressionyang.gitee.io/imgbed/img/favicon/favicon_64.png" /></center>
+<center>impressionyang</center></div><div class="post-copyright mb-4">
+  <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
+</div><div class="post-reward mb-4 text-center">
+  <button type="button" class="btn btn-reward" data-toggle="modal" data-target="#rewardModal">
+    <i class="fas fa-fw fa-medal"></i>打赏
+  </button>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post">
+      <a href="/posts/tech_and_skill/add-canvas-clock-in-pugjs/">给pugjs的stun主题添加canvas时钟</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"><div class="next-post">
+      <a href="/posts/tech_and_skill/compress-file-extract-and-compress/">Linux解压缩文件</a>
+    </div></div>
+</div><section class="related-posts">
+  <h3>相关文章</h3>
+  <ul class="related-posts"><li><a href="/posts/tech_and_skill/add-canvas-clock-in-pugjs/">给pugjs的stun主题添加canvas时钟</a></li><li><a href="/posts/tech_and_skill/arch-refind-bootloader-efi/">Arch Linux切换rEFInd开机引导程序</a></li><li><a href="/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/">为主题用pugjs编写的hexo博客添加网站运行时间</a></li><li><a href="/posts/tech_and_skill/archlinux-install-3/">archlinux安装篇（三） KDE配套小工具</a></li><li><a href="/posts/coding/markdown-note-mermaid/">Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</a></li></ul>
+</section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="impressionyang/impressionyang.github.io"
+  issue-term="pathname"
+  label=""
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row">
+  <div class="col-xl-6 d-flex align-items-center justify-content-center">
+    <img class="profile-avatar img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" alt="impressionyang" loading="lazy">
+  </div>
+  <div class="col-xl-6">
+    <h5 class="profile-name my-2">impressionyang</h5><div class="profile-bio mb-2">looove coooding.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><div class="profile-about mb-2"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">关于</a></div></div>
+</section><section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/talk/hugo_theme_bootstrap_change/">对于此hugo主题的更改</a></li><li><a href="/posts/talk/about_change_to_hugo/">关于换到hugo</a></li><li><a href="/posts/book/book_about/">关于读书分享</a></li><li><a href="/posts/coding/git-update-script/">git更新脚本</a></li><li><a href="/posts/tech_and_skill/qt-creator-my-setup/">Qt个人配置</a></li></ul>
+</section>
+<section class="taxonomy-categories row surface">
+  <h4>
+    <a href="/categories">分类</a>
+  </h4>
+  <div><a href="/categories/tech_and_skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="tech_and_skill">
+      tech_and_skill <span class="badge rounded-pill">30</span>
+    </a><a href="/categories/coding/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="coding">
+      coding <span class="badge rounded-pill">12</span>
+    </a><a href="/categories/book/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="book">
+      book <span class="badge rounded-pill">2</span>
+    </a><a href="/categories/talk/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="talk">
+      talk <span class="badge rounded-pill">2</span>
+    </a></div>
+</section><section class="taxonomy-series row surface">
+  <h4>
+    <a href="/series">专栏</a>
+  </h4>
+  <div><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="博客">
+      博客 <span class="badge rounded-pill">45</span>
+    </a></div>
+</section><section class="taxonomy-tags row surface">
+  <h4>
+    <a href="/tags">标签</a>
+  </h4>
+  <div><a href="/tags/skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="skill">
+      skill <span class="badge rounded-pill">33</span>
+    </a><a href="/tags/linux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Linux">
+      Linux <span class="badge rounded-pill">8</span>
+    </a><a href="/tags/archlinux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="archlinux">
+      archlinux <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c&#43;&#43;/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C&#43;&#43;">
+      C&#43;&#43; <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/program/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="program">
+      program <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C">
+      C <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/hexo/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="hexo">
+      hexo <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/qt/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Qt">
+      Qt <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/install/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="install">
+      install <span class="badge rounded-pill">4</span>
+    </a><a href="/tags/plasma/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Plasma">
+      Plasma <span class="badge rounded-pill">3</span>
+    </a></div>
+</section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:impressionyang@outlook.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/impressionyang" title="Github">
+        <i class="fab fa-fw fa-2x fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2572247223&amp;site=qq&amp;menu=yes" title="Qq">
+        <i class="fab fa-fw fa-2x fa-qq"></i>
+      </a>
+    </li></nav>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.9.2/mermaid.min.js"></script>
+<script>
+      mermaid.initialize({ startOnLoad: true });
+</script>
+<div class="copyright mb-2">
+  Copyright © 2016-2021 impressionyang. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">Bootstrap</a> theme.
+</div></footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

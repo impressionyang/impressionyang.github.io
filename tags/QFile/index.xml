@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QFile on impressionyang</title>
+    <link>/tags/qfile/</link>
+    <description>Recent content in QFile on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 29 Mar 2020 19:50:18 +0000</lastBuildDate><atom:link href="/tags/qfile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qt文件操作QFile</title>
+      <link>/posts/coding/qt-qfile-note/</link>
+      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qfile-note/</guid>
+      <description>&lt;h2 id=&#34;先导&#34;&gt;先导&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为有需求使用&lt;code&gt;Qt&lt;/code&gt;的文件&lt;code&gt;I/O&lt;/code&gt;操作,所以做此记录以供后用&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

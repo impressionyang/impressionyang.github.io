@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置 - impressionyang</title><link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="180x180">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png">
+<meta name="description" content="" /><meta itemprop="name" content="Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置">
+<meta itemprop="description" content="先导
+本贴在手机端因为mermaid插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览
+
+持续更新中&hellip;
+
+
+本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的
+"><meta itemprop="datePublished" content="2020-03-21T22:31:34&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-21T22:31:34&#43;00:00" />
+<meta itemprop="wordCount" content="3435">
+<meta itemprop="keywords" content="skill,markdown,UML,hexo,mermaid," /><meta property="og:title" content="Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置" />
+<meta property="og:description" content="先导
+本贴在手机端因为mermaid插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览
+
+持续更新中&hellip;
+
+
+本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/coding/markdown-note-mermaid/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-03-21T22:31:34&#43;00:00" />
+<meta property="article:modified_time" content="2020-03-21T22:31:34&#43;00:00" /><meta property="og:site_name" content="impressionyang" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置"/>
+<meta name="twitter:description" content="先导
+本贴在手机端因为mermaid插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览
+
+持续更新中&hellip;
+
+
+本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的
+"/>
+<meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.fb6a2f555467bf9d44fa0fc6f95b200fcddbd2efd37ad2621f7408b9c2c4b8e4.css" integrity="sha256-&#43;2ovVVRnv51E&#43;g/G&#43;VsgD83b0u/TetJiH3QIucLEuOQ=" crossorigin="anonymous"><script src="/js/bundle.min.078401d7a9ee1fd5830bf91cfe6d51e0711245cab1e263acd8cd0d79d5a3f04e.js" integrity="sha256-B4QB16nuH9WDC/kc/m1R4HESRcqx4mOs2M0NedWj8E4=" crossorigin="anonymous"></script>
+
+
+</head>
+  <body><header><nav class="navbar fixed-top navbar-expand-xl">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy">impressionyang</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-2 mb-2 mb-lg-0"><form class="search-bar d-flex mr-2" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav mb-2 mb-lg-0 mr-2 ml-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-about" role="button" data-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user"></i>个人
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-about"><li>
+              <a class="dropdown-item"
+                href="/about/about">
+                <i class="fas fa-user"></i> 个人简介
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/music">
+                <i class="fas fa-music"></i> 歌单分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="/about/games">
+                <i class="fab fa-steam"></i> stem游戏分享
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/impressionyang" target="_blank">
+                <i class="fab fa-fw fa-github"></i>github
+              </a>
+            </li></ul>
+        </li><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown-third_party" role="button" data-toggle="dropdown" aria-expanded="false">
+            第三方链接
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown-third_party"><li>
+              <a class="dropdown-item"
+                href="https://fontawesome.com/" target="_blank">
+                <i class="fab fa-font-awesome"></i> Font Awesome 5
+              </a>
+            </li><li>
+              <a class="dropdown-item"
+                href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">
+                <i class="fas fa-palette"></i> 主题地址
+              </a>
+            </li></ul>
+        </li></ul>
+      <ul class="navbar-nav d-flex flex-row mb-2 mb-lg-0"><li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="languageSwitcher" data-toggle="popover"
+    data-placement="bottom" data-target="#languagesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-language" ></i>
+  </a>
+</li>
+<script type="text/html" id="languagesPopoverBody">
+  <ul class="languages list-group"><li class="language list-group-item active">简体中文</li><li class="language list-group-item">
+      <a href="/en/">English</a></li><li class="language list-group-item">
+      <a href="/zh-tw/">繁體中文</a></li></ul>
+</script>
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="paletteSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#palettesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-palette" ></i>
+  </a>
+</li>
+<script type="text/html" id="palettesPopoverBody">
+  <ul class="palettes list-group"><li id="palette-blue" class="palette list-group-item bg-blue">
+      <a>蓝色</a>
+    </li><li id="palette-blue-gray" class="palette list-group-item bg-blue-gray">
+      <a>蓝灰色</a>
+    </li><li id="palette-brown" class="palette list-group-item bg-brown">
+      <a>棕色</a>
+    </li><li id="palette-cyan" class="palette list-group-item bg-cyan">
+      <a>青色</a>
+    </li><li id="palette-green" class="palette list-group-item bg-green">
+      <a>绿色</a>
+    </li><li id="palette-indigo" class="palette list-group-item bg-indigo">
+      <a>靛青色</a>
+    </li><li id="palette-orange" class="palette list-group-item bg-orange">
+      <a>橙色</a>
+    </li><li id="palette-pink" class="palette list-group-item bg-pink">
+      <a>粉色</a>
+    </li><li id="palette-purple" class="palette list-group-item bg-purple">
+      <a>紫色</a>
+    </li><li id="palette-red" class="palette list-group-item bg-red">
+      <a>红色</a>
+    </li><li id="palette-teal" class="palette list-group-item bg-teal">
+      <a>蓝绿色</a>
+    </li><li id="palette-yellow" class="palette list-group-item bg-yellow">
+      <a>黄色</a>
+    </li></ul>
+</script>
+
+<li class="nav-item mr-2">
+  <a class="nav-link" tabindex="0" data-trigger="click" id="fontSizeSwitcher" data-toggle="popover" data-placement="bottom" 
+    data-target="#fontSizesPopoverBody" data-html="true">
+    <i class="fas fa-fw fa-font" ></i>
+  </a>
+</li>
+<script type="text/html" id="fontSizesPopoverBody">
+  <form class="font-size-switcher-form">
+    <label for="fontSize" class="form-label">字体大小</label>
+    <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+  </form>
+</script>
+<form class="mode-switcher-form d-flex align-items-center">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="modeSwitcher">
+  </div>
+</form>
+</ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-md-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item"><a href="/posts/coding/">编程技巧</a></li><li class="breadcrumb-item active">Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</li></ol>
+</nav><article class="post row surface">
+  <h1 class="post-title my-3">Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</h1><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-03-21
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>7 分钟阅读
+  </span>
+<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/markdown/" class="post-taxonomy">#markdown</a><a href="/tags/uml/" class="post-taxonomy">#UML</a><a href="/tags/hexo/" class="post-taxonomy">#hexo</a><a href="/tags/mermaid/" class="post-taxonomy">#mermaid</a></div>
+<div class="accordion accordion-flush surface post-toc position-sticky" id="accordionTOC">
+  <div class="accordion-item">
+    <div class="accordion-header" id="headingTOC" data-toggle="collapse" data-target="#collapseTOC" aria-expanded="true" aria-controls="collapseTOC">
+      <i class="fas fa-fw fa-bars"></i>目录
+    </div>
+    <div id="collapseTOC" class="accordion-collapse collapse" aria-labelledby="headingTOC" data-parent="#accordionTOC">
+      <div class="accordion-body mt-2">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#先导">先导</a></li>
+    <li><a href="#hexo-相关配置">Hexo 相关配置</a>
+      <ul>
+        <li><a href="#安装插件">安装插件</a></li>
+        <li><a href="#配置插件">配置插件</a></li>
+      </ul>
+    </li>
+    <li><a href="#mermaid语法">mermaid语法</a>
+      <ul>
+        <li><a href="#流程图">流程图</a></li>
+        <li><a href="#类图">类图</a></li>
+        <li><a href="#时序图">时序图</a></li>
+        <li><a href="#甘特图">甘特图</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+  </div>
+</div><div class="post-content mb-3"><h2 id="先导">先导</h2>
+<p></br><center><b>本贴在手机端因为<code>mermaid</code>插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览</b></center></br></p>
+<ul>
+<li>持续更新中&hellip;</li>
+</ul>
+<blockquote>
+<p>本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的</p>
+</blockquote>
+<h2 id="hexo-相关配置">Hexo 相关配置</h2>
+<p>要想在<code>Hexo</code>中使用<code>mermaid</code>图形的话需要安装<code>hexo-filter-mermaid-diagrams</code>这个插件并且配置相关的设置，该插件是由作者<a href="https://webappdevelp.github.io/" target="_blank">Frank_Fang</a>
+修改编写的，并且在他的<a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams" target="_blank">github项目</a>
+中给出了很详细的配置说明,本贴就节选我的配置来说明。</p>
+<h3 id="安装插件">安装插件</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cnpm install hexo-filter-mermaid-diagrams --save
+</code></pre></div><h3 id="配置插件">配置插件</h3>
+<p>首先配置Hexo的<code>_config.yml</code></p>
+<p>需要在配置文件的文末添加</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e"># mermaid chart</span>
+<span style="color:#f92672">mermaid</span>: <span style="color:#75715e">## mermaid url https://github.com/knsv/mermaid</span>
+  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span>  
+  <span style="color:#75715e"># default true</span>
+  <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;7.1.2&#34;</span>
+  <span style="color:#75715e"># default v7.1.2</span>
+  <span style="color:#f92672">options</span>:  
+  <span style="color:#75715e"># find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js</span>
+  <span style="color:#75715e">#startOnload: true  // default true</span>
+</code></pre></div><p>然后在配置主题的相关页面片段使得网页能够是别到插件生成的<code>mermaid</code>图并渲染(需要一定的时间,主要是配置的js源比较慢),因为的使用的主题<a href="https://github.com/liuyib/hexo-theme-stun/" target="_blank">stun</a>
+的页面片段是用<code>pug</code>编写的,所以使用的是作者说明的配置来的,如果使用的是<code>ejs</code>或者其他文件编写的请查看作者的<a href="https://github.com/webappdevelp/hexo-filter-mermaid-diagrams" target="_blank">github</a>
+是怎么说明的,根据作者推荐的配置是在在<code>after_footer.pug</code>文件里面,但是我的这个主题并没有这个文件,所以我选择直接使用<code>footer.pug</code>来进行配置,可能会比原来的慢一点&hellip;</p>
+<p>于是,在<code>主题/layout/footer/footer.pug</code>里面添加以下内容</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">mermaid</span>.<span style="color:#a6e22e">enable</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">true</span>
+  <span style="color:#a6e22e">script</span>(<span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;text/javascript&#39;</span>, <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;maid-script&#39;</span> <span style="color:#a6e22e">mermaidoptioins</span><span style="color:#f92672">=</span><span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">mermaid</span>.<span style="color:#a6e22e">options</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://unpkg.com/mermaid@&#39;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">mermaid</span>.<span style="color:#a6e22e">version</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/dist/mermaid.min.js&#39;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;?v=&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">theme</span>.<span style="color:#a6e22e">version</span>)
+  <span style="color:#a6e22e">script</span>.
+    <span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">mermaid</span>) {
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;maid-script&#39;</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;mermaidoptioins&#39;</span>));
+      <span style="color:#a6e22e">mermaid</span>.<span style="color:#a6e22e">initialize</span>(<span style="color:#a6e22e">options</span>);
+    }
+</code></pre></div><p>至此,<code>Hexo</code>方面的配置基本完成,接下来就讲讲<code>mermaid</code>相关的语法</p>
+<h2 id="mermaid语法">mermaid语法</h2>
+<ul>
+<li><code>mermaid</code>的代码块标识是mermaid</li>
+<li>创建一个代码块并将相关语句添加进去即可</li>
+</ul>
+<p>如果想看到原汁原味的语法请到<code>mermaid-js</code>作者的<a href="https://mermaid-js.github.io/mermaid/#/" target="_blank">git pages页面查看</a>
+,里面有完整的语法支持,包括流程图、时序图、类图、活动土、甘特图和饼图，我这里只是节选一些我需要的进行简化抽取并进行简单的翻译</p>
+<ul>
+<li>也可以体验<code>mermaid-js</code>作者提供的<a href="https://mermaidjs.github.io/mermaid-live-editor/" target="_blank">在线demo</a>
+</li>
+</ul>
+<h3 id="流程图">流程图</h3>
+<blockquote>
+<p>程序流程图是用规定的符号描述一个专用程序中所需要的各项操作或判断的图示。这种流程图着重说明程序的逻辑性与处理顺序，具体描述了微机解题的逻辑及步骤。当程序中有较多循环语句和转移语句时，程序的结构将比较复杂，给程序设计与阅读造成困难。程序流程图用图的形式画出程序流向，是算法的一种图形化表示方法，具有直观、清晰、更易理解的特点。-百度百科&quot;程序流程图&quot;</p>
+</blockquote>
+<p>程序流程图的<code>mermaid</code>语法基本如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">graph 方向描述
+    组件相关语句
+       ...
+</code></pre></div><p>其大致能分成:</p>
+<ol>
+<li>方向描述</li>
+<li>组件</li>
+<li>线条</li>
+<li>子图</li>
+</ol>
+<h4 id="方向描述">方向描述</h4>
+<p>方向描述是用来规定流程图的方向的,具体语法如下</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TB</code></td>
+<td>方向从上至下</td>
+</tr>
+<tr>
+<td><code>BT</code></td>
+<td>方向从下至上</td>
+</tr>
+<tr>
+<td><code>LR</code></td>
+<td>方向从左至右</td>
+</tr>
+<tr>
+<td><code>RL</code></td>
+<td>方向从右至左</td>
+</tr>
+</tbody>
+</table>
+<h4 id="组件">组件</h4>
+<p>组件是用来表示相关过程的,由<code>id</code>和括号组成,<code>id</code>是用来标识组件的的,具体语法如下</p>
+<ul>
+<li>text是自定义文本</li>
+<li>id可以用别的英文名替换</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id(text)</code></td>
+<td>圆角矩形</td>
+</tr>
+<tr>
+<td><code>id[text]</code></td>
+<td>矩形</td>
+</tr>
+<tr>
+<td><code>id{text}</code></td>
+<td>菱形</td>
+</tr>
+<tr>
+<td><code>id&gt;text]</code></td>
+<td>旗帜形</td>
+</tr>
+<tr>
+<td><code>id((text))</code></td>
+<td>圆形</td>
+</tr>
+</tbody>
+</table>
+<h4 id="线条">线条</h4>
+<p>线条是流程图各个组件之间的联系</p>
+<ul>
+<li>text是自定义文本</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>---</code></td>
+<td>简单线条,无箭头</td>
+</tr>
+<tr>
+<td><code>--&gt;</code></td>
+<td>有箭头的简单线条</td>
+</tr>
+<tr>
+<td><code>--text---</code></td>
+<td>无箭头简单线条附带文字</td>
+</tr>
+<tr>
+<td><code>--text--&gt;</code></td>
+<td>有箭头简单线条附带文字</td>
+</tr>
+<tr>
+<td><code>===</code></td>
+<td>无箭头粗线条</td>
+</tr>
+<tr>
+<td><code>==&gt;</code></td>
+<td>有箭头粗线条</td>
+</tr>
+<tr>
+<td><code>==text===</code></td>
+<td>带文字无箭头粗线条</td>
+</tr>
+<tr>
+<td><code>==text==&gt;</code></td>
+<td>带文字有箭头粗线条</td>
+</tr>
+<tr>
+<td><code>-.--</code></td>
+<td>无箭头虚线</td>
+</tr>
+<tr>
+<td><code>-.-&gt;</code></td>
+<td>有箭头虚线</td>
+</tr>
+<tr>
+<td><code>-.text.--</code></td>
+<td>带文字无箭头虚线</td>
+</tr>
+<tr>
+<td><code>-.text.-&gt;</code></td>
+<td>带文字有箭头虚线</td>
+</tr>
+</tbody>
+</table>
+<p>由此,一个流程图所需的语法已经介绍完毕,子图我现在运用过少先不介绍了,接下来是一份基本例子</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">graph TB
+    start<span style="color:#f92672">(</span>开始<span style="color:#f92672">)</span>--&gt;opt1<span style="color:#f92672">[</span>事件1<span style="color:#f92672">]</span>
+    opt1--&gt;if1<span style="color:#f92672">{</span>判断1<span style="color:#f92672">}</span>
+    if1--Y--&gt;opt2<span style="color:#f92672">[</span>事件2<span style="color:#f92672">]</span>
+    opt2-.如果累了.-&gt;opt4<span style="color:#f92672">((</span>休息一下<span style="color:#f92672">))</span>
+    if1--N--&gt;opt3<span style="color:#f92672">[</span>事件3<span style="color:#f92672">]</span>
+    opt2--&gt;endd<span style="color:#f92672">(</span>结束<span style="color:#f92672">)</span>
+    opt3--&gt;endd
+
+</code></pre></div><div class="mermaid">
+graph TB
+    start(开始)-->opt1[事件1]
+    opt1-->if1{判断1}
+    if1--Y-->opt2[事件2]
+    opt2-.如果累了.->opt4((休息一下))
+    if1--N-->opt3[事件3]
+    opt2-->endd(结束)
+    opt3-->endd
+</div>
+<h3 id="类图">类图</h3>
+<blockquote>
+<p>类图(Class diagram)是显示了模型的静态结构，特别是模型中存在的类、类的内部结构以及它们与其他类的关系等。类图不显示暂时性的信息。类图是面向对象建模的主要组成部分。它既用于应用程序的系统分类的一般概念建模，也用于详细建模，将模型转换成编程代码。类图也可用于数据建模。-百度百科&quot;类图&quot;</p>
+</blockquote>
+<p>类图的创建语法基本如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">classDiagram
+  类图的语句
+   ...
+</code></pre></div><p>其内容大致能分为</p>
+<ol>
+<li>类定义</li>
+<li>注释</li>
+<li>关系</li>
+</ol>
+<h4 id="类定义">类定义</h4>
+<p>类图最主要的元素就是类了，定义一个类的方法有多种多样，建议使用比较像编程语言的语法创建类</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">class NAME<span style="color:#f92672">{</span>
+  成员变量相关
+  成员函数相关
+<span style="color:#f92672">}</span>
+</code></pre></div><p>通过上述语法可以在类图中创建一个类，下面讲讲成员变量和成员函数的相关语法</p>
+<ul>
+<li>可见性</li>
+</ul>
+<p>类的成员有着可见性这一特征，在类图中一般是<code>可见性</code> <code>类成员</code>直接连着写的，可见性分类如下</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>公有的 <code>public</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>私有的 <code>private</code></td>
+</tr>
+<tr>
+<td><code>#</code></td>
+<td>保护的 <code>protected</code></td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>包内的 <code>package</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>成员变量和成员函数</li>
+</ul>
+<p><code>mermaid</code>通过<code>()</code>来判定成员变量和成员函数，带有<code>()</code>的就是成员函数,否则为成员变量</p>
+<p>加上可见性组合成员变量和成员函数就可以建立一个简单的类了</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">classDiagram
+  class Student<span style="color:#f92672">{</span>
+    -String name;
+    -int age;
+    +Student<span style="color:#f92672">(</span>String name,int age<span style="color:#f92672">)</span>;
+  <span style="color:#f92672">}</span>
+</code></pre></div><div class="mermaid">
+classDiagram
+  class Student{
+    -String name;
+    -int age;
+    +Student(String name,int age);
+    +getAge()  int;
+  }
+</div>
+<ul>
+<li><strong>注意1</strong>:<code>mermaid</code>中想使用<code>List&lt;int&gt;</code>这样的通用参数或者返回值的话是不能直接使用<code>&lt;&gt;</code>符号的,需要使用<code>~~</code>来代替,也就是<code>List~int~</code>这样的形式。</li>
+<li><strong>注意2</strong>:<code>mermaid</code>函数返回值需要写在函数声明后,记住有空格,不能写在可见性后</li>
+</ul>
+<h4 id="注释">注释</h4>
+<p>注释分为类的注释和类图中的注释</p>
+<div class="mermaid">
+ classDiagram
+      class Animal{
+        +String gender
+        +isMammal()
+        +mate()
+      }
+      Animal : +int age
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+      Animal <|-- Duck
+      Animal <|-- Fish
+      Animal <|-- Zebra
+</div>
+<h3 id="时序图">时序图</h3>
+<blockquote>
+<p>时序图（Sequence Diagram），又名序列图、循序图，是一种UML交互图。它通过描述对象之间发送消息的时间顺序显示多个对象之间的动态协作。它可以表示用例的行为顺序，当执行一个用例行为时，其中的每条消息对应一个类操作或状态机中引起转换的触发事件。-百度百科&quot;时序图&quot;</p>
+</blockquote>
+<p>时序图的创建语法基本如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sequenceDiagram
+    时序图语句
+      ...
+</code></pre></div><p>其内容大致能分为:</p>
+<ol>
+<li>参与者</li>
+<li>消息线</li>
+<li>标注</li>
+<li>循环</li>
+<li>判断</li>
+</ol>
+<h4 id="参与者">参与者</h4>
+<p>参与者是参消息的实体,其创建语法如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">participant name1
+participant name2 as 名字2
+</code></pre></div><p>第1行是创建一个参与者,名字为<code>name1</code>,第2行是创建一个参与者名字叫做<code>name2</code>,但是它有一个别名叫<code>名字2</code></p>
+<h4 id="消息线">消息线</h4>
+<p>消息线是时序图里面各个实体之间相互通信的联系,其说明如下</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-&gt;</code></td>
+<td>无箭头的实线</td>
+</tr>
+<tr>
+<td><code>--&gt;</code></td>
+<td>无箭头的虚线</td>
+</tr>
+<tr>
+<td><code>-&gt;&gt;</code></td>
+<td>有箭头的实线</td>
+</tr>
+<tr>
+<td><code>--&gt;&gt;</code></td>
+<td>有箭头的虚线</td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td>末端为叉的实线</td>
+</tr>
+<tr>
+<td><code>--x</code></td>
+<td>末端为叉的虚线</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>:由此<code>参与者</code>+<code>消息线</code>就会合并就会发生信息,一般语法是:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">参与者 消息线 另一参与者: 信息
+<span style="color:#75715e">#例子 name1-&gt;&gt;name2:msg</span>
+</code></pre></div><h4 id="标注">标注</h4>
+<p>标注能够在时序图的某个时间点为实体标注一些信息,一般由<code>Note 位置 实体：文字描述</code>来组成，其位置说明如下</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Note left of</code></td>
+<td>标注在实体的左侧</td>
+</tr>
+<tr>
+<td><code>Note right of</code></td>
+<td>标注在实体的右侧</td>
+</tr>
+<tr>
+<td><code>Note over</code></td>
+<td>标注在实体上</td>
+</tr>
+</tbody>
+</table>
+<h4 id="循环">循环</h4>
+<p>循环是在一个时间段内符合某种条件时重复做一件事情,其基本语法如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">loop 循环的条件
+    循环体描述语句
+end
+</code></pre></div><h4 id="判断">判断</h4>
+<p>遇到一些需要根据不同情况进行分支选择的时候就需要用到判断语句了,其语法大致有两种,一种是有多分支的,一种是只有一条分支的</p>
+<p><strong>多分支</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">alt 分支条件1
+    分支语句1
+    ...
+<span style="color:#66d9ef">else</span> 分支条件2
+    分支语句2
+     ...
+<span style="color:#66d9ef">else</span> 分支条件3
+     ...
+     ...
+end
+</code></pre></div><p><strong>单分支</strong>,即只有一个条件操作:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">opt 条件
+    执行语句
+     ...
+end
+</code></pre></div><p>基本上时序图就是以上的常用语法了,下面给出一个实例:</p>
+<div class="mermaid">
+sequenceDiagram
+  title: 实例
+  participant teacher as 老师
+  participant stu as 学生
+<p>opt 起床了
+Note right of stu:上学
+Note left of teacher:上课
+end
+stu-&raquo;teacher:老师好
+teacher-&raquo;stu:同学们好,请坐
+opt 老师应答完毕
+Note over stu:坐下
+end
+loop 授课时间
+Note right of teacher:老师上课
+alt 同学提问
+stu-&raquo;teacher:问题
+teacher-&raquo;stu:答案
+else 老师提问
+teacher-&raquo;stu:问题
+stu-&raquo;teacher:回答
+else 下课时间到了
+Note right of teacher:下课
+end
+end
+opt 下课
+teacher-&raquo;stu:同学们再见
+stu-&raquo;teacher:老师再见
+end
+Note over teacher,stu:继续日常至放学时间</p>
+<p>opt 放学了
+Note left of teacher:回家
+Note right of stu:回家
+end</p>
+</div>
+<h3 id="甘特图">甘特图</h3>
+<p>以下节选自百度百科&quot;甘特图&quot;的信息:</p>
+<blockquote>
+<p>甘特图（Gantt chart）又称为横道图、条状图(Bar chart)。其通过条状图来显示项目，进度，和其他时间相关的系统进展的内在关系随着时间进展的情况。以提出者亨利·劳伦斯·甘特（Henry Laurence Gantt）先生的名字命名。</p>
+</blockquote></div><div class="post-copyright mb-4">
+  <h3>版权</h3><div class="post-cc">本作品采用 <a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0 <i class="fab fa-fw fa-creative-commons"></i><i class="fab fa-fw fa-creative-commons-by"></i><i class="fab fa-fw fa-creative-commons-nc"></i><i class="fab fa-fw fa-creative-commons-nd"></i></a> 授权。</div>
+</div><div class="post-reward mb-4 text-center">
+  <button type="button" class="btn btn-reward" data-toggle="modal" data-target="#rewardModal">
+    <i class="fas fa-fw fa-medal"></i>打赏
+  </button>
+</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post">
+      <a href="/posts/tech_and_skill/hexo-broken-fix-note01/">记录一次Hexo的崩溃修复</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"><div class="next-post">
+      <a href="/posts/tech_and_skill/archlinux-install-3/">archlinux安装篇（三） KDE配套小工具</a>
+    </div></div>
+</div><section class="related-posts">
+  <h3>相关文章</h3>
+  <ul class="related-posts"><li><a href="/posts/tech_and_skill/hexo-broken-fix-note01/">记录一次Hexo的崩溃修复</a></li><li><a href="/posts/tech_and_skill/hexo-init-config-1/">Hexo &#43; Git Pages搭建个人博客（一）</a></li><li><a href="/posts/tech_and_skill/fcitx5-install-note/">记一次Fcitx5的安装</a></li><li><a href="/posts/tech_and_skill/kde-wallet-login-config/">解决KDE下KDE Wallet重装系统后每次登陆需要输入密码</a></li><li><a href="/posts/tech_and_skill/unity-style-applet/">KDE下完美的Unity桌面体验，扔掉active window control</a></li></ul>
+</section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="impressionyang/impressionyang.github.io"
+  issue-term="pathname"
+  label=""
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row">
+  <div class="col-xl-6 d-flex align-items-center justify-content-center">
+    <img class="profile-avatar img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/logo_typhone.png" alt="impressionyang" loading="lazy">
+  </div>
+  <div class="col-xl-6">
+    <h5 class="profile-name my-2">impressionyang</h5><div class="profile-bio mb-2">looove coooding.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><div class="profile-about mb-2"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">关于</a></div></div>
+</section><section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/talk/hugo_theme_bootstrap_change/">对于此hugo主题的更改</a></li><li><a href="/posts/talk/about_change_to_hugo/">关于换到hugo</a></li><li><a href="/posts/book/book_about/">关于读书分享</a></li><li><a href="/posts/coding/git-update-script/">git更新脚本</a></li><li><a href="/posts/tech_and_skill/qt-creator-my-setup/">Qt个人配置</a></li></ul>
+</section>
+<section class="taxonomy-categories row surface">
+  <h4>
+    <a href="/categories">分类</a>
+  </h4>
+  <div><a href="/categories/tech_and_skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="tech_and_skill">
+      tech_and_skill <span class="badge rounded-pill">30</span>
+    </a><a href="/categories/coding/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="coding">
+      coding <span class="badge rounded-pill">12</span>
+    </a><a href="/categories/book/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="book">
+      book <span class="badge rounded-pill">2</span>
+    </a><a href="/categories/talk/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="talk">
+      talk <span class="badge rounded-pill">2</span>
+    </a></div>
+</section><section class="taxonomy-series row surface">
+  <h4>
+    <a href="/series">专栏</a>
+  </h4>
+  <div><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="博客">
+      博客 <span class="badge rounded-pill">45</span>
+    </a></div>
+</section><section class="taxonomy-tags row surface">
+  <h4>
+    <a href="/tags">标签</a>
+  </h4>
+  <div><a href="/tags/skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="skill">
+      skill <span class="badge rounded-pill">33</span>
+    </a><a href="/tags/linux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Linux">
+      Linux <span class="badge rounded-pill">8</span>
+    </a><a href="/tags/archlinux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="archlinux">
+      archlinux <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c&#43;&#43;/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C&#43;&#43;">
+      C&#43;&#43; <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/program/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="program">
+      program <span class="badge rounded-pill">7</span>
+    </a><a href="/tags/c/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C">
+      C <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/hexo/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="hexo">
+      hexo <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/qt/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Qt">
+      Qt <span class="badge rounded-pill">5</span>
+    </a><a href="/tags/install/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="install">
+      install <span class="badge rounded-pill">4</span>
+    </a><a href="/tags/plasma/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Plasma">
+      Plasma <span class="badge rounded-pill">3</span>
+    </a></div>
+</section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:impressionyang@outlook.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/impressionyang" title="Github">
+        <i class="fab fa-fw fa-2x fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2572247223&amp;site=qq&amp;menu=yes" title="Qq">
+        <i class="fab fa-fw fa-2x fa-qq"></i>
+      </a>
+    </li></nav>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.9.2/mermaid.min.js"></script>
+<script>
+      mermaid.initialize({ startOnLoad: true });
+</script>
+<div class="copyright mb-2">
+  Copyright © 2016-2021 impressionyang. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+  Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank">Bootstrap</a> theme.
+</div></footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

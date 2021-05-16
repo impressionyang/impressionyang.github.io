@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>关于 on impressionyang</title>
+    <link>/about/</link>
+    <description>Recent content in 关于 on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Sun, 16 May 2021 13:53:38 +0800</lastBuildDate><atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>steam游戏分享</title>
+      <link>/about/games/</link>
+      <pubDate>Sun, 16 May 2021 13:53:38 +0800</pubDate>
+      
+      <guid>/about/games/</guid>
+      <description>steam游戏分享 在评论区分享一下你们喜欢的游戏吧 impressionyang</description>
+    </item>
+    
+    <item>
+      <title>个人简介</title>
+      <link>/about/about/</link>
+      <pubDate>Tue, 18 Feb 2020 23:06:36 +0000</pubDate>
+      
+      <guid>/about/about/</guid>
+      <description>个人简介 姓名： 杨显运 性别： 男 个人介绍 一个技术小白，日常使用Linux系统作为主力系统，目前使用Arch Linux，使用过Ubuntu、Deb</description>
+    </item>
+    
+    <item>
+      <title>歌单分享</title>
+      <link>/about/music/</link>
+      <pubDate>Tue, 18 Feb 2020 23:06:36 +0000</pubDate>
+      
+      <guid>/about/music/</guid>
+      <description>歌单分享 说明一下，霉霉的歌在app里面是听正版的，但是在网页上想听也没办法</description>
+    </item>
+    
+  </channel>
+</rss>

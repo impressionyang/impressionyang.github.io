@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on impressionyang</title>
+    <link>/tags/git/</link>
+    <description>Recent content in git on impressionyang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
+    <lastBuildDate>Mon, 03 May 2021 01:28:44 +0000</lastBuildDate><atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git更新脚本</title>
+      <link>/posts/coding/git-update-script/</link>
+      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
+      
+      <guid>/posts/coding/git-update-script/</guid>
+      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此脚本用于更新git仓库，主要用于使用ssh克隆的仓库，使用https克隆或者直接下载的不可使用此脚本进行更新，编写此贴用于保存脚本以供后用&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>git使用要点</title>
+      <link>/posts/tech_and_skill/git_use_guid/</link>
+      <pubDate>Wed, 19 Feb 2020 14:32:47 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/git_use_guid/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本帖子是用来记录&lt;code&gt;git&lt;/code&gt;的使用操作的，会在使用到新功能的时候进行更新，所以本贴是会进行较为长期的更新的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;基本命令&#34;&gt;基本命令&lt;/h2&gt;
+&lt;h3 id=&#34;初始化配置username-useremail替换为自己的&#34;&gt;初始化配置（&lt;code&gt;$username&lt;/code&gt;、 &lt;code&gt;$useremail&lt;/code&gt;替换为自己的）&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git config --global user.name $username
+git config --global user.email $useremail
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
