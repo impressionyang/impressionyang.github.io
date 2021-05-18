@@ -7,7 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 03 May 2021 01:28:44 +0000</lastBuildDate><atom:link href="/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 May 2021 12:56:00 +0800</lastBuildDate><atom:link href="/categories/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于HAL库发送16bit数据</title>
+      <link>/posts/coding/hal_spi_send_16bit_data/</link>
+      <pubDate>Tue, 18 May 2021 12:56:00 +0800</pubDate>
+      
+      <guid>/posts/coding/hal_spi_send_16bit_data/</guid>
+      <description>&lt;h2 id=&#34;说明&#34;&gt;说明&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该文档是作为记录&lt;code&gt;STM32&lt;/code&gt;国内帖子关于&lt;code&gt;HAL&lt;/code&gt;库&lt;code&gt;SPI&lt;/code&gt;问题解决无法有效回答的补充，网上的回答大部分都是直说怎么发的，但是没说原理是什么&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;问题记录&#34;&gt;问题记录&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在使用&lt;code&gt;HAL&lt;/code&gt;库时，&lt;code&gt;HAL&lt;/code&gt;提供的发送函数时，提供的接口发送数据为&lt;code&gt;uint8_t *&lt;/code&gt;类型的数据的，所以发送&lt;code&gt;16bit&lt;/code&gt;数据时主观上感觉无法发送16位的数据，并且HAL库并没有在函数原型上说明如何发送&lt;code&gt;16bit&lt;/code&gt;数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img class=&#34;img-fluid&#34; src=&#34;https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/20210510133821.png&#34; alt=&#34;spi发送函数原型定义&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;/p&gt;
+&lt;center&gt;spi发送函数原型定义&lt;/center&gt;&lt;br&gt;</description>
+    </item>
+    
     <item>
       <title>git更新脚本</title>
       <link>/posts/coding/git-update-script/</link>

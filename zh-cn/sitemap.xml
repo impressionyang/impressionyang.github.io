@@ -2,11 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/tags/hugo/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+    <loc>/tags/c/</loc>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
+  </url><url>
+    <loc>/tags/coding/</loc>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
+  </url><url>
+    <loc>/categories/coding/</loc>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
+  </url><url>
+    <loc>/tags/hal/</loc>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -23,14 +32,11 @@
                 href="/"
                 />
   </url><url>
-    <loc>/tags/talk/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
-  </url><url>
-    <loc>/categories/talk/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+    <loc>/tags/spi/</loc>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
   </url><url>
     <loc>/series/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -47,8 +53,11 @@
                 href="/series/"
                 />
   </url><url>
+    <loc>/posts/coding/hal_spi_send_16bit_data/</loc>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
+  </url><url>
     <loc>/categories/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -66,13 +75,10 @@
                 />
   </url><url>
     <loc>/series/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
-  </url><url>
-    <loc>/posts/talk/hugo_theme_bootstrap_change/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -89,11 +95,8 @@
                 href="/posts/"
                 />
   </url><url>
-    <loc>/posts/talk/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
-  </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -110,14 +113,29 @@
                 href="/tags/"
                 />
   </url><url>
+    <loc>/posts/coding/</loc>
+    <lastmod>2021-05-18T12:56:00+08:00</lastmod>
+  </url><url>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+  </url><url>
+    <loc>/tags/talk/</loc>
+    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+  </url><url>
+    <loc>/categories/talk/</loc>
+    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+  </url><url>
+    <loc>/posts/talk/hugo_theme_bootstrap_change/</loc>
+    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+  </url><url>
+    <loc>/posts/talk/</loc>
+    <lastmod>2021-05-16T14:39:48+08:00</lastmod>
+  </url><url>
     <loc>/about/games/</loc>
     <lastmod>2021-05-16T13:53:38+08:00</lastmod>
   </url><url>
     <loc>/about/</loc>
     <lastmod>2021-05-16T13:53:38+08:00</lastmod>
-  </url><url>
-    <loc>/categories/book/</loc>
-    <lastmod>2021-05-16T00:10:33+08:00</lastmod>
   </url><url>
     <loc>/tags/dialy/</loc>
     <lastmod>2021-05-16T00:10:33+08:00</lastmod>
@@ -126,6 +144,9 @@
     <lastmod>2021-05-16T00:10:33+08:00</lastmod>
   </url><url>
     <loc>/tags/book/</loc>
+    <lastmod>2021-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/book/</loc>
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/notes/</loc>
@@ -137,9 +158,6 @@
     <loc>/posts/book/</loc>
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/coding/</loc>
-    <lastmod>2021-05-03T01:28:44+00:00</lastmod>
-  </url><url>
     <loc>/tags/git/</loc>
     <lastmod>2021-05-03T01:28:44+00:00</lastmod>
   </url><url>
@@ -149,16 +167,13 @@
     <loc>/tags/script/</loc>
     <lastmod>2021-05-03T01:28:44+00:00</lastmod>
   </url><url>
-    <loc>/tags/skill/</loc>
-    <lastmod>2021-05-03T01:28:44+00:00</lastmod>
-  </url><url>
-    <loc>/posts/coding/</loc>
-    <lastmod>2021-05-03T01:28:44+00:00</lastmod>
-  </url><url>
     <loc>/tags/qt/</loc>
     <lastmod>2021-05-02T23:55:04+00:00</lastmod>
   </url><url>
     <loc>/posts/tech_and_skill/qt-creator-my-setup/</loc>
+    <lastmod>2021-05-02T23:55:04+00:00</lastmod>
+  </url><url>
+    <loc>/tags/skill/</loc>
     <lastmod>2021-05-02T23:55:04+00:00</lastmod>
   </url><url>
     <loc>/categories/tech_and_skill/</loc>
@@ -203,9 +218,6 @@
     <loc>/tags/shell/</loc>
     <lastmod>2020-08-11T21:50:31+00:00</lastmod>
   </url><url>
-    <loc>/tags/c/</loc>
-    <lastmod>2020-08-11T21:47:45+00:00</lastmod>
-  </url><url>
     <loc>/posts/coding/pointer-level2-as-handle/</loc>
     <lastmod>2020-08-11T21:47:45+00:00</lastmod>
   </url><url>
@@ -240,9 +252,6 @@
     <lastmod>2020-03-30T09:35:19+00:00</lastmod>
   </url><url>
     <loc>/tags/c&#43;&#43;/</loc>
-    <lastmod>2020-03-29T19:50:18+00:00</lastmod>
-  </url><url>
-    <loc>/tags/program/</loc>
     <lastmod>2020-03-29T19:50:18+00:00</lastmod>
   </url><url>
     <loc>/tags/qfile/</loc>
@@ -330,9 +339,6 @@
     <lastmod>2020-02-25T09:40:30+00:00</lastmod>
   </url><url>
     <loc>/posts/coding/makefile_personal_config/</loc>
-    <lastmod>2020-02-24T11:59:33+00:00</lastmod>
-  </url><url>
-    <loc>/tags/tech/</loc>
     <lastmod>2020-02-24T11:59:33+00:00</lastmod>
   </url><url>
     <loc>/tags/tools/</loc>

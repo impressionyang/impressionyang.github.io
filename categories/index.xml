@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 16 May 2021 14:39:48 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 May 2021 12:56:00 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>coding</title>
+      <link>/categories/coding/</link>
+      <pubDate>Tue, 18 May 2021 12:56:00 +0800</pubDate>
+      
+      <guid>/categories/coding/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>talk</title>
       <link>/categories/talk/</link>
@@ -20,18 +29,9 @@
     <item>
       <title>book</title>
       <link>/categories/book/</link>
-      <pubDate>Sun, 16 May 2021 00:10:33 +0800</pubDate>
+      <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
       
       <guid>/categories/book/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>coding</title>
-      <link>/categories/coding/</link>
-      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
-      
-      <guid>/categories/coding/</guid>
       <description></description>
     </item>
     

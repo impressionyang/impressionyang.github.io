@@ -164,6 +164,27 @@
   <div class="container"><nav class="row" aria-label="breadcrumb">
   <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/tags/">标签</a></li><li class="breadcrumb-item active">C</li></ol>
 </nav><div class="posts mb-4"><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/coding/hal_spi_send_16bit_data/">关于HAL库发送16bit数据</a></h2><div class="post-meta mb-3">
+  <span class="post-date mr-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-05-18
+  </span>
+  <span class="poost-reading-time mr-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span>
+<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/coding/" class="post-taxonomy">#coding</a><a href="/tags/c/" class="post-taxonomy">#C</a><a href="/tags/spi/" class="post-taxonomy">#spi</a><a href="/tags/hal/" class="post-taxonomy">#HAL</a></div>
+<div class="post-summary mb-3"><h2 id="说明">说明</h2>
+<blockquote>
+<p>该文档是作为记录<code>STM32</code>国内帖子关于<code>HAL</code>库<code>SPI</code>问题解决无法有效回答的补充，网上的回答大部分都是直说怎么发的，但是没说原理是什么</p>
+</blockquote>
+<h2 id="问题记录">问题记录</h2>
+<ul>
+<li>在使用<code>HAL</code>库时，<code>HAL</code>提供的发送函数时，提供的接口发送数据为<code>uint8_t *</code>类型的数据的，所以发送<code>16bit</code>数据时主观上感觉无法发送16位的数据，并且HAL库并没有在函数原型上说明如何发送<code>16bit</code>数据</li>
+</ul>
+<p><img class="img-fluid" src="https://cdn.jsdelivr.net/gh/impressionyang/picgo_img_bed/imgs/20210510133821.png" alt="spi发送函数原型定义"  loading="lazy" />
+</p>
+<center>spi发送函数原型定义</center><br></div>
+      </div>
+    </article><article class="post row surface"><div class="post-body">
         <h2 class="post-title mb-4"><a href="/posts/coding/pointer-level2-as-handle/">C语言二级指针用法之模拟句柄用途</a></h2><div class="post-meta mb-3">
   <span class="post-date mr-2">
     <i class="fas fa-fw fa-calendar-alt"></i>2020-08-11
@@ -171,7 +192,7 @@
   <span class="poost-reading-time mr-2">
     <i class="fas fa-fw fa-coffee"></i>4 分钟阅读
   </span>
-<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/skill/" class="post-taxonomy">#skill</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a><a href="/tags/c/" class="post-taxonomy">#C</a></div>
+<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/coding/" class="post-taxonomy">#coding</a><a href="/tags/linux/" class="post-taxonomy">#Linux</a><a href="/tags/c/" class="post-taxonomy">#C</a></div>
 <div class="post-summary mb-3"><h2 id="先导">先导</h2>
 <blockquote>
 <p>因为在学习中使用到了二级指针进行操作，故而作此总结</p>
@@ -196,7 +217,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
   <span class="poost-reading-time mr-2">
     <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
   </span>
-<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/program/" class="post-taxonomy">#program</a><a href="/tags/c/" class="post-taxonomy">#C</a><a href="/tags/c&#43;&#43;/" class="post-taxonomy">#C&#43;&#43;</a><a href="/tags/qt/" class="post-taxonomy">#Qt</a></div>
+<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/coding/" class="post-taxonomy">#coding</a><a href="/tags/c/" class="post-taxonomy">#C</a><a href="/tags/c&#43;&#43;/" class="post-taxonomy">#C&#43;&#43;</a><a href="/tags/qt/" class="post-taxonomy">#Qt</a></div>
 <div class="post-summary mb-3"><h2 id="自动初始化linux下qt通用开发的cmake-gui工程的脚本">自动初始化Linux下Qt通用开发的CMake GUI工程的脚本</h2>
 <ul>
 <li>这个脚本的来由是在我使用了<code>CMake</code>作为<code>Qt</code>工程的编译工具之后，为了使得即使在没有<code>qtcreator</code>的情况下也能快速地建立<code>CMake Qt GUI</code>工程从而使用其他的文本编辑器如<code>VSCode</code>或者<code>Atom</code>进行开发，而开发的工程建立脚本。</li>
@@ -212,7 +233,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
   <span class="poost-reading-time mr-2">
     <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
   </span>
-<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/tech/" class="post-taxonomy">#tech</a><a href="/tags/c/" class="post-taxonomy">#C</a><a href="/tags/c&#43;&#43;/" class="post-taxonomy">#C&#43;&#43;</a><a href="/tags/tools/" class="post-taxonomy">#tools</a></div>
+<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/coding/" class="post-taxonomy">#coding</a><a href="/tags/c/" class="post-taxonomy">#C</a><a href="/tags/c&#43;&#43;/" class="post-taxonomy">#C&#43;&#43;</a><a href="/tags/tools/" class="post-taxonomy">#tools</a></div>
 <div class="post-summary mb-3"><h2 id="makfile文件的编写">Makfile文件的编写</h2>
 <ul>
 <li>不定期更新</li>
@@ -237,7 +258,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
   <span class="poost-reading-time mr-2">
     <i class="fas fa-fw fa-coffee"></i>4 分钟阅读
   </span>
-<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/program/" class="post-taxonomy">#program</a><a href="/tags/c/" class="post-taxonomy">#C</a><a href="/tags/c&#43;&#43;/" class="post-taxonomy">#C&#43;&#43;</a><a href="/tags/tools/" class="post-taxonomy">#tools</a></div>
+<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/coding/" class="post-taxonomy">#coding</a><a href="/tags/c/" class="post-taxonomy">#C</a><a href="/tags/c&#43;&#43;/" class="post-taxonomy">#C&#43;&#43;</a><a href="/tags/tools/" class="post-taxonomy">#tools</a></div>
 <div class="post-summary mb-3"><h2 id="cmake编写总结">CMake编写总结</h2>
 <ul>
 <li>不定期更新</li>
@@ -257,7 +278,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
   <span class="poost-reading-time mr-2">
     <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
   </span>
-<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/program/" class="post-taxonomy">#program</a><a href="/tags/c/" class="post-taxonomy">#C</a><a href="/tags/c&#43;&#43;/" class="post-taxonomy">#C&#43;&#43;</a><a href="/tags/tools/" class="post-taxonomy">#tools</a></div>
+<a href="/categories/coding/" class="post-taxonomy">#coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a><a href="/tags/coding/" class="post-taxonomy">#coding</a><a href="/tags/c/" class="post-taxonomy">#C</a><a href="/tags/c&#43;&#43;/" class="post-taxonomy">#C&#43;&#43;</a><a href="/tags/tools/" class="post-taxonomy">#tools</a></div>
 <div class="post-summary mb-3"><h2 id="盘点cc语言编程编译工具">盘点C/C++语言编程+编译工具</h2>
 <p>本帖子盘点了<code>Linux</code>下的各种<code>C/C++</code>的编程+编译工具及<code>IDE</code>（集成开发环境</p>
 <ul>
@@ -278,7 +299,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
     <h5 class="profile-name my-2">impressionyang</h5><div class="profile-bio mb-2">looove coooding.</div><div class="profile-company mb-2"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location mb-2"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><div class="profile-about mb-2"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">关于</a></div></div>
 </section><section class="recent-posts row surface">
   <h4>最近文章</h4>
-  <ul><li><a href="/posts/talk/hugo_theme_bootstrap_change/">对于此hugo主题的更改</a></li><li><a href="/posts/talk/about_change_to_hugo/">关于换到hugo</a></li><li><a href="/posts/book/book_about/">关于读书分享</a></li><li><a href="/posts/coding/git-update-script/">git更新脚本</a></li><li><a href="/posts/tech_and_skill/qt-creator-my-setup/">Qt个人配置</a></li></ul>
+  <ul><li><a href="/posts/coding/hal_spi_send_16bit_data/">关于HAL库发送16bit数据</a></li><li><a href="/posts/talk/hugo_theme_bootstrap_change/">对于此hugo主题的更改</a></li><li><a href="/posts/talk/about_change_to_hugo/">关于换到hugo</a></li><li><a href="/posts/book/book_about/">关于读书分享</a></li><li><a href="/posts/coding/git-update-script/">git更新脚本</a></li></ul>
 </section>
 <section class="taxonomy-categories row surface">
   <h4>
@@ -287,35 +308,35 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
   <div><a href="/categories/tech_and_skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="tech_and_skill">
       tech_and_skill <span class="badge rounded-pill">30</span>
     </a><a href="/categories/coding/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="coding">
-      coding <span class="badge rounded-pill">12</span>
-    </a><a href="/categories/book/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="book">
-      book <span class="badge rounded-pill">2</span>
+      coding <span class="badge rounded-pill">13</span>
     </a><a href="/categories/talk/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="talk">
-      talk <span class="badge rounded-pill">2</span>
+      talk <span class="badge rounded-pill">3</span>
+    </a><a href="/categories/book/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="book">
+      book <span class="badge rounded-pill">1</span>
     </a></div>
 </section><section class="taxonomy-series row surface">
   <h4>
     <a href="/series">专栏</a>
   </h4>
   <div><a href="/series/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="博客">
-      博客 <span class="badge rounded-pill">45</span>
+      博客 <span class="badge rounded-pill">46</span>
     </a></div>
 </section><section class="taxonomy-tags row surface">
   <h4>
     <a href="/tags">标签</a>
   </h4>
   <div><a href="/tags/skill/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="skill">
-      skill <span class="badge rounded-pill">33</span>
+      skill <span class="badge rounded-pill">30</span>
+    </a><a href="/tags/coding/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="coding">
+      coding <span class="badge rounded-pill">13</span>
     </a><a href="/tags/linux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Linux">
       Linux <span class="badge rounded-pill">8</span>
     </a><a href="/tags/archlinux/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="archlinux">
       archlinux <span class="badge rounded-pill">7</span>
     </a><a href="/tags/c&#43;&#43;/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C&#43;&#43;">
       C&#43;&#43; <span class="badge rounded-pill">7</span>
-    </a><a href="/tags/program/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="program">
-      program <span class="badge rounded-pill">7</span>
     </a><a href="/tags/c/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="C">
-      C <span class="badge rounded-pill">5</span>
+      C <span class="badge rounded-pill">6</span>
     </a><a href="/tags/hexo/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="hexo">
       hexo <span class="badge rounded-pill">5</span>
     </a><a href="/tags/qt/" class="post-taxonomy rounded-pill btn btn-sm mr-2 mb-2" title="Qt">

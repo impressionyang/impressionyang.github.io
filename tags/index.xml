@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2016-{year} impressionyang. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 16 May 2021 14:39:48 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 May 2021 12:56:00 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C</title>
+      <link>/tags/c/</link>
+      <pubDate>Tue, 18 May 2021 12:56:00 +0800</pubDate>
+      
+      <guid>/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>/tags/coding/</link>
+      <pubDate>Tue, 18 May 2021 12:56:00 +0800</pubDate>
+      
+      <guid>/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HAL</title>
+      <link>/tags/hal/</link>
+      <pubDate>Tue, 18 May 2021 12:56:00 +0800</pubDate>
+      
+      <guid>/tags/hal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spi</title>
+      <link>/tags/spi/</link>
+      <pubDate>Tue, 18 May 2021 12:56:00 +0800</pubDate>
+      
+      <guid>/tags/spi/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>hugo</title>
       <link>/tags/hugo/</link>
@@ -72,20 +108,20 @@
     </item>
     
     <item>
-      <title>skill</title>
-      <link>/tags/skill/</link>
-      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
-      
-      <guid>/tags/skill/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Qt</title>
       <link>/tags/qt/</link>
       <pubDate>Sun, 02 May 2021 23:55:04 +0000</pubDate>
       
       <guid>/tags/qt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>skill</title>
+      <link>/tags/skill/</link>
+      <pubDate>Sun, 02 May 2021 23:55:04 +0000</pubDate>
+      
+      <guid>/tags/skill/</guid>
       <description></description>
     </item>
     
@@ -131,15 +167,6 @@
       <pubDate>Tue, 11 Aug 2020 21:50:31 +0000</pubDate>
       
       <guid>/tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C</title>
-      <link>/tags/c/</link>
-      <pubDate>Tue, 11 Aug 2020 21:47:45 +0000</pubDate>
-      
-      <guid>/tags/c/</guid>
       <description></description>
     </item>
     
@@ -212,15 +239,6 @@
       <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
       
       <guid>/tags/c&#43;&#43;/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>program</title>
-      <link>/tags/program/</link>
-      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
-      
-      <guid>/tags/program/</guid>
       <description></description>
     </item>
     
@@ -338,15 +356,6 @@
       <pubDate>Tue, 25 Feb 2020 11:06:32 +0000</pubDate>
       
       <guid>/tags/goldendict/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tech</title>
-      <link>/tags/tech/</link>
-      <pubDate>Mon, 24 Feb 2020 11:59:33 +0000</pubDate>
-      
-      <guid>/tags/tech/</guid>
       <description></description>
     </item>
     
