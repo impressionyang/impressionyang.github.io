@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>gcc on impressionyang的个人分享站</title>
+    <link>/tags/gcc/</link>
+    <description>Recent content in gcc on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sun, 13 Feb 2022 11:50:30 +0800</lastBuildDate><atom:link href="/tags/gcc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>stm32_f103c8t6 RT Thread 移植笔记</title>
+      <link>/posts/coding/rt_thread_nano_port_stm32_f103c8t6/</link>
+      <pubDate>Sun, 13 Feb 2022 11:50:30 +0800</pubDate>
+      
+      <guid>/posts/coding/rt_thread_nano_port_stm32_f103c8t6/</guid>
+      <description><![CDATA[<blockquote>
+<p>该文章用来记录移植RT Thread的过程记录，本次移植基于STM32 F103C8T6，使用STM32 CubeMX工具构建HALL库的Makefile工程。</p>
+</blockquote>
+<h2 id="环境" data-numberify>环境<a class="anchor ms-1" href="#环境"></a></h2>
+<ul>
+<li>开发板：STM32F103C8T6最小开发板之一</li>
+</ul>
+<p><picture><img class="img-fluid " alt="" src="https://img.impressionyang.top/2022/02/04/1643983655632.png" loading="lazy" />
+</picture>
+</p>
+<ul>
+<li>操作系统：Linux</li>
+<li>开发环境：VSCode</li>
+<li>编译工具：GCC Makefile</li>
+<li>烧录工具：CMSIS DAP + openOCD</li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>git on impressionyang的个人分享站</title>
+    <link>/tags/git/</link>
+    <description>Recent content in git on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sat, 28 Jan 2023 15:39:13 +0800</lastBuildDate><atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git更新脚本</title>
+      <link>/posts/coding/git-update-script/</link>
+      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
+      
+      <guid>/posts/coding/git-update-script/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>此脚本用于更新git仓库，主要用于使用ssh克隆的仓库，使用https克隆或者直接下载的不可使用此脚本进行更新，编写此贴用于保存脚本以供后用</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>git使用要点</title>
+      <link>/posts/tech_and_skill/git_use_guid/</link>
+      <pubDate>Wed, 19 Feb 2020 14:32:47 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/git_use_guid/</guid>
+      <description><![CDATA[<blockquote>
+<p>本帖子是用来记录<code>git</code>的使用操作的，会在使用到新功能的时候进行更新，所以本贴是会进行较为长期的更新的</p>
+</blockquote>
+<h2 id="基本命令" data-numberify>基本命令<a class="anchor ms-1" href="#基本命令"></a></h2>
+<h3 id="初始化配置username-useremail替换为自己的" data-numberify>初始化配置（$username、 $useremail替换为自己的）<a class="anchor ms-1" href="#初始化配置username-useremail替换为自己的"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">git config --global user.name <span class="nv">$username</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">git config --global user.email <span class="nv">$useremail</span>
+</span></span></code></pre></div>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

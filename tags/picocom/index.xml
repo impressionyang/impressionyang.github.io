@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>picocom on impressionyang的个人分享站</title>
+    <link>/tags/picocom/</link>
+    <description>Recent content in picocom on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Thu, 17 Sep 2020 13:07:07 +0000</lastBuildDate><atom:link href="/tags/picocom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用picocm来进行Linux下的串口调试</title>
+      <link>/posts/tech_and_skill/picocom-dialy-use/</link>
+      <pubDate>Thu, 17 Sep 2020 13:07:07 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/picocom-dialy-use/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>为什么不用<code>minicom</code>呢？功能又强大由好用不是。主要原因就是<code>minicom</code>没有彩色文字，看着难受，特别是调试<code>ARM Linux</code>的时候233</p>
+</blockquote>
+<h2 id="安装" data-numberify>安装<a class="anchor ms-1" href="#安装"></a></h2>
+<p>因为正常是在<code>Debian</code>系列的<code>Linux</code>发行版上面使用的(<code>deepin</code>或者<code>ubuntu</code>这些的，解决方案比较完善)，所以就是用<code>apt</code>来进行安装，其他发行版使用自己的包管理软件进行安装</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">sudo apt install picocom -y
+</span></span></code></pre></div>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>win10 on impressionyang的个人分享站</title>
+    <link>/tags/win10/</link>
+    <description>Recent content in win10 on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Wed, 17 Feb 2021 02:22:54 +0000</lastBuildDate><atom:link href="/tags/win10/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Win10安装配置Windows Terminal</title>
+      <link>/posts/tech_and_skill/win10-windows-terminal-setup/</link>
+      <pubDate>Wed, 17 Feb 2021 02:22:54 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/win10-windows-terminal-setup/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>本文也是在Win10主机下配置轻量级开发环境的一个帖子，主要是用来记录Win10下的新Windows Terminal的安装和配置，留作以后参考</p>
+</blockquote>
+<h2 id="安装" data-numberify>安装<a class="anchor ms-1" href="#安装"></a></h2>
+<p>直接在Win10商店中安装Windows Terminal即可</p>
+<p><picture><img class="img-fluid " alt="pic windows terminal in win10 store" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210217022649.png" loading="lazy" />
+</picture>
+</p>]]></description>
+    </item>
+    
+    <item>
+      <title>win10重新安装导出的WSL2镜像</title>
+      <link>/posts/tech_and_skill/win10-install-wsl2/</link>
+      <pubDate>Mon, 15 Feb 2021 21:17:50 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/win10-install-wsl2/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>安装<code>WSL2 Linux子系统</code>是我打算在游戏主机上面安装轻量级开发环境的下一步打算，至于为什么不用更好评的<code>WSL1</code>我也不多说，毕竟<code>WSL2</code>是<code>Microsoft</code>主推的，支持的特性和后续的维护应该会更快且优先级更高，所以本文使用<code>WSL2</code></p>
+</blockquote>
+<h2 id="系统需求" data-numberify>系统需求<a class="anchor ms-1" href="#系统需求"></a></h2>
+<p>下面只是列举基本要求，详细的内容请查看微软的文档<a href="https://docs.microsoft.com/zh-cn/windows/wsl/" target="_blank" rel="noopener noreferrer">传送门<i class="fas fa-external-link-square-alt ms-1"></i></a></p>
+<p><picture><img class="img-fluid " alt="pic wsl2 require" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210216143928.png" loading="lazy" />
+</picture>
+</p>
+<p>所以如果不是<code>win10</code>的话就基本不能体验<code>WSL2</code>了</p>]]></description>
+    </item>
+    
+    <item>
+      <title>win10 安装scoop的正确姿势</title>
+      <link>/posts/tech_and_skill/win10-install-scoop/</link>
+      <pubDate>Mon, 15 Feb 2021 20:10:54 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/win10-install-scoop/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>为什么想要安装scoop并且是在win10中呢？这个问题主要聚焦于我的游戏小主机上，我想要能够随时玩游戏的同时也能够进一定的博客工作或者轻量级的开发（现在wsl2中），所以需要使用scoop这个Windows的命令行工具。 但是这个工具在国内进行安装是有一定的难度的，主要是网络环境以及系统的需求，所以做此帖子留作参考</p>
+</blockquote>
+<h3 id="系统需求" data-numberify>系统需求<a class="anchor ms-1" href="#系统需求"></a></h3>
+<ul>
+<li>操作系统： win10 （主要是基本能够一步到位，不用考虑以下因素，当然，Windows的其他发行版满足以下需求也可以进行安装）</li>
+<li>power shell版本： 3.0以上</li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

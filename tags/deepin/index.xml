@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>deepin on impressionyang的个人分享站</title>
+    <link>/tags/deepin/</link>
+    <description>Recent content in deepin on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Thu, 20 Feb 2020 14:01:21 +0000</lastBuildDate><atom:link href="/tags/deepin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wine和deepinwine的相关配置</title>
+      <link>/posts/tech_and_skill/wine_deepinwine_config/</link>
+      <pubDate>Thu, 20 Feb 2020 14:01:21 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/wine_deepinwine_config/</guid>
+      <description><![CDATA[<h2 id="wine和deepinwine的相关配置" data-numberify>wine和deepinwine的相关配置<a class="anchor ms-1" href="#wine和deepinwine的相关配置"></a></h2>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

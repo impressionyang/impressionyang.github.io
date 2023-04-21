@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>KDE Wallet on impressionyang的个人分享站</title>
+    <link>/tags/kde-wallet/</link>
+    <description>Recent content in KDE Wallet on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Fri, 20 Mar 2020 16:37:55 +0000</lastBuildDate><atom:link href="/tags/kde-wallet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次Fcitx5的安装</title>
+      <link>/posts/tech_and_skill/fcitx5-install-note/</link>
+      <pubDate>Fri, 20 Mar 2020 16:37:55 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/fcitx5-install-note/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>maybe a new fcitx. Next generation of fcitx. Fcitx 5 is a generic input method framework released under LGPL-2.1+.</p>
+</blockquote>
+<p>以上是<code>github</code>上记录的<code>fcitx5</code>的仅有的寥寥几笔，想看到更多的内容请查看老K的<a href="https://www.csslayer.info/wordpress/fcitx-dev/a-new-pinyin-input-method-that-might-be-slightly-better-than-sunpinyin/" target="_blank" rel="noopener noreferrer">文章<i class="fas fa-external-link-square-alt ms-1"></i></a></p>
+<p>这篇帖子是记录我安装<code>Fcitx5</code>的经历，反正是折腾了很久才配置成功的，也看了很多其他人的配置，记录成功安装方法以留作以后参考</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

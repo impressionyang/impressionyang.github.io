@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>UML on impressionyang的个人分享站</title>
+    <link>/tags/uml/</link>
+    <description>Recent content in UML on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sat, 21 Mar 2020 22:31:34 +0000</lastBuildDate><atom:link href="/tags/uml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</title>
+      <link>/posts/coding/markdown-note-mermaid/</link>
+      <pubDate>Sat, 21 Mar 2020 22:31:34 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-note-mermaid/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<p></br><center><b>本贴在手机端因为<code>mermaid</code>插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览</b></center></br></p>
+<ul>
+<li>持续更新中&hellip;</li>
+</ul>
+<blockquote>
+<p>本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的</p>
+</blockquote>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

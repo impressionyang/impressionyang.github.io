@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>hexo on impressionyang的个人分享站</title>
+    <link>/tags/hexo/</link>
+    <description>Recent content in hexo on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Fri, 07 Aug 2020 20:23:18 +0000</lastBuildDate><atom:link href="/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>给pugjs的stun主题添加canvas时钟</title>
+      <link>/posts/tech_and_skill/add-canvas-clock-in-pugjs/</link>
+      <pubDate>Fri, 07 Aug 2020 20:23:18 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/add-canvas-clock-in-pugjs/</guid>
+      <description><![CDATA[先导 首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了 在pugjs中添加一些好用的东]]></description>
+    </item>
+    
+    <item>
+      <title>为主题用pugjs编写的hexo博客添加网站运行时间</title>
+      <link>/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/</link>
+      <pubDate>Fri, 27 Mar 2020 22:59:08 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>写这篇帖子的原因是我很想在博客网站下面添加网站的运行时间,网上虽然有教程是怎么添加的,但是他们演示的主题大都是用<code>ejs</code>或者是<code>wig</code>来编写的,而我使用的这个个人很喜欢的<code>stun</code>主题却是用<code>pugjs</code>编写的,实在是很想用,所以根据语法的转换规则修改了一份<code>pug</code>文件下添加的脚本来使用,美滋滋</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</title>
+      <link>/posts/coding/markdown-note-mermaid/</link>
+      <pubDate>Sat, 21 Mar 2020 22:31:34 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-note-mermaid/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<p></br><center><b>本贴在手机端因为<code>mermaid</code>插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览</b></center></br></p>
+<ul>
+<li>持续更新中&hellip;</li>
+</ul>
+<blockquote>
+<p>本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>记录一次Hexo的崩溃修复</title>
+      <link>/posts/tech_and_skill/hexo-broken-fix-note01/</link>
+      <pubDate>Fri, 20 Mar 2020 21:43:36 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/hexo-broken-fix-note01/</guid>
+      <description><![CDATA[<h2 id="问题复现" data-numberify>问题复现<a class="anchor ms-1" href="#问题复现"></a></h2>
+<p>这次崩溃的原因是安装主题的时候手贱终止了一次然后就出了问题，导致<code>hexo</code>的各种命令如<code>clean</code>、<code>generate</code>、<code>server</code>等一直报警告并且导致网页资源的渲染出问题从而使得网站运行异常</p>
+<p>而这次发帖是为了记录本次的修复过程以提供后用</p>
+<h2 id="修复的原理" data-numberify>修复的原理<a class="anchor ms-1" href="#修复的原理"></a></h2>
+<p>我们都知道<code>hexo</code>的目录下面有一个<code>node_modules</code>文件架夹和一个<code>package.json</code>文件（安装插件后会自动生成），文件夹是保存了各个插件的文件依赖，<code>json</code>文件是保存了<code>hexo</code>的各个依赖组件，使用<code>npm install</code>可以根据此文件进行批量安装。</p>
+<p>更新/安装中断或者操作插件的时候导致的异常一般是因为<code>node_modules</code>文件夹里面的文件出问题或者丢失</p>
+<p>所以<strong>我们遇到什么困难也不要怕，微笑着干掉它</strong>，没错，直接把<code>node_modules</code>文件夹整个删掉、删掉、删掉。</p>
+<p>然后就没有问题了，因为整个问题的根源已经没有了233，开玩笑的，基本上只要把插件重新一个个安装完基本上就没事了，当然，如果你在折腾主题的话还需要先把主题会复制折腾之前哦。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Hexo &#43; Git Pages搭建个人博客（一）</title>
+      <link>/posts/tech_and_skill/hexo-init-config-1/</link>
+      <pubDate>Mon, 09 Mar 2020 16:44:58 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/hexo-init-config-1/</guid>
+      <description><![CDATA[<h2 id="hexo--git-pages搭建个人博客一" data-numberify>Hexo + Git Pages搭建个人博客（一）<a class="anchor ms-1" href="#hexo--git-pages搭建个人博客一"></a></h2>
+<p>期待已久的<code>Hexo</code>部署教程终于来了，本次发帖是在经过较长时间地使用<code>Hexo</code>之后才发出的，一成功就发感觉有点不稳，本贴主要是记录了本博客站的最终搭建方案，会分为几个部分，这次就讲讲怎么把<code>Hexo</code>运行起来的方法。</p>
+<p><picture><img class="img-fluid " alt="hexo web" src="https://impressionyang.gitee.io/imgbed/img/blog/2020-03-09_10-37.png" loading="lazy" />
+</picture>
+</p>
+<blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

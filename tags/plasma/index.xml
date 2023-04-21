@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Plasma on impressionyang的个人分享站</title>
+    <link>/tags/plasma/</link>
+    <description>Recent content in Plasma on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sat, 29 Feb 2020 19:09:50 +0000</lastBuildDate><atom:link href="/tags/plasma/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KDE下完美的Unity桌面体验，扔掉active window control</title>
+      <link>/posts/tech_and_skill/unity-style-applet/</link>
+      <pubDate>Sat, 29 Feb 2020 19:09:50 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/unity-style-applet/</guid>
+      <description><![CDATA[<h2 id="psifidotos-的-applet-window-系列完全实现unity当年风采" data-numberify>psifidotos 的 applet-window 系列完全实现unity当年风采<a class="anchor ms-1" href="#psifidotos-的-applet-window-系列完全实现unity当年风采"></a></h2>
+<p>熟悉我对<code>Linux</code>桌面态度的人都知道我个人是很推崇当年<code>Ubuntu</code>的<code>Unity</code>桌面的全局菜单的整合功能的，其有着能把窗口标题栏以及窗口按钮和全局菜单整合为一体的功能，能够大大节省屏幕的纵向空间而不影响使用菜单以及查看窗口标题和使用窗口按钮。在我个人看来，<code>Ubuntu</code>的<code>Unity</code>桌面简直就是<code>Linux</code>桌面环境的最强代表，直到它退出历史舞台。</p>
+<p>至今我仍然向往那种能够有效率节省屏幕空间的功能却苦于没有什么桌面能够原生支持，但是，在我转向了<code>archlinux+KDE</code>之后便发现了此事有所转机。</p>
+<p>一开始我是使用<code>KDE</code>的一个名为<code>active window control</code>的插件进行使用，它能够将窗口标题栏和顶栏进行结合，但是全局菜单需要使用<code>KDE</code>的原生全局菜单插件，并且其使用起来并不是很友好，不过它也能够在一定程度上节省了屏幕的纵向空间，所以也能够勉强够用，但是使用起来并不是很开心。</p>
+<p>但是在<code>KDE</code>桌面的强大的可定制化插件的支持下，由<a href="https://github.com/psifidotos" target="_blank" rel="noopener noreferrer">psifidotos<i class="fas fa-external-link-square-alt ms-1"></i></a>所编写的<code>applet-window</code>系列插件能够配合<code>Plasma KDE</code>桌面来完美来达成‘这一愿想。</p>
+<p>要实现<code>Unity</code>桌面的功能需要安装他写的三个插件：</p>
+<ol>
+<li>applet-window-title</li>
+<li>applet-window-buttons</li>
+<li>applet-window-appmenu</li>
+</ol>
+<p>说明：<code>archlinux+KDE</code>（原理上来说<code>manjaro+KDE</code>也可以）在安装好桌面后还需要安装<code>cmake</code>和<code>extra-cmake-modules</code>，一般在安装了这两个编译依赖之后如果还是编译不成功请在评论区说明清楚哦。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Plasma顶栏和窗口标题整合插件</title>
+      <link>/posts/tech_and_skill/active_window_control/</link>
+      <pubDate>Thu, 20 Feb 2020 15:10:11 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/active_window_control/</guid>
+      <description><![CDATA[<h2 id="plasma顶栏和窗口标题整合插件" data-numberify>Plasma顶栏和窗口标题整合插件<a class="anchor ms-1" href="#plasma顶栏和窗口标题整合插件"></a></h2>
+<ul>
+<li>Active Window Controle 窗口集成功能</li>
+</ul>
+<p>Active Window Controle经过配置可以使得你的Plasma的窗口与顶栏相结合，达到Ubuntu曾经使用的Unity桌面环境那般高效，可以在全屏是节省一条标题栏的高度，毕竟显示器区域真的是寸土寸金的呀。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>一个命令进行Plasma热重启</title>
+      <link>/posts/tech_and_skill/restart_kde/</link>
+      <pubDate>Thu, 20 Feb 2020 14:16:41 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/restart_kde/</guid>
+      <description><![CDATA[<h2 id="一个命令进行plasma热重启" data-numberify>一个命令进行Plasma热重启<a class="anchor ms-1" href="#一个命令进行plasma热重启"></a></h2>
+<ul>
+<li>通过一个命令来重启Plasma桌面来释放系统资源</li>
+</ul>
+<p>KDE Plasma桌面环境具有很多炫酷的显示效果，但是经过一天下来长时间使用Plasma桌面而不待机或者睡眠的话，Plasma桌面会占用大量的内存资源，为了解决这个问题，特地写了一个脚本文件来对Plasma桌面进行热重启，从而释放一些资源的占用</p>
+<p>思路基本上就是使用Plasma的指令先关闭Plasma桌面再启动它</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>console，shell on impressionyang的个人分享站</title>
+    <link>/tags/consoleshell/</link>
+    <description>Recent content in console，shell on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Tue, 25 Feb 2020 22:01:40 +0000</lastBuildDate><atom:link href="/tags/consoleshell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>终端shell美化</title>
+      <link>/posts/tech_and_skill/console-beautify-config/</link>
+      <pubDate>Tue, 25 Feb 2020 22:01:40 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/console-beautify-config/</guid>
+      <description><![CDATA[<h2 id="终端美化" data-numberify>终端美化<a class="anchor ms-1" href="#终端美化"></a></h2>
+<p>终端是<code>Linux</code>用户的一大特色，对于经常使用终端的我来说，单调的配色和命令行已经使我有点审美疲劳了，配色可以使用首选项配置，但是命令行的模式我是有点犯尴尬症，所以重新配置了下终端并写了这篇帖子</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

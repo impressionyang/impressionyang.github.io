@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>boot loader on impressionyang的个人分享站</title>
+    <link>/tags/boot-loader/</link>
+    <description>Recent content in boot loader on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Mon, 30 Mar 2020 09:35:19 +0000</lastBuildDate><atom:link href="/tags/boot-loader/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux切换rEFInd开机引导程序</title>
+      <link>/posts/tech_and_skill/arch-refind-bootloader-efi/</link>
+      <pubDate>Mon, 30 Mar 2020 09:35:19 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/arch-refind-bootloader-efi/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<p>以下<code>rEFInd</code>的<code>arckwiki</code>词条的内容：</p>
+<blockquote>
+<p>rEFInd 是一个 UEFI 启动管理器。它是 rEFIt （不再维护）的一个分支并且针对非 Mac 硬件修复了若干问题。它被设计为平台无关，可启动多个操作系统。</p>
+</blockquote>
+<p>使用<code>rEFInd</code>的需求是我原来使用的是<code>bootctl</code>这个启动引导程序,虽然简单好用,但是只有黑白界面难免有点单调,所以就想使用一个比较漂亮的但是文件结构又简洁的<code>bootloader</code>,所以<code>grub</code>就被丢弃了,虽然它的却很强大,但是文件结构有点复杂,配置影响因素有点多</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

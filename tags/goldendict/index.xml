@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>goldendict on impressionyang的个人分享站</title>
+    <link>/tags/goldendict/</link>
+    <description>Recent content in goldendict on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Tue, 25 Feb 2020 11:06:32 +0000</lastBuildDate><atom:link href="/tags/goldendict/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GoldenDict个人配置</title>
+      <link>/posts/tech_and_skill/goldendict-personal-config/</link>
+      <pubDate>Tue, 25 Feb 2020 11:06:32 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/goldendict-personal-config/</guid>
+      <description><![CDATA[<h2 id="goldendict个人配置" data-numberify>GoldenDict个人配置<a class="anchor ms-1" href="#goldendict个人配置"></a></h2>
+<p><strong>&ndash;一款支持Linux的强大单词翻译软件</strong></p>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<blockquote>
+<p>GoldenDict 是一款不错的、与StarDict（星际译王）类似的词典软件。它使用 WebKit作为渲染核心，格式化、颜色、图像、链接等支持一应俱全；支持多种词典文件格式，包括Babylon的 .BGL 文件、StarDict 的 .ifo/.dict/.idx/.syn 文件、Dictd的·index/.dict(.dz) 文件、ABBYY Lingvo 的 .dsl/.lsa/.dat 文件。</p>
+</blockquote>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

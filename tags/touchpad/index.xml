@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>touchpad on impressionyang的个人分享站</title>
+    <link>/tags/touchpad/</link>
+    <description>Recent content in touchpad on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sun, 26 Dec 2021 23:54:57 +0800</lastBuildDate><atom:link href="/tags/touchpad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KDE桌面下的触控板手势</title>
+      <link>/posts/tech_and_skill/kde_gesture/</link>
+      <pubDate>Sun, 26 Dec 2021 23:54:57 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/kde_gesture/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>以<code>windows</code>为主、<code>linux</code>使用<code>WSL</code>子系统的路子走不通了，相关帖子在<a href="../win10-install-wsl2">这里</a>。因为使用WSL方案USB串口无法直通到linux方案中，并且<code>GUI</code>方面也是有所缺失，使用起来并不得劲。所以打算转换思路，以<code>linux</code>为主、<code>windows</code>为辅的路子（<code>linux下使用虚拟机运行</code>windows<code>）。所以在笔记本上重新捡起</code>manjaro KDE`，感觉触控板要用起来，所以有了本篇帖子</p>
+</blockquote>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

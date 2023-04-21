@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>USB on impressionyang的个人分享站</title>
+    <link>/tags/usb/</link>
+    <description>Recent content in USB on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Thu, 20 Feb 2020 12:03:10 +0000</lastBuildDate><atom:link href="/tags/usb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>archlinux安装与应急使用双用U盘</title>
+      <link>/posts/tech_and_skill/usb_boot_multi_use/</link>
+      <pubDate>Thu, 20 Feb 2020 12:03:10 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/usb_boot_multi_use/</guid>
+      <description><![CDATA[<h2 id="archlinux安装与应急使用双用u盘" data-numberify>archlinux安装与应急使用双用U盘<a class="anchor ms-1" href="#archlinux安装与应急使用双用u盘"></a></h2>
+<ul>
+<li>本次方案建议使用16G及以上的U盘进行安装，以保证得到较好的体验</li>
+<li>建议使用<code>USB3.0</code>及以上的U盘，当然<code>2.0</code>也没问题，如果不使用图形界面的话</li>
+<li>本次是在linux环境下完成的，当然Windows下也可以实现</li>
+</ul>
+<h2 id="使用意义" data-numberify>使用意义<a class="anchor ms-1" href="#使用意义"></a></h2>
+<p>在使用archlinux启动盘之前需要用<code>dd</code>命令将U盘刻为启动盘，这样就导致整个U盘分区被<code>dd</code>修改，最明显的是第一个装有安装环境的分区被分配了一个<code>iso9960</code>标志并且使用<code>cfdisk</code>打开该设备是会有提示使用<code>写命令</code>是会丢失丢失该标志从而导致标签异常使得启动异常，而安装环境仅有<code>600+</code>M，白白浪费了该启动盘的其他空间，因为不可以新建分区。</p>
+<p>另一方面，对于某些情况下，例如电脑的系统炸了，但是又要很快地进行某些工作的时候，例如运维、出差是别的电脑是win系统等情况时，需要尽快的使用linux操作系统的时候，如果有一个装在U盘里面的移动的linux操作系统就可以解决燃眉之急了，并且，在日常使用的时候也可以偶尔使用U盘里面的linux系统</p>
+<p>一些想体验linux操作系统又怕把自己的电脑搞坏的人也可以使用这一方案进行双系统使用，而不是去使用linux live环境。</p>
+<p>所以，在以上的需求之下，这一使用方案就从我的脑子应运而生了。</p>
+<h2 id="基本想法" data-numberify>基本想法<a class="anchor ms-1" href="#基本想法"></a></h2>
+<p>主要实现的基本想法就是通过将刻好的启动盘的内容复制出来后在重新格式化U盘重新分区并尽量将前两个分区模仿原有的启动盘方案，然后剩下的分区在重新利用。</p>
+<p>，使用<code>gparted</code>或者<code>blkid</code>（Windows可以使用分区工具查看）查看U盘经过<code>dd</code>刻录之后的<code>文件系统</code>和<code>标签</code>。</p>
+<p>之后使用<code>mount</code>命令将其第一和第二个分区挂载后将其内容复制出来</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

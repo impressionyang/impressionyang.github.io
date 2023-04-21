@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>vm_ware on impressionyang的个人分享站</title>
+    <link>/tags/vm_ware/</link>
+    <description>Recent content in vm_ware on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Wed, 05 Jan 2022 21:15:33 +0800</lastBuildDate><atom:link href="/tags/vm_ware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch/Manjaro Linux安装vmware tools</title>
+      <link>/posts/tech_and_skill/install_vmtools_in_arch_seris_os/</link>
+      <pubDate>Wed, 05 Jan 2022 21:15:33 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/install_vmtools_in_arch_seris_os/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>本文主要说明在Arch系下安装VM Ware增强工具，因为同时想用dde+pacman，所以想折腾一下manjaro deepin，作此总结。</p>
+</blockquote>
+<p>本文主要基于archwiki的指导进行：<a href="https://wiki.archlinux.org/title/VMware/Install_Arch_Linux_as_a_guest" target="_blank" rel="noopener noreferrer">VMware/Install Arch Linux as a guest<i class="fas fa-external-link-square-alt ms-1"></i></a></p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

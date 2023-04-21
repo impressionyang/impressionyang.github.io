@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Qt on impressionyang的个人分享站</title>
+    <link>/tags/qt/</link>
+    <description>Recent content in Qt on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sun, 02 May 2021 23:55:04 +0000</lastBuildDate><atom:link href="/tags/qt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qt个人配置</title>
+      <link>/posts/tech_and_skill/qt-creator-my-setup/</link>
+      <pubDate>Sun, 02 May 2021 23:55:04 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/qt-creator-my-setup/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>该帖子是用来保存Qt的相关配置的，比如代码片段、快捷键等，用来进行新开发环境搭建时的参考</p>
+</blockquote>
+<p><picture><img class="img-fluid " alt="pic cheader" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210503000819.png" loading="lazy" />
+</picture>
+</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt使用配置文件</title>
+      <link>/posts/coding/qt-qsettins-uage/</link>
+      <pubDate>Tue, 29 Dec 2020 23:34:17 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qsettins-uage/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>本文用于在qt中使用配置文件进行一些配置的保存</p>
+</blockquote>
+<h2 id="方法" data-numberify>方法<a class="anchor ms-1" href="#方法"></a></h2>
+<p>关键点就是使用qt的一个类<code>QSettings</code>，该类提供一系列接口用于配置文件的操作如读取和写入，支持的配置文件格式有<code>ini</code>、<code>conf</code>等。使用该类在软件启动时进行初始化操作对一些软件的配置进行赋值操作，可以使得上一次保存的配置可以继续使用，增加程序使用的便捷性。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt文件操作QFile</title>
+      <link>/posts/coding/qt-qfile-note/</link>
+      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qfile-note/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>因为有需求使用<code>Qt</code>的文件<code>I/O</code>操作,所以做此记录以供后用</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt UDP广播</title>
+      <link>/posts/coding/qt-udp-brocast/</link>
+      <pubDate>Sat, 28 Mar 2020 19:57:07 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-udp-brocast/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>最近有使用<code>QT</code>的<code>UDP</code>广播,所以记录这篇帖子记录一下</p>
+</blockquote>
+<h2 id="讲解" data-numberify>讲解<a class="anchor ms-1" href="#讲解"></a></h2>
+<p>什么是<code>UDP</code>广播,我就不搬百科的内容了,就按照我的一点理解来说吧</p>
+<p><code>UDP</code>是一种网络进程间通信的技术,一般和<code>TCP</code>一起出现,<code>UDP</code>的通信优势是速度快、不需要确定对方<code>IP</code>地址，但是缺点是连接不可靠。而<code>UDP</code>广播是<code>UDP</code>下的一种通讯手段，他作为广播发送端（使用<code>writeDatagram()</code>方法）时可以在当前网络下的广播地址中进行发送广播信息，而任何接收端(使用<code>readDatagram()</code>方法)都能接收到服务器<strong>当前发送</strong>的广播信息</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt CMake GUI项目生成脚本</title>
+      <link>/posts/coding/auto-init-cmake-qt-project/</link>
+      <pubDate>Thu, 27 Feb 2020 09:48:34 +0000</pubDate>
+      
+      <guid>/posts/coding/auto-init-cmake-qt-project/</guid>
+      <description><![CDATA[<h2 id="自动初始化linux下qt通用开发的cmake-gui工程的脚本" data-numberify>自动初始化Linux下Qt通用开发的CMake GUI工程的脚本<a class="anchor ms-1" href="#自动初始化linux下qt通用开发的cmake-gui工程的脚本"></a></h2>
+<ul>
+<li>这个脚本的来由是在我使用了<code>CMake</code>作为<code>Qt</code>工程的编译工具之后，为了使得即使在没有<code>qtcreator</code>的情况下也能快速地建立<code>CMake Qt GUI</code>工程从而使用其他的文本编辑器如<code>VSCode</code>或者<code>Atom</code>进行开发，而开发的工程建立脚本。</li>
+<li>本项目已经发布至我的<a href="https://github.com/impressionyang/qt_cmanke_project_initialize" target="_blank" rel="noopener noreferrer">github<i class="fas fa-external-link-square-alt ms-1"></i></a></li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

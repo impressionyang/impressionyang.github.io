@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>C&#43;&#43; on impressionyang的个人分享站</title>
+    <link>/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sun, 29 Mar 2020 19:50:18 +0000</lastBuildDate><atom:link href="/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Qt文件操作QFile</title>
+      <link>/posts/coding/qt-qfile-note/</link>
+      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qfile-note/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>因为有需求使用<code>Qt</code>的文件<code>I/O</code>操作,所以做此记录以供后用</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt UDP广播</title>
+      <link>/posts/coding/qt-udp-brocast/</link>
+      <pubDate>Sat, 28 Mar 2020 19:57:07 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-udp-brocast/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>最近有使用<code>QT</code>的<code>UDP</code>广播,所以记录这篇帖子记录一下</p>
+</blockquote>
+<h2 id="讲解" data-numberify>讲解<a class="anchor ms-1" href="#讲解"></a></h2>
+<p>什么是<code>UDP</code>广播,我就不搬百科的内容了,就按照我的一点理解来说吧</p>
+<p><code>UDP</code>是一种网络进程间通信的技术,一般和<code>TCP</code>一起出现,<code>UDP</code>的通信优势是速度快、不需要确定对方<code>IP</code>地址，但是缺点是连接不可靠。而<code>UDP</code>广播是<code>UDP</code>下的一种通讯手段，他作为广播发送端（使用<code>writeDatagram()</code>方法）时可以在当前网络下的广播地址中进行发送广播信息，而任何接收端(使用<code>readDatagram()</code>方法)都能接收到服务器<strong>当前发送</strong>的广播信息</p>]]></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;和Java的变量对比</title>
+      <link>/posts/coding/cpp-java-variable-diff/</link>
+      <pubDate>Fri, 20 Mar 2020 14:08:35 +0000</pubDate>
+      
+      <guid>/posts/coding/cpp-java-variable-diff/</guid>
+      <description><![CDATA[<h2 id="c和java的变量对比" data-numberify>C++和Java的变量对比<a class="anchor ms-1" href="#c和java的变量对比"></a></h2>
+<blockquote>
+<p>本贴创建的原因是本人需要做一个<code>C++</code>和<code>Java</code>之间进行<code>socket</code>通信的时候想要确定一下两者之间变量的内存占用情况，经过验证测试得出的结果用于以后用来进行验证</p>
+</blockquote>
+<ul>
+<li><strong>本次的结果均是在32位系统中得到的，64位的操作系统的内存占用情况可能有所不同！</strong></li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt CMake GUI项目生成脚本</title>
+      <link>/posts/coding/auto-init-cmake-qt-project/</link>
+      <pubDate>Thu, 27 Feb 2020 09:48:34 +0000</pubDate>
+      
+      <guid>/posts/coding/auto-init-cmake-qt-project/</guid>
+      <description><![CDATA[<h2 id="自动初始化linux下qt通用开发的cmake-gui工程的脚本" data-numberify>自动初始化Linux下Qt通用开发的CMake GUI工程的脚本<a class="anchor ms-1" href="#自动初始化linux下qt通用开发的cmake-gui工程的脚本"></a></h2>
+<ul>
+<li>这个脚本的来由是在我使用了<code>CMake</code>作为<code>Qt</code>工程的编译工具之后，为了使得即使在没有<code>qtcreator</code>的情况下也能快速地建立<code>CMake Qt GUI</code>工程从而使用其他的文本编辑器如<code>VSCode</code>或者<code>Atom</code>进行开发，而开发的工程建立脚本。</li>
+<li>本项目已经发布至我的<a href="https://github.com/impressionyang/qt_cmanke_project_initialize" target="_blank" rel="noopener noreferrer">github<i class="fas fa-external-link-square-alt ms-1"></i></a></li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Makfile文件的编写</title>
+      <link>/posts/coding/makefile_personal_config/</link>
+      <pubDate>Mon, 24 Feb 2020 11:59:33 +0000</pubDate>
+      
+      <guid>/posts/coding/makefile_personal_config/</guid>
+      <description><![CDATA[<h2 id="makfile文件的编写" data-numberify>Makfile文件的编写<a class="anchor ms-1" href="#makfile文件的编写"></a></h2>
+<ul>
+<li>不定期更新</li>
+</ul>
+<h2 id="make和makefile" data-numberify>make和Makefile<a class="anchor ms-1" href="#make和makefile"></a></h2>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<p><code>make</code>:</p>
+<blockquote>
+<p><code>make</code>是一条计算机指令，是在安装有<code>GNU Make</code>的计算机上的可执行指令。该指令是读入一个名为<code>makefile</code> 的文件，然后执行这个文件中指定的指令。有时<code>make</code>又指<code>GNU Make</code>，<code>GNU Make</code> 是一个用来控制可执行文件和其他一些从源文件来的非源代码文件版本的软件。</p>
+</blockquote>
+<p><code>Makefile</code>:</p>
+<blockquote>
+<p>一个工程中的源文件不计其数，其按类型、功能、模块分别放在若干个目录中，<code>makefile</code>定义了一系列的规则来指定哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为 makefile就像一个Shell脚本一样，也可以执行操作系统的命令。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>CMake编写总结</title>
+      <link>/posts/coding/cmake-personal-config/</link>
+      <pubDate>Sun, 23 Feb 2020 22:47:22 +0000</pubDate>
+      
+      <guid>/posts/coding/cmake-personal-config/</guid>
+      <description><![CDATA[<h2 id="cmake编写总结" data-numberify>CMake编写总结<a class="anchor ms-1" href="#cmake编写总结"></a></h2>
+<ul>
+<li>不定期更新</li>
+</ul>
+<h2 id="cmake介绍" data-numberify>CMake介绍<a class="anchor ms-1" href="#cmake介绍"></a></h2>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<blockquote>
+<p>CMake是一个跨平台的安装（编译）工具，可以用简单的语句来描述所有平台的安装(编译过程)。他能够输出各种各样的makefile或者project文件，能测试编译器所支持的C++特性,类似UNIX下的automake。只是 CMake 的组态档取名为 CMakeLists.txt。CMake 并不直接建构出最终的软件，而是产生标准的建构档（如 Unix 的 Makefile 或 Windows Visual C++ 的 projects/workspaces），然后再依一般的建构方式使用。这使得熟悉某个集成开发环境（IDE）的开发者可以用标准的方式建构他的软件，这种可以使用各平台的原生建构系统的能力是 CMake 和 SCons 等其他类似系统的区别之处。</p>
+</blockquote>
+<h3 id="cmake和make" data-numberify>CMake和make<a class="anchor ms-1" href="#cmake和make"></a></h3>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<blockquote>
+<p>“CMake”这个名字是“cross platform make”的缩写。虽然名字中含有“make”，但是CMake和Unix上常见的“make”系统是分开的，而且更为高阶。</p>
+</blockquote>
+<p><code>make</code>和<code>CMake</code>之间的关系是<code>CMake</code> 通过命令可以生成<code>make</code>执行的<code>Makefile</code>文件，所以说<code>CMake</code> 是<code>make</code> 的升级版的生成工具</p>]]></description>
+    </item>
+    
+    <item>
+      <title>盘点C/C&#43;&#43;语言编程&#43;编译工具</title>
+      <link>/posts/coding/c-cpp-tools-collect/</link>
+      <pubDate>Fri, 21 Feb 2020 10:40:33 +0000</pubDate>
+      
+      <guid>/posts/coding/c-cpp-tools-collect/</guid>
+      <description><![CDATA[<h2 id="盘点cc语言编程编译工具" data-numberify>盘点C/C++语言编程+编译工具<a class="anchor ms-1" href="#盘点cc语言编程编译工具"></a></h2>
+<p>本帖子盘点了<code>Linux</code>下的各种<code>C/C++</code>的编程+编译工具及<code>IDE</code>（集成开发环境</p>
+<ul>
+<li>主要是收集<code>Arch Linux</code>下的</li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

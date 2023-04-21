@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>markdown on impressionyang的个人分享站</title>
+    <link>/tags/markdown/</link>
+    <description>Recent content in markdown on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sat, 21 Mar 2020 22:31:34 +0000</lastBuildDate><atom:link href="/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</title>
+      <link>/posts/coding/markdown-note-mermaid/</link>
+      <pubDate>Sat, 21 Mar 2020 22:31:34 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-note-mermaid/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<p></br><center><b>本贴在手机端因为<code>mermaid</code>插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览</b></center></br></p>
+<ul>
+<li>持续更新中&hellip;</li>
+</ul>
+<blockquote>
+<p>本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>markdown数学公式</title>
+      <link>/posts/coding/markdown-math-support/</link>
+      <pubDate>Tue, 25 Feb 2020 09:40:30 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-math-support/</guid>
+      <description><![CDATA[<h2 id="markdown数学公式" data-numberify>markdown数学公式<a class="anchor ms-1" href="#markdown数学公式"></a></h2>
+<ul>
+<li>此贴用来记录日常使用的<code>markdown</code>数学公式以供参考</li>
+<li>不定时更新</li>
+<li>本文所用的公式渲染器是<code>KaTeX</code>，相关语法支持请点击<a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener noreferrer">此处<i class="fas fa-external-link-square-alt ms-1"></i></a>查看</li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

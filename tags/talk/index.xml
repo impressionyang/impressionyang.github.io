@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>talk on impressionyang的个人分享站</title>
+    <link>/tags/talk/</link>
+    <description>Recent content in talk on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Tue, 04 Jan 2022 00:32:09 +0800</lastBuildDate><atom:link href="/tags/talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>好物推荐 Phyphox --一个强大的工具集</title>
+      <link>/posts/talk/good_apps_of_phyphox/</link>
+      <pubDate>Tue, 04 Jan 2022 00:32:09 +0800</pubDate>
+      
+      <guid>/posts/talk/good_apps_of_phyphox/</guid>
+      <description><![CDATA[<h2 id="用途" data-numberify>用途<a class="anchor ms-1" href="#用途"></a></h2>
+<blockquote>
+<p>Your smartphone is a mobile lab.</p>
+</blockquote>
+<p>如上所说，这个软件就是你的智能手机上的移动实验室。</p>
+<p>该app是将手机上的传感器应用起来用于进行测量等功能的软件，它可以使用我们手机上的传感器进行数据采集，然后通过算法将结果以可视化的方式呈现出来。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>对于此hugo主题的更改</title>
+      <link>/posts/talk/hugo_theme_bootstrap_change/</link>
+      <pubDate>Sun, 16 May 2021 14:39:48 +0800</pubDate>
+      
+      <guid>/posts/talk/hugo_theme_bootstrap_change/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>此贴说明对该主题做出的更改点，主要是为了达成原有hexo站点功能</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>关于换到hugo</title>
+      <link>/posts/talk/about_change_to_hugo/</link>
+      <pubDate>Sun, 16 May 2021 00:10:33 +0800</pubDate>
+      
+      <guid>/posts/talk/about_change_to_hugo/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>本贴说明为何更改使用<code>hugo</code>作为静态博客生成器</p>
+</blockquote>
+<p><picture><img class="img-fluid " alt="hugo" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210515224700.png" loading="lazy" />
+</picture>
+</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

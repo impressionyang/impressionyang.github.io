@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>编程技巧 on impressionyang的个人分享站</title>
+    <link>/posts/coding/</link>
+    <description>Recent content in 编程技巧 on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sun, 13 Feb 2022 11:50:30 +0800</lastBuildDate><atom:link href="/posts/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>stm32_f103c8t6 RT Thread 移植笔记</title>
+      <link>/posts/coding/rt_thread_nano_port_stm32_f103c8t6/</link>
+      <pubDate>Sun, 13 Feb 2022 11:50:30 +0800</pubDate>
+      
+      <guid>/posts/coding/rt_thread_nano_port_stm32_f103c8t6/</guid>
+      <description><![CDATA[<blockquote>
+<p>该文章用来记录移植RT Thread的过程记录，本次移植基于STM32 F103C8T6，使用STM32 CubeMX工具构建HALL库的Makefile工程。</p>
+</blockquote>
+<h2 id="环境" data-numberify>环境<a class="anchor ms-1" href="#环境"></a></h2>
+<ul>
+<li>开发板：STM32F103C8T6最小开发板之一</li>
+</ul>
+<p><picture><img class="img-fluid " alt="" src="https://img.impressionyang.top/2022/02/04/1643983655632.png" loading="lazy" />
+</picture>
+</p>
+<ul>
+<li>操作系统：Linux</li>
+<li>开发环境：VSCode</li>
+<li>编译工具：GCC Makefile</li>
+<li>烧录工具：CMSIS DAP + openOCD</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>git更新脚本</title>
+      <link>/posts/coding/git-update-script/</link>
+      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
+      
+      <guid>/posts/coding/git-update-script/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>此脚本用于更新git仓库，主要用于使用ssh克隆的仓库，使用https克隆或者直接下载的不可使用此脚本进行更新，编写此贴用于保存脚本以供后用</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt使用配置文件</title>
+      <link>/posts/coding/qt-qsettins-uage/</link>
+      <pubDate>Tue, 29 Dec 2020 23:34:17 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qsettins-uage/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>本文用于在qt中使用配置文件进行一些配置的保存</p>
+</blockquote>
+<h2 id="方法" data-numberify>方法<a class="anchor ms-1" href="#方法"></a></h2>
+<p>关键点就是使用qt的一个类<code>QSettings</code>，该类提供一系列接口用于配置文件的操作如读取和写入，支持的配置文件格式有<code>ini</code>、<code>conf</code>等。使用该类在软件启动时进行初始化操作对一些软件的配置进行赋值操作，可以使得上一次保存的配置可以继续使用，增加程序使用的便捷性。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>C语言二级指针用法之模拟句柄用途</title>
+      <link>/posts/coding/pointer-level2-as-handle/</link>
+      <pubDate>Tue, 11 Aug 2020 21:47:45 +0000</pubDate>
+      
+      <guid>/posts/coding/pointer-level2-as-handle/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>因为在学习中使用到了二级指针进行操作，故而作此总结</p>
+</blockquote>
+<h2 id="提前了解" data-numberify>提前了解<a class="anchor ms-1" href="#提前了解"></a></h2>
+<h3 id="句柄" data-numberify>句柄<a class="anchor ms-1" href="#句柄"></a></h3>
+<ul>
+<li>以下词条来自百度百科</li>
+</ul>
+<blockquote>
+<p>句柄（Handle）是一个是用来标识对象或者项目的标识符，可以用来描述窗体、文件等，值得注意的是句柄不能是常量 。<br />
+Windows之所以要设立句柄，根本上源于内存管理机制的问题，即虚拟地址。简而言之数据的地址需要变动，变动以后就需要有人来记录、管理变动，因此系统用句柄来记载数据地址的变更。在程序设计中，句柄是一种特殊的智能指针，当一个应用程序要引用其他系统（如数据库、操作系统）所管理的内存块或对象时，就要使用句柄 。</p>
+</blockquote>
+<h3 id="二级指针" data-numberify>二级指针<a class="anchor ms-1" href="#二级指针"></a></h3>
+<p>指针是C语言中最高深莫测的部分了，能够直接操作内存的这些指针如果使用得当的话可以完成很多很高效的代码。而二级或者多级指针则能够达到你之前想都不敢想的效果。</p>
+<ul>
+<li>以下来自于百度百科</li>
+</ul>
+<blockquote>
+<p>A(即B的地址)是指向指针的指针，称为二级指针，用于存放二级指针的变量称为二级指针变量．根据B的不同情况，二级指针又分为指向指针变量的指针和指向数组的指针。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt文件操作QFile</title>
+      <link>/posts/coding/qt-qfile-note/</link>
+      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qfile-note/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>因为有需求使用<code>Qt</code>的文件<code>I/O</code>操作,所以做此记录以供后用</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt UDP广播</title>
+      <link>/posts/coding/qt-udp-brocast/</link>
+      <pubDate>Sat, 28 Mar 2020 19:57:07 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-udp-brocast/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>最近有使用<code>QT</code>的<code>UDP</code>广播,所以记录这篇帖子记录一下</p>
+</blockquote>
+<h2 id="讲解" data-numberify>讲解<a class="anchor ms-1" href="#讲解"></a></h2>
+<p>什么是<code>UDP</code>广播,我就不搬百科的内容了,就按照我的一点理解来说吧</p>
+<p><code>UDP</code>是一种网络进程间通信的技术,一般和<code>TCP</code>一起出现,<code>UDP</code>的通信优势是速度快、不需要确定对方<code>IP</code>地址，但是缺点是连接不可靠。而<code>UDP</code>广播是<code>UDP</code>下的一种通讯手段，他作为广播发送端（使用<code>writeDatagram()</code>方法）时可以在当前网络下的广播地址中进行发送广播信息，而任何接收端(使用<code>readDatagram()</code>方法)都能接收到服务器<strong>当前发送</strong>的广播信息</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</title>
+      <link>/posts/coding/markdown-note-mermaid/</link>
+      <pubDate>Sat, 21 Mar 2020 22:31:34 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-note-mermaid/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<p></br><center><b>本贴在手机端因为<code>mermaid</code>插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览</b></center></br></p>
+<ul>
+<li>持续更新中&hellip;</li>
+</ul>
+<blockquote>
+<p>本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;和Java的变量对比</title>
+      <link>/posts/coding/cpp-java-variable-diff/</link>
+      <pubDate>Fri, 20 Mar 2020 14:08:35 +0000</pubDate>
+      
+      <guid>/posts/coding/cpp-java-variable-diff/</guid>
+      <description><![CDATA[<h2 id="c和java的变量对比" data-numberify>C++和Java的变量对比<a class="anchor ms-1" href="#c和java的变量对比"></a></h2>
+<blockquote>
+<p>本贴创建的原因是本人需要做一个<code>C++</code>和<code>Java</code>之间进行<code>socket</code>通信的时候想要确定一下两者之间变量的内存占用情况，经过验证测试得出的结果用于以后用来进行验证</p>
+</blockquote>
+<ul>
+<li><strong>本次的结果均是在32位系统中得到的，64位的操作系统的内存占用情况可能有所不同！</strong></li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt CMake GUI项目生成脚本</title>
+      <link>/posts/coding/auto-init-cmake-qt-project/</link>
+      <pubDate>Thu, 27 Feb 2020 09:48:34 +0000</pubDate>
+      
+      <guid>/posts/coding/auto-init-cmake-qt-project/</guid>
+      <description><![CDATA[<h2 id="自动初始化linux下qt通用开发的cmake-gui工程的脚本" data-numberify>自动初始化Linux下Qt通用开发的CMake GUI工程的脚本<a class="anchor ms-1" href="#自动初始化linux下qt通用开发的cmake-gui工程的脚本"></a></h2>
+<ul>
+<li>这个脚本的来由是在我使用了<code>CMake</code>作为<code>Qt</code>工程的编译工具之后，为了使得即使在没有<code>qtcreator</code>的情况下也能快速地建立<code>CMake Qt GUI</code>工程从而使用其他的文本编辑器如<code>VSCode</code>或者<code>Atom</code>进行开发，而开发的工程建立脚本。</li>
+<li>本项目已经发布至我的<a href="https://github.com/impressionyang/qt_cmanke_project_initialize" target="_blank" rel="noopener noreferrer">github<i class="fas fa-external-link-square-alt ms-1"></i></a></li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>markdown数学公式</title>
+      <link>/posts/coding/markdown-math-support/</link>
+      <pubDate>Tue, 25 Feb 2020 09:40:30 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-math-support/</guid>
+      <description><![CDATA[<h2 id="markdown数学公式" data-numberify>markdown数学公式<a class="anchor ms-1" href="#markdown数学公式"></a></h2>
+<ul>
+<li>此贴用来记录日常使用的<code>markdown</code>数学公式以供参考</li>
+<li>不定时更新</li>
+<li>本文所用的公式渲染器是<code>KaTeX</code>，相关语法支持请点击<a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener noreferrer">此处<i class="fas fa-external-link-square-alt ms-1"></i></a>查看</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Makfile文件的编写</title>
+      <link>/posts/coding/makefile_personal_config/</link>
+      <pubDate>Mon, 24 Feb 2020 11:59:33 +0000</pubDate>
+      
+      <guid>/posts/coding/makefile_personal_config/</guid>
+      <description><![CDATA[<h2 id="makfile文件的编写" data-numberify>Makfile文件的编写<a class="anchor ms-1" href="#makfile文件的编写"></a></h2>
+<ul>
+<li>不定期更新</li>
+</ul>
+<h2 id="make和makefile" data-numberify>make和Makefile<a class="anchor ms-1" href="#make和makefile"></a></h2>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<p><code>make</code>:</p>
+<blockquote>
+<p><code>make</code>是一条计算机指令，是在安装有<code>GNU Make</code>的计算机上的可执行指令。该指令是读入一个名为<code>makefile</code> 的文件，然后执行这个文件中指定的指令。有时<code>make</code>又指<code>GNU Make</code>，<code>GNU Make</code> 是一个用来控制可执行文件和其他一些从源文件来的非源代码文件版本的软件。</p>
+</blockquote>
+<p><code>Makefile</code>:</p>
+<blockquote>
+<p>一个工程中的源文件不计其数，其按类型、功能、模块分别放在若干个目录中，<code>makefile</code>定义了一系列的规则来指定哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为 makefile就像一个Shell脚本一样，也可以执行操作系统的命令。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>CMake编写总结</title>
+      <link>/posts/coding/cmake-personal-config/</link>
+      <pubDate>Sun, 23 Feb 2020 22:47:22 +0000</pubDate>
+      
+      <guid>/posts/coding/cmake-personal-config/</guid>
+      <description><![CDATA[<h2 id="cmake编写总结" data-numberify>CMake编写总结<a class="anchor ms-1" href="#cmake编写总结"></a></h2>
+<ul>
+<li>不定期更新</li>
+</ul>
+<h2 id="cmake介绍" data-numberify>CMake介绍<a class="anchor ms-1" href="#cmake介绍"></a></h2>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<blockquote>
+<p>CMake是一个跨平台的安装（编译）工具，可以用简单的语句来描述所有平台的安装(编译过程)。他能够输出各种各样的makefile或者project文件，能测试编译器所支持的C++特性,类似UNIX下的automake。只是 CMake 的组态档取名为 CMakeLists.txt。CMake 并不直接建构出最终的软件，而是产生标准的建构档（如 Unix 的 Makefile 或 Windows Visual C++ 的 projects/workspaces），然后再依一般的建构方式使用。这使得熟悉某个集成开发环境（IDE）的开发者可以用标准的方式建构他的软件，这种可以使用各平台的原生建构系统的能力是 CMake 和 SCons 等其他类似系统的区别之处。</p>
+</blockquote>
+<h3 id="cmake和make" data-numberify>CMake和make<a class="anchor ms-1" href="#cmake和make"></a></h3>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<blockquote>
+<p>“CMake”这个名字是“cross platform make”的缩写。虽然名字中含有“make”，但是CMake和Unix上常见的“make”系统是分开的，而且更为高阶。</p>
+</blockquote>
+<p><code>make</code>和<code>CMake</code>之间的关系是<code>CMake</code> 通过命令可以生成<code>make</code>执行的<code>Makefile</code>文件，所以说<code>CMake</code> 是<code>make</code> 的升级版的生成工具</p>]]></description>
+    </item>
+    
+    <item>
+      <title>盘点C/C&#43;&#43;语言编程&#43;编译工具</title>
+      <link>/posts/coding/c-cpp-tools-collect/</link>
+      <pubDate>Fri, 21 Feb 2020 10:40:33 +0000</pubDate>
+      
+      <guid>/posts/coding/c-cpp-tools-collect/</guid>
+      <description><![CDATA[<h2 id="盘点cc语言编程编译工具" data-numberify>盘点C/C++语言编程+编译工具<a class="anchor ms-1" href="#盘点cc语言编程编译工具"></a></h2>
+<p>本帖子盘点了<code>Linux</code>下的各种<code>C/C++</code>的编程+编译工具及<code>IDE</code>（集成开发环境</p>
+<ul>
+<li>主要是收集<code>Arch Linux</code>下的</li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

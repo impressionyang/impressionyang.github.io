@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Java on impressionyang的个人分享站</title>
+    <link>/tags/java/</link>
+    <description>Recent content in Java on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Fri, 20 Mar 2020 14:08:35 +0000</lastBuildDate><atom:link href="/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;和Java的变量对比</title>
+      <link>/posts/coding/cpp-java-variable-diff/</link>
+      <pubDate>Fri, 20 Mar 2020 14:08:35 +0000</pubDate>
+      
+      <guid>/posts/coding/cpp-java-variable-diff/</guid>
+      <description><![CDATA[<h2 id="c和java的变量对比" data-numberify>C++和Java的变量对比<a class="anchor ms-1" href="#c和java的变量对比"></a></h2>
+<blockquote>
+<p>本贴创建的原因是本人需要做一个<code>C++</code>和<code>Java</code>之间进行<code>socket</code>通信的时候想要确定一下两者之间变量的内存占用情况，经过验证测试得出的结果用于以后用来进行验证</p>
+</blockquote>
+<ul>
+<li><strong>本次的结果均是在32位系统中得到的，64位的操作系统的内存占用情况可能有所不同！</strong></li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

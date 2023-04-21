@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tech on impressionyang的个人分享站</title>
+    <link>/tags/tech/</link>
+    <description>Recent content in tech on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Mon, 24 Feb 2020 11:59:33 +0000</lastBuildDate><atom:link href="/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Makfile文件的编写</title>
+      <link>/posts/coding/makefile_personal_config/</link>
+      <pubDate>Mon, 24 Feb 2020 11:59:33 +0000</pubDate>
+      
+      <guid>/posts/coding/makefile_personal_config/</guid>
+      <description><![CDATA[<h2 id="makfile文件的编写" data-numberify>Makfile文件的编写<a class="anchor ms-1" href="#makfile文件的编写"></a></h2>
+<ul>
+<li>不定期更新</li>
+</ul>
+<h2 id="make和makefile" data-numberify>make和Makefile<a class="anchor ms-1" href="#make和makefile"></a></h2>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<p><code>make</code>:</p>
+<blockquote>
+<p><code>make</code>是一条计算机指令，是在安装有<code>GNU Make</code>的计算机上的可执行指令。该指令是读入一个名为<code>makefile</code> 的文件，然后执行这个文件中指定的指令。有时<code>make</code>又指<code>GNU Make</code>，<code>GNU Make</code> 是一个用来控制可执行文件和其他一些从源文件来的非源代码文件版本的软件。</p>
+</blockquote>
+<p><code>Makefile</code>:</p>
+<blockquote>
+<p>一个工程中的源文件不计其数，其按类型、功能、模块分别放在若干个目录中，<code>makefile</code>定义了一系列的规则来指定哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为 makefile就像一个Shell脚本一样，也可以执行操作系统的命令。</p>
+</blockquote>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

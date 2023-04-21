@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on impressionyang的个人分享站</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in Linux on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sun, 26 Dec 2021 23:54:57 +0800</lastBuildDate><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KDE桌面下的触控板手势</title>
+      <link>/posts/tech_and_skill/kde_gesture/</link>
+      <pubDate>Sun, 26 Dec 2021 23:54:57 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/kde_gesture/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>以<code>windows</code>为主、<code>linux</code>使用<code>WSL</code>子系统的路子走不通了，相关帖子在<a href="../win10-install-wsl2">这里</a>。因为使用WSL方案USB串口无法直通到linux方案中，并且<code>GUI</code>方面也是有所缺失，使用起来并不得劲。所以打算转换思路，以<code>linux</code>为主、<code>windows</code>为辅的路子（<code>linux下使用虚拟机运行</code>windows<code>）。所以在笔记本上重新捡起</code>manjaro KDE`，感觉触控板要用起来，所以有了本篇帖子</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>realvnc使用小结</title>
+      <link>/posts/tech_and_skill/real_vnc_config/</link>
+      <pubDate>Sun, 14 Nov 2021 20:02:02 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/real_vnc_config/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>为什么要使用VNC： VNC是一个通用的桌面分享协议，与windows的RDP协议齐名，用于在不同电脑键进行桌面分享，可以在另一台电脑操控你当前的电脑。当前我的需求就是在windows系统下链接我的linux主机进行远程操作</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>使用picocm来进行Linux下的串口调试</title>
+      <link>/posts/tech_and_skill/picocom-dialy-use/</link>
+      <pubDate>Thu, 17 Sep 2020 13:07:07 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/picocom-dialy-use/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>为什么不用<code>minicom</code>呢？功能又强大由好用不是。主要原因就是<code>minicom</code>没有彩色文字，看着难受，特别是调试<code>ARM Linux</code>的时候233</p>
+</blockquote>
+<h2 id="安装" data-numberify>安装<a class="anchor ms-1" href="#安装"></a></h2>
+<p>因为正常是在<code>Debian</code>系列的<code>Linux</code>发行版上面使用的(<code>deepin</code>或者<code>ubuntu</code>这些的，解决方案比较完善)，所以就是用<code>apt</code>来进行安装，其他发行版使用自己的包管理软件进行安装</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">sudo apt install picocom -y
+</span></span></code></pre></div>]]></description>
+    </item>
+    
+    <item>
+      <title>Linux下在文件夹所有文件中查找相关内容</title>
+      <link>/posts/tech_and_skill/search-content-in-files-of-dir/</link>
+      <pubDate>Sat, 22 Aug 2020 11:18:52 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/search-content-in-files-of-dir/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>本文是为了记录在编程中进行一些在文件夹中查找某些关键字进行配置时查找文件过于麻烦的解决办法<br />
+在Linux开发中使用一些命令或者命令的配合进行查找文件内容及匹配关键词还是比较方便的。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Linux解压缩文件</title>
+      <link>/posts/tech_and_skill/compress-file-extract-and-compress/</link>
+      <pubDate>Tue, 11 Aug 2020 21:50:31 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/compress-file-extract-and-compress/</guid>
+      <description><![CDATA[<blockquote>
+<p>先导：写这篇文章是为了记录在Linux下常用的、简单的进行压缩文件的解压缩以及打包压缩文件的方法，以方便自己未来忘记了在查询</p>
+</blockquote>
+<h2 id="全局说明" data-numberify>全局说明<a class="anchor ms-1" href="#全局说明"></a></h2>
+<p>下面的两个参数意义</p>
+<ul>
+<li><code>dest</code>：目标文件，压缩的话将<code>dest</code>换成你想要的文件名</li>
+<li><code>src</code>：来源文件，是一个文件或者一个文件夹，压缩要想打包多个就空格后追加接下来的文件或者文件夹，解压的就不行了</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>C语言二级指针用法之模拟句柄用途</title>
+      <link>/posts/coding/pointer-level2-as-handle/</link>
+      <pubDate>Tue, 11 Aug 2020 21:47:45 +0000</pubDate>
+      
+      <guid>/posts/coding/pointer-level2-as-handle/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>因为在学习中使用到了二级指针进行操作，故而作此总结</p>
+</blockquote>
+<h2 id="提前了解" data-numberify>提前了解<a class="anchor ms-1" href="#提前了解"></a></h2>
+<h3 id="句柄" data-numberify>句柄<a class="anchor ms-1" href="#句柄"></a></h3>
+<ul>
+<li>以下词条来自百度百科</li>
+</ul>
+<blockquote>
+<p>句柄（Handle）是一个是用来标识对象或者项目的标识符，可以用来描述窗体、文件等，值得注意的是句柄不能是常量 。<br />
+Windows之所以要设立句柄，根本上源于内存管理机制的问题，即虚拟地址。简而言之数据的地址需要变动，变动以后就需要有人来记录、管理变动，因此系统用句柄来记载数据地址的变更。在程序设计中，句柄是一种特殊的智能指针，当一个应用程序要引用其他系统（如数据库、操作系统）所管理的内存块或对象时，就要使用句柄 。</p>
+</blockquote>
+<h3 id="二级指针" data-numberify>二级指针<a class="anchor ms-1" href="#二级指针"></a></h3>
+<p>指针是C语言中最高深莫测的部分了，能够直接操作内存的这些指针如果使用得当的话可以完成很多很高效的代码。而二级或者多级指针则能够达到你之前想都不敢想的效果。</p>
+<ul>
+<li>以下来自于百度百科</li>
+</ul>
+<blockquote>
+<p>A(即B的地址)是指向指针的指针，称为二级指针，用于存放二级指针的变量称为二级指针变量．根据B的不同情况，二级指针又分为指向指针变量的指针和指向数组的指针。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>一个命令进行Plasma热重启</title>
+      <link>/posts/tech_and_skill/restart_kde/</link>
+      <pubDate>Thu, 20 Feb 2020 14:16:41 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/restart_kde/</guid>
+      <description><![CDATA[<h2 id="一个命令进行plasma热重启" data-numberify>一个命令进行Plasma热重启<a class="anchor ms-1" href="#一个命令进行plasma热重启"></a></h2>
+<ul>
+<li>通过一个命令来重启Plasma桌面来释放系统资源</li>
+</ul>
+<p>KDE Plasma桌面环境具有很多炫酷的显示效果，但是经过一天下来长时间使用Plasma桌面而不待机或者睡眠的话，Plasma桌面会占用大量的内存资源，为了解决这个问题，特地写了一个脚本文件来对Plasma桌面进行热重启，从而释放一些资源的占用</p>
+<p>思路基本上就是使用Plasma的指令先关闭Plasma桌面再启动它</p>]]></description>
+    </item>
+    
+    <item>
+      <title>archlinux安装与应急使用双用U盘</title>
+      <link>/posts/tech_and_skill/usb_boot_multi_use/</link>
+      <pubDate>Thu, 20 Feb 2020 12:03:10 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/usb_boot_multi_use/</guid>
+      <description><![CDATA[<h2 id="archlinux安装与应急使用双用u盘" data-numberify>archlinux安装与应急使用双用U盘<a class="anchor ms-1" href="#archlinux安装与应急使用双用u盘"></a></h2>
+<ul>
+<li>本次方案建议使用16G及以上的U盘进行安装，以保证得到较好的体验</li>
+<li>建议使用<code>USB3.0</code>及以上的U盘，当然<code>2.0</code>也没问题，如果不使用图形界面的话</li>
+<li>本次是在linux环境下完成的，当然Windows下也可以实现</li>
+</ul>
+<h2 id="使用意义" data-numberify>使用意义<a class="anchor ms-1" href="#使用意义"></a></h2>
+<p>在使用archlinux启动盘之前需要用<code>dd</code>命令将U盘刻为启动盘，这样就导致整个U盘分区被<code>dd</code>修改，最明显的是第一个装有安装环境的分区被分配了一个<code>iso9960</code>标志并且使用<code>cfdisk</code>打开该设备是会有提示使用<code>写命令</code>是会丢失丢失该标志从而导致标签异常使得启动异常，而安装环境仅有<code>600+</code>M，白白浪费了该启动盘的其他空间，因为不可以新建分区。</p>
+<p>另一方面，对于某些情况下，例如电脑的系统炸了，但是又要很快地进行某些工作的时候，例如运维、出差是别的电脑是win系统等情况时，需要尽快的使用linux操作系统的时候，如果有一个装在U盘里面的移动的linux操作系统就可以解决燃眉之急了，并且，在日常使用的时候也可以偶尔使用U盘里面的linux系统</p>
+<p>一些想体验linux操作系统又怕把自己的电脑搞坏的人也可以使用这一方案进行双系统使用，而不是去使用linux live环境。</p>
+<p>所以，在以上的需求之下，这一使用方案就从我的脑子应运而生了。</p>
+<h2 id="基本想法" data-numberify>基本想法<a class="anchor ms-1" href="#基本想法"></a></h2>
+<p>主要实现的基本想法就是通过将刻好的启动盘的内容复制出来后在重新格式化U盘重新分区并尽量将前两个分区模仿原有的启动盘方案，然后剩下的分区在重新利用。</p>
+<p>，使用<code>gparted</code>或者<code>blkid</code>（Windows可以使用分区工具查看）查看U盘经过<code>dd</code>刻录之后的<code>文件系统</code>和<code>标签</code>。</p>
+<p>之后使用<code>mount</code>命令将其第一和第二个分区挂载后将其内容复制出来</p>]]></description>
+    </item>
+    
+    <item>
+      <title>arch系的bumblebee安装</title>
+      <link>/posts/tech_and_skill/arch_sierial_bumblebee_install/</link>
+      <pubDate>Wed, 19 Feb 2020 22:45:26 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/arch_sierial_bumblebee_install/</guid>
+      <description><![CDATA[<h2 id="arch系的bumblebee安装" data-numberify>arch系的bumblebee安装<a class="anchor ms-1" href="#arch系的bumblebee安装"></a></h2>
+<h2 id="bumblebee有什么用" data-numberify>bumblebee有什么用<a class="anchor ms-1" href="#bumblebee有什么用"></a></h2>
+<ul>
+<li>bumblebee是用来进行双显卡切换的工具，专用于具有NVDIA独立显卡以及CPU核显双显卡方案的笔记本来说可以有效的节约电源</li>
+<li>有效地进行双显卡的快速切换使用，默认使用核显以节约电量</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>archlinux生成字符图片</title>
+      <link>/posts/tech_and_skill/archlinux_asciiview/</link>
+      <pubDate>Wed, 19 Feb 2020 14:36:20 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/archlinux_asciiview/</guid>
+      <description><![CDATA[<h2 id="asciiview----archlinux生成字符图片的程序" data-numberify>asciiview &mdash;archlinux生成字符图片的程序<a class="anchor ms-1" href="#asciiview----archlinux生成字符图片的程序"></a></h2>
+<ul>
+<li>控制台生成ascii字符图片的程序</li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

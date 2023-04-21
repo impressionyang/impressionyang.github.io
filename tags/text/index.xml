@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>text on impressionyang的个人分享站</title>
+    <link>/tags/text/</link>
+    <description>Recent content in text on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Tue, 21 Apr 2020 17:10:07 +0000</lastBuildDate><atom:link href="/tags/text/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>最近网站备案中。。。</title>
+      <link>/posts/tech_and_skill/the-blog-is-put-on-record/</link>
+      <pubDate>Tue, 21 Apr 2020 17:10:07 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/the-blog-is-put-on-record/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>打算是主要打理国内的空间，当然github也会同步发布，是所以使用未备案的域名感觉还是挺不妥当的，还是备案一下，但是我万万没想到的是备案有那么多需要注意的问题</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>置顶公告（点击查看详情）</title>
+      <link>/posts/talk/first-begin/</link>
+      <pubDate>Tue, 18 Feb 2020 21:45:12 +0000</pubDate>
+      
+      <guid>/posts/talk/first-begin/</guid>
+      <description><![CDATA[<p><strong>本页面主要内容为本站的一些置顶的重要信息</strong></p>
+<p>当前无重要信息发出</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

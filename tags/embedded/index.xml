@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>embedded on impressionyang的个人分享站</title>
+    <link>/tags/embedded/</link>
+    <description>Recent content in embedded on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sat, 19 Mar 2022 23:07:37 +0800</lastBuildDate><atom:link href="/tags/embedded/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用openOCD</title>
+      <link>/posts/tech_and_skill/how_to_use_openocd/</link>
+      <pubDate>Sat, 19 Mar 2022 23:07:37 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/how_to_use_openocd/</guid>
+      <description><![CDATA[<blockquote>
+<p>该文档用来记录简单使用openOCD过程，使用的是CMSIS DAPLink（该link很便宜，并且开源正版）</p>
+</blockquote>
+<blockquote>
+<p>openOCD是一个用来进行在线调试的工具，它配合GDB和对应的芯片的SVD文件根据调试工具（stlink、jlink、CMSIS DAPLink等）的配置可以对嵌入式单片机MCU进行在线调试</p>
+</blockquote>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

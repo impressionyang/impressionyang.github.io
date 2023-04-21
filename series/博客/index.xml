@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>博客 on impressionyang的个人分享站</title>
+    <link>/series/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Thu, 20 Apr 2023 01:32:34 +0800</lastBuildDate><atom:link href="/series/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>x86_x64系统安装HAOS</title>
+      <link>/posts/tech_and_skill/haos_x86_x64_install/</link>
+      <pubDate>Thu, 20 Apr 2023 01:32:34 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/haos_x86_x64_install/</guid>
+      <description><![CDATA[x86_x64系统安装HAOS 本文引用自HomeAsisstant官网内容，地址为：https://www.home-assistant.i]]></description>
+    </item>
+    
+    <item>
+      <title>《掌中花园 无穷小亮的栽培心得与技巧》 张辰亮著</title>
+      <link>/posts/book/garden_in_the_palm/</link>
+      <pubDate>Sat, 28 Jan 2023 15:13:46 +0800</pubDate>
+      
+      <guid>/posts/book/garden_in_the_palm/</guid>
+      <description><![CDATA[《掌中花园 无穷小亮的栽培心得与技巧》 张辰亮著 书籍信息 作者： 张晨亮 出版社：中国国家地理 我的阅读感受 这是一本非常好的微型植物养护入门的书籍，虽然]]></description>
+    </item>
+    
+    <item>
+      <title>如何使用openOCD</title>
+      <link>/posts/tech_and_skill/how_to_use_openocd/</link>
+      <pubDate>Sat, 19 Mar 2022 23:07:37 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/how_to_use_openocd/</guid>
+      <description><![CDATA[<blockquote>
+<p>该文档用来记录简单使用openOCD过程，使用的是CMSIS DAPLink（该link很便宜，并且开源正版）</p>
+</blockquote>
+<blockquote>
+<p>openOCD是一个用来进行在线调试的工具，它配合GDB和对应的芯片的SVD文件根据调试工具（stlink、jlink、CMSIS DAPLink等）的配置可以对嵌入式单片机MCU进行在线调试</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>stm32_f103c8t6 RT Thread 移植笔记</title>
+      <link>/posts/coding/rt_thread_nano_port_stm32_f103c8t6/</link>
+      <pubDate>Sun, 13 Feb 2022 11:50:30 +0800</pubDate>
+      
+      <guid>/posts/coding/rt_thread_nano_port_stm32_f103c8t6/</guid>
+      <description><![CDATA[<blockquote>
+<p>该文章用来记录移植RT Thread的过程记录，本次移植基于STM32 F103C8T6，使用STM32 CubeMX工具构建HALL库的Makefile工程。</p>
+</blockquote>
+<h2 id="环境" data-numberify>环境<a class="anchor ms-1" href="#环境"></a></h2>
+<ul>
+<li>开发板：STM32F103C8T6最小开发板之一</li>
+</ul>
+<p><picture><img class="img-fluid " alt="" src="https://img.impressionyang.top/2022/02/04/1643983655632.png" loading="lazy" />
+</picture>
+</p>
+<ul>
+<li>操作系统：Linux</li>
+<li>开发环境：VSCode</li>
+<li>编译工具：GCC Makefile</li>
+<li>烧录工具：CMSIS DAP + openOCD</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Arch/Manjaro Linux安装vmware tools</title>
+      <link>/posts/tech_and_skill/install_vmtools_in_arch_seris_os/</link>
+      <pubDate>Wed, 05 Jan 2022 21:15:33 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/install_vmtools_in_arch_seris_os/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>本文主要说明在Arch系下安装VM Ware增强工具，因为同时想用dde+pacman，所以想折腾一下manjaro deepin，作此总结。</p>
+</blockquote>
+<p>本文主要基于archwiki的指导进行：<a href="https://wiki.archlinux.org/title/VMware/Install_Arch_Linux_as_a_guest" target="_blank" rel="noopener noreferrer">VMware/Install Arch Linux as a guest<i class="fas fa-external-link-square-alt ms-1"></i></a></p>]]></description>
+    </item>
+    
+    <item>
+      <title>关于SEGGER RTT调试</title>
+      <link>/posts/tech_and_skill/rtt_view_experiment/</link>
+      <pubDate>Wed, 05 Jan 2022 21:02:48 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/rtt_view_experiment/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>SEGGER RTT调试全名为SEGGER’s Real Time Transfer，实时传输调试，其调试传输能力非常优秀，表现为调试的数据传输速度快、时延低。并且通过相应的API，可以将其配置为多个窗口调试。</p>
+</blockquote>
+<h2 id="优缺点" data-numberify>优缺点<a class="anchor ms-1" href="#优缺点"></a></h2>
+<h3 id="优点" data-numberify>优点<a class="anchor ms-1" href="#优点"></a></h3>
+<p>最显而易见的一个优点就是使用SEGGER RTT进行数据调试，可以节省使用串口的资源进行显示输入输出，从而达到节省IO管脚资源的效果。</p>
+<p><strong>以下为SEGGER官方给出的性能数据</strong></p>
+<p><picture><img class="img-fluid " alt="233" src="https://img.impressionyang.top/2022/01/05/20210608195852.png" loading="lazy" />
+</picture>
+</p>
+<center>SEGGER 传输82 Bytes数据时延</center>]]></description>
+    </item>
+    
+    <item>
+      <title>好物推荐 Phyphox --一个强大的工具集</title>
+      <link>/posts/talk/good_apps_of_phyphox/</link>
+      <pubDate>Tue, 04 Jan 2022 00:32:09 +0800</pubDate>
+      
+      <guid>/posts/talk/good_apps_of_phyphox/</guid>
+      <description><![CDATA[<h2 id="用途" data-numberify>用途<a class="anchor ms-1" href="#用途"></a></h2>
+<blockquote>
+<p>Your smartphone is a mobile lab.</p>
+</blockquote>
+<p>如上所说，这个软件就是你的智能手机上的移动实验室。</p>
+<p>该app是将手机上的传感器应用起来用于进行测量等功能的软件，它可以使用我们手机上的传感器进行数据采集，然后通过算法将结果以可视化的方式呈现出来。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>KDE桌面下的触控板手势</title>
+      <link>/posts/tech_and_skill/kde_gesture/</link>
+      <pubDate>Sun, 26 Dec 2021 23:54:57 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/kde_gesture/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>以<code>windows</code>为主、<code>linux</code>使用<code>WSL</code>子系统的路子走不通了，相关帖子在<a href="../win10-install-wsl2">这里</a>。因为使用WSL方案USB串口无法直通到linux方案中，并且<code>GUI</code>方面也是有所缺失，使用起来并不得劲。所以打算转换思路，以<code>linux</code>为主、<code>windows</code>为辅的路子（<code>linux下使用虚拟机运行</code>windows<code>）。所以在笔记本上重新捡起</code>manjaro KDE`，感觉触控板要用起来，所以有了本篇帖子</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>realvnc使用小结</title>
+      <link>/posts/tech_and_skill/real_vnc_config/</link>
+      <pubDate>Sun, 14 Nov 2021 20:02:02 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/real_vnc_config/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>为什么要使用VNC： VNC是一个通用的桌面分享协议，与windows的RDP协议齐名，用于在不同电脑键进行桌面分享，可以在另一台电脑操控你当前的电脑。当前我的需求就是在windows系统下链接我的linux主机进行远程操作</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>对于此hugo主题的更改</title>
+      <link>/posts/talk/hugo_theme_bootstrap_change/</link>
+      <pubDate>Sun, 16 May 2021 14:39:48 +0800</pubDate>
+      
+      <guid>/posts/talk/hugo_theme_bootstrap_change/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>此贴说明对该主题做出的更改点，主要是为了达成原有hexo站点功能</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>关于换到hugo</title>
+      <link>/posts/talk/about_change_to_hugo/</link>
+      <pubDate>Sun, 16 May 2021 00:10:33 +0800</pubDate>
+      
+      <guid>/posts/talk/about_change_to_hugo/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>本贴说明为何更改使用<code>hugo</code>作为静态博客生成器</p>
+</blockquote>
+<p><picture><img class="img-fluid " alt="hugo" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210515224700.png" loading="lazy" />
+</picture>
+</p>]]></description>
+    </item>
+    
+    <item>
+      <title>关于读书分享</title>
+      <link>/posts/book/book_about/</link>
+      <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/book/book_about/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>读书分享的说明</p>
+</blockquote>
+<p>读书分享一般用来分享一些书籍的读后感的,估计是会长期的鸽下去的2333</p>]]></description>
+    </item>
+    
+    <item>
+      <title>git更新脚本</title>
+      <link>/posts/coding/git-update-script/</link>
+      <pubDate>Mon, 03 May 2021 01:28:44 +0000</pubDate>
+      
+      <guid>/posts/coding/git-update-script/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>此脚本用于更新git仓库，主要用于使用ssh克隆的仓库，使用https克隆或者直接下载的不可使用此脚本进行更新，编写此贴用于保存脚本以供后用</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt个人配置</title>
+      <link>/posts/tech_and_skill/qt-creator-my-setup/</link>
+      <pubDate>Sun, 02 May 2021 23:55:04 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/qt-creator-my-setup/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>该帖子是用来保存Qt的相关配置的，比如代码片段、快捷键等，用来进行新开发环境搭建时的参考</p>
+</blockquote>
+<p><picture><img class="img-fluid " alt="pic cheader" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210503000819.png" loading="lazy" />
+</picture>
+</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Win10安装配置Windows Terminal</title>
+      <link>/posts/tech_and_skill/win10-windows-terminal-setup/</link>
+      <pubDate>Wed, 17 Feb 2021 02:22:54 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/win10-windows-terminal-setup/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>本文也是在Win10主机下配置轻量级开发环境的一个帖子，主要是用来记录Win10下的新Windows Terminal的安装和配置，留作以后参考</p>
+</blockquote>
+<h2 id="安装" data-numberify>安装<a class="anchor ms-1" href="#安装"></a></h2>
+<p>直接在Win10商店中安装Windows Terminal即可</p>
+<p><picture><img class="img-fluid " alt="pic windows terminal in win10 store" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210217022649.png" loading="lazy" />
+</picture>
+</p>]]></description>
+    </item>
+    
+    <item>
+      <title>win10重新安装导出的WSL2镜像</title>
+      <link>/posts/tech_and_skill/win10-install-wsl2/</link>
+      <pubDate>Mon, 15 Feb 2021 21:17:50 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/win10-install-wsl2/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>安装<code>WSL2 Linux子系统</code>是我打算在游戏主机上面安装轻量级开发环境的下一步打算，至于为什么不用更好评的<code>WSL1</code>我也不多说，毕竟<code>WSL2</code>是<code>Microsoft</code>主推的，支持的特性和后续的维护应该会更快且优先级更高，所以本文使用<code>WSL2</code></p>
+</blockquote>
+<h2 id="系统需求" data-numberify>系统需求<a class="anchor ms-1" href="#系统需求"></a></h2>
+<p>下面只是列举基本要求，详细的内容请查看微软的文档<a href="https://docs.microsoft.com/zh-cn/windows/wsl/" target="_blank" rel="noopener noreferrer">传送门<i class="fas fa-external-link-square-alt ms-1"></i></a></p>
+<p><picture><img class="img-fluid " alt="pic wsl2 require" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210216143928.png" loading="lazy" />
+</picture>
+</p>
+<p>所以如果不是<code>win10</code>的话就基本不能体验<code>WSL2</code>了</p>]]></description>
+    </item>
+    
+    <item>
+      <title>win10 安装scoop的正确姿势</title>
+      <link>/posts/tech_and_skill/win10-install-scoop/</link>
+      <pubDate>Mon, 15 Feb 2021 20:10:54 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/win10-install-scoop/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>为什么想要安装scoop并且是在win10中呢？这个问题主要聚焦于我的游戏小主机上，我想要能够随时玩游戏的同时也能够进一定的博客工作或者轻量级的开发（现在wsl2中），所以需要使用scoop这个Windows的命令行工具。 但是这个工具在国内进行安装是有一定的难度的，主要是网络环境以及系统的需求，所以做此帖子留作参考</p>
+</blockquote>
+<h3 id="系统需求" data-numberify>系统需求<a class="anchor ms-1" href="#系统需求"></a></h3>
+<ul>
+<li>操作系统： win10 （主要是基本能够一步到位，不用考虑以下因素，当然，Windows的其他发行版满足以下需求也可以进行安装）</li>
+<li>power shell版本： 3.0以上</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt使用配置文件</title>
+      <link>/posts/coding/qt-qsettins-uage/</link>
+      <pubDate>Tue, 29 Dec 2020 23:34:17 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qsettins-uage/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>本文用于在qt中使用配置文件进行一些配置的保存</p>
+</blockquote>
+<h2 id="方法" data-numberify>方法<a class="anchor ms-1" href="#方法"></a></h2>
+<p>关键点就是使用qt的一个类<code>QSettings</code>，该类提供一系列接口用于配置文件的操作如读取和写入，支持的配置文件格式有<code>ini</code>、<code>conf</code>等。使用该类在软件启动时进行初始化操作对一些软件的配置进行赋值操作，可以使得上一次保存的配置可以继续使用，增加程序使用的便捷性。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>使用picocm来进行Linux下的串口调试</title>
+      <link>/posts/tech_and_skill/picocom-dialy-use/</link>
+      <pubDate>Thu, 17 Sep 2020 13:07:07 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/picocom-dialy-use/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>为什么不用<code>minicom</code>呢？功能又强大由好用不是。主要原因就是<code>minicom</code>没有彩色文字，看着难受，特别是调试<code>ARM Linux</code>的时候233</p>
+</blockquote>
+<h2 id="安装" data-numberify>安装<a class="anchor ms-1" href="#安装"></a></h2>
+<p>因为正常是在<code>Debian</code>系列的<code>Linux</code>发行版上面使用的(<code>deepin</code>或者<code>ubuntu</code>这些的，解决方案比较完善)，所以就是用<code>apt</code>来进行安装，其他发行版使用自己的包管理软件进行安装</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">sudo apt install picocom -y
+</span></span></code></pre></div>]]></description>
+    </item>
+    
+    <item>
+      <title>Linux下在文件夹所有文件中查找相关内容</title>
+      <link>/posts/tech_and_skill/search-content-in-files-of-dir/</link>
+      <pubDate>Sat, 22 Aug 2020 11:18:52 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/search-content-in-files-of-dir/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>本文是为了记录在编程中进行一些在文件夹中查找某些关键字进行配置时查找文件过于麻烦的解决办法<br />
+在Linux开发中使用一些命令或者命令的配合进行查找文件内容及匹配关键词还是比较方便的。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Linux解压缩文件</title>
+      <link>/posts/tech_and_skill/compress-file-extract-and-compress/</link>
+      <pubDate>Tue, 11 Aug 2020 21:50:31 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/compress-file-extract-and-compress/</guid>
+      <description><![CDATA[<blockquote>
+<p>先导：写这篇文章是为了记录在Linux下常用的、简单的进行压缩文件的解压缩以及打包压缩文件的方法，以方便自己未来忘记了在查询</p>
+</blockquote>
+<h2 id="全局说明" data-numberify>全局说明<a class="anchor ms-1" href="#全局说明"></a></h2>
+<p>下面的两个参数意义</p>
+<ul>
+<li><code>dest</code>：目标文件，压缩的话将<code>dest</code>换成你想要的文件名</li>
+<li><code>src</code>：来源文件，是一个文件或者一个文件夹，压缩要想打包多个就空格后追加接下来的文件或者文件夹，解压的就不行了</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>C语言二级指针用法之模拟句柄用途</title>
+      <link>/posts/coding/pointer-level2-as-handle/</link>
+      <pubDate>Tue, 11 Aug 2020 21:47:45 +0000</pubDate>
+      
+      <guid>/posts/coding/pointer-level2-as-handle/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>因为在学习中使用到了二级指针进行操作，故而作此总结</p>
+</blockquote>
+<h2 id="提前了解" data-numberify>提前了解<a class="anchor ms-1" href="#提前了解"></a></h2>
+<h3 id="句柄" data-numberify>句柄<a class="anchor ms-1" href="#句柄"></a></h3>
+<ul>
+<li>以下词条来自百度百科</li>
+</ul>
+<blockquote>
+<p>句柄（Handle）是一个是用来标识对象或者项目的标识符，可以用来描述窗体、文件等，值得注意的是句柄不能是常量 。<br />
+Windows之所以要设立句柄，根本上源于内存管理机制的问题，即虚拟地址。简而言之数据的地址需要变动，变动以后就需要有人来记录、管理变动，因此系统用句柄来记载数据地址的变更。在程序设计中，句柄是一种特殊的智能指针，当一个应用程序要引用其他系统（如数据库、操作系统）所管理的内存块或对象时，就要使用句柄 。</p>
+</blockquote>
+<h3 id="二级指针" data-numberify>二级指针<a class="anchor ms-1" href="#二级指针"></a></h3>
+<p>指针是C语言中最高深莫测的部分了，能够直接操作内存的这些指针如果使用得当的话可以完成很多很高效的代码。而二级或者多级指针则能够达到你之前想都不敢想的效果。</p>
+<ul>
+<li>以下来自于百度百科</li>
+</ul>
+<blockquote>
+<p>A(即B的地址)是指向指针的指针，称为二级指针，用于存放二级指针的变量称为二级指针变量．根据B的不同情况，二级指针又分为指向指针变量的指针和指向数组的指针。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>给pugjs的stun主题添加canvas时钟</title>
+      <link>/posts/tech_and_skill/add-canvas-clock-in-pugjs/</link>
+      <pubDate>Fri, 07 Aug 2020 20:23:18 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/add-canvas-clock-in-pugjs/</guid>
+      <description><![CDATA[先导 首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了 在pugjs中添加一些好用的东]]></description>
+    </item>
+    
+    <item>
+      <title>最近网站备案中。。。</title>
+      <link>/posts/tech_and_skill/the-blog-is-put-on-record/</link>
+      <pubDate>Tue, 21 Apr 2020 17:10:07 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/the-blog-is-put-on-record/</guid>
+      <description><![CDATA[<h2 id="说明" data-numberify>说明<a class="anchor ms-1" href="#说明"></a></h2>
+<blockquote>
+<p>打算是主要打理国内的空间，当然github也会同步发布，是所以使用未备案的域名感觉还是挺不妥当的，还是备案一下，但是我万万没想到的是备案有那么多需要注意的问题</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Arch Linux切换rEFInd开机引导程序</title>
+      <link>/posts/tech_and_skill/arch-refind-bootloader-efi/</link>
+      <pubDate>Mon, 30 Mar 2020 09:35:19 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/arch-refind-bootloader-efi/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<p>以下<code>rEFInd</code>的<code>arckwiki</code>词条的内容：</p>
+<blockquote>
+<p>rEFInd 是一个 UEFI 启动管理器。它是 rEFIt （不再维护）的一个分支并且针对非 Mac 硬件修复了若干问题。它被设计为平台无关，可启动多个操作系统。</p>
+</blockquote>
+<p>使用<code>rEFInd</code>的需求是我原来使用的是<code>bootctl</code>这个启动引导程序,虽然简单好用,但是只有黑白界面难免有点单调,所以就想使用一个比较漂亮的但是文件结构又简洁的<code>bootloader</code>,所以<code>grub</code>就被丢弃了,虽然它的却很强大,但是文件结构有点复杂,配置影响因素有点多</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt文件操作QFile</title>
+      <link>/posts/coding/qt-qfile-note/</link>
+      <pubDate>Sun, 29 Mar 2020 19:50:18 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-qfile-note/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>因为有需求使用<code>Qt</code>的文件<code>I/O</code>操作,所以做此记录以供后用</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt UDP广播</title>
+      <link>/posts/coding/qt-udp-brocast/</link>
+      <pubDate>Sat, 28 Mar 2020 19:57:07 +0000</pubDate>
+      
+      <guid>/posts/coding/qt-udp-brocast/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>最近有使用<code>QT</code>的<code>UDP</code>广播,所以记录这篇帖子记录一下</p>
+</blockquote>
+<h2 id="讲解" data-numberify>讲解<a class="anchor ms-1" href="#讲解"></a></h2>
+<p>什么是<code>UDP</code>广播,我就不搬百科的内容了,就按照我的一点理解来说吧</p>
+<p><code>UDP</code>是一种网络进程间通信的技术,一般和<code>TCP</code>一起出现,<code>UDP</code>的通信优势是速度快、不需要确定对方<code>IP</code>地址，但是缺点是连接不可靠。而<code>UDP</code>广播是<code>UDP</code>下的一种通讯手段，他作为广播发送端（使用<code>writeDatagram()</code>方法）时可以在当前网络下的广播地址中进行发送广播信息，而任何接收端(使用<code>readDatagram()</code>方法)都能接收到服务器<strong>当前发送</strong>的广播信息</p>]]></description>
+    </item>
+    
+    <item>
+      <title>为主题用pugjs编写的hexo博客添加网站运行时间</title>
+      <link>/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/</link>
+      <pubDate>Fri, 27 Mar 2020 22:59:08 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/add-runing-time-in-pug-script-for-hexo/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>写这篇帖子的原因是我很想在博客网站下面添加网站的运行时间,网上虽然有教程是怎么添加的,但是他们演示的主题大都是用<code>ejs</code>或者是<code>wig</code>来编写的,而我使用的这个个人很喜欢的<code>stun</code>主题却是用<code>pugjs</code>编写的,实在是很想用,所以根据语法的转换规则修改了一份<code>pug</code>文件下添加的脚本来使用,美滋滋</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>archlinux安装篇（三） KDE配套小工具</title>
+      <link>/posts/tech_and_skill/archlinux-install-3/</link>
+      <pubDate>Thu, 26 Mar 2020 09:50:22 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/archlinux-install-3/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>经过上一次的在配置之后能够使用图形界面了,但是会发现有一些功能是使用不了的,包括一切笔记本上的快捷键,原因是缺少了相配套的小工具进行配置,本期就是讲讲这些相关配置的</p>
+</blockquote>
+<ul>
+<li>再更新中&hellip;</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Markdown的时序图、流程图、和甘特图&#43;Hexo的相关配置</title>
+      <link>/posts/coding/markdown-note-mermaid/</link>
+      <pubDate>Sat, 21 Mar 2020 22:31:34 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-note-mermaid/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<p></br><center><b>本贴在手机端因为<code>mermaid</code>插件的问题显示会超出屏幕，以后在想办法解决，目前建议使用电脑浏览</b></center></br></p>
+<ul>
+<li>持续更新中&hellip;</li>
+</ul>
+<blockquote>
+<p>本贴是为了记录因为沦为需要进行时序图和流程图进行mermaid图像的学习而写下的</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>记录一次Hexo的崩溃修复</title>
+      <link>/posts/tech_and_skill/hexo-broken-fix-note01/</link>
+      <pubDate>Fri, 20 Mar 2020 21:43:36 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/hexo-broken-fix-note01/</guid>
+      <description><![CDATA[<h2 id="问题复现" data-numberify>问题复现<a class="anchor ms-1" href="#问题复现"></a></h2>
+<p>这次崩溃的原因是安装主题的时候手贱终止了一次然后就出了问题，导致<code>hexo</code>的各种命令如<code>clean</code>、<code>generate</code>、<code>server</code>等一直报警告并且导致网页资源的渲染出问题从而使得网站运行异常</p>
+<p>而这次发帖是为了记录本次的修复过程以提供后用</p>
+<h2 id="修复的原理" data-numberify>修复的原理<a class="anchor ms-1" href="#修复的原理"></a></h2>
+<p>我们都知道<code>hexo</code>的目录下面有一个<code>node_modules</code>文件架夹和一个<code>package.json</code>文件（安装插件后会自动生成），文件夹是保存了各个插件的文件依赖，<code>json</code>文件是保存了<code>hexo</code>的各个依赖组件，使用<code>npm install</code>可以根据此文件进行批量安装。</p>
+<p>更新/安装中断或者操作插件的时候导致的异常一般是因为<code>node_modules</code>文件夹里面的文件出问题或者丢失</p>
+<p>所以<strong>我们遇到什么困难也不要怕，微笑着干掉它</strong>，没错，直接把<code>node_modules</code>文件夹整个删掉、删掉、删掉。</p>
+<p>然后就没有问题了，因为整个问题的根源已经没有了233，开玩笑的，基本上只要把插件重新一个个安装完基本上就没事了，当然，如果你在折腾主题的话还需要先把主题会复制折腾之前哦。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>记一次Fcitx5的安装</title>
+      <link>/posts/tech_and_skill/fcitx5-install-note/</link>
+      <pubDate>Fri, 20 Mar 2020 16:37:55 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/fcitx5-install-note/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>maybe a new fcitx. Next generation of fcitx. Fcitx 5 is a generic input method framework released under LGPL-2.1+.</p>
+</blockquote>
+<p>以上是<code>github</code>上记录的<code>fcitx5</code>的仅有的寥寥几笔，想看到更多的内容请查看老K的<a href="https://www.csslayer.info/wordpress/fcitx-dev/a-new-pinyin-input-method-that-might-be-slightly-better-than-sunpinyin/" target="_blank" rel="noopener noreferrer">文章<i class="fas fa-external-link-square-alt ms-1"></i></a></p>
+<p>这篇帖子是记录我安装<code>Fcitx5</code>的经历，反正是折腾了很久才配置成功的，也看了很多其他人的配置，记录成功安装方法以留作以后参考</p>]]></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;和Java的变量对比</title>
+      <link>/posts/coding/cpp-java-variable-diff/</link>
+      <pubDate>Fri, 20 Mar 2020 14:08:35 +0000</pubDate>
+      
+      <guid>/posts/coding/cpp-java-variable-diff/</guid>
+      <description><![CDATA[<h2 id="c和java的变量对比" data-numberify>C++和Java的变量对比<a class="anchor ms-1" href="#c和java的变量对比"></a></h2>
+<blockquote>
+<p>本贴创建的原因是本人需要做一个<code>C++</code>和<code>Java</code>之间进行<code>socket</code>通信的时候想要确定一下两者之间变量的内存占用情况，经过验证测试得出的结果用于以后用来进行验证</p>
+</blockquote>
+<ul>
+<li><strong>本次的结果均是在32位系统中得到的，64位的操作系统的内存占用情况可能有所不同！</strong></li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>解决KDE下KDE Wallet重装系统后每次登陆需要输入密码</title>
+      <link>/posts/tech_and_skill/kde-wallet-login-config/</link>
+      <pubDate>Sun, 15 Mar 2020 12:26:23 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/kde-wallet-login-config/</guid>
+      <description><![CDATA[<h2 id="解决kde下kde-wallet重装系统后每次登陆需要输入密码" data-numberify>解决KDE下KDE Wallet重装系统后每次登陆需要输入密码<a class="anchor ms-1" href="#解决kde下kde-wallet重装系统后每次登陆需要输入密码"></a></h2>
+<blockquote>
+<p>在每次重装或者配置桌面后<code>kdewallet</code>总是在登陆系统之后提示输入密码，虽然在输入密码后能够继续正常使用，但是每次登陆系统都需要输入一次密码还是很烦人的，所以记录本帖以留作后用</p>
+</blockquote>
+<h2 id="出现的原因" data-numberify>出现的原因<a class="anchor ms-1" href="#出现的原因"></a></h2>
+<p>在重新配置桌面或者重装系统之后<code>KDE Wallet</code>所需要的一些必备需要依赖组件未能找到，所以导致不能正确运行<code>KDE Wallet</code>，所以只要安装其所需的组件即可。而其所需的但是未能自动安装的依赖组件正是<a href="https://www.archlinux.org/packages/?name=kwallet-pam" target="_blank" rel="noopener noreferrer">kwallet-pam<i class="fas fa-external-link-square-alt ms-1"></i></a><sup>Extra</sup></p>
+<h2 id="解决方案" data-numberify>解决方案<a class="anchor ms-1" href="#解决方案"></a></h2>
+<p>安装缺失的组件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">sudo pacman -S kwallet-pam
+</span></span></code></pre></div>]]></description>
+    </item>
+    
+    <item>
+      <title>Hexo &#43; Git Pages搭建个人博客（一）</title>
+      <link>/posts/tech_and_skill/hexo-init-config-1/</link>
+      <pubDate>Mon, 09 Mar 2020 16:44:58 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/hexo-init-config-1/</guid>
+      <description><![CDATA[<h2 id="hexo--git-pages搭建个人博客一" data-numberify>Hexo + Git Pages搭建个人博客（一）<a class="anchor ms-1" href="#hexo--git-pages搭建个人博客一"></a></h2>
+<p>期待已久的<code>Hexo</code>部署教程终于来了，本次发帖是在经过较长时间地使用<code>Hexo</code>之后才发出的，一成功就发感觉有点不稳，本贴主要是记录了本博客站的最终搭建方案，会分为几个部分，这次就讲讲怎么把<code>Hexo</code>运行起来的方法。</p>
+<p><picture><img class="img-fluid " alt="hexo web" src="https://impressionyang.gitee.io/imgbed/img/blog/2020-03-09_10-37.png" loading="lazy" />
+</picture>
+</p>
+<blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>KDE下完美的Unity桌面体验，扔掉active window control</title>
+      <link>/posts/tech_and_skill/unity-style-applet/</link>
+      <pubDate>Sat, 29 Feb 2020 19:09:50 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/unity-style-applet/</guid>
+      <description><![CDATA[<h2 id="psifidotos-的-applet-window-系列完全实现unity当年风采" data-numberify>psifidotos 的 applet-window 系列完全实现unity当年风采<a class="anchor ms-1" href="#psifidotos-的-applet-window-系列完全实现unity当年风采"></a></h2>
+<p>熟悉我对<code>Linux</code>桌面态度的人都知道我个人是很推崇当年<code>Ubuntu</code>的<code>Unity</code>桌面的全局菜单的整合功能的，其有着能把窗口标题栏以及窗口按钮和全局菜单整合为一体的功能，能够大大节省屏幕的纵向空间而不影响使用菜单以及查看窗口标题和使用窗口按钮。在我个人看来，<code>Ubuntu</code>的<code>Unity</code>桌面简直就是<code>Linux</code>桌面环境的最强代表，直到它退出历史舞台。</p>
+<p>至今我仍然向往那种能够有效率节省屏幕空间的功能却苦于没有什么桌面能够原生支持，但是，在我转向了<code>archlinux+KDE</code>之后便发现了此事有所转机。</p>
+<p>一开始我是使用<code>KDE</code>的一个名为<code>active window control</code>的插件进行使用，它能够将窗口标题栏和顶栏进行结合，但是全局菜单需要使用<code>KDE</code>的原生全局菜单插件，并且其使用起来并不是很友好，不过它也能够在一定程度上节省了屏幕的纵向空间，所以也能够勉强够用，但是使用起来并不是很开心。</p>
+<p>但是在<code>KDE</code>桌面的强大的可定制化插件的支持下，由<a href="https://github.com/psifidotos" target="_blank" rel="noopener noreferrer">psifidotos<i class="fas fa-external-link-square-alt ms-1"></i></a>所编写的<code>applet-window</code>系列插件能够配合<code>Plasma KDE</code>桌面来完美来达成‘这一愿想。</p>
+<p>要实现<code>Unity</code>桌面的功能需要安装他写的三个插件：</p>
+<ol>
+<li>applet-window-title</li>
+<li>applet-window-buttons</li>
+<li>applet-window-appmenu</li>
+</ol>
+<p>说明：<code>archlinux+KDE</code>（原理上来说<code>manjaro+KDE</code>也可以）在安装好桌面后还需要安装<code>cmake</code>和<code>extra-cmake-modules</code>，一般在安装了这两个编译依赖之后如果还是编译不成功请在评论区说明清楚哦。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>Qt CMake GUI项目生成脚本</title>
+      <link>/posts/coding/auto-init-cmake-qt-project/</link>
+      <pubDate>Thu, 27 Feb 2020 09:48:34 +0000</pubDate>
+      
+      <guid>/posts/coding/auto-init-cmake-qt-project/</guid>
+      <description><![CDATA[<h2 id="自动初始化linux下qt通用开发的cmake-gui工程的脚本" data-numberify>自动初始化Linux下Qt通用开发的CMake GUI工程的脚本<a class="anchor ms-1" href="#自动初始化linux下qt通用开发的cmake-gui工程的脚本"></a></h2>
+<ul>
+<li>这个脚本的来由是在我使用了<code>CMake</code>作为<code>Qt</code>工程的编译工具之后，为了使得即使在没有<code>qtcreator</code>的情况下也能快速地建立<code>CMake Qt GUI</code>工程从而使用其他的文本编辑器如<code>VSCode</code>或者<code>Atom</code>进行开发，而开发的工程建立脚本。</li>
+<li>本项目已经发布至我的<a href="https://github.com/impressionyang/qt_cmanke_project_initialize" target="_blank" rel="noopener noreferrer">github<i class="fas fa-external-link-square-alt ms-1"></i></a></li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>终端shell美化</title>
+      <link>/posts/tech_and_skill/console-beautify-config/</link>
+      <pubDate>Tue, 25 Feb 2020 22:01:40 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/console-beautify-config/</guid>
+      <description><![CDATA[<h2 id="终端美化" data-numberify>终端美化<a class="anchor ms-1" href="#终端美化"></a></h2>
+<p>终端是<code>Linux</code>用户的一大特色，对于经常使用终端的我来说，单调的配色和命令行已经使我有点审美疲劳了，配色可以使用首选项配置，但是命令行的模式我是有点犯尴尬症，所以重新配置了下终端并写了这篇帖子</p>]]></description>
+    </item>
+    
+    <item>
+      <title>GoldenDict个人配置</title>
+      <link>/posts/tech_and_skill/goldendict-personal-config/</link>
+      <pubDate>Tue, 25 Feb 2020 11:06:32 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/goldendict-personal-config/</guid>
+      <description><![CDATA[<h2 id="goldendict个人配置" data-numberify>GoldenDict个人配置<a class="anchor ms-1" href="#goldendict个人配置"></a></h2>
+<p><strong>&ndash;一款支持Linux的强大单词翻译软件</strong></p>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<blockquote>
+<p>GoldenDict 是一款不错的、与StarDict（星际译王）类似的词典软件。它使用 WebKit作为渲染核心，格式化、颜色、图像、链接等支持一应俱全；支持多种词典文件格式，包括Babylon的 .BGL 文件、StarDict 的 .ifo/.dict/.idx/.syn 文件、Dictd的·index/.dict(.dz) 文件、ABBYY Lingvo 的 .dsl/.lsa/.dat 文件。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>markdown数学公式</title>
+      <link>/posts/coding/markdown-math-support/</link>
+      <pubDate>Tue, 25 Feb 2020 09:40:30 +0000</pubDate>
+      
+      <guid>/posts/coding/markdown-math-support/</guid>
+      <description><![CDATA[<h2 id="markdown数学公式" data-numberify>markdown数学公式<a class="anchor ms-1" href="#markdown数学公式"></a></h2>
+<ul>
+<li>此贴用来记录日常使用的<code>markdown</code>数学公式以供参考</li>
+<li>不定时更新</li>
+<li>本文所用的公式渲染器是<code>KaTeX</code>，相关语法支持请点击<a href="https://katex.org/docs/supported.html" target="_blank" rel="noopener noreferrer">此处<i class="fas fa-external-link-square-alt ms-1"></i></a>查看</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Makfile文件的编写</title>
+      <link>/posts/coding/makefile_personal_config/</link>
+      <pubDate>Mon, 24 Feb 2020 11:59:33 +0000</pubDate>
+      
+      <guid>/posts/coding/makefile_personal_config/</guid>
+      <description><![CDATA[<h2 id="makfile文件的编写" data-numberify>Makfile文件的编写<a class="anchor ms-1" href="#makfile文件的编写"></a></h2>
+<ul>
+<li>不定期更新</li>
+</ul>
+<h2 id="make和makefile" data-numberify>make和Makefile<a class="anchor ms-1" href="#make和makefile"></a></h2>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<p><code>make</code>:</p>
+<blockquote>
+<p><code>make</code>是一条计算机指令，是在安装有<code>GNU Make</code>的计算机上的可执行指令。该指令是读入一个名为<code>makefile</code> 的文件，然后执行这个文件中指定的指令。有时<code>make</code>又指<code>GNU Make</code>，<code>GNU Make</code> 是一个用来控制可执行文件和其他一些从源文件来的非源代码文件版本的软件。</p>
+</blockquote>
+<p><code>Makefile</code>:</p>
+<blockquote>
+<p>一个工程中的源文件不计其数，其按类型、功能、模块分别放在若干个目录中，<code>makefile</code>定义了一系列的规则来指定哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为 makefile就像一个Shell脚本一样，也可以执行操作系统的命令。</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>CMake编写总结</title>
+      <link>/posts/coding/cmake-personal-config/</link>
+      <pubDate>Sun, 23 Feb 2020 22:47:22 +0000</pubDate>
+      
+      <guid>/posts/coding/cmake-personal-config/</guid>
+      <description><![CDATA[<h2 id="cmake编写总结" data-numberify>CMake编写总结<a class="anchor ms-1" href="#cmake编写总结"></a></h2>
+<ul>
+<li>不定期更新</li>
+</ul>
+<h2 id="cmake介绍" data-numberify>CMake介绍<a class="anchor ms-1" href="#cmake介绍"></a></h2>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<blockquote>
+<p>CMake是一个跨平台的安装（编译）工具，可以用简单的语句来描述所有平台的安装(编译过程)。他能够输出各种各样的makefile或者project文件，能测试编译器所支持的C++特性,类似UNIX下的automake。只是 CMake 的组态档取名为 CMakeLists.txt。CMake 并不直接建构出最终的软件，而是产生标准的建构档（如 Unix 的 Makefile 或 Windows Visual C++ 的 projects/workspaces），然后再依一般的建构方式使用。这使得熟悉某个集成开发环境（IDE）的开发者可以用标准的方式建构他的软件，这种可以使用各平台的原生建构系统的能力是 CMake 和 SCons 等其他类似系统的区别之处。</p>
+</blockquote>
+<h3 id="cmake和make" data-numberify>CMake和make<a class="anchor ms-1" href="#cmake和make"></a></h3>
+<ul>
+<li>以下来自百度百科</li>
+</ul>
+<blockquote>
+<p>“CMake”这个名字是“cross platform make”的缩写。虽然名字中含有“make”，但是CMake和Unix上常见的“make”系统是分开的，而且更为高阶。</p>
+</blockquote>
+<p><code>make</code>和<code>CMake</code>之间的关系是<code>CMake</code> 通过命令可以生成<code>make</code>执行的<code>Makefile</code>文件，所以说<code>CMake</code> 是<code>make</code> 的升级版的生成工具</p>]]></description>
+    </item>
+    
+    <item>
+      <title>archlinux安装篇（二） KDE桌面环境</title>
+      <link>/posts/tech_and_skill/archlinux-install_2/</link>
+      <pubDate>Sat, 22 Feb 2020 16:38:19 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/archlinux-install_2/</guid>
+      <description><![CDATA[<h2 id="archlinux安装篇二" data-numberify>archlinux安装篇（二）<a class="anchor ms-1" href="#archlinux安装篇二"></a></h2>
+<p>接着上一次安装完成了之后应该能启动到<code>archlinux</code>的图形界面了，但是没有图形界面的话作为日常使用的系统还是很勉强的，所以还是很有必要进行接下来的图形操作界面的配置的</p>
+<p>接下来就是配置<code>archlinux</code>的图形操作环境了，本文介绍的是<code>Plasma KDE</code>桌面环境</p>]]></description>
+    </item>
+    
+    <item>
+      <title>盘点C/C&#43;&#43;语言编程&#43;编译工具</title>
+      <link>/posts/coding/c-cpp-tools-collect/</link>
+      <pubDate>Fri, 21 Feb 2020 10:40:33 +0000</pubDate>
+      
+      <guid>/posts/coding/c-cpp-tools-collect/</guid>
+      <description><![CDATA[<h2 id="盘点cc语言编程编译工具" data-numberify>盘点C/C++语言编程+编译工具<a class="anchor ms-1" href="#盘点cc语言编程编译工具"></a></h2>
+<p>本帖子盘点了<code>Linux</code>下的各种<code>C/C++</code>的编程+编译工具及<code>IDE</code>（集成开发环境</p>
+<ul>
+<li>主要是收集<code>Arch Linux</code>下的</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Plasma顶栏和窗口标题整合插件</title>
+      <link>/posts/tech_and_skill/active_window_control/</link>
+      <pubDate>Thu, 20 Feb 2020 15:10:11 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/active_window_control/</guid>
+      <description><![CDATA[<h2 id="plasma顶栏和窗口标题整合插件" data-numberify>Plasma顶栏和窗口标题整合插件<a class="anchor ms-1" href="#plasma顶栏和窗口标题整合插件"></a></h2>
+<ul>
+<li>Active Window Controle 窗口集成功能</li>
+</ul>
+<p>Active Window Controle经过配置可以使得你的Plasma的窗口与顶栏相结合，达到Ubuntu曾经使用的Unity桌面环境那般高效，可以在全屏是节省一条标题栏的高度，毕竟显示器区域真的是寸土寸金的呀。</p>]]></description>
+    </item>
+    
+    <item>
+      <title>一个命令进行Plasma热重启</title>
+      <link>/posts/tech_and_skill/restart_kde/</link>
+      <pubDate>Thu, 20 Feb 2020 14:16:41 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/restart_kde/</guid>
+      <description><![CDATA[<h2 id="一个命令进行plasma热重启" data-numberify>一个命令进行Plasma热重启<a class="anchor ms-1" href="#一个命令进行plasma热重启"></a></h2>
+<ul>
+<li>通过一个命令来重启Plasma桌面来释放系统资源</li>
+</ul>
+<p>KDE Plasma桌面环境具有很多炫酷的显示效果，但是经过一天下来长时间使用Plasma桌面而不待机或者睡眠的话，Plasma桌面会占用大量的内存资源，为了解决这个问题，特地写了一个脚本文件来对Plasma桌面进行热重启，从而释放一些资源的占用</p>
+<p>思路基本上就是使用Plasma的指令先关闭Plasma桌面再启动它</p>]]></description>
+    </item>
+    
+    <item>
+      <title>wine和deepinwine的相关配置</title>
+      <link>/posts/tech_and_skill/wine_deepinwine_config/</link>
+      <pubDate>Thu, 20 Feb 2020 14:01:21 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/wine_deepinwine_config/</guid>
+      <description><![CDATA[<h2 id="wine和deepinwine的相关配置" data-numberify>wine和deepinwine的相关配置<a class="anchor ms-1" href="#wine和deepinwine的相关配置"></a></h2>]]></description>
+    </item>
+    
+    <item>
+      <title>archlinux安装与应急使用双用U盘</title>
+      <link>/posts/tech_and_skill/usb_boot_multi_use/</link>
+      <pubDate>Thu, 20 Feb 2020 12:03:10 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/usb_boot_multi_use/</guid>
+      <description><![CDATA[<h2 id="archlinux安装与应急使用双用u盘" data-numberify>archlinux安装与应急使用双用U盘<a class="anchor ms-1" href="#archlinux安装与应急使用双用u盘"></a></h2>
+<ul>
+<li>本次方案建议使用16G及以上的U盘进行安装，以保证得到较好的体验</li>
+<li>建议使用<code>USB3.0</code>及以上的U盘，当然<code>2.0</code>也没问题，如果不使用图形界面的话</li>
+<li>本次是在linux环境下完成的，当然Windows下也可以实现</li>
+</ul>
+<h2 id="使用意义" data-numberify>使用意义<a class="anchor ms-1" href="#使用意义"></a></h2>
+<p>在使用archlinux启动盘之前需要用<code>dd</code>命令将U盘刻为启动盘，这样就导致整个U盘分区被<code>dd</code>修改，最明显的是第一个装有安装环境的分区被分配了一个<code>iso9960</code>标志并且使用<code>cfdisk</code>打开该设备是会有提示使用<code>写命令</code>是会丢失丢失该标志从而导致标签异常使得启动异常，而安装环境仅有<code>600+</code>M，白白浪费了该启动盘的其他空间，因为不可以新建分区。</p>
+<p>另一方面，对于某些情况下，例如电脑的系统炸了，但是又要很快地进行某些工作的时候，例如运维、出差是别的电脑是win系统等情况时，需要尽快的使用linux操作系统的时候，如果有一个装在U盘里面的移动的linux操作系统就可以解决燃眉之急了，并且，在日常使用的时候也可以偶尔使用U盘里面的linux系统</p>
+<p>一些想体验linux操作系统又怕把自己的电脑搞坏的人也可以使用这一方案进行双系统使用，而不是去使用linux live环境。</p>
+<p>所以，在以上的需求之下，这一使用方案就从我的脑子应运而生了。</p>
+<h2 id="基本想法" data-numberify>基本想法<a class="anchor ms-1" href="#基本想法"></a></h2>
+<p>主要实现的基本想法就是通过将刻好的启动盘的内容复制出来后在重新格式化U盘重新分区并尽量将前两个分区模仿原有的启动盘方案，然后剩下的分区在重新利用。</p>
+<p>，使用<code>gparted</code>或者<code>blkid</code>（Windows可以使用分区工具查看）查看U盘经过<code>dd</code>刻录之后的<code>文件系统</code>和<code>标签</code>。</p>
+<p>之后使用<code>mount</code>命令将其第一和第二个分区挂载后将其内容复制出来</p>]]></description>
+    </item>
+    
+    <item>
+      <title>arch系的bumblebee安装</title>
+      <link>/posts/tech_and_skill/arch_sierial_bumblebee_install/</link>
+      <pubDate>Wed, 19 Feb 2020 22:45:26 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/arch_sierial_bumblebee_install/</guid>
+      <description><![CDATA[<h2 id="arch系的bumblebee安装" data-numberify>arch系的bumblebee安装<a class="anchor ms-1" href="#arch系的bumblebee安装"></a></h2>
+<h2 id="bumblebee有什么用" data-numberify>bumblebee有什么用<a class="anchor ms-1" href="#bumblebee有什么用"></a></h2>
+<ul>
+<li>bumblebee是用来进行双显卡切换的工具，专用于具有NVDIA独立显卡以及CPU核显双显卡方案的笔记本来说可以有效的节约电源</li>
+<li>有效地进行双显卡的快速切换使用，默认使用核显以节约电量</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>Linux显示bilibili小电视</title>
+      <link>/posts/tech_and_skill/linux_show_bilibili/</link>
+      <pubDate>Wed, 19 Feb 2020 22:12:43 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/linux_show_bilibili/</guid>
+      <description><![CDATA[<h2 id="linux控制台显示bilibili小电视" data-numberify>Linux控制台显示bilibili小电视<a class="anchor ms-1" href="#linux控制台显示bilibili小电视"></a></h2>
+<ul>
+<li>不限制linux系统发行版、不限制shell</li>
+</ul>
+<h2 id="显示效果" data-numberify>显示效果<a class="anchor ms-1" href="#显示效果"></a></h2>
+<p><picture><img class="img-fluid " alt="Screenshot_20190826_223125" src="https://impressionyang.gitee.io/imgbed/img/blog/Screenshot_20190826_223125.png" loading="lazy" />
+</picture>
+</p>]]></description>
+    </item>
+    
+    <item>
+      <title>archlinux生成字符图片</title>
+      <link>/posts/tech_and_skill/archlinux_asciiview/</link>
+      <pubDate>Wed, 19 Feb 2020 14:36:20 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/archlinux_asciiview/</guid>
+      <description><![CDATA[<h2 id="asciiview----archlinux生成字符图片的程序" data-numberify>asciiview &mdash;archlinux生成字符图片的程序<a class="anchor ms-1" href="#asciiview----archlinux生成字符图片的程序"></a></h2>
+<ul>
+<li>控制台生成ascii字符图片的程序</li>
+</ul>]]></description>
+    </item>
+    
+    <item>
+      <title>git使用要点</title>
+      <link>/posts/tech_and_skill/git_use_guid/</link>
+      <pubDate>Wed, 19 Feb 2020 14:32:47 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/git_use_guid/</guid>
+      <description><![CDATA[<blockquote>
+<p>本帖子是用来记录<code>git</code>的使用操作的，会在使用到新功能的时候进行更新，所以本贴是会进行较为长期的更新的</p>
+</blockquote>
+<h2 id="基本命令" data-numberify>基本命令<a class="anchor ms-1" href="#基本命令"></a></h2>
+<h3 id="初始化配置username-useremail替换为自己的" data-numberify>初始化配置（$username、 $useremail替换为自己的）<a class="anchor ms-1" href="#初始化配置username-useremail替换为自己的"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">git config --global user.name <span class="nv">$username</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">git config --global user.email <span class="nv">$useremail</span>
+</span></span></code></pre></div>]]></description>
+    </item>
+    
+    <item>
+      <title>archlinux安装篇（一） 基本系统</title>
+      <link>/posts/tech_and_skill/archlinux_install_1/</link>
+      <pubDate>Wed, 19 Feb 2020 11:27:14 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/archlinux_install_1/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>安装ArchLinux</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>MANJARO KDE安装配置(已换Arch Linux，此贴可能废弃)</title>
+      <link>/posts/tech_and_skill/manjaro-install-config/</link>
+      <pubDate>Tue, 18 Feb 2020 23:41:19 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/manjaro-install-config/</guid>
+      <description><![CDATA[<h2 id="manjaro-kde安装配置" data-numberify>MANJARO KDE安装配置<a class="anchor ms-1" href="#manjaro-kde安装配置"></a></h2>
+<ul>
+<li>已换<code>Arch Linux</code>，<code>Manjaro</code>文章已经不再添加更新，此文为以前所写，作为备份用,看心情更新</li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

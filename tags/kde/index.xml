@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>KDE on impressionyang的个人分享站</title>
+    <link>/tags/kde/</link>
+    <description>Recent content in KDE on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Sun, 26 Dec 2021 23:54:57 +0800</lastBuildDate><atom:link href="/tags/kde/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KDE桌面下的触控板手势</title>
+      <link>/posts/tech_and_skill/kde_gesture/</link>
+      <pubDate>Sun, 26 Dec 2021 23:54:57 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/kde_gesture/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>以<code>windows</code>为主、<code>linux</code>使用<code>WSL</code>子系统的路子走不通了，相关帖子在<a href="../win10-install-wsl2">这里</a>。因为使用WSL方案USB串口无法直通到linux方案中，并且<code>GUI</code>方面也是有所缺失，使用起来并不得劲。所以打算转换思路，以<code>linux</code>为主、<code>windows</code>为辅的路子（<code>linux下使用虚拟机运行</code>windows<code>）。所以在笔记本上重新捡起</code>manjaro KDE`，感觉触控板要用起来，所以有了本篇帖子</p>
+</blockquote>]]></description>
+    </item>
+    
+    <item>
+      <title>记一次Fcitx5的安装</title>
+      <link>/posts/tech_and_skill/fcitx5-install-note/</link>
+      <pubDate>Fri, 20 Mar 2020 16:37:55 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/fcitx5-install-note/</guid>
+      <description><![CDATA[<h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>maybe a new fcitx. Next generation of fcitx. Fcitx 5 is a generic input method framework released under LGPL-2.1+.</p>
+</blockquote>
+<p>以上是<code>github</code>上记录的<code>fcitx5</code>的仅有的寥寥几笔，想看到更多的内容请查看老K的<a href="https://www.csslayer.info/wordpress/fcitx-dev/a-new-pinyin-input-method-that-might-be-slightly-better-than-sunpinyin/" target="_blank" rel="noopener noreferrer">文章<i class="fas fa-external-link-square-alt ms-1"></i></a></p>
+<p>这篇帖子是记录我安装<code>Fcitx5</code>的经历，反正是折腾了很久才配置成功的，也看了很多其他人的配置，记录成功安装方法以留作以后参考</p>]]></description>
+    </item>
+    
+    <item>
+      <title>解决KDE下KDE Wallet重装系统后每次登陆需要输入密码</title>
+      <link>/posts/tech_and_skill/kde-wallet-login-config/</link>
+      <pubDate>Sun, 15 Mar 2020 12:26:23 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/kde-wallet-login-config/</guid>
+      <description><![CDATA[<h2 id="解决kde下kde-wallet重装系统后每次登陆需要输入密码" data-numberify>解决KDE下KDE Wallet重装系统后每次登陆需要输入密码<a class="anchor ms-1" href="#解决kde下kde-wallet重装系统后每次登陆需要输入密码"></a></h2>
+<blockquote>
+<p>在每次重装或者配置桌面后<code>kdewallet</code>总是在登陆系统之后提示输入密码，虽然在输入密码后能够继续正常使用，但是每次登陆系统都需要输入一次密码还是很烦人的，所以记录本帖以留作后用</p>
+</blockquote>
+<h2 id="出现的原因" data-numberify>出现的原因<a class="anchor ms-1" href="#出现的原因"></a></h2>
+<p>在重新配置桌面或者重装系统之后<code>KDE Wallet</code>所需要的一些必备需要依赖组件未能找到，所以导致不能正确运行<code>KDE Wallet</code>，所以只要安装其所需的组件即可。而其所需的但是未能自动安装的依赖组件正是<a href="https://www.archlinux.org/packages/?name=kwallet-pam" target="_blank" rel="noopener noreferrer">kwallet-pam<i class="fas fa-external-link-square-alt ms-1"></i></a><sup>Extra</sup></p>
+<h2 id="解决方案" data-numberify>解决方案<a class="anchor ms-1" href="#解决方案"></a></h2>
+<p>安装缺失的组件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">sudo pacman -S kwallet-pam
+</span></span></code></pre></div>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

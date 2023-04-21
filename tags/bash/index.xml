@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>bash on impressionyang的个人分享站</title>
+    <link>/tags/bash/</link>
+    <description>Recent content in bash on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Wed, 19 Feb 2020 22:12:43 +0000</lastBuildDate><atom:link href="/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux显示bilibili小电视</title>
+      <link>/posts/tech_and_skill/linux_show_bilibili/</link>
+      <pubDate>Wed, 19 Feb 2020 22:12:43 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/linux_show_bilibili/</guid>
+      <description><![CDATA[<h2 id="linux控制台显示bilibili小电视" data-numberify>Linux控制台显示bilibili小电视<a class="anchor ms-1" href="#linux控制台显示bilibili小电视"></a></h2>
+<ul>
+<li>不限制linux系统发行版、不限制shell</li>
+</ul>
+<h2 id="显示效果" data-numberify>显示效果<a class="anchor ms-1" href="#显示效果"></a></h2>
+<p><picture><img class="img-fluid " alt="Screenshot_20190826_223125" src="https://impressionyang.gitee.io/imgbed/img/blog/Screenshot_20190826_223125.png" loading="lazy" />
+</picture>
+</p>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

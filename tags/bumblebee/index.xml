@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>bumblebee on impressionyang的个人分享站</title>
+    <link>/tags/bumblebee/</link>
+    <description>Recent content in bumblebee on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Wed, 19 Feb 2020 22:45:26 +0000</lastBuildDate><atom:link href="/tags/bumblebee/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>arch系的bumblebee安装</title>
+      <link>/posts/tech_and_skill/arch_sierial_bumblebee_install/</link>
+      <pubDate>Wed, 19 Feb 2020 22:45:26 +0000</pubDate>
+      
+      <guid>/posts/tech_and_skill/arch_sierial_bumblebee_install/</guid>
+      <description><![CDATA[<h2 id="arch系的bumblebee安装" data-numberify>arch系的bumblebee安装<a class="anchor ms-1" href="#arch系的bumblebee安装"></a></h2>
+<h2 id="bumblebee有什么用" data-numberify>bumblebee有什么用<a class="anchor ms-1" href="#bumblebee有什么用"></a></h2>
+<ul>
+<li>bumblebee是用来进行双显卡切换的工具，专用于具有NVDIA独立显卡以及CPU核显双显卡方案的笔记本来说可以有效的节约电源</li>
+<li>有效地进行双显卡的快速切换使用，默认使用核显以节约电量</li>
+</ul>]]></description>
+    </item>
+    
+  </channel>
+</rss>
+
