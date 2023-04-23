@@ -8,7 +8,16 @@
     <language>zh-cn</language>
     <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
 </copyright>
-    <lastBuildDate>Thu, 20 Apr 2023 01:32:34 +0800</lastBuildDate><atom:link href="/tags/homeassistant/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Apr 2023 23:59:19 +0800</lastBuildDate><atom:link href="/tags/homeassistant/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么我使用HomeAssistant并且使用HAOS</title>
+      <link>/posts/talk/why_i_use_home_assitant_and_haos/</link>
+      <pubDate>Sun, 23 Apr 2023 23:59:19 +0800</pubDate>
+      
+      <guid>/posts/talk/why_i_use_home_assitant_and_haos/</guid>
+      <description><![CDATA[为什么我使用HomeAssistant并且使用HAOS 以下称HomeAssistant为HA，至于为什么写这篇文章则是为了让我哪天怀疑我为什]]></description>
+    </item>
+    
     <item>
       <title>x86_x64系统安装HAOS</title>
       <link>/posts/tech_and_skill/haos_x86_x64_install/</link>

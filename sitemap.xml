@@ -3,13 +3,40 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/tags/haos/</loc>
-    <lastmod>2023-04-20T01:32:34+08:00</lastmod>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
   </url><url>
     <loc>/tags/homeassistant/</loc>
-    <lastmod>2023-04-20T01:32:34+08:00</lastmod>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2023-04-20T01:32:34+08:00</lastmod>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
+  </url><url>
+    <loc>/tags/talk/</loc>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
+  </url><url>
+    <loc>/categories/talk/</loc>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
+  </url><url>
+    <loc>/series/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
+  </url><url>
+    <loc>/posts/talk/why_i_use_home_assitant_and_haos/</loc>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
+  </url><url>
+    <loc>/posts/talk/</loc>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2023-04-23T23:59:19+08:00</lastmod>
   </url><url>
     <loc>/tags/skill/</loc>
     <lastmod>2023-04-20T01:32:34+08:00</lastmod>
@@ -20,22 +47,7 @@
     <loc>/posts/tech_and_skill/haos_x86_x64_install/</loc>
     <lastmod>2023-04-20T01:32:34+08:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-04-20T01:32:34+08:00</lastmod>
-  </url><url>
-    <loc>/series/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2023-04-20T01:32:34+08:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2023-04-20T01:32:34+08:00</lastmod>
-  </url><url>
     <loc>/posts/tech_and_skill/</loc>
-    <lastmod>2023-04-20T01:32:34+08:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2023-04-20T01:32:34+08:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
     <lastmod>2023-04-20T01:32:34+08:00</lastmod>
   </url><url>
     <loc>/tags/esp32/</loc>
@@ -143,16 +155,7 @@
     <loc>/tags/phyphox/</loc>
     <lastmod>2022-01-04T00:32:09+08:00</lastmod>
   </url><url>
-    <loc>/tags/talk/</loc>
-    <lastmod>2022-01-04T00:32:09+08:00</lastmod>
-  </url><url>
-    <loc>/categories/talk/</loc>
-    <lastmod>2022-01-04T00:32:09+08:00</lastmod>
-  </url><url>
     <loc>/posts/talk/good_apps_of_phyphox/</loc>
-    <lastmod>2022-01-04T00:32:09+08:00</lastmod>
-  </url><url>
-    <loc>/posts/talk/</loc>
     <lastmod>2022-01-04T00:32:09+08:00</lastmod>
   </url><url>
     <loc>/tags/kde/</loc>
