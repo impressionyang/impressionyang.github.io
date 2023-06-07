@@ -8,7 +8,16 @@
     <language>zh-cn</language>
     <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
 </copyright>
-    <lastBuildDate>Thu, 20 Apr 2023 01:32:34 +0800</lastBuildDate><atom:link href="/tags/skill/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jun 2023 00:23:35 +0800</lastBuildDate><atom:link href="/tags/skill/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeCAD 离线手动安装插件的方法</title>
+      <link>/posts/tech_and_skill/freecad_install_addons/</link>
+      <pubDate>Thu, 08 Jun 2023 00:23:35 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/freecad_install_addons/</guid>
+      <description><![CDATA[FreeCAD 离线手动安装插件的方法 该文档从FreeCAD的官方文档Installing more workbenches小节中获取，记录用于后续查找 插件从哪里获]]></description>
+    </item>
+    
     <item>
       <title>x86_x64系统安装HAOS</title>
       <link>/posts/tech_and_skill/haos_x86_x64_install/</link>

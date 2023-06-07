@@ -306,6 +306,23 @@
   <div class="posts mb-4"><article class="row card post component">
   <div class="card-header">
     <h2 class="card-title post-title my-2 fs-4">
+      <a href="/posts/tech_and_skill/console-beautify-config/">终端shell美化</a>
+    </h2>
+  </div>
+  <div class="card-body"><div class="post-meta mb-3">
+  <span class="post-date me-1 mb-1" title="创建于 2020-02-26 06:01:40 &#43;0800 CST。">February 25, 2020</span><span class="post-reading-time me-1 mb-1">2 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
+      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/consoleshell/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Console，shell</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
+</div>
+
+    <div class="post-summary"><h2 id="终端美化" data-numberify>终端美化<a class="anchor ms-1" href="#终端美化"></a></h2>
+<p>终端是<code>Linux</code>用户的一大特色，对于经常使用终端的我来说，单调的配色和命令行已经使我有点审美疲劳了，配色可以使用首选项配置，但是命令行的模式我是有点犯尴尬症，所以重新配置了下终端并写了这篇帖子</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/console-beautify-config/">阅读更多</a></div>
+    </div>
+  </div>
+</article>
+<article class="row card post component">
+  <div class="card-header">
+    <h2 class="card-title post-title my-2 fs-4">
       <a href="/posts/tech_and_skill/goldendict-personal-config/">GoldenDict个人配置</a>
     </h2>
   </div>
@@ -507,36 +524,6 @@
     </div>
   </div>
 </article>
-<article class="row card post component">
-  <div class="card-header">
-    <h2 class="card-title post-title my-2 fs-4">
-      <a href="/posts/tech_and_skill/usb_boot_multi_use/">Archlinux安装与应急使用双用U盘</a>
-    </h2>
-  </div>
-  <div class="card-body"><div class="post-meta mb-3">
-  <span class="post-date me-1 mb-1" title="创建于 2020-02-20 20:03:10 &#43;0800 CST。">February 20, 2020</span><span class="post-reading-time me-1 mb-1">4 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
-      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/archlinux/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Archlinux</a><a href="/tags/linux/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Linux</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a><a href="/tags/usb/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">USB</a>
-</div>
-
-    <div class="post-summary"><h2 id="archlinux安装与应急使用双用u盘" data-numberify>archlinux安装与应急使用双用U盘<a class="anchor ms-1" href="#archlinux安装与应急使用双用u盘"></a></h2>
-<ul>
-<li>本次方案建议使用16G及以上的U盘进行安装，以保证得到较好的体验</li>
-<li>建议使用<code>USB3.0</code>及以上的U盘，当然<code>2.0</code>也没问题，如果不使用图形界面的话</li>
-<li>本次是在linux环境下完成的，当然Windows下也可以实现</li>
-</ul>
-<h2 id="使用意义" data-numberify>使用意义<a class="anchor ms-1" href="#使用意义"></a></h2>
-<p>在使用archlinux启动盘之前需要用<code>dd</code>命令将U盘刻为启动盘，这样就导致整个U盘分区被<code>dd</code>修改，最明显的是第一个装有安装环境的分区被分配了一个<code>iso9960</code>标志并且使用<code>cfdisk</code>打开该设备是会有提示使用<code>写命令</code>是会丢失丢失该标志从而导致标签异常使得启动异常，而安装环境仅有<code>600+</code>M，白白浪费了该启动盘的其他空间，因为不可以新建分区。</p>
-<p>另一方面，对于某些情况下，例如电脑的系统炸了，但是又要很快地进行某些工作的时候，例如运维、出差是别的电脑是win系统等情况时，需要尽快的使用linux操作系统的时候，如果有一个装在U盘里面的移动的linux操作系统就可以解决燃眉之急了，并且，在日常使用的时候也可以偶尔使用U盘里面的linux系统</p>
-<p>一些想体验linux操作系统又怕把自己的电脑搞坏的人也可以使用这一方案进行双系统使用，而不是去使用linux live环境。</p>
-<p>所以，在以上的需求之下，这一使用方案就从我的脑子应运而生了。</p>
-<h2 id="基本想法" data-numberify>基本想法<a class="anchor ms-1" href="#基本想法"></a></h2>
-<p>主要实现的基本想法就是通过将刻好的启动盘的内容复制出来后在重新格式化U盘重新分区并尽量将前两个分区模仿原有的启动盘方案，然后剩下的分区在重新利用。</p>
-<p>，使用<code>gparted</code>或者<code>blkid</code>（Windows可以使用分区工具查看）查看U盘经过<code>dd</code>刻录之后的<code>文件系统</code>和<code>标签</code>。</p>
-<p>之后使用<code>mount</code>命令将其第一和第二个分区挂载后将其内容复制出来</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/usb_boot_multi_use/">阅读更多</a></div>
-    </div>
-  </div>
-</article>
 
   </div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
@@ -657,7 +644,7 @@
                     <div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0">
                         <a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-series me-2 mb-2" title="博客">
                             博客
-                            <span class="badge badge-sm text-secondary bg-white ms-1">55</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">56</span>
                         </a>
                         <a href="/series/%E9%A1%B9%E7%9B%AE/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-series me-2 mb-2" title="项目">
                             项目
@@ -667,7 +654,7 @@
                     <div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0">
                         <a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="tech_and_skill">
                             tech_and_skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">34</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">35</span>
                         </a>
                         <a href="/categories/coding/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="coding">
                             coding
@@ -685,7 +672,7 @@
                     <div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0">
                         <a href="/tags/skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="skill">
                             skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">40</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">41</span>
                         </a>
                         <a href="/tags/linux/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="Linux">
                             Linux
@@ -731,7 +718,7 @@
                 <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2023">
-    2023 <span class="badge badge-sm text-secondary bg-white ms-1">3</span>
+    2023 <span class="badge badge-sm text-secondary bg-white ms-1">4</span>
     </a>
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2022">
@@ -777,6 +764,16 @@
                     <li class="mb-2">
     <div class="d-flex">
         <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+            <a class="post-title" href="/posts/tech_and_skill/freecad_install_addons/">FreeCAD 离线手动安装插件的方法</a>
+            <div class="post-meta mt-2">
+                <span class="post-date">June 8, 2023</span>
+            </div>
+        </div>
+    </div>
+                    </li>
+                    <li class="mb-2">
+    <div class="d-flex">
+        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
             <a class="post-title" href="/posts/talk/why_i_use_home_assitant_and_haos/">为什么我使用HomeAssistant并且使用HAOS</a>
             <div class="post-meta mt-2">
                 <span class="post-date">April 23, 2023</span>
@@ -815,16 +812,6 @@
             <a class="post-title" href="/posts/tech_and_skill/how_to_use_openocd/">如何使用openOCD</a>
             <div class="post-meta mt-2">
                 <span class="post-date">March 19, 2022</span>
-            </div>
-        </div>
-    </div>
-                    </li>
-                    <li class="mb-2">
-    <div class="d-flex">
-        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
-            <a class="post-title" href="/posts/coding/rt_thread_nano_port_stm32_f103c8t6/">Stm32_f103c8t6 RT Thread 移植笔记</a>
-            <div class="post-meta mt-2">
-                <span class="post-date">February 13, 2022</span>
             </div>
         </div>
     </div>
