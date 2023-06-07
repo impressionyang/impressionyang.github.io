@@ -8,16 +8,7 @@
     <language>zh-cn</language>
     <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
 </copyright>
-    <lastBuildDate>Thu, 08 Jun 2023 00:23:35 +0800</lastBuildDate><atom:link href="/tags/kde/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>FreeCAD 离线手动安装插件的方法</title>
-      <link>/posts/tech_and_skill/freecad_install_addons/</link>
-      <pubDate>Thu, 08 Jun 2023 00:23:35 +0800</pubDate>
-      
-      <guid>/posts/tech_and_skill/freecad_install_addons/</guid>
-      <description><![CDATA[FreeCAD 离线手动安装插件的方法 该文档从FreeCAD的官方文档Installing more workbenches小节中获取，记录用于后续查找 插件从哪里获]]></description>
-    </item>
-    
+    <lastBuildDate>Sun, 26 Dec 2021 23:54:57 +0800</lastBuildDate><atom:link href="/tags/kde/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>KDE桌面下的触控板手势</title>
       <link>/posts/tech_and_skill/kde_gesture/</link>
