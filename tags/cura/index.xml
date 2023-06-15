@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cura on impressionyang的个人分享站</title>
+    <link>/tags/cura/</link>
+    <description>Recent content in cura on impressionyang的个人分享站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+</copyright>
+    <lastBuildDate>Thu, 15 Jun 2023 00:41:24 +0800</lastBuildDate><atom:link href="/tags/cura/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在Linux中运行Elegoo Cura 3D切片软件</title>
+      <link>/posts/tech_and_skill/running_elegoo_cura_in_linux/</link>
+      <pubDate>Thu, 15 Jun 2023 00:41:24 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/running_elegoo_cura_in_linux/</guid>
+      <description><![CDATA[在Linux中运行Elegoo Cura 3D切片软件 该文章用于记录在Linux下使用Wine来运行Windows版本的Elegoo的定制Cura 3D]]></description>
+    </item>
+    
+  </channel>
+</rss>
+

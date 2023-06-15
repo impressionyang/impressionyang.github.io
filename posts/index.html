@@ -29,7 +29,7 @@
   <meta name="twitter:image:alt" content="文章" />
   <link rel="manifest" href="/manifest.json">
 <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="impressionyang的个人分享站" />
-<link data-precache rel="stylesheet" href="/assets/main/bundle.min.7938575864bad391089e8175093f4e0b273bfc8215cf70d4d7a4b0c57c385fd8.css" integrity="sha256-eThXWGS605EInoF1CT9OCyc7/IIVz3DU16SwxXw4X9g=" crossorigin="anonymous">
+<link data-precache rel="stylesheet" href="/assets/main/bundle.min.7946c6df2fe86684370c424ef540062805b7c1cc4dfc1b7614791d816fc6c346.css" integrity="sha256-eUbG3y/oZoQ3DEJO9UAGKAW3wcxN/Bt2FHkdgW/Gw0Y=" crossorigin="anonymous">
 
     <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.c8cc49b70e98e42caf70845e0d50f8e86821121688c2e5a5f6fc464d40154853.css" integrity="sha256-yMxJtw6Y5CyvcIReDVD46GghEhaIwuWl9vxGTUAVSFM=" crossorigin="anonymous">
 
@@ -306,8 +306,41 @@
   <div class="card-body pb-0">
     <ol class="breadcrumb"><li class="breadcrumb-item text-surface"><a href="/">主页</a></li><li class="breadcrumb-item active">文章</li></ol>
   </div>
-</nav>
+</nav><div class="post-sections row card component">
+  <div class="card-header">
+    <h2 class="card-title fs-4 text-surface my-2">Sections</h2>
+  </div>
+  <div class="card-body">
+    <ul class="nav nav-pills justify-content-between"><li class="nav-item post-section my-2 mx-1">
+          <a class="btn btn-sm btn-secondary" href="/posts/coding/">编程技巧</a>
+        </li><li class="nav-item post-section my-2 mx-1">
+          <a class="btn btn-sm btn-secondary" href="/posts/book/">读书分享</a>
+        </li><li class="nav-item post-section my-2 mx-1">
+          <a class="btn btn-sm btn-secondary" href="/posts/tech_and_skill/">技术分享</a>
+        </li><li class="nav-item post-section my-2 mx-1">
+          <a class="btn btn-sm btn-secondary" href="/posts/talk/">杂谈</a>
+        </li></ul>
+  </div>
+</div>
   <div class="posts mb-4"><article class="row card post component">
+  <div class="card-header">
+    <h2 class="card-title post-title my-2 fs-4">
+      <a href="/posts/tech_and_skill/running_elegoo_cura_in_linux/">在Linux中运行Elegoo Cura 3D切片软件</a>
+    </h2>
+  </div>
+  <div class="card-body"><div class="post-meta mb-3">
+  <span class="post-date me-1 mb-1" title="创建于 2023-06-15 00:41:24 &#43;0800 CST。">June 15, 2023</span><span class="post-reading-time me-1 mb-1">2 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
+      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/3d/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">3D</a><a href="/tags/cura/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Cura</a><a href="/tags/elegoo/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Elegoo</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
+</div>
+
+    <div class="post-summary"><p>在Linux中运行Elegoo Cura 3D切片软件 该文章用于记录在Linux下使用Wine来运行Windows版本的Elegoo的定制Cura 3D切片软件
+Cura是什么软件 在FDM（FDM是“Fused Deposition Modeling”的缩写，即熔积成型法，是一种将各种丝材（如工程塑料ABS、聚碳酸酯PC 等）3D加热熔化进而堆积成型方法）打印的圈子里面大家经常使用到的切片软件就是Cura,所谓切片，就是将一个3D模型按照打印机的打印机制将其切成一个个平面进行编辑打印路径，然后合成一个路径文件即GCode文件，将该文件导入打印机后即可启动3D打印。
+Elegoo Cura软件界面 如何获取Cura...</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/running_elegoo_cura_in_linux/">阅读更多</a></div>
+    </div>
+  </div>
+</article>
+<article class="row card post component">
   <div class="card-header">
     <h2 class="card-title post-title my-2 fs-4">
       <a href="/posts/tech_and_skill/freecad_install_addons/">FreeCAD 离线手动安装插件的方法</a>
@@ -508,25 +541,6 @@ impressionyang </p>
     </div>
   </div>
 </article>
-<article class="row card post component">
-  <div class="card-header">
-    <h2 class="card-title post-title my-2 fs-4">
-      <a href="/posts/tech_and_skill/kde_gesture/">KDE桌面下的触控板手势</a>
-    </h2>
-  </div>
-  <div class="card-body"><div class="post-meta mb-3">
-  <span class="post-date me-1 mb-1" title="创建于 2021-12-26 23:54:57 &#43;0800 CST。">December 26, 2021</span><span class="post-reading-time me-1 mb-1">2 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
-      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/kde/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">KDE</a><a href="/tags/linux/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Linux</a><a href="/tags/manjaro/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Manjaro</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a><a href="/tags/touchpad/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Touchpad</a>
-</div>
-
-    <div class="post-summary"><h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
-<blockquote>
-<p>以<code>windows</code>为主、<code>linux</code>使用<code>WSL</code>子系统的路子走不通了，相关帖子在<a href="../win10-install-wsl2">这里</a>。因为使用WSL方案USB串口无法直通到linux方案中，并且<code>GUI</code>方面也是有所缺失，使用起来并不得劲。所以打算转换思路，以<code>linux</code>为主、<code>windows</code>为辅的路子（<code>linux下使用虚拟机运行</code>windows<code>）。所以在笔记本上重新捡起</code>manjaro KDE`，感觉触控板要用起来，所以有了本篇帖子</p>
-</blockquote><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/kde_gesture/">阅读更多</a></div>
-    </div>
-  </div>
-</article>
 
   </div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
@@ -578,7 +592,7 @@ impressionyang </p>
     <div class="card-body collapse accordion-collapse accordion-body d-lg-block show" id="profile" aria-labelledby="profile-header">
       <div class="col-12 d-flex align-items-center justify-content-center"><picture><img class="profile-avatar rounded-circle " alt="impressionyang" src="https://impressionyang.gitee.io/imgbed/img/favicon/favicon_64.png" loading="lazy" data-viewer-invisible />
 </picture></div>
-      <div class="col-12 profile-meta"><div class="profile-name fw-fold fs-lg">impressionyang</div><div class="profile-bio">looove coooding.</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><a class="profile-about text-primary" href="/about/"><i class="fas fa-fw fa-user"></i>关于</a></div>
+      <div class="col-12 profile-meta"><div class="profile-name fw-fold fs-lg">impressionyang</div><div class="profile-bio">looove coooding.</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>HollyLand</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>Mother Earth</div><a class="profile-about text-primary" href="/about/about/"><i class="fas fa-fw fa-user"></i>个人简介</a></div>
 
 
 <nav class="social-links nav justify-content-center mt-1 justify-content-around">
@@ -647,7 +661,7 @@ impressionyang </p>
                     <div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0">
                         <a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-series me-2 mb-2" title="博客">
                             博客
-                            <span class="badge badge-sm text-secondary bg-white ms-1">56</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">57</span>
                         </a>
                         <a href="/series/%E9%A1%B9%E7%9B%AE/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-series me-2 mb-2" title="项目">
                             项目
@@ -657,7 +671,7 @@ impressionyang </p>
                     <div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0">
                         <a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="tech_and_skill">
                             tech_and_skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">35</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">36</span>
                         </a>
                         <a href="/categories/coding/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="coding">
                             coding
@@ -675,7 +689,7 @@ impressionyang </p>
                     <div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0">
                         <a href="/tags/skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="skill">
                             skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">41</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">42</span>
                         </a>
                         <a href="/tags/linux/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="Linux">
                             Linux
@@ -715,13 +729,13 @@ impressionyang </p>
                         </a>
                         <a href="/tags" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title='全部'>
                         全部
-                        <span class="badge badge-sm text-secondary bg-white ms-1">66</span>
+                        <span class="badge badge-sm text-secondary bg-white ms-1">69</span>
                         </a>
                     </div>
                 <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2023">
-    2023 <span class="badge badge-sm text-secondary bg-white ms-1">4</span>
+    2023 <span class="badge badge-sm text-secondary bg-white ms-1">5</span>
     </a>
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2022">
@@ -767,6 +781,16 @@ impressionyang </p>
                     <li class="mb-2">
     <div class="d-flex">
         <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+            <a class="post-title" href="/posts/tech_and_skill/running_elegoo_cura_in_linux/">在Linux中运行Elegoo Cura 3D切片软件</a>
+            <div class="post-meta mt-2">
+                <span class="post-date">June 15, 2023</span>
+            </div>
+        </div>
+    </div>
+                    </li>
+                    <li class="mb-2">
+    <div class="d-flex">
+        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
             <a class="post-title" href="/posts/tech_and_skill/freecad_install_addons/">FreeCAD 离线手动安装插件的方法</a>
             <div class="post-meta mt-2">
                 <span class="post-date">June 8, 2023</span>
@@ -809,16 +833,6 @@ impressionyang </p>
         </div>
     </div>
                     </li>
-                    <li class="mb-2">
-    <div class="d-flex">
-        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
-            <a class="post-title" href="/posts/tech_and_skill/how_to_use_openocd/">如何使用openOCD</a>
-            <div class="post-meta mt-2">
-                <span class="post-date">March 19, 2022</span>
-            </div>
-        </div>
-    </div>
-                    </li>
                     </ul>
                 </div>
             </div>
@@ -847,11 +861,11 @@ impressionyang </p>
   </div>
   <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=%e5%85%b3%e4%ba%8e%e8%af%bb%e4%b9%a6%e5%88%86%e4%ba%ab&url=%2fposts%2fbook%2fbook_about%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=steam%e6%b8%b8%e6%88%8f%e5%88%86%e4%ba%ab&url=%2fabout%2fgames%2f">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
-        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fbook%2fbook_about%2f">
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fabout%2fgames%2f">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
