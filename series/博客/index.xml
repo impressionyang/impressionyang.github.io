@@ -8,7 +8,16 @@
     <language>zh-cn</language>
     <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
 </copyright>
-    <lastBuildDate>Thu, 15 Jun 2023 00:41:24 +0800</lastBuildDate><atom:link href="/series/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Sep 2023 22:24:58 +0800</lastBuildDate><atom:link href="/series/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows on Arm APP 推荐1</title>
+      <link>/posts/talk/windows-on-arm-apps-1/</link>
+      <pubDate>Wed, 20 Sep 2023 22:24:58 +0800</pubDate>
+      
+      <guid>/posts/talk/windows-on-arm-apps-1/</guid>
+      <description><![CDATA[Windows on Arm APP 推荐1 本文用来记录购买huawei matebook e go后转入使用Windows On ARM系统的一些ARM架构的APP的心得 楔子 本月购入了huawe]]></description>
+    </item>
+    
     <item>
       <title>在Linux中运行Elegoo Cura 3D切片软件</title>
       <link>/posts/tech_and_skill/running_elegoo_cura_in_linux/</link>
