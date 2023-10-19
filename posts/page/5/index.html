@@ -29,7 +29,7 @@
   <meta name="twitter:image:alt" content="文章" />
   <link rel="manifest" href="/manifest.json">
 <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="impressionyang的个人分享站" />
-<link data-precache rel="stylesheet" href="/assets/main/bundle.min.c86cd49dc84d3f4d5b6edd07f7948a8027c115694a2706251fc43ea3e6497ece.css" integrity="sha256-yGzUnchNP01bbt0H95SKgCfBFWlKJwYlH8Q+o+ZJfs4=" crossorigin="anonymous">
+<link data-precache rel="stylesheet" href="/assets/main/bundle.min.29d44113983e6cdcbddffcdf8da8d0a62935fce7972217fa50982f42cfa3a0f7.css" integrity="sha256-KdRBE5g+bNy93/zfjajQpik1/OeXIhf6UJgvQs+joPc=" crossorigin="anonymous">
 
     <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.87c3f3247f50583d900db7d779087756dd6ae1aeab9c40e3472144cf8e7bda80.css" integrity="sha256-h8PzJH9QWD2QDbfXeQh3Vt1q4a6rnEDjRyFEz4572oA=" crossorigin="anonymous">
 
@@ -306,23 +306,35 @@
   <div class="card-body pb-0">
     <ol class="breadcrumb"><li class="breadcrumb-item text-surface"><a href="/">主页</a></li><li class="breadcrumb-item active">文章</li></ol>
   </div>
-</nav><div class="post-sections row card component">
-  <div class="card-header">
-    <h2 class="card-title fs-4 text-surface my-2"></h2>
-  </div>
-  <div class="card-body">
-    <ul class="nav nav-pills justify-content-between"><li class="nav-item post-section my-2 mx-1">
-          <a class="btn btn-sm btn-secondary" href="/posts/coding/">编程技巧</a>
-        </li><li class="nav-item post-section my-2 mx-1">
-          <a class="btn btn-sm btn-secondary" href="/posts/book/">读书分享</a>
-        </li><li class="nav-item post-section my-2 mx-1">
-          <a class="btn btn-sm btn-secondary" href="/posts/tech_and_skill/">技术分享</a>
-        </li><li class="nav-item post-section my-2 mx-1">
-          <a class="btn btn-sm btn-secondary" href="/posts/talk/">杂谈</a>
-        </li></ul>
-  </div>
-</div>
+</nav>
   <div class="posts mb-4"><article class="row card post component">
+  <div class="card-header">
+    <h2 class="card-title post-title my-2 fs-4">
+      <a href="/posts/tech_and_skill/unity-style-applet/">KDE下完美的Unity桌面体验，扔掉active Window Control</a>
+    </h2>
+  </div>
+  <div class="card-body"><div class="post-meta mb-3">
+  <span class="post-date me-1 mb-1" title="创建于 2020-03-01 03:09:50 &#43;0800 CST。">February 29, 2020</span><span class="post-reading-time me-1 mb-1">2 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
+      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/plasma/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Plasma</a><a href="/tags/plasma-applet/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Plasma-Applet</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
+</div>
+
+    <div class="post-summary"><h2 id="psifidotos-的-applet-window-系列完全实现unity当年风采" data-numberify>psifidotos 的 applet-window 系列完全实现unity当年风采<a class="anchor ms-1" href="#psifidotos-的-applet-window-系列完全实现unity当年风采"></a></h2>
+<p>熟悉我对<code>Linux</code>桌面态度的人都知道我个人是很推崇当年<code>Ubuntu</code>的<code>Unity</code>桌面的全局菜单的整合功能的，其有着能把窗口标题栏以及窗口按钮和全局菜单整合为一体的功能，能够大大节省屏幕的纵向空间而不影响使用菜单以及查看窗口标题和使用窗口按钮。在我个人看来，<code>Ubuntu</code>的<code>Unity</code>桌面简直就是<code>Linux</code>桌面环境的最强代表，直到它退出历史舞台。</p>
+<p>至今我仍然向往那种能够有效率节省屏幕空间的功能却苦于没有什么桌面能够原生支持，但是，在我转向了<code>archlinux+KDE</code>之后便发现了此事有所转机。</p>
+<p>一开始我是使用<code>KDE</code>的一个名为<code>active window control</code>的插件进行使用，它能够将窗口标题栏和顶栏进行结合，但是全局菜单需要使用<code>KDE</code>的原生全局菜单插件，并且其使用起来并不是很友好，不过它也能够在一定程度上节省了屏幕的纵向空间，所以也能够勉强够用，但是使用起来并不是很开心。</p>
+<p>但是在<code>KDE</code>桌面的强大的可定制化插件的支持下，由<a href="https://github.com/psifidotos" target="_blank" rel="noopener noreferrer">psifidotos<i class="fas fa-external-link-square-alt ms-1"></i></a>所编写的<code>applet-window</code>系列插件能够配合<code>Plasma KDE</code>桌面来完美来达成‘这一愿想。</p>
+<p>要实现<code>Unity</code>桌面的功能需要安装他写的三个插件：</p>
+<ol>
+<li>applet-window-title</li>
+<li>applet-window-buttons</li>
+<li>applet-window-appmenu</li>
+</ol>
+<p>说明：<code>archlinux+KDE</code>（原理上来说<code>manjaro+KDE</code>也可以）在安装好桌面后还需要安装<code>cmake</code>和<code>extra-cmake-modules</code>，一般在安装了这两个编译依赖之后如果还是编译不成功请在评论区说明清楚哦。</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/unity-style-applet/">阅读更多</a></div>
+    </div>
+  </div>
+</article>
+<article class="row card post component">
   <div class="card-header">
     <h2 class="card-title post-title my-2 fs-4">
       <a href="/posts/coding/auto-init-cmake-qt-project/">Qt CMake GUI项目生成脚本</a>
@@ -526,27 +538,6 @@
     </div>
   </div>
 </article>
-<article class="row card post component">
-  <div class="card-header">
-    <h2 class="card-title post-title my-2 fs-4">
-      <a href="/posts/tech_and_skill/restart_kde/">一个命令进行Plasma热重启</a>
-    </h2>
-  </div>
-  <div class="card-body"><div class="post-meta mb-3">
-  <span class="post-date me-1 mb-1" title="创建于 2020-02-20 22:16:41 &#43;0800 CST。">February 20, 2020</span><span class="post-reading-time me-1 mb-1">1 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
-      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/linux/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Linux</a><a href="/tags/plasma/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Plasma</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
-</div>
-
-    <div class="post-summary"><h2 id="一个命令进行plasma热重启" data-numberify>一个命令进行Plasma热重启<a class="anchor ms-1" href="#一个命令进行plasma热重启"></a></h2>
-<ul>
-<li>通过一个命令来重启Plasma桌面来释放系统资源</li>
-</ul>
-<p>KDE Plasma桌面环境具有很多炫酷的显示效果，但是经过一天下来长时间使用Plasma桌面而不待机或者睡眠的话，Plasma桌面会占用大量的内存资源，为了解决这个问题，特地写了一个脚本文件来对Plasma桌面进行热重启，从而释放一些资源的占用</p>
-<p>思路基本上就是使用Plasma的指令先关闭Plasma桌面再启动它</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/restart_kde/">阅读更多</a></div>
-    </div>
-  </div>
-</article>
 
   </div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
@@ -667,7 +658,7 @@
                     <div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0">
                         <a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-series me-2 mb-2" title="博客">
                             博客
-                            <span class="badge badge-sm text-secondary bg-white ms-1">58</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">59</span>
                         </a>
                         <a href="/series/%E9%A1%B9%E7%9B%AE/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-series me-2 mb-2" title="项目">
                             项目
@@ -685,7 +676,7 @@
                         </a>
                         <a href="/categories/talk/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="talk">
                             talk
-                            <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
                         </a>
                         <a href="/categories/book/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="book">
                             book
@@ -717,6 +708,10 @@
                             C
                             <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
                         </a>
+                        <a href="/tags/talk/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="talk">
+                            talk
+                            <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
+                        </a>
                         <a href="/tags/hexo/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="hexo">
                             hexo
                             <span class="badge badge-sm text-secondary bg-white ms-1">5</span>
@@ -725,23 +720,19 @@
                             Qt
                             <span class="badge badge-sm text-secondary bg-white ms-1">5</span>
                         </a>
-                        <a href="/tags/talk/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="talk">
-                            talk
-                            <span class="badge badge-sm text-secondary bg-white ms-1">5</span>
-                        </a>
-                        <a href="/tags/git/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="git">
-                            git
+                        <a href="/tags/dialy/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="dialy">
+                            dialy
                             <span class="badge badge-sm text-secondary bg-white ms-1">4</span>
                         </a>
                         <a href="/tags" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title='全部'>
                         全部
-                        <span class="badge badge-sm text-secondary bg-white ms-1">70</span>
+                        <span class="badge badge-sm text-secondary bg-white ms-1">71</span>
                         </a>
                     </div>
                 <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2023">
-    2023 <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
+    2023 <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
     </a>
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2022">
@@ -787,6 +778,16 @@
                     <li class="mb-2">
     <div class="d-flex">
         <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+            <a class="post-title" href="/posts/talk/fuck_ios_17_001/">抽风的IOS 17 体验</a>
+            <div class="post-meta mt-2">
+                <span class="post-date">October 19, 2023</span>
+            </div>
+        </div>
+    </div>
+                    </li>
+                    <li class="mb-2">
+    <div class="d-flex">
+        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
             <a class="post-title" href="/posts/talk/windows-on-arm-apps-1/">Windows on Arm APP 推荐1</a>
             <div class="post-meta mt-2">
                 <span class="post-date">September 20, 2023</span>
@@ -824,16 +825,6 @@
         </div>
     </div>
                     </li>
-                    <li class="mb-2">
-    <div class="d-flex">
-        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
-            <a class="post-title" href="/posts/tech_and_skill/haos_x86_x64_install/">X86_x64系统安装HAOS</a>
-            <div class="post-meta mt-2">
-                <span class="post-date">April 20, 2023</span>
-            </div>
-        </div>
-    </div>
-                    </li>
                     </ul>
                 </div>
             </div>
@@ -862,11 +853,11 @@
   </div>
   <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=%e4%b8%aa%e4%ba%ba%e7%ae%80%e5%8e%86&url=%2fabout%2fresume%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=%e5%85%b3%e4%ba%8e%e8%af%bb%e4%b9%a6%e5%88%86%e4%ba%ab&url=%2fposts%2fbook%2fbook_about%2f">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
-        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fabout%2fresume%2f">
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fbook%2fbook_about%2f">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>

@@ -29,7 +29,7 @@
   <meta name="twitter:image:alt" content="文章" />
   <link rel="manifest" href="/manifest.json">
 <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="impressionyang的个人分享站" />
-<link data-precache rel="stylesheet" href="/assets/main/bundle.min.c86cd49dc84d3f4d5b6edd07f7948a8027c115694a2706251fc43ea3e6497ece.css" integrity="sha256-yGzUnchNP01bbt0H95SKgCfBFWlKJwYlH8Q+o+ZJfs4=" crossorigin="anonymous">
+<link data-precache rel="stylesheet" href="/assets/main/bundle.min.29d44113983e6cdcbddffcdf8da8d0a62935fce7972217fa50982f42cfa3a0f7.css" integrity="sha256-KdRBE5g+bNy93/zfjajQpik1/OeXIhf6UJgvQs+joPc=" crossorigin="anonymous">
 
     <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.87c3f3247f50583d900db7d779087756dd6ae1aeab9c40e3472144cf8e7bda80.css" integrity="sha256-h8PzJH9QWD2QDbfXeQh3Vt1q4a6rnEDjRyFEz4572oA=" crossorigin="anonymous">
 
@@ -306,23 +306,33 @@
   <div class="card-body pb-0">
     <ol class="breadcrumb"><li class="breadcrumb-item text-surface"><a href="/">主页</a></li><li class="breadcrumb-item active">文章</li></ol>
   </div>
-</nav><div class="post-sections row card component">
-  <div class="card-header">
-    <h2 class="card-title fs-4 text-surface my-2"></h2>
-  </div>
-  <div class="card-body">
-    <ul class="nav nav-pills justify-content-between"><li class="nav-item post-section my-2 mx-1">
-          <a class="btn btn-sm btn-secondary" href="/posts/coding/">编程技巧</a>
-        </li><li class="nav-item post-section my-2 mx-1">
-          <a class="btn btn-sm btn-secondary" href="/posts/book/">读书分享</a>
-        </li><li class="nav-item post-section my-2 mx-1">
-          <a class="btn btn-sm btn-secondary" href="/posts/tech_and_skill/">技术分享</a>
-        </li><li class="nav-item post-section my-2 mx-1">
-          <a class="btn btn-sm btn-secondary" href="/posts/talk/">杂谈</a>
-        </li></ul>
-  </div>
-</div>
+</nav>
   <div class="posts mb-4"><article class="row card post component">
+  <div class="card-header">
+    <h2 class="card-title post-title my-2 fs-4">
+      <a href="/posts/tech_and_skill/win10-install-wsl2/">Win10重新安装导出的WSL2镜像</a>
+    </h2>
+  </div>
+  <div class="card-body"><div class="post-meta mb-3">
+  <span class="post-date me-1 mb-1" title="创建于 2021-02-16 05:17:50 &#43;0800 CST。">February 15, 2021</span><span class="post-reading-time me-1 mb-1">2 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
+      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a><a href="/tags/win10/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Win10</a>
+</div>
+
+    <div class="post-summary"><h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>安装<code>WSL2 Linux子系统</code>是我打算在游戏主机上面安装轻量级开发环境的下一步打算，至于为什么不用更好评的<code>WSL1</code>我也不多说，毕竟<code>WSL2</code>是<code>Microsoft</code>主推的，支持的特性和后续的维护应该会更快且优先级更高，所以本文使用<code>WSL2</code></p>
+</blockquote>
+<h2 id="系统需求" data-numberify>系统需求<a class="anchor ms-1" href="#系统需求"></a></h2>
+<p>下面只是列举基本要求，详细的内容请查看微软的文档<a href="https://docs.microsoft.com/zh-cn/windows/wsl/" target="_blank" rel="noopener noreferrer">传送门<i class="fas fa-external-link-square-alt ms-1"></i></a></p>
+<p><picture><img class="img-fluid " alt="pic wsl2 require" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210216143928.png" loading="lazy" />
+</picture>
+</p>
+<p>所以如果不是<code>win10</code>的话就基本不能体验<code>WSL2</code>了</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/win10-install-wsl2/">阅读更多</a></div>
+    </div>
+  </div>
+</article>
+<article class="row card post component">
   <div class="card-header">
     <h2 class="card-title post-title my-2 fs-4">
       <a href="/posts/tech_and_skill/win10-install-scoop/">Win10 安装scoop的正确姿势</a>
@@ -529,25 +539,6 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
     </div>
   </div>
 </article>
-<article class="row card post component">
-  <div class="card-header">
-    <h2 class="card-title post-title my-2 fs-4">
-      <a href="/posts/coding/qt-qfile-note/">Qt文件操作QFile</a>
-    </h2>
-  </div>
-  <div class="card-body"><div class="post-meta mb-3">
-  <span class="post-date me-1 mb-1" title="创建于 2020-03-30 03:50:18 &#43;0800 CST。">March 29, 2020</span><span class="post-reading-time me-1 mb-1">2 分钟阅读</span><a href="/categories/coding/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>Coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
-      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/c&#43;&#43;/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">C&#43;&#43;</a><a href="/tags/program/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Program</a><a href="/tags/qfile/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">QFile</a><a href="/tags/qt/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Qt</a>
-</div>
-
-    <div class="post-summary"><h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
-<blockquote>
-<p>因为有需求使用<code>Qt</code>的文件<code>I/O</code>操作,所以做此记录以供后用</p>
-</blockquote><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/coding/qt-qfile-note/">阅读更多</a></div>
-    </div>
-  </div>
-</article>
 
   </div><div class="row table-responsive mb-3">
     <ul class="pagination pagination-default">
@@ -668,7 +659,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                     <div class="tab-pane active" id="taxonomySeries" role="tabpanel" aria-labelledby="taxonomySeriesTab" tabindex="0">
                         <a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-series me-2 mb-2" title="博客">
                             博客
-                            <span class="badge badge-sm text-secondary bg-white ms-1">58</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">59</span>
                         </a>
                         <a href="/series/%E9%A1%B9%E7%9B%AE/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-series me-2 mb-2" title="项目">
                             项目
@@ -686,7 +677,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                         </a>
                         <a href="/categories/talk/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="talk">
                             talk
-                            <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
                         </a>
                         <a href="/categories/book/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="book">
                             book
@@ -718,6 +709,10 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                             C
                             <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
                         </a>
+                        <a href="/tags/talk/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="talk">
+                            talk
+                            <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
+                        </a>
                         <a href="/tags/hexo/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="hexo">
                             hexo
                             <span class="badge badge-sm text-secondary bg-white ms-1">5</span>
@@ -726,23 +721,19 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                             Qt
                             <span class="badge badge-sm text-secondary bg-white ms-1">5</span>
                         </a>
-                        <a href="/tags/talk/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="talk">
-                            talk
-                            <span class="badge badge-sm text-secondary bg-white ms-1">5</span>
-                        </a>
-                        <a href="/tags/git/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="git">
-                            git
+                        <a href="/tags/dialy/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="dialy">
+                            dialy
                             <span class="badge badge-sm text-secondary bg-white ms-1">4</span>
                         </a>
                         <a href="/tags" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title='全部'>
                         全部
-                        <span class="badge badge-sm text-secondary bg-white ms-1">70</span>
+                        <span class="badge badge-sm text-secondary bg-white ms-1">71</span>
                         </a>
                     </div>
                 <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2023">
-    2023 <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
+    2023 <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
     </a>
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2022">
@@ -788,6 +779,16 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                     <li class="mb-2">
     <div class="d-flex">
         <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+            <a class="post-title" href="/posts/talk/fuck_ios_17_001/">抽风的IOS 17 体验</a>
+            <div class="post-meta mt-2">
+                <span class="post-date">October 19, 2023</span>
+            </div>
+        </div>
+    </div>
+                    </li>
+                    <li class="mb-2">
+    <div class="d-flex">
+        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
             <a class="post-title" href="/posts/talk/windows-on-arm-apps-1/">Windows on Arm APP 推荐1</a>
             <div class="post-meta mt-2">
                 <span class="post-date">September 20, 2023</span>
@@ -825,16 +826,6 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
         </div>
     </div>
                     </li>
-                    <li class="mb-2">
-    <div class="d-flex">
-        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
-            <a class="post-title" href="/posts/tech_and_skill/haos_x86_x64_install/">X86_x64系统安装HAOS</a>
-            <div class="post-meta mt-2">
-                <span class="post-date">April 20, 2023</span>
-            </div>
-        </div>
-    </div>
-                    </li>
                     </ul>
                 </div>
             </div>
@@ -863,11 +854,11 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
   </div>
   <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=%e4%b8%aa%e4%ba%ba%e7%ae%80%e5%8e%86&url=%2fabout%2fresume%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=%e5%85%b3%e4%ba%8e%e8%af%bb%e4%b9%a6%e5%88%86%e4%ba%ab&url=%2fposts%2fbook%2fbook_about%2f">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
-        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fabout%2fresume%2f">
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fposts%2fbook%2fbook_about%2f">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
