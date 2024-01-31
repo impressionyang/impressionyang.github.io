@@ -33,6 +33,7 @@
 <meta property="article:modified_time" content="2020-03-27T22:59:08+00:00" />
 
 
+
 <meta itemprop="name" content="为主题用pugjs编写的hexo博客添加网站运行时间">
 <meta itemprop="description" content="先导
 
@@ -49,7 +50,7 @@
 
 <link data-precache rel="stylesheet" href="/assets/main/bundle.min.29d44113983e6cdcbddffcdf8da8d0a62935fce7972217fa50982f42cfa3a0f7.css" integrity="sha256-KdRBE5g+bNy93/zfjajQpik1/OeXIhf6UJgvQs+joPc=" crossorigin="anonymous">
 
-    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.87c3f3247f50583d900db7d779087756dd6ae1aeab9c40e3472144cf8e7bda80.css" integrity="sha256-h8PzJH9QWD2QDbfXeQh3Vt1q4a6rnEDjRyFEz4572oA=" crossorigin="anonymous">
+    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.8c1002839fa22c1350d6ae1eef6593120e108f973c41348be9b5065430566aaf.css" integrity="sha256-jBACg5&#43;iLBNQ1q4e72WTEg4Qj5c8QTSL6bUGVDBWaq8=" crossorigin="anonymous">
 
 
 </head>
@@ -398,24 +399,24 @@
 </span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="o">&lt;</span><span class="err">/div&gt;</span>
 </span></span></code></pre></div><p>转换后的<code>pugjs</code>脚本</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">div
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  span#timeDate 载入天数...
-</span></span><span class="line"><span class="ln"> 3</span><span class="cl">  span#times 载入时分秒...
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  script.
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    var now = new Date();
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    function createtime() {
-</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    var grt= new Date(&#34;08/13/2018 00:00:00&#34;);
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    now.setTime(now.getTime()+250);
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-</span></span><span class="line"><span class="ln">10</span><span class="cl">    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-</span></span><span class="line"><span class="ln">11</span><span class="cl">    if(String(hnum).length ==1 ){hnum = &#34;0&#34; + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-</span></span><span class="line"><span class="ln">12</span><span class="cl">    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = &#34;0&#34; + mnum;}
-</span></span><span class="line"><span class="ln">13</span><span class="cl">    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-</span></span><span class="line"><span class="ln">14</span><span class="cl">    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = &#34;0&#34; + snum;}
-</span></span><span class="line"><span class="ln">15</span><span class="cl">    document.getElementById(&#34;timeDate&#34;).innerHTML = &#34;本站已安全运行 &#34;+dnum+&#34; 天 &#34;;
-</span></span><span class="line"><span class="ln">16</span><span class="cl">    document.getElementById(&#34;times&#34;).innerHTML = hnum + &#34; 小时 &#34; + mnum + &#34; 分 &#34; + snum + &#34; 秒&#34;;
-</span></span><span class="line"><span class="ln">17</span><span class="cl">    }
-</span></span><span class="line"><span class="ln">18</span><span class="cl">    setInterval(&#34;createtime()&#34;,250);
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="n">div</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="n">span</span><span class="c1">#timeDate 载入天数...</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">  <span class="n">span</span><span class="c1">#times 载入时分秒...</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="n">script</span><span class="o">.</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="k">var</span> <span class="n">now</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">();</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">    <span class="n">function</span> <span class="n">createtime</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    <span class="k">var</span> <span class="n">grt</span><span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">(</span><span class="s2">&#34;08/13/2018 00:00:00&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    <span class="n">now</span><span class="o">.</span><span class="n">setTime</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">getTime</span><span class="p">()</span><span class="o">+</span><span class="mi">250</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    <span class="n">days</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="n">grt</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">24</span><span class="p">;</span> <span class="n">dnum</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">days</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    <span class="n">hours</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="n">grt</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">-</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="n">dnum</span><span class="p">);</span> <span class="n">hnum</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">hours</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="ne">String</span><span class="p">(</span><span class="n">hnum</span><span class="p">)</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span><span class="mi">1</span> <span class="p">){</span><span class="n">hnum</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="n">hnum</span><span class="p">;}</span> <span class="n">minutes</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="n">grt</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">/</span><span class="mi">60</span> <span class="o">-</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">dnum</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="n">hnum</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    <span class="n">mnum</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">minutes</span><span class="p">);</span> <span class="k">if</span><span class="p">(</span><span class="ne">String</span><span class="p">(</span><span class="n">mnum</span><span class="p">)</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span><span class="mi">1</span> <span class="p">){</span><span class="n">mnum</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="n">mnum</span><span class="p">;}</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="n">seconds</span> <span class="o">=</span> <span class="p">(</span><span class="n">now</span> <span class="o">-</span> <span class="n">grt</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span> <span class="o">-</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">dnum</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">hnum</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="n">mnum</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">    <span class="n">snum</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">seconds</span><span class="p">);</span> <span class="k">if</span><span class="p">(</span><span class="ne">String</span><span class="p">(</span><span class="n">snum</span><span class="p">)</span><span class="o">.</span><span class="n">length</span> <span class="o">==</span><span class="mi">1</span> <span class="p">){</span><span class="n">snum</span> <span class="o">=</span> <span class="s2">&#34;0&#34;</span> <span class="o">+</span> <span class="n">snum</span><span class="p">;}</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&#34;timeDate&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s2">&#34;本站已安全运行 &#34;</span><span class="o">+</span><span class="n">dnum</span><span class="o">+</span><span class="s2">&#34; 天 &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">    <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&#34;times&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">hnum</span> <span class="o">+</span> <span class="s2">&#34; 小时 &#34;</span> <span class="o">+</span> <span class="n">mnum</span> <span class="o">+</span> <span class="s2">&#34; 分 &#34;</span> <span class="o">+</span> <span class="n">snum</span> <span class="o">+</span> <span class="s2">&#34; 秒&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="n">setInterval</span><span class="p">(</span><span class="s2">&#34;createtime()&#34;</span><span class="p">,</span><span class="mi">250</span><span class="p">);</span>
 </span></span></code></pre></div><p>然后把上述脚本添加到主题的<code>layout/_partials/footer/footer.pug</code>文件中(不同主题可能文件不一样,请自行参考)即可在网页底部显示网站运行时间了<code>OvO</code>,不过要注意修改一下<code>var grt= new Date(&quot;08/13/2018 00:00:00&quot;);</code>中的起始时间哦!</p>
 <ul>
 <li>效果</li>
@@ -586,7 +587,7 @@
                     <div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0">
                         <a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="tech_and_skill">
                             tech_and_skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">36</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">37</span>
                         </a>
                         <a href="/categories/coding/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="coding">
                             coding
@@ -604,7 +605,7 @@
                     <div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0">
                         <a href="/tags/skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="skill">
                             skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">42</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">43</span>
                         </a>
                         <a href="/tags/linux/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="Linux">
                             Linux
@@ -614,6 +615,10 @@
                             archlinux
                             <span class="badge badge-sm text-secondary bg-white ms-1">8</span>
                         </a>
+                        <a href="/tags/c/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="C">
+                            C
+                            <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
+                        </a>
                         <a href="/tags/c&#43;&#43;/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="C&#43;&#43;">
                             C&#43;&#43;
                             <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
@@ -621,10 +626,6 @@
                         <a href="/tags/program/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="program">
                             program
                             <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
-                        </a>
-                        <a href="/tags/c/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="C">
-                            C
-                            <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
                         </a>
                         <a href="/tags/talk/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="talk">
                             talk
@@ -644,10 +645,14 @@
                         </a>
                         <a href="/tags" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title='全部'>
                         全部
-                        <span class="badge badge-sm text-secondary bg-white ms-1">71</span>
+                        <span class="badge badge-sm text-secondary bg-white ms-1">72</span>
                         </a>
                     </div>
                 <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
+
+    <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2024">
+    2024 <span class="badge badge-sm text-secondary bg-white ms-1">1</span>
+    </a>
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2023">
     2023 <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
@@ -696,6 +701,16 @@
                     <li class="mb-2">
     <div class="d-flex">
         <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+            <a class="post-title" href="/posts/tech_and_skill/lazy_makefile_for_c_project/">懒人C工程Makefile</a>
+            <div class="post-meta mt-2">
+                <span class="post-date">January 26, 2024</span>
+            </div>
+        </div>
+    </div>
+                    </li>
+                    <li class="mb-2">
+    <div class="d-flex">
+        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
             <a class="post-title" href="/posts/talk/fuck_ios_17_001/">抽风的IOS 17 体验</a>
             <div class="post-meta mt-2">
                 <span class="post-date">October 19, 2023</span>
@@ -733,16 +748,6 @@
         </div>
     </div>
                     </li>
-                    <li class="mb-2">
-    <div class="d-flex">
-        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
-            <a class="post-title" href="/posts/talk/why_i_use_home_assitant_and_haos/">为什么我使用HomeAssistant并且使用HAOS</a>
-            <div class="post-meta mt-2">
-                <span class="post-date">April 23, 2023</span>
-            </div>
-        </div>
-    </div>
-                    </li>
                     </ul>
                 </div>
             </div>
@@ -771,11 +776,11 @@
   </div>
   <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=%e4%b8%aa%e4%ba%ba%e7%ae%80%e4%bb%8b&url=%2fabout%2fabout%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=steam%e6%b8%b8%e6%88%8f%e5%88%86%e4%ba%ab&url=%2fabout%2fgames%2f">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
-        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fabout%2fabout%2f">
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fabout%2fgames%2f">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
@@ -814,7 +819,7 @@
     <i class="fas fa-fw fa-2x fa-rss" style="color: #ea6221;"></i>
   </a>
 </nav>
-<div class="copyright mb-2">Copyright © 2016-2023 impressionyang. All Rights Reserved.
+<div class="copyright mb-2">Copyright © 2016-2024 impressionyang. All Rights Reserved.
 <div>
     <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
     <script>
@@ -851,8 +856,8 @@
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script data-precache src="/assets/main/bundle.min.28c9c47385899d50d6525babaa98a21c9a8d7d3f411d4e4d6d95d16c92d24d83.js" integrity="sha256-KMnEc4WJnVDWUlurqpiiHJqNfT9BHU5NbZXRbJLSTYM=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.08110fe5d5c57fe7d8f4f3e14ca4cfd582153c7d5d9b007a975b909893c89cd9.js" integrity="sha256-CBEP5dXFf&#43;fY9PPhTKTP1YIVPH1dmwB6l1uQmJPInNk=" crossorigin="anonymous" defer></script>
-<script data-precache src="/assets/viewer/bundle.min.c184b4ee1aaa204d373139da54fee8a8ac5d197d70b76ebcb89c1887f116c5af.js" integrity="sha256-wYS07hqqIE03MTnaVP7oqKxdGX1wt268uJwYh/EWxa8=" crossorigin="anonymous" defer></script><script>
+<script data-precache src="/assets/main/bundle.min.28c9c47385899d50d6525babaa98a21c9a8d7d3f411d4e4d6d95d16c92d24d83.js" integrity="sha256-KMnEc4WJnVDWUlurqpiiHJqNfT9BHU5NbZXRbJLSTYM=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.74b4fd1eeeaa9fc4aedb2377a4340bc674a0489bd8a41a7d12d4221bac9bdcd1.js" integrity="sha256-dLT9Hu6qn8Su2yN3pDQLxnSgSJvYpBp9EtQiG6yb3NE=" crossorigin="anonymous" defer></script>
+<script data-precache src="/assets/viewer/bundle.min.06371891cfe6d10d36cba465c61c4d7cb17591a3be2fd9af4a38444d2074e709.js" integrity="sha256-BjcYkc/m0Q02y6RlxhxNfLF1kaO&#43;L9mvSjhETSB05wk=" crossorigin="anonymous" defer></script><script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('\/service-worker.min.js').then(function(reg) {

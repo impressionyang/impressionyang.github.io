@@ -2,7 +2,7 @@
 <html class="position-relative" itemscope itemtype="http://schema.org/WebPage" lang="zh-cn"
   data-bs-theme="auto" data-palette="blue">
   <head>
-	<meta name="generator" content="Hugo 0.118.2"><script src="/assets/init/bundle.min.e642e504d5a78f9500f85637c173f7a45b239ff35247c86c36b43233e5234fbf.js" integrity="sha256-5kLlBNWnj5UA&#43;FY3wXP3pFsjn/NSR8hsNrQyM&#43;UjT78=" crossorigin="anonymous"></script>
+	<meta name="generator" content="Hugo 0.120.4"><script src="/assets/init/bundle.min.e642e504d5a78f9500f85637c173f7a45b239ff35247c86c36b43233e5234fbf.js" integrity="sha256-5kLlBNWnj5UA&#43;FY3wXP3pFsjn/NSR8hsNrQyM&#43;UjT78=" crossorigin="anonymous"></script>
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>impressionyang的个人分享站</title>
@@ -22,6 +22,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/" />
 
+
 <meta itemprop="name" content="impressionyang的个人分享站">
 <meta itemprop="description" content="An extreme fast, responsive and feature-rich blog theme for Hugo">
   <meta property="og:image" content="https://impressionyang.gitee.io/imgbed/img/favicon/favicon_64.png"/>
@@ -32,7 +33,7 @@
 <link rel="alternate" type="application/rss+xml" href="/index.xml" title="impressionyang的个人分享站" />
 <link data-precache rel="stylesheet" href="/assets/main/bundle.min.29d44113983e6cdcbddffcdf8da8d0a62935fce7972217fa50982f42cfa3a0f7.css" integrity="sha256-KdRBE5g+bNy93/zfjajQpik1/OeXIhf6UJgvQs+joPc=" crossorigin="anonymous">
 
-    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.87c3f3247f50583d900db7d779087756dd6ae1aeab9c40e3472144cf8e7bda80.css" integrity="sha256-h8PzJH9QWD2QDbfXeQh3Vt1q4a6rnEDjRyFEz4572oA=" crossorigin="anonymous">
+    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.8c1002839fa22c1350d6ae1eef6593120e108f973c41348be9b5065430566aaf.css" integrity="sha256-jBACg5&#43;iLBNQ1q4e72WTEg4Qj5c8QTSL6bUGVDBWaq8=" crossorigin="anonymous">
 
 
 </head>
@@ -323,6 +324,23 @@
 <article class="row card post component">
   <div class="card-header">
     <h2 class="card-title post-title my-2 fs-4">
+      <a href="/posts/tech_and_skill/lazy_makefile_for_c_project/">懒人C工程Makefile</a>
+    </h2>
+  </div>
+  <div class="card-body"><div class="post-meta mb-3">
+  <span class="post-date me-1 mb-1" title="创建于 2024-01-26 20:46:56 &#43;0800 CST。">January 26, 2024</span><span class="post-reading-time me-1 mb-1">3 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/tags/c/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">C</a><a href="/tags/makefile/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Makefile</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
+</div>
+
+    <div class="post-summary"><p>懒人C工程Makefile 引言 在工作的一段时间里面， 因为平时写项目的时候有一些功能需要紧急调试，但是调试的代码呢又想单独的分出来进行归档，然后又不想使用IDE进行创建，同时还想跨平台使用（windows/Linux），所以还是继续折腾Makdfile吧。
+需求 首先因为是懒人需求，也就是不想老是每次都编辑Makefile文件进行项目文件的管理，所以就想整个项目只有一个Makefile文件，然后仅需要修改项目名称和编译器的路径（甚至编译器路径仅需要自己配一次，以后直接复制该Makefile文件修改项目名称即可），也就是修改有限的两行代码。
+Makefile的功能需求很简单，使用Makefile来进行C项目的编译工作，自动收集.c...</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/lazy_makefile_for_c_project/">阅读更多</a></div>
+    </div>
+  </div>
+</article>
+<article class="row card post component">
+  <div class="card-header">
+    <h2 class="card-title post-title my-2 fs-4">
       <a href="/posts/talk/fuck_ios_17_001/">抽风的IOS 17 体验</a>
     </h2>
   </div>
@@ -335,7 +353,7 @@
     <div class="post-summary"><p>真的是服了，苹果自动更新的IOS17，本来没感觉有什么，但是今天要用虚拟定位的时候才发现，IOS 17居然没法成功启用（爱思助手），冲浪了一圈才发现是因为IOS17做了重大更改，导致原来的虚拟定位功能机制变更，无法使用当前版本的爱思助手进行虚拟定位。
 网上找了一圈才发现支持IOS17的主流虚拟定位软件（anygo）收费真他娘的黑啊，一个月19美金。。。。，免费的方案倒是有，但是折腾了挺久也没成功，传送门是这个https://github.com/RManLuo/FakePosition，包括看了他的上游方案也不行。
 emmmmmm，真的是F**K Apple了！
-impressionyang</p>
+impressionyang </p>
     </div>
   </div>
 </article>
@@ -351,10 +369,10 @@ impressionyang</p>
       <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/app/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">App</a><a href="/tags/talk/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Talk</a><a href="/tags/woa/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">WOA</a>
 </div>
 
-    <div class="post-summary"><p>Windows on Arm APP 推荐1本文用来记录购买huawei matebook e go后转入使用Windows On ARM系统的一些ARM架构的APP的心得
-楔子本月购入了huawei matebook e go，这是一个二合一的windows 平板，搭载高通骁龙8cx gen3的处理器，运行win11 ARM版，所以使用过程中会针对ARM架构的原生APP进行关注，立贴收集。
+    <div class="post-summary"><p>Windows on Arm APP 推荐1 本文用来记录购买huawei matebook e go后转入使用Windows On ARM系统的一些ARM架构的APP的心得
+楔子 本月购入了huawei matebook e go，这是一个二合一的windows 平板，搭载高通骁龙8cx gen3的处理器，运行win11 ARM版，所以使用过程中会针对ARM架构的原生APP进行关注，立贴收集。
 今天收集了两款软件
-obsidian vscode obsidianobsidian是我用来进行日记记录和整理的工具，非常好用，没想到居然有ARM版本的，传送门如下：
+obsidian vscode obsidian obsidian是我用来进行日记记录和整理的工具，非常好用，没想到居然有ARM版本的，传送门如下：
 https://obsidian.md/download
 下载后安装即...</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/talk/windows-on-arm-apps-1/">阅读更多</a></div>
     </div>
@@ -372,8 +390,8 @@ https://obsidian.md/download
       <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/3d/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">3D</a><a href="/tags/cura/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Cura</a><a href="/tags/elegoo/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Elegoo</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
 </div>
 
-    <div class="post-summary"><p>在Linux中运行Elegoo Cura 3D切片软件该文章用于记录在Linux下使用Wine来运行Windows版本的Elegoo的定制Cura 3D切片软件
-Cura是什么软件在FDM（FDM是“Fused Deposition Modeling”的缩写，即熔积成型法，是一种将各种丝材（如工程塑料ABS、聚碳酸酯PC 等）3D加热熔化进而堆积成型方法）打印的圈子里面大家经常使用到的切片软件就是Cura,所谓切片，就是将一个3D模型按照打印机的打印机制将其切成一个个平面进行编辑打印路径，然后合成一个路径文件即GCode文件，将该文件导入打印机后即可启动3D打印。
+    <div class="post-summary"><p>在Linux中运行Elegoo Cura 3D切片软件 该文章用于记录在Linux下使用Wine来运行Windows版本的Elegoo的定制Cura 3D切片软件
+Cura是什么软件 在FDM（FDM是“Fused Deposition Modeling”的缩写，即熔积成型法，是一种将各种丝材（如工程塑料ABS、聚碳酸酯PC 等）3D加热熔化进而堆积成型方法）打印的圈子里面大家经常使用到的切片软件就是Cura,所谓切片，就是将一个3D模型按照打印机的打印机制将其切成一个个平面进行编辑打印路径，然后合成一个路径文件即GCode文件，将该文件导入打印机后即可启动3D打印。
 Elegoo Cura软件界面 如何获取Cura...</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/running_elegoo_cura_in_linux/">阅读更多</a></div>
     </div>
   </div>
@@ -390,11 +408,11 @@ Elegoo Cura软件界面 如何获取Cura...</p><div><a class="btn btn-sm btn-out
       <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/freecad/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">FreeCAD</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
 </div>
 
-    <div class="post-summary"><p>FreeCAD 离线手动安装插件的方法该文档从FreeCAD的官方文档Installing more workbenches小节中获取，记录用于后续查找
-插件从哪里获取插件从Github上获取，传送门
-插件安装位置从github上获取到想要的插件后，解压放到对应的位置即可
-安装到系统全局位置如果想要所有人都能够读取到插件的话，就安装到系统全局的位置
-Linux系统基本是： /usr/share/freecad/Mod/ Windows系统基本是： C:\Program Files\FreeCAD\Mod\ Mac系统基本是： /Applications/FreeCAD/Mod/ 安装到个人目录位置如果只需要个人使用目的的...</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/freecad_install_addons/">阅读更多</a></div>
+    <div class="post-summary"><p>FreeCAD 离线手动安装插件的方法 该文档从FreeCAD的官方文档Installing more workbenches小节中获取，记录用于后续查找
+插件从哪里获取 插件从Github上获取，传送门
+插件安装位置 从github上获取到想要的插件后，解压放到对应的位置即可
+安装到系统全局位置 如果想要所有人都能够读取到插件的话，就安装到系统全局的位置
+Linux系统基本是： /usr/share/freecad/Mod/ Windows系统基本是： C:\Program Files\FreeCAD\Mod\ Mac系统基本是： /Applications/FreeCAD/Mod/ 安装到个人目录位置 如果只需要个人使用目的的...</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/freecad_install_addons/">阅读更多</a></div>
     </div>
   </div>
 </article>
@@ -410,8 +428,8 @@ Linux系统基本是： /usr/share/freecad/Mod/ Windows系统基本是： C:\Pro
       <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/haos/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">HAOS</a><a href="/tags/homeassistant/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Homeassistant</a><a href="/tags/talk/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Talk</a>
 </div>
 
-    <div class="post-summary"><p>为什么我使用HomeAssistant并且使用HAOS以下称HomeAssistant为HA，至于为什么写这篇文章则是为了让我哪天怀疑我为什么使用HA的时候回首拾回初心吧（或许也不会[bush]）
-为什么是HA我是一个开源拥护者，因为开源意味着可以白嫖（bushi），可以对相关的安全性和隐私性有比较好的把握。本来我打算搭建的智能家居系统是华为的智慧家居的，但是因为成本和生态链的原因放弃了。
+    <div class="post-summary"><p>为什么我使用HomeAssistant并且使用HAOS 以下称HomeAssistant为HA，至于为什么写这篇文章则是为了让我哪天怀疑我为什么使用HA的时候回首拾回初心吧（或许也不会[bush]）
+为什么是HA 我是一个开源拥护者，因为开源意味着可以白嫖（bushi），可以对相关的安全性和隐私性有比较好的把握。本来我打算搭建的智能家居系统是华为的智慧家居的，但是因为成本和生态链的原因放弃了。
 其实还有一部分的原因是我希望我能够对自己的智能家居系统有绝对的掌控权，并且能够自己开发相应的插件集成到这个系统中。很明显，在米家、华为智慧生活等国产的智能家居的方案中是很难达成的。
 HA已经是一个成熟的、经过很多人验证的智能家居管理系统了，其...</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/talk/why_i_use_home_assitant_and_haos/">阅读更多</a></div>
     </div>
@@ -429,9 +447,9 @@ HA已经是一个成熟的、经过很多人验证的智能家居管理系统了
       <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/haos/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">HAOS</a><a href="/tags/homeassistant/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Homeassistant</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
 </div>
 
-    <div class="post-summary"><p>x86_x64系统安装HAOS本文引用自HomeAsisstant官网内容，地址为：https://www.home-assistant.io/installation/generic-x86-64 , 下面称呼Home Assistant Operating System为HAOS
+    <div class="post-summary"><p>x86_x64系统安装HAOS 本文引用自HomeAsisstant官网内容，地址为：https://www.home-assistant.io/installation/generic-x86-64 , 下面称呼Home Assistant Operating System为HAOS
 本文是为了使用一个单独的硬件来运行HAOS, 让HAOS完全使用硬件的性能来完成管理功能，不适合想用容器或supervisor方式体验的人参考，切记！
-安装环境我选择安装的机器是一个X86_X64的瘦客户机，使用Intel J1900处理器， 4G内存，120G存储，本次使用它来进行HAOS的安装，但是安装过程中还是有些问题。
+安装环境 我选择安装的机器是一个X86_X64的瘦客户机，使用Intel J1900处理器， 4G内存，120G存储，本次使用它来进行HAOS的安装，但是安装过程中还是有些问题。
 目前（截止本...</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/haos_x86_x64_install/">阅读更多</a></div>
     </div>
   </div>
@@ -451,10 +469,10 @@ HA已经是一个成熟的、经过很多人验证的智能家居管理系统了
       <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/book/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Book</a><a href="/tags/dialy/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Dialy</a><a href="/tags/notes/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Notes</a>
 </div>
 
-    <div class="post-summary"><p>《掌中花园 无穷小亮的栽培心得与技巧》 张辰亮著书籍信息作者： 张晨亮
+    <div class="post-summary"><p>《掌中花园 无穷小亮的栽培心得与技巧》 张辰亮著 书籍信息 作者： 张晨亮
 出版社：中国国家地理
-我的阅读感受这是一本非常好的微型植物养护入门的书籍，虽然我现在还没有进行实践，但是并不妨碍我从里面学习很多的微观造景知识，所以，个人非常推荐在闲暇的时候进行阅读。
-impressionyang</p>
+我的阅读感受 这是一本非常好的微型植物养护入门的书籍，虽然我现在还没有进行实践，但是并不妨碍我从里面学习很多的微观造景知识，所以，个人非常推荐在闲暇的时候进行阅读。
+impressionyang </p>
     </div>
   </div>
 </article>
@@ -476,37 +494,6 @@ impressionyang</p>
 <blockquote>
 <p>openOCD是一个用来进行在线调试的工具，它配合GDB和对应的芯片的SVD文件根据调试工具（stlink、jlink、CMSIS DAPLink等）的配置可以对嵌入式单片机MCU进行在线调试</p>
 </blockquote><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/how_to_use_openocd/">阅读更多</a></div>
-    </div>
-  </div>
-</article>
-<article class="row card post component">
-  <div class="card-header">
-    <h2 class="card-title post-title my-2 fs-4">
-      <a href="/posts/coding/rt_thread_nano_port_stm32_f103c8t6/">Stm32_f103c8t6 RT Thread 移植笔记</a>
-    </h2>
-  </div>
-  <div class="card-body"><div class="post-meta mb-3">
-  <span class="post-date me-1 mb-1" title="创建于 2022-02-13 11:50:30 &#43;0800 CST。">February 13, 2022</span><span class="post-reading-time me-1 mb-1">5 分钟阅读</span><a href="/categories/coding/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>Coding</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
-      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/c/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">C</a><a href="/tags/gcc/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Gcc</a><a href="/tags/porting/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Porting</a><a href="/tags/rt_thread/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">RT_Thread</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
-</div>
-
-    <div class="post-summary"><blockquote>
-<p>该文章用来记录移植RT Thread的过程记录，本次移植基于STM32 F103C8T6，使用STM32 CubeMX工具构建HALL库的Makefile工程。</p>
-</blockquote>
-<h2 id="环境" data-numberify>环境<a class="anchor ms-1" href="#环境"></a></h2>
-<ul>
-<li>开发板：STM32F103C8T6最小开发板之一</li>
-</ul>
-<p><picture><img class="img-fluid " alt="" src="https://img.impressionyang.top/2022/02/04/1643983655632.png" loading="lazy" />
-</picture>
-</p>
-<ul>
-<li>操作系统：Linux</li>
-<li>开发环境：VSCode</li>
-<li>编译工具：GCC Makefile</li>
-<li>烧录工具：CMSIS DAP + openOCD</li>
-</ul><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/coding/rt_thread_nano_port_stm32_f103c8t6/">阅读更多</a></div>
     </div>
   </div>
 </article>
@@ -538,7 +525,7 @@ impressionyang</p>
         <a href="/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/page/6/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/page/7/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
 
@@ -640,7 +627,7 @@ impressionyang</p>
                     <div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0">
                         <a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="tech_and_skill">
                             tech_and_skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">36</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">37</span>
                         </a>
                         <a href="/categories/coding/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="coding">
                             coding
@@ -658,7 +645,7 @@ impressionyang</p>
                     <div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0">
                         <a href="/tags/skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="skill">
                             skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">42</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">43</span>
                         </a>
                         <a href="/tags/linux/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="Linux">
                             Linux
@@ -668,6 +655,10 @@ impressionyang</p>
                             archlinux
                             <span class="badge badge-sm text-secondary bg-white ms-1">8</span>
                         </a>
+                        <a href="/tags/c/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="C">
+                            C
+                            <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
+                        </a>
                         <a href="/tags/c&#43;&#43;/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="C&#43;&#43;">
                             C&#43;&#43;
                             <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
@@ -675,10 +666,6 @@ impressionyang</p>
                         <a href="/tags/program/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="program">
                             program
                             <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
-                        </a>
-                        <a href="/tags/c/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="C">
-                            C
-                            <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
                         </a>
                         <a href="/tags/talk/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="talk">
                             talk
@@ -698,10 +685,14 @@ impressionyang</p>
                         </a>
                         <a href="/tags" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title='全部'>
                         全部
-                        <span class="badge badge-sm text-secondary bg-white ms-1">71</span>
+                        <span class="badge badge-sm text-secondary bg-white ms-1">72</span>
                         </a>
                     </div>
                 <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
+
+    <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2024">
+    2024 <span class="badge badge-sm text-secondary bg-white ms-1">1</span>
+    </a>
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2023">
     2023 <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
@@ -750,6 +741,16 @@ impressionyang</p>
                     <li class="mb-2">
     <div class="d-flex">
         <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+            <a class="post-title" href="/posts/tech_and_skill/lazy_makefile_for_c_project/">懒人C工程Makefile</a>
+            <div class="post-meta mt-2">
+                <span class="post-date">January 26, 2024</span>
+            </div>
+        </div>
+    </div>
+                    </li>
+                    <li class="mb-2">
+    <div class="d-flex">
+        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
             <a class="post-title" href="/posts/talk/fuck_ios_17_001/">抽风的IOS 17 体验</a>
             <div class="post-meta mt-2">
                 <span class="post-date">October 19, 2023</span>
@@ -787,16 +788,6 @@ impressionyang</p>
         </div>
     </div>
                     </li>
-                    <li class="mb-2">
-    <div class="d-flex">
-        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
-            <a class="post-title" href="/posts/talk/why_i_use_home_assitant_and_haos/">为什么我使用HomeAssistant并且使用HAOS</a>
-            <div class="post-meta mt-2">
-                <span class="post-date">April 23, 2023</span>
-            </div>
-        </div>
-    </div>
-                    </li>
                     </ul>
                 </div>
             </div>
@@ -825,11 +816,11 @@ impressionyang</p>
   </div>
   <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=%e4%b8%aa%e4%ba%ba%e7%ae%80%e4%bb%8b&url=%2fabout%2fabout%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=steam%e6%b8%b8%e6%88%8f%e5%88%86%e4%ba%ab&url=%2fabout%2fgames%2f">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
-        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fabout%2fabout%2f">
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fabout%2fgames%2f">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
@@ -868,7 +859,7 @@ impressionyang</p>
     <i class="fas fa-fw fa-2x fa-rss" style="color: #ea6221;"></i>
   </a>
 </nav>
-<div class="copyright mb-2">Copyright © 2016-2023 impressionyang. All Rights Reserved.
+<div class="copyright mb-2">Copyright © 2016-2024 impressionyang. All Rights Reserved.
 <div>
     <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
     <script>
@@ -905,8 +896,8 @@ impressionyang</p>
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script data-precache src="/assets/main/bundle.min.28c9c47385899d50d6525babaa98a21c9a8d7d3f411d4e4d6d95d16c92d24d83.js" integrity="sha256-KMnEc4WJnVDWUlurqpiiHJqNfT9BHU5NbZXRbJLSTYM=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.08110fe5d5c57fe7d8f4f3e14ca4cfd582153c7d5d9b007a975b909893c89cd9.js" integrity="sha256-CBEP5dXFf&#43;fY9PPhTKTP1YIVPH1dmwB6l1uQmJPInNk=" crossorigin="anonymous" defer></script>
-<script data-precache src="/assets/viewer/bundle.min.c184b4ee1aaa204d373139da54fee8a8ac5d197d70b76ebcb89c1887f116c5af.js" integrity="sha256-wYS07hqqIE03MTnaVP7oqKxdGX1wt268uJwYh/EWxa8=" crossorigin="anonymous" defer></script><script>
+<script data-precache src="/assets/main/bundle.min.28c9c47385899d50d6525babaa98a21c9a8d7d3f411d4e4d6d95d16c92d24d83.js" integrity="sha256-KMnEc4WJnVDWUlurqpiiHJqNfT9BHU5NbZXRbJLSTYM=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.74b4fd1eeeaa9fc4aedb2377a4340bc674a0489bd8a41a7d12d4221bac9bdcd1.js" integrity="sha256-dLT9Hu6qn8Su2yN3pDQLxnSgSJvYpBp9EtQiG6yb3NE=" crossorigin="anonymous" defer></script>
+<script data-precache src="/assets/viewer/bundle.min.06371891cfe6d10d36cba465c61c4d7cb17591a3be2fd9af4a38444d2074e709.js" integrity="sha256-BjcYkc/m0Q02y6RlxhxNfLF1kaO&#43;L9mvSjhETSB05wk=" crossorigin="anonymous" defer></script><script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('\/service-worker.min.js').then(function(reg) {

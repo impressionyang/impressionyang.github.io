@@ -21,6 +21,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/posts/" />
 
+
 <meta itemprop="name" content="文章">
 <meta itemprop="description" content="An extreme fast, responsive and feature-rich blog theme for Hugo">
   <meta property="og:image" content="https://impressionyang.gitee.io/imgbed/img/favicon/favicon_64.png"/>
@@ -31,7 +32,7 @@
 <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="impressionyang的个人分享站" />
 <link data-precache rel="stylesheet" href="/assets/main/bundle.min.29d44113983e6cdcbddffcdf8da8d0a62935fce7972217fa50982f42cfa3a0f7.css" integrity="sha256-KdRBE5g+bNy93/zfjajQpik1/OeXIhf6UJgvQs+joPc=" crossorigin="anonymous">
 
-    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.87c3f3247f50583d900db7d779087756dd6ae1aeab9c40e3472144cf8e7bda80.css" integrity="sha256-h8PzJH9QWD2QDbfXeQh3Vt1q4a6rnEDjRyFEz4572oA=" crossorigin="anonymous">
+    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.8c1002839fa22c1350d6ae1eef6593120e108f973c41348be9b5065430566aaf.css" integrity="sha256-jBACg5&#43;iLBNQ1q4e72WTEg4Qj5c8QTSL6bUGVDBWaq8=" crossorigin="anonymous">
 
 
 </head>
@@ -310,6 +311,30 @@
   <div class="posts mb-4"><article class="row card post component">
   <div class="card-header">
     <h2 class="card-title post-title my-2 fs-4">
+      <a href="/posts/tech_and_skill/win10-windows-terminal-setup/">Win10安装配置Windows Terminal</a>
+    </h2>
+  </div>
+  <div class="card-body"><div class="post-meta mb-3">
+  <span class="post-date me-1 mb-1" title="创建于 2021-02-17 10:22:54 &#43;0800 CST。">February 17, 2021</span><span class="post-reading-time me-1 mb-1">1 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
+      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a><a href="/tags/win10/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Win10</a>
+</div>
+
+    <div class="post-summary"><h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
+<blockquote>
+<p>本文也是在Win10主机下配置轻量级开发环境的一个帖子，主要是用来记录Win10下的新Windows Terminal的安装和配置，留作以后参考</p>
+</blockquote>
+<h2 id="安装" data-numberify>安装<a class="anchor ms-1" href="#安装"></a></h2>
+<p>直接在Win10商店中安装Windows Terminal即可</p>
+<p><picture><img class="img-fluid " alt="pic windows terminal in win10 store" src="https://impressionyang.github.io/picgo_img_bed/imgs/20210217022649.png" loading="lazy" />
+</picture>
+</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/win10-windows-terminal-setup/">阅读更多</a></div>
+    </div>
+  </div>
+</article>
+<article class="row card post component">
+  <div class="card-header">
+    <h2 class="card-title post-title my-2 fs-4">
       <a href="/posts/tech_and_skill/win10-install-wsl2/">Win10重新安装导出的WSL2镜像</a>
     </h2>
   </div>
@@ -492,9 +517,9 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
       <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/beautify/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Beautify</a><a href="/tags/hexo/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Hexo</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
 </div>
 
-    <div class="post-summary"><p>先导首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了
+    <div class="post-summary"><p>先导 首先隔了这么久才继续进行更新的原因是网站备案和毕业设计，加上刚入职没有时间去进行内容更新，以后会继续更新了
 在pugjs中添加一些好用的东西这个系列会长期的添加更新，因为这些都是会用在博客当中的，而且这些操作都比较简单，都是在主题的相应文件位置添加相应代码即可。
-内容介绍这次添加的内容是在右边栏那里加上一个时钟，用来给阅读的人直观地看到时间，时钟的代码是直接从网上拷贝下来的，并且自己做了修改，地址是这里,打开这个链接就能看到一个时钟，此时检查页面元素定位到时钟所在的div标签，其中有一个canvas标签，将其复制下来，并且找到下面与之最近的script标签查看到时钟的逻辑代码，也将其复制下来进行修改后就差不多可以使用了。
+内容介绍 这次添加的内容是在右边栏那里加上一个时钟，用来给阅读的人直观地看到时间，时钟的代码是直接从网上拷贝下来的，并且自己做了修改，地址是这里,打开这个链接就能看到一个时钟，此时检查页面元素定位到时钟所在的div标签，其中有一个canvas标签，将其复制下来，并且找到下面与之最近的script标签查看到时钟的逻辑代码，也将其复制下来进行修改后就差不多可以使用了。
 首...</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/add-canvas-clock-in-pugjs/">阅读更多</a></div>
     </div>
   </div>
@@ -515,27 +540,6 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
 <blockquote>
 <p>打算是主要打理国内的空间，当然github也会同步发布，是所以使用未备案的域名感觉还是挺不妥当的，还是备案一下，但是我万万没想到的是备案有那么多需要注意的问题</p>
 </blockquote><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/the-blog-is-put-on-record/">阅读更多</a></div>
-    </div>
-  </div>
-</article>
-<article class="row card post component">
-  <div class="card-header">
-    <h2 class="card-title post-title my-2 fs-4">
-      <a href="/posts/tech_and_skill/arch-refind-bootloader-efi/">Arch Linux切换rEFInd开机引导程序</a>
-    </h2>
-  </div>
-  <div class="card-body"><div class="post-meta mb-3">
-  <span class="post-date me-1 mb-1" title="创建于 2020-03-30 17:35:19 &#43;0800 CST。">March 30, 2020</span><span class="post-reading-time me-1 mb-1">2 分钟阅读</span><a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>Tech_and_skill</a><a href="/series/%E5%8D%9A%E5%AE%A2/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-series">
-      <i class="fas fa-fw fa-columns me-1"></i>博客</a><a href="/tags/archlinux/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Archlinux</a><a href="/tags/boot-loader/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Boot Loader</a><a href="/tags/refind/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">REFInd</a><a href="/tags/skill/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Skill</a>
-</div>
-
-    <div class="post-summary"><h2 id="先导" data-numberify>先导<a class="anchor ms-1" href="#先导"></a></h2>
-<p>以下<code>rEFInd</code>的<code>arckwiki</code>词条的内容：</p>
-<blockquote>
-<p>rEFInd 是一个 UEFI 启动管理器。它是 rEFIt （不再维护）的一个分支并且针对非 Mac 硬件修复了若干问题。它被设计为平台无关，可启动多个操作系统。</p>
-</blockquote>
-<p>使用<code>rEFInd</code>的需求是我原来使用的是<code>bootctl</code>这个启动引导程序,虽然简单好用,但是只有黑白界面难免有点单调,所以就想使用一个比较漂亮的但是文件结构又简洁的<code>bootloader</code>,所以<code>grub</code>就被丢弃了,虽然它的却很强大,但是文件结构有点复杂,配置影响因素有点多</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/tech_and_skill/arch-refind-bootloader-efi/">阅读更多</a></div>
     </div>
   </div>
 </article>
@@ -567,7 +571,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
         <a href="/posts/page/4/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/6/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/7/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
 
@@ -669,7 +673,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                     <div class="tab-pane" id="taxonomyCategories" role="tabpanel" aria-labelledby="taxonomyCategoriesTab" tabindex="0">
                         <a href="/categories/tech_and_skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="tech_and_skill">
                             tech_and_skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">36</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">37</span>
                         </a>
                         <a href="/categories/coding/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-category me-2 mb-2" title="coding">
                             coding
@@ -687,7 +691,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                     <div class="tab-pane" id="taxonomyTags" role="tabpanel" aria-labelledby="taxonomyTagsTab" tabindex="0">
                         <a href="/tags/skill/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="skill">
                             skill
-                            <span class="badge badge-sm text-secondary bg-white ms-1">42</span>
+                            <span class="badge badge-sm text-secondary bg-white ms-1">43</span>
                         </a>
                         <a href="/tags/linux/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="Linux">
                             Linux
@@ -697,6 +701,10 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                             archlinux
                             <span class="badge badge-sm text-secondary bg-white ms-1">8</span>
                         </a>
+                        <a href="/tags/c/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="C">
+                            C
+                            <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
+                        </a>
                         <a href="/tags/c&#43;&#43;/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="C&#43;&#43;">
                             C&#43;&#43;
                             <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
@@ -704,10 +712,6 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                         <a href="/tags/program/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="program">
                             program
                             <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
-                        </a>
-                        <a href="/tags/c/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="C">
-                            C
-                            <span class="badge badge-sm text-secondary bg-white ms-1">6</span>
                         </a>
                         <a href="/tags/talk/" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title="talk">
                             talk
@@ -727,10 +731,14 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                         </a>
                         <a href="/tags" class="btn btn-sm btn-secondary post-taxonomy ps-3 post-tag me-2 mb-2" title='全部'>
                         全部
-                        <span class="badge badge-sm text-secondary bg-white ms-1">71</span>
+                        <span class="badge badge-sm text-secondary bg-white ms-1">72</span>
                         </a>
                     </div>
                 <div class="tab-pane" id="taxonomyArchive" role="tabpanel" aria-labelledby="taxonomyArchiveTab" tabindex="0">
+
+    <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2024">
+    2024 <span class="badge badge-sm text-secondary bg-white ms-1">1</span>
+    </a>
 
     <a href="" class="btn btn-sm btn-secondary post-taxonomy ps-3 me-2 mb-2" title="2023">
     2023 <span class="badge badge-sm text-secondary bg-white ms-1">7</span>
@@ -779,6 +787,16 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
                     <li class="mb-2">
     <div class="d-flex">
         <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
+            <a class="post-title" href="/posts/tech_and_skill/lazy_makefile_for_c_project/">懒人C工程Makefile</a>
+            <div class="post-meta mt-2">
+                <span class="post-date">January 26, 2024</span>
+            </div>
+        </div>
+    </div>
+                    </li>
+                    <li class="mb-2">
+    <div class="d-flex">
+        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
             <a class="post-title" href="/posts/talk/fuck_ios_17_001/">抽风的IOS 17 体验</a>
             <div class="post-meta mt-2">
                 <span class="post-date">October 19, 2023</span>
@@ -816,16 +834,6 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
         </div>
     </div>
                     </li>
-                    <li class="mb-2">
-    <div class="d-flex">
-        <div class="flex-grow-1 d-flex flex-column h-auto justify-content-center">
-            <a class="post-title" href="/posts/talk/why_i_use_home_assitant_and_haos/">为什么我使用HomeAssistant并且使用HAOS</a>
-            <div class="post-meta mt-2">
-                <span class="post-date">April 23, 2023</span>
-            </div>
-        </div>
-    </div>
-                    </li>
                     </ul>
                 </div>
             </div>
@@ -854,11 +862,11 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
   </div>
   <div class="offcanvas-body mt-2"><div class="social-share mb-4 d-flex overflow-auto">
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Twitter Share Button"
-      target="_blank" href="https://twitter.com/intent/tweet?title=%e4%b8%aa%e4%ba%ba%e7%ae%80%e4%bb%8b&url=%2fabout%2fabout%2f">
+      target="_blank" href="https://twitter.com/intent/tweet?title=steam%e6%b8%b8%e6%88%8f%e5%88%86%e4%ba%ab&url=%2fabout%2fgames%2f">
         <i class="fab fa-2x fa-fw fa-twitter mb-2"></i> Twitter
       </a>
       <a class="btn-social-share d-flex flex-column align-items-center me-3" rel="noopener noreferrer" aria-label="Facebook Share Button"
-        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fabout%2fabout%2f">
+        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=%2fabout%2fgames%2f">
         <i class="fab fa-2x fa-fw fa-facebook-f mb-2"></i> Facebook
       </a>
     </div>
@@ -897,7 +905,7 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
     <i class="fas fa-fw fa-2x fa-rss" style="color: #ea6221;"></i>
   </a>
 </nav>
-<div class="copyright mb-2">Copyright © 2016-2023 impressionyang. All Rights Reserved.
+<div class="copyright mb-2">Copyright © 2016-2024 impressionyang. All Rights Reserved.
 <div>
     <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
     <script>
@@ -934,8 +942,8 @@ Windows之所以要设立句柄，根本上源于内存管理机制的问题，�
 <div class="powered-by mb-2">
   Powered by <a href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">Bootstrap</a> theme.
 </div></footer>
-<script data-precache src="/assets/main/bundle.min.28c9c47385899d50d6525babaa98a21c9a8d7d3f411d4e4d6d95d16c92d24d83.js" integrity="sha256-KMnEc4WJnVDWUlurqpiiHJqNfT9BHU5NbZXRbJLSTYM=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.08110fe5d5c57fe7d8f4f3e14ca4cfd582153c7d5d9b007a975b909893c89cd9.js" integrity="sha256-CBEP5dXFf&#43;fY9PPhTKTP1YIVPH1dmwB6l1uQmJPInNk=" crossorigin="anonymous" defer></script>
-<script data-precache src="/assets/viewer/bundle.min.c184b4ee1aaa204d373139da54fee8a8ac5d197d70b76ebcb89c1887f116c5af.js" integrity="sha256-wYS07hqqIE03MTnaVP7oqKxdGX1wt268uJwYh/EWxa8=" crossorigin="anonymous" defer></script><script>
+<script data-precache src="/assets/main/bundle.min.28c9c47385899d50d6525babaa98a21c9a8d7d3f411d4e4d6d95d16c92d24d83.js" integrity="sha256-KMnEc4WJnVDWUlurqpiiHJqNfT9BHU5NbZXRbJLSTYM=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.74b4fd1eeeaa9fc4aedb2377a4340bc674a0489bd8a41a7d12d4221bac9bdcd1.js" integrity="sha256-dLT9Hu6qn8Su2yN3pDQLxnSgSJvYpBp9EtQiG6yb3NE=" crossorigin="anonymous" defer></script>
+<script data-precache src="/assets/viewer/bundle.min.06371891cfe6d10d36cba465c61c4d7cb17591a3be2fd9af4a38444d2074e709.js" integrity="sha256-BjcYkc/m0Q02y6RlxhxNfLF1kaO&#43;L9mvSjhETSB05wk=" crossorigin="anonymous" defer></script><script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('\/service-worker.min.js').then(function(reg) {

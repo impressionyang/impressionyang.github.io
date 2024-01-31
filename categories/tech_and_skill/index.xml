@@ -6,9 +6,18 @@
     <description>Recent content in tech_and_skill on impressionyang的个人分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>Copyright © 2016-2023 impressionyang. All Rights Reserved.
+    <copyright>Copyright © 2016-2024 impressionyang. All Rights Reserved.
 </copyright>
-    <lastBuildDate>Thu, 15 Jun 2023 00:41:24 +0800</lastBuildDate><atom:link href="/categories/tech_and_skill/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Jan 2024 20:46:56 +0800</lastBuildDate><atom:link href="/categories/tech_and_skill/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>懒人C工程Makefile</title>
+      <link>/posts/tech_and_skill/lazy_makefile_for_c_project/</link>
+      <pubDate>Fri, 26 Jan 2024 20:46:56 +0800</pubDate>
+      
+      <guid>/posts/tech_and_skill/lazy_makefile_for_c_project/</guid>
+      <description><![CDATA[懒人C工程Makefile 引言 在工作的一段时间里面， 因为平时写项目的时候有一些功能需要紧急调试，但是调试的代码呢又想单独的分出来进行归档，然]]></description>
+    </item>
+    
     <item>
       <title>在Linux中运行Elegoo Cura 3D切片软件</title>
       <link>/posts/tech_and_skill/running_elegoo_cura_in_linux/</link>
