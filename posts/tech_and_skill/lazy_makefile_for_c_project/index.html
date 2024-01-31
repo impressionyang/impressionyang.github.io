@@ -28,7 +28,7 @@
 <meta itemprop="name" content="懒人C工程Makefile">
 <meta itemprop="description" content="懒人C工程Makefile 引言 在工作的一段时间里面， 因为平时写项目的时候有一些功能需要紧急调试，但是调试的代码呢又想单独的分出来进行归档，然"><meta itemprop="datePublished" content="2024-01-26T20:46:56+08:00" />
 <meta itemprop="dateModified" content="2024-01-26T20:46:56+08:00" />
-<meta itemprop="wordCount" content="1046">
+<meta itemprop="wordCount" content="1123">
 <meta itemprop="keywords" content="skill,C,makefile," />
   <meta property="og:image" content="https://impressionyang.gitee.io/imgbed/img/favicon/favicon_64.png"/>
   <meta name="twitter:image" content="https://impressionyang.gitee.io/imgbed/img/favicon/favicon_64.png"/>
@@ -36,7 +36,7 @@
   <meta name="twitter:image:alt" content="懒人C工程Makefile" />
   <link rel="manifest" href="/manifest.json">
 
-<link data-precache rel="stylesheet" href="/assets/main/bundle.min.29d44113983e6cdcbddffcdf8da8d0a62935fce7972217fa50982f42cfa3a0f7.css" integrity="sha256-KdRBE5g+bNy93/zfjajQpik1/OeXIhf6UJgvQs+joPc=" crossorigin="anonymous">
+<link data-precache rel="stylesheet" href="/assets/main/bundle.min.c86cd49dc84d3f4d5b6edd07f7948a8027c115694a2706251fc43ea3e6497ece.css" integrity="sha256-yGzUnchNP01bbt0H95SKgCfBFWlKJwYlH8Q+o+ZJfs4=" crossorigin="anonymous">
 
     <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.8c1002839fa22c1350d6ae1eef6593120e108f973c41348be9b5065430566aaf.css" integrity="sha256-jBACg5&#43;iLBNQ1q4e72WTEg4Qj5c8QTSL6bUGVDBWaq8=" crossorigin="anonymous">
 
@@ -370,54 +370,81 @@
 <p>既然需求已经明确，所以直接给出第一版代码，未来的代码更新会在GitHub上同步，传送门<a href="https://github.com/impressionyang/lazy_single_makefile_for_c_project" target="_blank" rel="noopener noreferrer">https://github.com/impressionyang/lazy_single_makefile_for_c_project<i class="fas fa-external-link-square-alt ms-1"></i></a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Makefile" data-lang="Makefile"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c"># lazy build C project Makefiles by impressionyang
 </span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="c"># user config values
-</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="c"></span><span class="nv">CC</span><span class="o">=</span><span class="s2">&#34;E:\\impressionyang\\scoop\\apps\\mingw\\12.2.0\\bin\\gcc.exe&#34;</span>
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="nv">PROJECT</span><span class="o">=</span><span class="nb">test</span>
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="c"># patern config
-</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c"></span><span class="nv">FILES_PATH</span>  <span class="o">:=</span> ./
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="nv">SRC_FILES_SUFFIX</span> <span class="o">:=</span> %.c
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="nv">HDR_FILES_SUFFIX</span> <span class="o">:=</span> %.h
-</span></span><span class="line"><span class="ln">10</span><span class="cl">
-</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c"># define func to remove_same_str
-</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="c"></span><span class="err">define</span> <span class="nv">remove_same_str</span> <span class="o">=</span>
-</span></span><span class="line"><span class="ln">13</span><span class="cl">  <span class="k">$(</span><span class="nb">eval</span> seen :<span class="o">=</span><span class="k">)</span>
-</span></span><span class="line"><span class="ln">14</span><span class="cl">  <span class="k">$(</span>foreach _,<span class="nv">$1</span>,<span class="k">$(if</span> <span class="k">$(</span>filter <span class="nv">$_</span>,<span class="si">${</span><span class="nv">seen</span><span class="si">}</span><span class="k">)</span>,,<span class="k">$(</span><span class="nb">eval</span> <span class="nv">seen</span> <span class="o">+=</span> <span class="nv">$_</span><span class="k">)))</span>
-</span></span><span class="line"><span class="ln">15</span><span class="cl">  <span class="si">${</span><span class="nv">seen</span><span class="si">}</span>
-</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="err">endef</span>
-</span></span><span class="line"><span class="ln">17</span><span class="cl">
-</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="c"># find recursive all files
-</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="c"></span><span class="nv">rwildcard</span><span class="o">=</span><span class="k">$(</span>wildcard <span class="nv">$1$2</span><span class="k">)</span> <span class="k">$(</span>foreach d,<span class="k">$(</span>wildcard <span class="nv">$1</span>*<span class="k">)</span>,<span class="k">$(</span>call rwildcard,<span class="nv">$d</span>/,<span class="nv">$2</span><span class="k">))</span>
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="c"></span><span class="nv">CC</span><span class="o">=</span><span class="s2">&#34;/usr/bin/gcc&#34;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c"># CC=&#34;E:\\impressionyang\\scoop\\apps\\mingw\\12.2.0\\bin\\gcc.exe&#34;
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c"></span><span class="nv">PROJECT</span><span class="o">=</span><span class="nb">test</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="c"># check operating system type
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="c"></span><span class="err">ifeq</span> <span class="err">(</span><span class="k">$(</span><span class="nv">OS</span><span class="k">)</span><span class="err">,</span> <span class="err">Windows_NT)</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">	<span class="nv">OS_TYPE</span> <span class="o">:=</span> WINDOWS
+</span></span><span class="line"><span class="ln">10</span><span class="cl">	SHELL :<span class="o">=</span> cmd
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="err">else</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">	<span class="nv">UNAME_S</span> <span class="o">:=</span> <span class="k">$(</span>shell uname -s<span class="k">)</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    ifeq <span class="o">(</span><span class="k">$(</span>UNAME_S<span class="k">)</span>,Linux<span class="o">)</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">        OS_TYPE :<span class="o">=</span> LINUX
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    endif
+</span></span><span class="line"><span class="ln">16</span><span class="cl">    ifeq <span class="o">(</span><span class="k">$(</span>UNAME_S<span class="k">)</span>,Darwin<span class="o">)</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">        OS_TYPE :<span class="o">=</span> OSX
+</span></span><span class="line"><span class="ln">18</span><span class="cl">    endif
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="err">endif</span>
 </span></span><span class="line"><span class="ln">20</span><span class="cl">
-</span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="c"># get source file and header file
-</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="c"></span><span class="nv">FIND_ALL_FILES</span> <span class="o">:=</span> <span class="k">$(</span>foreach files_path,<span class="k">$(</span>FILES_PATH<span class="k">)</span>, <span class="k">$(</span>call rwildcard,<span class="k">$(</span>files_path<span class="k">)</span>,*.*<span class="k">)</span> <span class="k">)</span> 
-</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="nv">SOURCES</span>  <span class="o">:=</span> <span class="k">$(</span>filter <span class="k">$(</span>SRC_FILES_SUFFIX<span class="k">)</span>,<span class="k">$(</span>FIND_ALL_FILES<span class="k">))</span> 
-</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="nv">SOURCES</span>  <span class="o">:=</span> <span class="k">$(</span>SOURCES:<span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/%<span class="o">=</span>%<span class="k">)</span>
-</span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="nv">HEADERS</span>  <span class="o">:=</span> <span class="k">$(</span>filter <span class="k">$(</span>HDR_FILES_SUFFIX<span class="k">)</span>,<span class="k">$(</span>FIND_ALL_FILES<span class="k">))</span> 
-</span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="nv">HEADERS</span>  <span class="o">:=</span> <span class="k">$(</span>HEADERS:<span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/%<span class="o">=</span>%<span class="k">)</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="k">$(</span><span class="nv">info</span> <span class="nv">OS</span> <span class="nv">type</span> = <span class="k">$(</span><span class="nv">OS_TYPE</span><span class="k">))</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">
+</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="c"># patern config
+</span></span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="c"></span><span class="nv">FILES_PATH</span>  <span class="o">:=</span> ./
+</span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="nv">SRC_FILES_SUFFIX</span> <span class="o">:=</span> %.c
+</span></span><span class="line"><span class="ln">26</span><span class="cl"><span class="nv">HDR_FILES_SUFFIX</span> <span class="o">:=</span> %.h
 </span></span><span class="line"><span class="ln">27</span><span class="cl">
-</span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="c"># fillter out all include path
-</span></span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="c"></span><span class="nv">FIND_ALL_FILES_DIR</span> <span class="o">:=</span> <span class="k">$(</span>dir <span class="k">$(</span>foreach files_path,<span class="k">$(</span>FILES_PATH<span class="k">)</span>, <span class="k">$(</span>call rwildcard,<span class="k">$(</span>files_path<span class="k">)</span>,*/<span class="k">)</span> <span class="k">)</span> <span class="k">)</span>
-</span></span><span class="line"><span class="ln">30</span><span class="cl"><span class="nv">INC_DIRS</span> <span class="o">:=</span> <span class="k">$(</span>call remove_same_str,<span class="k">$(</span>FIND_ALL_FILES_DIR<span class="k">))</span>
-</span></span><span class="line"><span class="ln">31</span><span class="cl"><span class="nv">INC_DIRS</span> <span class="o">:=</span> <span class="k">$(</span>subst ./, -I./, <span class="k">$(</span>INC_DIRS<span class="k">))</span>
-</span></span><span class="line"><span class="ln">32</span><span class="cl"><span class="nv">INC_DIRS</span> <span class="o">:=</span> <span class="k">$(</span>wordlist 1, <span class="k">$(</span>words <span class="k">$(</span>INC_DIRS<span class="k">))</span>, <span class="k">$(</span>INC_DIRS<span class="k">))</span>
-</span></span><span class="line"><span class="ln">33</span><span class="cl">
-</span></span><span class="line"><span class="ln">34</span><span class="cl"><span class="c"># debug print info, no need to be change
-</span></span></span><span class="line"><span class="ln">35</span><span class="cl"><span class="c"># $(info &#34;INC_DIRS&#34;)
-</span></span></span><span class="line"><span class="ln">36</span><span class="cl"><span class="c"># $(info $(INC_DIRS))
-</span></span></span><span class="line"><span class="ln">37</span><span class="cl"><span class="c"># $(info &#34;HEADERS&#34;)
-</span></span></span><span class="line"><span class="ln">38</span><span class="cl"><span class="c"># $(info $(HEADERS))
-</span></span></span><span class="line"><span class="ln">39</span><span class="cl"><span class="c"># $(info &#34;SOURCES&#34;)
-</span></span></span><span class="line"><span class="ln">40</span><span class="cl"><span class="c"># $(info $(SOURCES))
-</span></span></span><span class="line"><span class="ln">41</span><span class="cl"><span class="c"></span>
-</span></span><span class="line"><span class="ln">42</span><span class="cl"><span class="c"># compile job
-</span></span></span><span class="line"><span class="ln">43</span><span class="cl"><span class="c"></span><span class="nf">all </span><span class="o">:</span> 
-</span></span><span class="line"><span class="ln">44</span><span class="cl">	<span class="k">$(</span>CC<span class="k">)</span> -fdiagnostics-color<span class="o">=</span>always -g <span class="k">$(</span>SOURCES<span class="k">)</span> <span class="k">$(</span>HEADERS<span class="k">)</span> <span class="k">$(</span>INC_DIRS<span class="k">)</span> -o <span class="k">$(</span>PROJECT<span class="k">)</span>
-</span></span><span class="line"><span class="ln">45</span><span class="cl">
-</span></span><span class="line"><span class="ln">46</span><span class="cl"><span class="c"># virtual clean job
-</span></span></span><span class="line"><span class="ln">47</span><span class="cl"><span class="c"></span><span class="nf">.PHONY </span><span class="o">:</span> <span class="n">clean</span>
-</span></span><span class="line"><span class="ln">48</span><span class="cl"><span class="nf">clean</span><span class="o">:</span>
-</span></span><span class="line"><span class="ln">49</span><span class="cl">	<span class="k">$(</span>warning <span class="s2">&#34;remove some files but it may not exist because the OS different&#34;</span><span class="k">)</span>
-</span></span><span class="line"><span class="ln">50</span><span class="cl">	rm <span class="k">$(</span>PROJECT<span class="k">)</span>.exe <span class="k">$(</span>PROJECT<span class="k">)</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="c"># define func to remove_same_str for debug: $(info get seen ${seen})
+</span></span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="c"></span><span class="err">define</span> <span class="nv">remove_same_str</span> <span class="o">=</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">  <span class="k">$(</span><span class="nb">eval</span> seen :<span class="o">=</span><span class="k">)</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl">  <span class="k">$(</span>foreach _,<span class="nv">$1</span>,<span class="k">$(if</span> <span class="k">$(</span>filter <span class="nv">$_</span>,<span class="si">${</span><span class="nv">seen</span><span class="si">}</span><span class="k">)</span>,,<span class="k">$(if</span> <span class="nv">$_</span>, <span class="k">$(</span><span class="nb">eval</span> <span class="nv">seen</span> <span class="o">+=</span> <span class="nv">$_</span><span class="k">))))</span> 
+</span></span><span class="line"><span class="ln">32</span><span class="cl">  <span class="si">${</span><span class="nv">seen</span><span class="si">}</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl"><span class="err">endef</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl">
+</span></span><span class="line"><span class="ln">35</span><span class="cl"><span class="c"># find recursive all files
+</span></span></span><span class="line"><span class="ln">36</span><span class="cl"><span class="c"></span><span class="nv">rwildcard</span><span class="o">=</span><span class="k">$(</span>wildcard <span class="nv">$1$2</span><span class="k">)</span> <span class="k">$(</span>foreach d,<span class="k">$(</span>wildcard <span class="nv">$1</span>*<span class="k">)</span>,<span class="k">$(</span>call rwildcard,<span class="nv">$d</span>/,<span class="nv">$2</span><span class="k">))</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl">
+</span></span><span class="line"><span class="ln">38</span><span class="cl"><span class="c"># get source file and header file
+</span></span></span><span class="line"><span class="ln">39</span><span class="cl"><span class="c"></span><span class="nv">FIND_ALL_FILES</span> <span class="o">:=</span> <span class="k">$(</span>foreach files_path,<span class="k">$(</span>FILES_PATH<span class="k">)</span>, <span class="k">$(</span>call rwildcard,<span class="k">$(</span>files_path<span class="k">)</span>,*.*<span class="k">)</span> <span class="k">)</span> 
+</span></span><span class="line"><span class="ln">40</span><span class="cl"><span class="nv">SOURCES</span>  <span class="o">:=</span> <span class="k">$(</span>filter <span class="k">$(</span>SRC_FILES_SUFFIX<span class="k">)</span>,<span class="k">$(</span>FIND_ALL_FILES<span class="k">))</span> 
+</span></span><span class="line"><span class="ln">41</span><span class="cl"><span class="nv">SOURCES</span>  <span class="o">:=</span> <span class="k">$(</span>SOURCES:<span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/%<span class="o">=</span>%<span class="k">)</span>
+</span></span><span class="line"><span class="ln">42</span><span class="cl"><span class="nv">HEADERS</span>  <span class="o">:=</span> <span class="k">$(</span>filter <span class="k">$(</span>HDR_FILES_SUFFIX<span class="k">)</span>,<span class="k">$(</span>FIND_ALL_FILES<span class="k">))</span> 
+</span></span><span class="line"><span class="ln">43</span><span class="cl"><span class="nv">HEADERS</span>  <span class="o">:=</span> <span class="k">$(</span>HEADERS:<span class="k">$(</span>LOCAL_PATH<span class="k">)</span>/%<span class="o">=</span>%<span class="k">)</span>
+</span></span><span class="line"><span class="ln">44</span><span class="cl">
+</span></span><span class="line"><span class="ln">45</span><span class="cl"><span class="c"># fillter out all include path
+</span></span></span><span class="line"><span class="ln">46</span><span class="cl"><span class="c"></span><span class="nv">FIND_ALL_FILES_DIR</span> <span class="o">:=</span> <span class="k">$(</span>dir <span class="k">$(</span>foreach files_path,<span class="k">$(</span>FILES_PATH<span class="k">)</span>, <span class="k">$(</span>call rwildcard,<span class="k">$(</span>files_path<span class="k">)</span>,*/<span class="k">)</span> <span class="k">)</span> <span class="k">)</span>
+</span></span><span class="line"><span class="ln">47</span><span class="cl"><span class="nv">GET_INC_DIRS</span> <span class="o">:=</span> <span class="k">$(</span>call remove_same_str,<span class="k">$(</span>FIND_ALL_FILES_DIR<span class="k">))</span>
+</span></span><span class="line"><span class="ln">48</span><span class="cl"><span class="nv">INC_DIRS</span> <span class="o">:=</span>
+</span></span><span class="line"><span class="ln">49</span><span class="cl"><span class="nv">INC_DIRS</span> <span class="o">+=</span> <span class="k">$(</span>foreach v, <span class="k">$(</span>GET_INC_DIRS<span class="k">)</span>, <span class="k">$(if</span> <span class="k">$(</span>filter %/,<span class="nv">$v</span><span class="k">)</span> , <span class="k">$(</span><span class="nb">eval</span> <span class="nv">INC_DIRS</span><span class="o">+=</span><span class="nv">$v</span><span class="k">)</span>, <span class="k">))</span>
+</span></span><span class="line"><span class="ln">50</span><span class="cl"><span class="nv">INC_DIRS</span> <span class="o">:=</span> <span class="k">$(</span>subst ./, -I./, <span class="k">$(</span>INC_DIRS<span class="k">))</span>
+</span></span><span class="line"><span class="ln">51</span><span class="cl"><span class="nv">INC_DIRS</span> <span class="o">:=</span> <span class="k">$(</span>wordlist 1, <span class="k">$(</span>words <span class="k">$(</span>INC_DIRS<span class="k">))</span>, <span class="k">$(</span>INC_DIRS<span class="k">))</span>
+</span></span><span class="line"><span class="ln">52</span><span class="cl">
+</span></span><span class="line"><span class="ln">53</span><span class="cl"><span class="c"># debug print info, no need to be change
+</span></span></span><span class="line"><span class="ln">54</span><span class="cl"><span class="c"># $(info &#34;INC_DIRS&#34;)
+</span></span></span><span class="line"><span class="ln">55</span><span class="cl"><span class="c"># $(info $(INC_DIRS))
+</span></span></span><span class="line"><span class="ln">56</span><span class="cl"><span class="c"># $(info &#34;HEADERS&#34;)
+</span></span></span><span class="line"><span class="ln">57</span><span class="cl"><span class="c"># $(info $(HEADERS))
+</span></span></span><span class="line"><span class="ln">58</span><span class="cl"><span class="c"># $(info &#34;SOURCES&#34;)
+</span></span></span><span class="line"><span class="ln">59</span><span class="cl"><span class="c"># $(info $(SOURCES))
+</span></span></span><span class="line"><span class="ln">60</span><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="ln">61</span><span class="cl"><span class="c"># compile job
+</span></span></span><span class="line"><span class="ln">62</span><span class="cl"><span class="c"></span><span class="nf">all </span><span class="o">:</span> 
+</span></span><span class="line"><span class="ln">63</span><span class="cl">	<span class="k">$(</span>CC<span class="k">)</span> -fdiagnostics-color<span class="o">=</span>always -g <span class="k">$(</span>SOURCES<span class="k">)</span> <span class="k">$(</span>HEADERS<span class="k">)</span> <span class="k">$(</span>INC_DIRS<span class="k">)</span> -o <span class="k">$(</span>PROJECT<span class="k">)</span>
+</span></span><span class="line"><span class="ln">64</span><span class="cl">
+</span></span><span class="line"><span class="ln">65</span><span class="cl"><span class="c"># virtual clean job
+</span></span></span><span class="line"><span class="ln">66</span><span class="cl"><span class="c"></span><span class="nf">.PHONY </span><span class="o">:</span> <span class="n">clean</span>
+</span></span><span class="line"><span class="ln">67</span><span class="cl"><span class="nf">clean</span><span class="o">:</span>
+</span></span><span class="line"><span class="ln">68</span><span class="cl"><span class="err">ifeq</span> <span class="err">(</span><span class="k">$(</span><span class="nv">OS_TYPE</span><span class="k">)</span><span class="err">,</span> <span class="err">WINDOWS)</span>
+</span></span><span class="line"><span class="ln">69</span><span class="cl">	<span class="err">del</span> <span class="k">$(</span><span class="nv">PROJECT</span><span class="k">)</span><span class="err">.exe</span>
+</span></span><span class="line"><span class="ln">70</span><span class="cl"><span class="err">endif</span>
+</span></span><span class="line"><span class="ln">71</span><span class="cl"><span class="err">ifeq</span> <span class="err">(</span><span class="k">$(</span><span class="nv">OS_TYPE</span><span class="k">)</span><span class="err">,</span> <span class="err">LINUX)</span>
+</span></span><span class="line"><span class="ln">72</span><span class="cl">	<span class="err">rm</span> <span class="k">$(</span><span class="nv">PROJECT</span><span class="k">)</span>
+</span></span><span class="line"><span class="ln">73</span><span class="cl"><span class="err">endif</span>
+</span></span><span class="line"><span class="ln">74</span><span class="cl"><span class="err">ifeq</span> <span class="err">(</span><span class="k">$(</span><span class="nv">OS_TYPE</span><span class="k">)</span><span class="err">,</span> <span class="err">OSX)</span>
+</span></span><span class="line"><span class="ln">75</span><span class="cl">	<span class="err">rm</span> <span class="k">$(</span><span class="nv">PROJECT</span><span class="k">)</span>
+</span></span><span class="line"><span class="ln">76</span><span class="cl"><span class="err">endif</span>
+</span></span><span class="line"><span class="ln">77</span><span class="cl">	
 </span></span></code></pre></div><h2 id="如何使用" data-numberify>如何使用<a class="anchor ms-1" href="#如何使用"></a></h2>
 <p>基本上，只要如下几步就可以进行项目开发：</p>
 <ol>
